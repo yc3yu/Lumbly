@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		644E35C7290E52940024B8A5 /* Color+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E35C6290E52930024B8A5 /* Color+Presets.swift */; };
+		644E35C9290E52AC0024B8A5 /* Font+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E35C8290E52AC0024B8A5 /* Font+Presets.swift */; };
 		647635C828FBA34F0043DCFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 647635C728FBA34F0043DCFD /* Assets.xcassets */; };
 		647635D528FBA34F0043DCFD /* OAidherenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647635D428FBA34F0043DCFD /* OAidherenceTests.swift */; };
 		647635DF28FBA34F0043DCFD /* OAidherenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647635DE28FBA34F0043DCFD /* OAidherenceUITests.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		5B1CD79A5A049FDDE38BEE5F /* libPods-OAidherence.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OAidherence.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		644E35C6290E52930024B8A5 /* Color+Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Presets.swift"; sourceTree = "<group>"; };
+		644E35C8290E52AC0024B8A5 /* Font+Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Presets.swift"; sourceTree = "<group>"; };
 		647635C028FBA34E0043DCFD /* OAidherence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAidherence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		647635C728FBA34F0043DCFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		647635D028FBA34F0043DCFD /* OAidherenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OAidherenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +93,13 @@
 				5B1CD79A5A049FDDE38BEE5F /* libPods-OAidherence.a */,
 			);
 			name = Frameworks;
+		644E35C5290E52650024B8A5 /* OAidherenceCore */ = {
+			isa = PBXGroup;
+			children = (
+				644E35C6290E52930024B8A5 /* Color+Presets.swift */,
+				644E35C8290E52AC0024B8A5 /* Font+Presets.swift */,
+			);
+			path = OAidherenceCore;
 			sourceTree = "<group>";
 		};
 		647635B728FBA34E0043DCFD = {
@@ -96,6 +107,7 @@
 			children = (
 				64879C6229101E670071AB5A /* .gitignore.rtf */,
 				647635C228FBA34E0043DCFD /* OAidherence */,
+				644E35C5290E52650024B8A5 /* OAidherenceCore */,
 				647635D328FBA34F0043DCFD /* OAidherenceTests */,
 				647635DD28FBA34F0043DCFD /* OAidherenceUITests */,
 				647635C128FBA34E0043DCFD /* Products */,
@@ -334,11 +346,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				644E35C9290E52AC0024B8A5 /* Font+Presets.swift in Sources */,
 				647C9F482908F277007EFE62 /* Coordinator.swift in Sources */,
 				647C9F502909D27C007EFE62 /* LoginView.swift in Sources */,
 				647C9F0A2908ECCC007EFE62 /* AppCoordinator.swift in Sources */,
 				647C9F4A2909971D007EFE62 /* LoginViewController.swift in Sources */,
 				647C9F8A2909E91B007EFE62 /* SceneDelegate.swift in Sources */,
+				644E35C7290E52940024B8A5 /* Color+Presets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
