@@ -8,9 +8,6 @@
       location = "group:Pods">
    </FileRef>
    <FileRef
-      location = "group:swiftgen.yml">
-   </FileRef>
-   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
