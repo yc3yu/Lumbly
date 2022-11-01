@@ -19,7 +19,6 @@
 		647C9F502909D27C007EFE62 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647C9F4F2909D27C007EFE62 /* LoginView.swift */; };
 		647C9F8A2909E91B007EFE62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647C9F892909E91B007EFE62 /* SceneDelegate.swift */; };
 		64879C6329101E670071AB5A /* .gitignore.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 64879C6229101E670071AB5A /* .gitignore.rtf */; };
-		925FA8B51555A74EB2B6A8B7 /* libPods-OAidherence.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1CD79A5A049FDDE38BEE5F /* libPods-OAidherence.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5B1CD79A5A049FDDE38BEE5F /* libPods-OAidherence.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OAidherence.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		644E35C6290E52930024B8A5 /* Color+Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Presets.swift"; sourceTree = "<group>"; };
 		644E35C8290E52AC0024B8A5 /* Font+Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Presets.swift"; sourceTree = "<group>"; };
 		647635C028FBA34E0043DCFD /* OAidherence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAidherence.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				925FA8B51555A74EB2B6A8B7 /* libPods-OAidherence.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,14 +84,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4FBD5A9FB638D566A094AFF5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5B1CD79A5A049FDDE38BEE5F /* libPods-OAidherence.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<unknown>";
-		};
 		644E35C5290E52650024B8A5 /* OAidherenceCore */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +103,6 @@
 				647635DD28FBA34F0043DCFD /* OAidherenceUITests */,
 				647635C128FBA34E0043DCFD /* Products */,
 				7B61B1D5BA99C86EE85E54DE /* Pods */,
-				4FBD5A9FB638D566A094AFF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -441,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -495,7 +483,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -522,7 +510,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -553,7 +541,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -575,13 +563,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuechenyu.OAidherenceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OAidherence.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OAidherence";
 			};
 			name = Debug;
@@ -594,13 +582,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuechenyu.OAidherenceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OAidherence.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OAidherence";
 			};
 			name = Release;
@@ -617,7 +605,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = OAidherence;
 			};
 			name = Debug;
@@ -634,7 +622,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = OAidherence;
 			};
 			name = Release;
