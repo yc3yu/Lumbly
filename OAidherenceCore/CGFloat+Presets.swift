@@ -9,6 +9,8 @@ import Foundation
 
 extension CGFloat {
     
+    public static let tinySpace: CGFloat = 2.0
+    
     public static let nanoSpace: CGFloat = 4.0
     
     public static let miniSpace: CGFloat = 8.0
