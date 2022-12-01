@@ -11,7 +11,9 @@ extension Font {
     
     // MARK: Regular fonts
     
-    public static let captionRegular: Font = Font.system(.caption)
+    public static let caption2Regular: Font = Font.system(.caption2)
+    
+    public static let caption1Regular: Font = Font.system(.caption)
     
     public static let bodyRegular: Font = Font.system(.body)
     
@@ -25,7 +27,9 @@ extension Font {
     
     // MARK: Bold fonts
     
-    public static let captionBold: Font = Font.system(.caption).weight(.medium)
+    public static let caption2Bold: Font = Font.system(.caption2).weight(.semibold)
+    
+    public static let caption1Bold: Font = Font.system(.caption).weight(.medium)
     
     public static let bodyBold: Font = Font.system(.body).weight(.semibold)
     
@@ -45,8 +49,12 @@ struct FontPresets_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             VStack {
-                Text("Caption Regular")
-                    .font(.captionRegular)
+                Text("Caption2 Regular")
+                    .font(.caption2Regular)
+                    .padding([.top], FontPresets_Previews.padding)
+                
+                Text("Caption1 Regular")
+                    .font(.caption1Regular)
                     .padding([.top], FontPresets_Previews.padding)
                 
                 Text("Body Regular")
@@ -71,8 +79,12 @@ struct FontPresets_Previews: PreviewProvider {
             }
             
             VStack {
-                Text("Caption Bold")
-                    .font(.captionBold)
+                Text("Caption2 Bold")
+                    .font(.caption2Bold)
+                    .padding([.top], FontPresets_Previews.padding)
+                
+                Text("Caption1 Bold")
+                    .font(.caption1Bold)
                     .padding([.top], FontPresets_Previews.padding)
                 
                 Text("Body Bold")
