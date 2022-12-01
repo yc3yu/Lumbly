@@ -17,7 +17,7 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = LoginViewController(rootView: LoginView(viewModel: .init(name: "Anne")))
+        let vc = ResultsViewController(rootView: ResultsView(viewModel: .init(name: "Anne")))
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
