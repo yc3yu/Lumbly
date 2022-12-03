@@ -9,6 +9,7 @@ import Foundation
 
 extension CGFloat {
     
+    /// A value of 2.0
     public static let tinySpace: CGFloat = 2.0
     
     /// A value of 4.0
