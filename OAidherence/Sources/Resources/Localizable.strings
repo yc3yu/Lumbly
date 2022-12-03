@@ -6,4 +6,16 @@
   
 */
 
-"welcome" = "Welcome";
+// MARK: MainTabBar
+"MainTabBar.exercise" = "Exercise";
+"MainTabBar.activity" = "Activity";
+"MainTabBar.profile" = "Profile";
+
+// MARK: ResultsView
+"ResultsView.results" = "Results";
+"ResultsView.problems" = "Problems";
+"ResultsView.welldone" = "Well-Done";
+"ResultsView.problem" = "Problem";
+"ResultsView.solution" = "Solution";
+
+
