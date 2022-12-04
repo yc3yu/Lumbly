@@ -10,11 +10,33 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
-  /// Localizable.strings
-  ///   OAidherence
-  /// 
-  ///   Created by Yue chen Yu on 2022-10-31.
-  internal static let welcome = L10n.tr("Localizable", "welcome", fallback: "Welcome")
+  internal enum MainTabBar {
+    /// Activity
+    internal static let activity = L10n.tr("Localizable", "MainTabBar.activity", fallback: "Activity")
+    /// Localizable.strings
+    ///   OAidherence
+    /// 
+    ///   Created by Yue chen Yu on 2022-10-31.
+    internal static let exercise = L10n.tr("Localizable", "MainTabBar.exercise", fallback: "Exercise")
+    /// Profile
+    internal static let profile = L10n.tr("Localizable", "MainTabBar.profile", fallback: "Profile")
+  }
+  internal enum ResultsView {
+    /// No problems were detected in this session. Well done!
+    internal static let noProblemsDetected = L10n.tr("Localizable", "ResultsView.noProblemsDetected", fallback: "No problems were detected in this session. Well done!")
+    /// Problem
+    internal static let problem = L10n.tr("Localizable", "ResultsView.problem", fallback: "Problem")
+    /// Problems
+    internal static let problems = L10n.tr("Localizable", "ResultsView.problems", fallback: "Problems")
+    /// Problems or Well-Done
+    internal static let problemsOrWellDone = L10n.tr("Localizable", "ResultsView.problemsOrWellDone", fallback: "Problems or Well-Done")
+    /// Results
+    internal static let results = L10n.tr("Localizable", "ResultsView.results", fallback: "Results")
+    /// Solution
+    internal static let solution = L10n.tr("Localizable", "ResultsView.solution", fallback: "Solution")
+    /// Well-Done
+    internal static let welldone = L10n.tr("Localizable", "ResultsView.welldone", fallback: "Well-Done")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
