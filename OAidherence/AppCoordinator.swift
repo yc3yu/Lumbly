@@ -17,7 +17,10 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = ResultsViewController(rootView: ResultsView(viewModel: .init(name: "Anne")))
+        let vc = ResultsViewController(rootView: ResultsView(viewModel: .init(exercises: ["Bird dog", "Filler", "Example"],
+                                                                              selectedIndex: 0,
+                                                                              summaryGraphTitle: "AVERAGE FORM CORRECTNESS "),
+                                                             exerciseMenuSelection: { }))
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
