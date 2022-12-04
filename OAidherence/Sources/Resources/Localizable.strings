@@ -13,9 +13,11 @@
 
 // MARK: ResultsView
 "ResultsView.results" = "Results";
+"ResultsView.problemsOrWellDone" = "Problems or Well-Done";
 "ResultsView.problems" = "Problems";
 "ResultsView.welldone" = "Well-Done";
 "ResultsView.problem" = "Problem";
+"ResultsView.noProblemsDetected" = "No problems were detected in this clip. Well done!";
 "ResultsView.solution" = "Solution";
 
 

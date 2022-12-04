@@ -22,10 +22,14 @@ internal enum L10n {
     internal static let profile = L10n.tr("Localizable", "MainTabBar.profile", fallback: "Profile")
   }
   internal enum ResultsView {
+    /// No problems were detected in this clip. Well done!
+    internal static let noProblemsDetected = L10n.tr("Localizable", "ResultsView.noProblemsDetected", fallback: "No problems were detected in this clip. Well done!")
     /// Problem
     internal static let problem = L10n.tr("Localizable", "ResultsView.problem", fallback: "Problem")
     /// Problems
     internal static let problems = L10n.tr("Localizable", "ResultsView.problems", fallback: "Problems")
+    /// Problems or Well-Done
+    internal static let problemsOrWellDone = L10n.tr("Localizable", "ResultsView.problemsOrWellDone", fallback: "Problems or Well-Done")
     /// Results
     internal static let results = L10n.tr("Localizable", "ResultsView.results", fallback: "Results")
     /// Solution
