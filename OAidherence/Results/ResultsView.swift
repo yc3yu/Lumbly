@@ -7,28 +7,6 @@
 
 import SwiftUI
 
-extension ResultsView {
-    struct Problem: Hashable {
-        var icon: String
-        var name: String
-//        var problemDescription: String
-//        var problemImage: Image
-//        var solutionDescription: String
-//        var solutionImage: Image
-        
-    }
-    
-    struct ViewModel {
-        var exercises: [String]? // Array of available exercises to select in drop-down menu
-        var selectedIndex: Int? // Index of selected element in array of exercises
-        var problems: [Problem]?
-        var summaryGraphTitle: String?
-        var summaryGraphXLabel: String?
-        var summaryGraphYLabel: String?
-        
-    }
-}
-
 struct ResultsView: View {
     private struct Constants {
         static let dropShadowOpacity: CGFloat = 0.25
@@ -39,9 +17,10 @@ struct ResultsView: View {
     }
     
     @State private var problemsOrWellDone = L10n.ResultsView.problems
+    @StateObject private var viewModel = ResultsViewModel()
     
-    let viewModel: ViewModel?
-    let exerciseMenuSelection: (() -> ())?
+    // TODO: Add functional drop-down menu of exercises
+    // let exerciseMenuSelection: (() -> ())?
     
     var body: some View {
         VStack {
@@ -51,8 +30,8 @@ struct ResultsView: View {
                     
                     Spacer()
                     
-                    if let exercises = viewModel?.exercises,
-                       let selectedIndex = viewModel?.selectedIndex {
+                    if let exercises = viewModel.results?.exercises,
+                       let selectedIndex = viewModel.results?.selectedIndex {
                         Button(action: { }) {
                             HStack {
                                 Text(exercises[selectedIndex])
@@ -71,7 +50,7 @@ struct ResultsView: View {
                     }
                 }.padding(.bottom, .mediumSpace)
                 
-                if let summaryGraphTitle = viewModel?.summaryGraphTitle {
+                if let summaryGraphTitle = viewModel.results?.summaryGraphTitle {
                     Text(summaryGraphTitle)
                         .font(.caption1Bold)
                     Image("Placeholder")
@@ -91,18 +70,33 @@ struct ResultsView: View {
             }
             
             if problemsOrWellDone == L10n.ResultsView.problems {
-                if let problems = viewModel?.problems {
+                if let problems = viewModel.results?.problems {
                     ScrollView(showsIndicators: false) {
                         ForEach(problems, id: \.self) { problem in
                             HStack(alignment: .center, spacing: .littleSpace) {
-                                AsyncImage(url: URL(string: problem.icon))
-                                    .frame(width: Constants.problemIconSize, height: Constants.problemIconSize, alignment: .center)
+                                if let problemIcon = problem.icon {
+                                    AsyncImage(url: URL(string: problemIcon),
+                                               content: { image in
+                                        image.resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: Constants.problemIconSize, height: Constants.problemIconSize, alignment: .center)
+                                    },
+                                    placeholder: {
+                                        Image("Placeholder")
+                                            .resizable()
+                                            .frame(width: Constants.problemIconSize, height: Constants.problemIconSize, alignment: .center)
+                                            .padding(.bottom, .smallSpace)
+                                    })
+                                        
+                                }
                                 
                                 Spacer()
                                 
-                                Text(problem.name)
-                                    .font(.bodyBold)
-                                    .multilineTextAlignment(.center)
+                                if let problemName = problem.name {
+                                    Text(problemName)
+                                        .font(.bodyBold)
+                                        .multilineTextAlignment(.center)
+                                }
                                 
                                 Spacer()
                                 
@@ -129,33 +123,17 @@ struct ResultsView: View {
             // TODO: Add else case for well-done tab once the design is created
             
             Spacer()
-        }.padding(.horizontal, .largeSpace)
+        }
+        .padding(.horizontal, .largeSpace)
+        .onAppear(perform: viewModel.fetchData)
     }
 }
 
 struct ResultsView_Previews: PreviewProvider {
-    static let imageURL: String = "https://www.flaticon.com/free-icon/exercise_991924"
+    static let imageURL: String = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/61f2140b-e5a4-4602-9ef0-37b979b1c377/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221206T014953Z&X-Amz-Expires=86400&X-Amz-Signature=206c9a49d0c4546fee5ccc3dc69df09a5e8c2318f91f56e7ce95fd7c5f7eb725&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject"
     
     static var previews: some View {
-        ResultsView(viewModel: .init(exercises: ["Bird dog", "Filler", "Example"],
-                                     selectedIndex: 0,
-                                     problems: [ResultsView.Problem(icon: ResultsView_Previews.imageURL,
-                                                      name: "Leg lifted too high"),
-                                                ResultsView.Problem(icon: ResultsView_Previews.imageURL,
-                                                      name: "A long problem string that flows to two lines"),
-                                                ResultsView.Problem(icon: ResultsView_Previews.imageURL,
-                                                      name: "A long problem string that flows to more than two lines of text"),
-                                                ResultsView.Problem(icon: ResultsView_Previews.imageURL,
-                                                      name: "Another problem"),
-                                                ResultsView.Problem(icon: ResultsView_Previews.imageURL,
-                                                      name: "One more problem")],
-                                     summaryGraphTitle: "AVERAGE FORM CORRECTNESS "),
-                    exerciseMenuSelection: { })
-        
-//        ResultsView(viewModel: .init(exercises: ["Bird dog", "Filler", "Example"],
-//                                     selectedIndex: 0,
-//                                     summaryGraphTitle: "AVERAGE FORM CORRECTNESS "),
-//                    exerciseMenuSelection: { })
+        ResultsView()
     }
 }
 
