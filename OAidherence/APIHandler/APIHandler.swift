@@ -18,9 +18,11 @@ class APIHandler {
                         let jsonDecoder = JSONDecoder()
                         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                         
+                        // TODO: Change from array of Results to just single Results object (both here and in API server)
+                        
                         if let data = data,
-                           let results = try? jsonDecoder.decode(Results.self, from: data) {
-                            completion(results)
+                           let results = try? jsonDecoder.decode([Results].self, from: data) {
+                            completion(results[0])
                         } else {
                             // TODO: Handle error
                         }
