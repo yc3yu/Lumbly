@@ -30,11 +30,10 @@ struct ResultsView: View {
                     
                     Spacer()
                     
-                    if let exercises = viewModel.results?.exercises,
-                       let selectedIndex = viewModel.results?.selectedIndex {
+                    if let exercises = viewModel.results?.exercises {
                         Button(action: { }) {
                             HStack {
-                                Text(exercises[selectedIndex])
+                                Text(exercises[0]) // TODO: Remove hard-coded selected exercise index (make functional drop-down menu)
                                     .foregroundColor(.secondary)
                                     .padding([.trailing], .mediumSpace)
                                 

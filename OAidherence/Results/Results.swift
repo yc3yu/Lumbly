@@ -8,7 +8,6 @@
 struct Results: Decodable {
     var id: Int?
     var exercises: [String]? // Array of available exercises to select in drop-down menu
-    var selectedIndex: Int? // Index of selected element in array of exercises
     var summaryGraphTitle: String?
     var summaryGraphXLabel: String?
     var summaryGraphYLabel: String?
