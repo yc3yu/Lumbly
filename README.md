@@ -1,2 +1,2 @@
 # OAidherence
-An app for individuals with knee osteoarthritis (OA) to aid exercise adherence.
+An app that helps physiotherapy patients perform their exercises correctly and consistently at home.
