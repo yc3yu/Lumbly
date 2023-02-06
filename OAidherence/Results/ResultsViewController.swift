@@ -8,12 +8,18 @@
 import SwiftUI
 
 final class ResultsViewController: UIHostingController<ResultsView> {
-    
     weak var coordinator: AppCoordinator?
+    
+    private var viewModel: ResultsView.ResultsViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // anything else
+        
+        updateViewModel()
+    }
+    
+    func updateViewModel() {
+        self.viewModel = ResultsView.ResultsViewModel()
     }
 }
 
