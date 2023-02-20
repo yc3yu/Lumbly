@@ -43,8 +43,8 @@ class APIHandler {
                         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                         
                         if let data = data,
-                           let exerciseTileData = try? jsonDecoder.decode(ExerciseTile.self, from: data) {
-                            completion(exerciseTileData)
+                           let exerciseTileData = try? jsonDecoder.decode([ExerciseTile].self, from: data) {
+                            completion(exerciseTileData[0])
                         } else {
                             // TODO: Handle error
                         }

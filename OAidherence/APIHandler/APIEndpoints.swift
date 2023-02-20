@@ -8,5 +8,5 @@
 struct APIEndpoints {
     static let resultsURL = "http://localhost:5000/api/results"
     
-    static let exerciseTileURL = ""
+    static let exerciseTileURL = "http://localhost:5000/api/exercise_tile"
 }
