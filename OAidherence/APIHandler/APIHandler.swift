@@ -31,4 +31,26 @@ class APIHandler {
             }).resume()
         }
     }
+    
+    func fetchExerciseTileData(completion : @escaping ((ExerciseTile) -> ())) {
+        if let url = URL(string: APIEndpoints.exerciseTileURL) {
+            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+                DispatchQueue.main.async {
+                    if let error = error {
+                        // TODO: Handle error
+                    } else {
+                        let jsonDecoder = JSONDecoder()
+                        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                        
+                        if let data = data,
+                           let exerciseTileData = try? jsonDecoder.decode(ExerciseTile.self, from: data) {
+                            completion(exerciseTileData)
+                        } else {
+                            // TODO: Handle error
+                        }
+                    }
+                }
+            }).resume()
+        }
+    }
 }

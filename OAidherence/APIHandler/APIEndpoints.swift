@@ -7,4 +7,6 @@
 
 struct APIEndpoints {
     static let resultsURL = "http://localhost:5000/api/results"
+    
+    static let exerciseTileURL = ""
 }
