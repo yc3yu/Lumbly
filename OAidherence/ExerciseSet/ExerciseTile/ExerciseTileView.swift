@@ -29,17 +29,8 @@ struct ExerciseTileView: View {
                 VStack(alignment: .leading) {
                     HStack {
                         if let inlineIcon = viewModel.exerciseTileData?.inlineIcon {
-                            AsyncImage(url: URL(string: inlineIcon),
-                                       content: { image in
-                                image.resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: .mediumSpace, height: .mediumSpace)
-                            },
-                            placeholder: {
-                                Image("Physiotherapy")
-                                    .resizable()
-                                    .frame(width: .mediumSpace, height: .mediumSpace)
-                            })
+                            AsyncImage(url: URL(string: inlineIcon))
+                                .frame(width: .mediumSpace, height: .mediumSpace)
                         }
                         
                         if let exerciseName = viewModel.exerciseTileData?.exerciseName {
@@ -55,21 +46,11 @@ struct ExerciseTileView: View {
                 }
                 
                 if let exerciseImage = viewModel.exerciseTileData?.exerciseImage {
-                    AsyncImage(url: URL(string: exerciseImage),
-                               content: { image in
-                        image.resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: Constants.exerciseImageWidth, height: Constants.exerciseImageHeight, alignment: .center)
-                    },
-                    placeholder: {
-                        Image("Placeholder")
-                            .resizable()
-                            .frame(width: Constants.exerciseImageWidth, height: Constants.exerciseImageHeight, alignment: .center)
-                    })
-                    
+                    AsyncImage(url: URL(string: exerciseImage))
+                        .frame(width: Constants.exerciseImageWidth, height: Constants.exerciseImageHeight)
                 }
             }
-        }
+        }.onAppear(perform: viewModel.fetchData)
     }
 }
 
