@@ -28,24 +28,31 @@ struct ExerciseTileView: View {
             HStack(spacing: .mediumSpace) {
                 VStack(alignment: .leading) {
                     HStack {
-                        // TODO: Remove this placeholder image once API server part works
-                        Image("Physiotherapy")
-                            .resizable()
-                            .frame(width: .mediumSpace, height: .mediumSpace)
+                        if let inlineIcon = viewModel.exerciseTileData?.inlineIcon {
+                            AsyncImage(url: URL(string: inlineIcon),
+                                       content: { image in
+                                image.resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: .mediumSpace, height: .mediumSpace)
+                            },
+                            placeholder: {
+                                Image("Physiotherapy")
+                                    .resizable()
+                                    .frame(width: .mediumSpace, height: .mediumSpace)
+                            })
+                        }
                         
-                        // TODO: Remove this placeholder image once API server part works
-                        Text("Bird Dog")
-                            .font(.title3Bold)
+                        if let exerciseName = viewModel.exerciseTileData?.exerciseName {
+                            Text(exerciseName)
+                                .font(.title3Bold)
+                        }
                     }
                     
-                    Text("10 Repetitions (per side)")
-                        .font(.caption1Bold)
+                    if let reps = viewModel.exerciseTileData?.reps {
+                        Text(reps)
+                            .font(.caption1Bold)
+                    }
                 }
-                
-                // TODO: Remove this placeholder image once API server part works
-                Image("Placeholder")
-                    .resizable()
-                    .frame(width: Constants.exerciseImageWidth, height: Constants.exerciseImageHeight, alignment: .center)
                 
                 if let exerciseImage = viewModel.exerciseTileData?.exerciseImage {
                     AsyncImage(url: URL(string: exerciseImage),
@@ -58,7 +65,6 @@ struct ExerciseTileView: View {
                         Image("Placeholder")
                             .resizable()
                             .frame(width: Constants.exerciseImageWidth, height: Constants.exerciseImageHeight, alignment: .center)
-                            .padding(.bottom, .smallSpace)
                     })
                     
                 }
