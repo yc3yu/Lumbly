@@ -36,6 +36,7 @@
 		6488E9DD29A31F790090554A /* ExerciseTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E9DC29A31F790090554A /* ExerciseTileViewController.swift */; };
 		6488E9EA29A4786E0090554A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E9E929A4786E0090554A /* LoadingView.swift */; };
 		64979C6829A4A1C600C27768 /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64979C6729A4A1C600C27768 /* BlueButtonView.swift */; };
+		6488E9EE29A47F390090554A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E9ED29A47F390090554A /* OnboardingView.swift */; };
 		64A434392990B0F3008F8253 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A434382990B0F3008F8253 /* UIColor+Hex.swift */; };
 		64B1BBED2910BA4000AEA7E3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,7 @@
 		6488E9DC29A31F790090554A /* ExerciseTileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTileViewController.swift; sourceTree = "<group>"; };
 		6488E9E929A4786E0090554A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		64979C6729A4A1C600C27768 /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
+		6488E9ED29A47F390090554A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		64A434382990B0F3008F8253 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		CA73BCC58085341DDBBEE890 /* Pods-OAidherence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.release.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				6488E9E829A478370090554A /* Loading */,
+				6488E9EB29A47F1E0090554A /* Onboarding */,
 				6488E9D629A2C5C30090554A /* ExerciseSet */,
 				643382D22910BCF90067AA19 /* Sources */,
 				647C9F8C2909ECAA007EFE62 /* Info.plist */,
@@ -211,7 +214,6 @@
 				647C9F892909E91B007EFE62 /* SceneDelegate.swift */,
 				647C9F092908ECCC007EFE62 /* AppCoordinator.swift */,
 				647280A5293ED94B004CCE75 /* APIHandler */,
-				647C9F4E2909D26D007EFE62 /* Login */,
 				6472809B29370BA5004CCE75 /* Results */,
 				647C9F0D2908F07A007EFE62 /* Coordinators */,
 				647C9F4B2909989F007EFE62 /* Preview Content */,
@@ -306,6 +308,21 @@
 				64979C6729A4A1C600C27768 /* BlueButtonView.swift */,
 			);
 			path = Components;
+		6488E9EB29A47F1E0090554A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				6488E9EC29A47F2C0090554A /* Signup */,
+				647C9F4E2909D26D007EFE62 /* Login */,
+				6488E9ED29A47F390090554A /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		6488E9EC29A47F2C0090554A /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 		7B61B1D5BA99C86EE85E54DE /* Pods */ = {
@@ -510,6 +527,7 @@
 				647280AB293EE15C004CCE75 /* Results.swift in Sources */,
 				6488E9DB29A2C8540090554A /* ExerciseTileViewModel.swift in Sources */,
 				6488E9EA29A4786E0090554A /* LoadingView.swift in Sources */,
+				6488E9EE29A47F390090554A /* OnboardingView.swift in Sources */,
 				6488E9DD29A31F790090554A /* ExerciseTileViewController.swift in Sources */,
 				647C9F4A2909971D007EFE62 /* LoginViewController.swift in Sources */,
 				647280992936D401004CCE75 /* CGFloat+Presets.swift in Sources */,
