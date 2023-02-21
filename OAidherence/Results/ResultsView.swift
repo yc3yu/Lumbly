@@ -74,11 +74,13 @@ struct ResultsView: View {
                         ForEach(problems, id: \.self) { problem in
                             HStack(alignment: .center, spacing: .littleSpace) {
                                 if let problemIcon = problem.icon {
-                                    AsyncImage(url: URL(string: problemIcon), content: { image in
+                                    AsyncImage(url: URL(string: problemIcon),
+                                               content: { image in
                                         image.resizable()
                                             .aspectRatio(contentMode: .fit)
                                             .frame(width: Constants.problemIconSize, height: Constants.problemIconSize, alignment: .center)
-                                    }, placeholder: {
+                                    },
+                                    placeholder: {
                                         Image("Placeholder")
                                             .resizable()
                                             .frame(width: Constants.problemIconSize, height: Constants.problemIconSize, alignment: .center)
