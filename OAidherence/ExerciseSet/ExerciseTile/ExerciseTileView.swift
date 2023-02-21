@@ -16,7 +16,7 @@ struct ExerciseTileView: View {
         static let exerciseImageHeight: CGFloat = 78.0
     }
     
-    @StateObject private var viewModel = ExerciseTileViewModel()
+    @StateObject var viewModel: ExerciseTileViewModel
     
     var body: some View {
         ZStack {
@@ -50,7 +50,7 @@ struct ExerciseTileView: View {
                         .frame(width: Constants.exerciseImageWidth, height: Constants.exerciseImageHeight)
                 }
             }
-        }.onAppear(perform: viewModel.fetchData)
+        }
     }
 }
 
