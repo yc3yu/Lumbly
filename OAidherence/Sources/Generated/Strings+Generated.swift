@@ -10,6 +10,10 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  internal enum ExerciseSetView {
+    /// Start Exercise Set
+    internal static let startExerciseSet = L10n.tr("Localizable", "ExerciseSetView.startExerciseSet", fallback: "Start Exercise Set")
+  }
   internal enum MainTabBar {
     /// Activity
     internal static let activity = L10n.tr("Localizable", "MainTabBar.activity", fallback: "Activity")

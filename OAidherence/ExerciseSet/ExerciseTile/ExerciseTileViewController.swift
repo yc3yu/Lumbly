@@ -11,14 +11,4 @@ final class ExerciseTileViewController: UIHostingController<ExerciseTileView> {
     weak var coordinator: AppCoordinator?
     
     private var viewModel: ExerciseTileView.ExerciseTileViewModel?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        updateViewModel()
-    }
-    
-    func updateViewModel() {
-        self.viewModel = ExerciseTileView.ExerciseTileViewModel()
-    }
 }

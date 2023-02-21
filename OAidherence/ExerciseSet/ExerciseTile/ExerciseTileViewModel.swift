@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExerciseTile: Decodable {
+struct ExerciseTile: Decodable, Hashable {
     var inlineIcon: String?
     var exerciseName: String?
     var reps: String?
@@ -16,19 +16,10 @@ struct ExerciseTile: Decodable {
 
 extension ExerciseTileView {
     class ExerciseTileViewModel : ObservableObject {
-        private let apiHandler: APIHandler
+        @Published private(set) var exerciseTileData: ExerciseTile?
         
-        @Published private(set) var exerciseTileData: ExerciseTile? = nil
-        
-        init() {
-            self.apiHandler = APIHandler()
-            fetchData()
-        }
-
-        func fetchData() {
-            apiHandler.fetchExerciseTileData() { [weak self] data in
-                self?.exerciseTileData = data
-            }
+        init(exerciseTileData: ExerciseTile?) {
+            self.exerciseTileData = exerciseTileData
         }
     }
 }
