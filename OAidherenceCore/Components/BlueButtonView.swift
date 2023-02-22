@@ -40,16 +40,16 @@ struct BlueButtonView: View {
                 Text(text)
                     .font(.title3Bold)
                     .foregroundColor(textColor ?? .mercuryGrey)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                    .background(
+                        RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
+                            .fill(backgroundColor ?? .resolutionBlue)
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
+                            .strokeBorder(borderColor ?? .clear, lineWidth: Constants.borderWidth)
+                    )
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-            .background(
-                RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
-                    .fill(backgroundColor ?? .resolutionBlue)
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
-                    .strokeBorder(borderColor ?? .clear, lineWidth: Constants.borderWidth)
-            )
         }
     }
 }
