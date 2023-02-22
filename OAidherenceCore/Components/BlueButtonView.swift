@@ -18,10 +18,10 @@ struct BlueButtonView: View {
     var textColor: Color?
     var backgroundColor: Color?
     var borderColor: Color?
-    var action: () -> ()
+    var action: (() -> ())?
     
     var body: some View {
-        Button(action: action) {
+        Button(action: action ?? { }) {
                 Text(text)
                     .font(.title3Bold)
                     .foregroundColor(textColor ?? .mercuryGrey)
@@ -50,23 +50,19 @@ struct BlueButtonView_Previews: PreviewProvider {
         VStack {
             BlueButtonView(text: L10n.ExerciseSetView.startExerciseSet,
                            backgroundColor: .veniceBlue,
-                           borderColor: .blueCharcoal,
-                           action: { })
+                           borderColor: .blueCharcoal)
             
             BlueButtonView(text: L10n.ExerciseSetView.startExerciseSet,
-                           backgroundColor: .veniceBlue,
-                           action: { })
+                           backgroundColor: .veniceBlue)
             .frame(width: Constants.wideWidth)
             
-            BlueButtonView(text: "Sign up",
-                           action: { })
+            BlueButtonView(text: "Sign up")
             .frame(width: Constants.narrowWidth)
             
             BlueButtonView(text: "Log in",
                            textColor: .prussianBlue,
                            backgroundColor: .white,
-                           borderColor: .resolutionBlue,
-                           action: { })
+                           borderColor: .resolutionBlue)
             .frame(width: Constants.narrowWidth)
         }
     }
