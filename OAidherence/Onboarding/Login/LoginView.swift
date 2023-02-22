@@ -58,9 +58,12 @@ struct LoginView: View {
                     }.padding(.horizontal, .smallSpace)
                 }.frame(height: Constants.fieldHeight)
                 
-                BlueButtonView(text: L10n.Onboarding.logIn)
+                NavigationLink(destination: HomeView()) {
+                    BlueButtonView(text: L10n.Onboarding.logIn,
+                                   navLinkButton: true)
                     .frame(width: Constants.buttonWidth, height: Constants.buttonHeight)
-                }.padding(.horizontal, Constants.vStackHorizontalPadding)
+                }.disabled(email.isEmpty || password.isEmpty)
+            }.padding(.horizontal, Constants.vStackHorizontalPadding)
         }
     }
 }
