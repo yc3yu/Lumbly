@@ -6,9 +6,9 @@
   
 */
 
-// MARK: OnboardingView
-"OnboardingView.signUp" = "Sign up";
-"OnboardingView.logIn" = "Log in";
+// MARK: Onboarding
+"Onboarding.signUp" = "Sign up";
+"Onboarding.logIn" = "Log in";
 
 // MARK: ResultsView
 "ResultsView.results" = "Results";

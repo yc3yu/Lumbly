@@ -27,14 +27,14 @@ struct OnboardingView: View {
                     .padding(.bottom, Constants.logoToSignUpSpacing)
                 
                 NavigationLink(destination: SignupView()) {
-                    BlueButtonView(text: L10n.OnboardingView.signUp,
+                    BlueButtonView(text: L10n.Onboarding.signUp,
                                    navLinkButton: true)
                     .frame(width: Constants.buttonWidth)
                     .padding(.bottom, .mediumSpace)
                 }
                 
                 NavigationLink(destination: LoginView()) {
-                    BlueButtonView(text: L10n.OnboardingView.logIn,
+                    BlueButtonView(text: L10n.Onboarding.logIn,
                                    textColor: .prussianBlue,
                                    backgroundColor: .oysterBay,
                                    borderColor: .resolutionBlue,
