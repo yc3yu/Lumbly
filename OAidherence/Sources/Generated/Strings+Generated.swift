@@ -15,8 +15,16 @@ internal enum L10n {
     internal static let startExerciseSet = L10n.tr("Localizable", "ExerciseSetView.startExerciseSet", fallback: "Start Exercise Set")
   }
   internal enum Onboarding {
+    /// Email
+    internal static let email = L10n.tr("Localizable", "Onboarding.email", fallback: "Email")
     /// Log in
     internal static let logIn = L10n.tr("Localizable", "Onboarding.logIn", fallback: "Log in")
+    /// Name
+    internal static let name = L10n.tr("Localizable", "Onboarding.name", fallback: "Name")
+    /// Password
+    internal static let password = L10n.tr("Localizable", "Onboarding.password", fallback: "Password")
+    /// Physiotherapist code
+    internal static let physiotherapistCode = L10n.tr("Localizable", "Onboarding.physiotherapistCode", fallback: "Physiotherapist code")
     /// Localizable.strings
     ///   OAidherence
     /// 
