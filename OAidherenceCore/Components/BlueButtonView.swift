@@ -18,24 +18,42 @@ struct BlueButtonView: View {
     var textColor: Color?
     var backgroundColor: Color?
     var borderColor: Color?
+    var navLinkButton: Bool?
     var action: (() -> ())?
     
     var body: some View {
-        Button(action: action ?? { }) {
+        if let navLinkButton = navLinkButton,
+           navLinkButton {
+            Text(text)
+                .font(.title3Bold)
+                .foregroundColor(textColor ?? .mercuryGrey)
+                .frame(height: Constants.height, alignment: .center)
+                .frame(maxWidth: .infinity)
+                .background(
+                    RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
+                        .fill(backgroundColor ?? .resolutionBlue)
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
+                        .strokeBorder(borderColor ?? .clear, lineWidth: Constants.borderWidth)
+                )
+        } else {
+            Button(action: action ?? { }) {
                 Text(text)
                     .font(.title3Bold)
                     .foregroundColor(textColor ?? .mercuryGrey)
+            }
+            .frame(height: Constants.height, alignment: .center)
+            .frame(maxWidth: .infinity)
+            .background(
+                RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
+                    .fill(backgroundColor ?? .resolutionBlue)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
+                    .strokeBorder(borderColor ?? .clear, lineWidth: Constants.borderWidth)
+            )
         }
-        .frame(height: Constants.height, alignment: .center)
-        .frame(maxWidth: .infinity)
-        .background(
-            RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
-                .fill(backgroundColor ?? .resolutionBlue)
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
-                .strokeBorder(borderColor ?? .clear, lineWidth: Constants.borderWidth)
-        )
     }
 }
 
@@ -63,6 +81,13 @@ struct BlueButtonView_Previews: PreviewProvider {
                            textColor: .prussianBlue,
                            backgroundColor: .white,
                            borderColor: .resolutionBlue)
+            .frame(width: Constants.narrowWidth)
+            
+            BlueButtonView(text: "Log in",
+                           textColor: .prussianBlue,
+                           backgroundColor: .white,
+                           borderColor: .resolutionBlue,
+                           navLinkButton: true)
             .frame(width: Constants.narrowWidth)
         }
     }
