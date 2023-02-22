@@ -148,10 +148,8 @@
 		644E35C5290E52650024B8A5 /* OAidherenceCore */ = {
 			isa = PBXGroup;
 			children = (
-				647280982936D401004CCE75 /* CGFloat+Presets.swift */,
-				644E35C6290E52930024B8A5 /* Color+Presets.swift */,
-				64A434382990B0F3008F8253 /* UIColor+Hex.swift */,
-				644E35C8290E52AC0024B8A5 /* Font+Presets.swift */,
+				64979C6629A4A1B400C27768 /* Components */,
+				64979C6529A4A19B00C27768 /* Presets */,
 			);
 			path = OAidherenceCore;
 			sourceTree = "<group>";
@@ -287,6 +285,17 @@
 				6488E9E929A4786E0090554A /* LoadingView.swift */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		64979C6529A4A19B00C27768 /* Presets */ = {
+			isa = PBXGroup;
+			children = (
+				644E35C6290E52930024B8A5 /* Color+Presets.swift */,
+				64A434382990B0F3008F8253 /* UIColor+Hex.swift */,
+				647280982936D401004CCE75 /* CGFloat+Presets.swift */,
+				644E35C8290E52AC0024B8A5 /* Font+Presets.swift */,
+			);
+			path = Presets;
 			sourceTree = "<group>";
 		};
 		7B61B1D5BA99C86EE85E54DE /* Pods */ = {
