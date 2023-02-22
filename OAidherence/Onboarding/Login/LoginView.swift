@@ -32,31 +32,17 @@ struct LoginView: View {
                     .resizable()
                     .frame(width: Constants.logoWidth, height: Constants.logoHeight)
                 
-                ZStack {
-                    Rectangle()
-                        .fill(.white)
-                    
-                    VStack {
-                        TextField(L10n.Onboarding.email, text: $email)
-                            .textInputAutocapitalization(.never)
-                            .autocorrectionDisabled(true)
-                        
-                        Divider()
-                    }.padding(.horizontal, .smallSpace)
-                }.frame(height: Constants.fieldHeight)
+                StyledTextFieldView(textFieldContent:
+                                        AnyView(TextField(L10n.Onboarding.email,
+                                                          text: $email)
+                                            .textInputAutocapitalization(.never)
+                                            .autocorrectionDisabled(true)))
                 
-                ZStack {
-                    Rectangle()
-                        .fill(.white)
-                    
-                    VStack {
-                        SecureField(L10n.Onboarding.password, text: $password)
-                            .textInputAutocapitalization(.never)
-                            .autocorrectionDisabled(true)
-                        
-                        Divider()
-                    }.padding(.horizontal, .smallSpace)
-                }.frame(height: Constants.fieldHeight)
+                StyledTextFieldView(textFieldContent:
+                                        AnyView(SecureField(L10n.Onboarding.password,
+                                                            text: $password)
+                                            .textInputAutocapitalization(.never)
+                                            .autocorrectionDisabled(true)))
                 
                 NavigationLink(destination: HomeView()) {
                     BlueButtonView(text: L10n.Onboarding.logIn,
