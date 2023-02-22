@@ -9,7 +9,6 @@ import SwiftUI
 
 struct BlueButtonView: View {
     private struct Constants {
-        static let height: CGFloat = 50.0
         static let cornerRadius: CGFloat = 15.0
         static let borderWidth: CGFloat = 3.0
     }
@@ -27,8 +26,7 @@ struct BlueButtonView: View {
             Text(text)
                 .font(.title3Bold)
                 .foregroundColor(textColor ?? .mercuryGrey)
-                .frame(height: Constants.height, alignment: .center)
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 .background(
                     RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
                         .fill(backgroundColor ?? .resolutionBlue)
@@ -42,17 +40,16 @@ struct BlueButtonView: View {
                 Text(text)
                     .font(.title3Bold)
                     .foregroundColor(textColor ?? .mercuryGrey)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                    .background(
+                        RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
+                            .fill(backgroundColor ?? .resolutionBlue)
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
+                            .strokeBorder(borderColor ?? .clear, lineWidth: Constants.borderWidth)
+                    )
             }
-            .frame(height: Constants.height, alignment: .center)
-            .frame(maxWidth: .infinity)
-            .background(
-                RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
-                    .fill(backgroundColor ?? .resolutionBlue)
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
-                    .strokeBorder(borderColor ?? .clear, lineWidth: Constants.borderWidth)
-            )
         }
     }
 }
@@ -60,8 +57,9 @@ struct BlueButtonView: View {
 struct BlueButtonView_Previews: PreviewProvider {
     private struct Constants {
         static let wideWidth: CGFloat = 366.0
-        
         static let narrowWidth: CGFloat = 177.0
+        static let tallHeight: CGFloat = 56.0
+        static let shortHeight: CGFloat = 49.0
     }
     
     static var previews: some View {
@@ -72,23 +70,23 @@ struct BlueButtonView_Previews: PreviewProvider {
             
             BlueButtonView(text: L10n.ExerciseSetView.startExerciseSet,
                            backgroundColor: .veniceBlue)
-            .frame(width: Constants.wideWidth)
+            .frame(width: Constants.wideWidth, height: Constants.shortHeight)
             
             BlueButtonView(text: "Sign up")
-            .frame(width: Constants.narrowWidth)
+            .frame(width: Constants.narrowWidth, height: Constants.tallHeight)
             
             BlueButtonView(text: "Log in",
                            textColor: .prussianBlue,
                            backgroundColor: .white,
                            borderColor: .resolutionBlue)
-            .frame(width: Constants.narrowWidth)
+            .frame(width: Constants.narrowWidth, height: Constants.tallHeight)
             
             BlueButtonView(text: "Log in",
                            textColor: .prussianBlue,
                            backgroundColor: .white,
                            borderColor: .resolutionBlue,
                            navLinkButton: true)
-            .frame(width: Constants.narrowWidth)
+            .frame(width: Constants.narrowWidth, height: Constants.tallHeight)
         }
     }
 }
