@@ -14,16 +14,14 @@ internal enum L10n {
     /// Start Exercise Set
     internal static let startExerciseSet = L10n.tr("Localizable", "ExerciseSetView.startExerciseSet", fallback: "Start Exercise Set")
   }
-  internal enum MainTabBar {
-    /// Activity
-    internal static let activity = L10n.tr("Localizable", "MainTabBar.activity", fallback: "Activity")
+  internal enum OnboardingView {
+    /// Log in
+    internal static let logIn = L10n.tr("Localizable", "OnboardingView.logIn", fallback: "Log in")
     /// Localizable.strings
     ///   OAidherence
     /// 
     ///   Created by Yue chen Yu on 2022-10-31.
-    internal static let exercise = L10n.tr("Localizable", "MainTabBar.exercise", fallback: "Exercise")
-    /// Profile
-    internal static let profile = L10n.tr("Localizable", "MainTabBar.profile", fallback: "Profile")
+    internal static let signUp = L10n.tr("Localizable", "OnboardingView.signUp", fallback: "Sign up")
   }
   internal enum ResultsView {
     /// No problems were detected in this session. Well done!

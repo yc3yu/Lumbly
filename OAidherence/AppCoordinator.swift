@@ -17,7 +17,7 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = ResultsViewController(rootView: ResultsView())
+        let vc = OnboardingViewController(rootView: OnboardingView())
         
 //    viewModel: ResultsViewModel(results: ResultsViewModel.Results(exercises: ["Bird dog", "Filler", "Example"],
 //                                                                  selectedIndex: 0,
