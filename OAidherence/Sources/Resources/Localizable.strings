@@ -9,6 +9,10 @@
 // MARK: Onboarding
 "Onboarding.signUp" = "Sign up";
 "Onboarding.logIn" = "Log in";
+"Onboarding.physiotherapistCode" = "Physiotherapist code";
+"Onboarding.name" = "Name";
+"Onboarding.email" = "Email";
+"Onboarding.password" = "Password";
 
 // MARK: ResultsView
 "ResultsView.results" = "Results";
