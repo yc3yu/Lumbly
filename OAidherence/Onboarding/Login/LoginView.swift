@@ -37,7 +37,7 @@ struct LoginView: View {
                         .fill(.white)
                     
                     VStack {
-                        TextField("Email", text: $email)
+                        TextField(L10n.Onboarding.email, text: $email)
                             .textInputAutocapitalization(.never)
                             .autocorrectionDisabled(true)
                         
@@ -50,7 +50,7 @@ struct LoginView: View {
                         .fill(.white)
                     
                     VStack {
-                        SecureField("Password", text: $password)
+                        SecureField(L10n.Onboarding.password, text: $password)
                             .textInputAutocapitalization(.never)
                             .autocorrectionDisabled(true)
                         
