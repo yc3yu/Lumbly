@@ -6,10 +6,9 @@
   
 */
 
-// MARK: MainTabBar
-"MainTabBar.exercise" = "Exercise";
-"MainTabBar.activity" = "Activity";
-"MainTabBar.profile" = "Profile";
+// MARK: OnboardingView
+"OnboardingView.signUp" = "Sign up";
+"OnboardingView.logIn" = "Log in";
 
 // MARK: ResultsView
 "ResultsView.results" = "Results";
