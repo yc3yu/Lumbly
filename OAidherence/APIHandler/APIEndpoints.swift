@@ -8,5 +8,5 @@
 struct APIEndpoints {
     static let resultsURL = "http://localhost:5000/api/results"
     
-    static let exerciseSetURL = "http://localhost:5000/api/exercise_set"
+    static let exerciseSetURL = "https://templumblyfunction.azurewebsites.net/api/exercise_set/TestUser"
 }
