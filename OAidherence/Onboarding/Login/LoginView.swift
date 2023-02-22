@@ -7,26 +7,16 @@
 
 import SwiftUI
 
-extension LoginView {
-    struct ViewModel {
-        var name: String
-    }
-}
-
 struct LoginView: View {
-    let viewModel: ViewModel?
-    
     var body: some View {
-        if let name = viewModel?.name {
-            Text(name)
+        VStack {
+            Text("login view")
         }
-        
-        Text("hi")
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(viewModel: LoginView.ViewModel(name: "Anne"))
+        LoginView()
     }
 }
