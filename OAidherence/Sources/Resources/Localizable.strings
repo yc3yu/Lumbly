@@ -14,7 +14,7 @@
 "Onboarding.email" = "Email";
 "Onboarding.password" = "Password";
 
-// MARK:
+// MARK: HomeView
 "HomeView.exercises" = "Exercises";
 "HomeView.calendar" = "Calendar";
 
