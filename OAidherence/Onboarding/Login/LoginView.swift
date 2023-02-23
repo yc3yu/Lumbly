@@ -19,7 +19,6 @@ struct LoginView: View {
     }
     
     @State private var email: String = ""
-    
     @State private var password: String = ""
     
     var body: some View {
@@ -44,7 +43,7 @@ struct LoginView: View {
                                             .textInputAutocapitalization(.never)
                                             .autocorrectionDisabled(true)))
                 
-                NavigationLink(destination: HomeView()) {
+                NavigationLink(destination: HomeView(viewModel: .init())) {
                     BlueButtonView(text: L10n.Onboarding.logIn,
                                    navLinkButton: true)
                     .frame(width: Constants.buttonWidth, height: Constants.buttonHeight)

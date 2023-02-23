@@ -22,6 +22,8 @@ struct HomeView: View {
         static let calendarTilesHeight: CGFloat = 100.0
     }
     
+    @StateObject var viewModel: HomeViewModel
+    
     var body: some View {
         VStack(spacing: .zero) {
             ZStack {
@@ -62,11 +64,14 @@ struct HomeView: View {
                             HStack {
                                 Spacer(minLength: .mediumSpace)
                                 
-                                ExerciseSetTileView(viewModel: .init(exerciseSetTileData: .init(exerciseSetName: "Lower Back Exercises", duration: "5 min")))
-                                    .frame(width: Constants.exerciseSetTilesWidth)
-                                
-                                ExerciseSetTileView(viewModel: .init(exerciseSetTileData: .init(exerciseSetName: "Lower Back Exercises", duration: "5 min")))
-                                    .frame(width: Constants.exerciseSetTilesWidth)
+                                if let exerciseSetTiles = viewModel.homeData?.exerciseSetTiles {
+                                    ForEach(exerciseSetTiles, id: \.self) { exerciseSetTile in
+                                        NavigationLink(destination: ExerciseSetView()) {
+                                            ExerciseSetTileView(viewModel: .init(exerciseSetTileData: exerciseSetTile))
+                                                .frame(width: Constants.exerciseSetTilesWidth)
+                                        }
+                                    }
+                                }
                                 
                                 Spacer(minLength: .mediumSpace)
                             }
@@ -84,54 +89,18 @@ struct HomeView: View {
                             HStack {
                                 Spacer(minLength: .mediumSpace)
                                 
-                                CalendarTileView(viewModel:
-                                        .init(calendarTileData:
-                                                CalendarTile(didExercise: true),
-                                             dayOfWeek: "MON",
-                                              dateRelativeToToday: .past))
-                                .frame(width: Constants.calendarTilesWidth, height: Constants.calendarTilesHeight)
-                                
-                                CalendarTileView(viewModel:
-                                        .init(calendarTileData:
-                                                CalendarTile(didExercise: false),
-                                             dayOfWeek: "TUE",
-                                              dateRelativeToToday: .past))
-                                .frame(width: Constants.calendarTilesWidth, height: Constants.calendarTilesHeight)
-                                
-                                CalendarTileView(viewModel:
-                                        .init(calendarTileData:
-                                                CalendarTile(didExercise: true),
-                                             dayOfWeek: "WED",
-                                              dateRelativeToToday: .today))
-                                .frame(width: Constants.calendarTilesWidth, height: Constants.calendarTilesHeight)
-                                
-                                CalendarTileView(viewModel:
-                                        .init(calendarTileData:
-                                                CalendarTile(didExercise: false),
-                                             dayOfWeek: "THU",
-                                              dateRelativeToToday: .future))
-                                .frame(width: Constants.calendarTilesWidth, height: Constants.calendarTilesHeight)
-                                
-                                CalendarTileView(viewModel:
-                                        .init(calendarTileData:
-                                                CalendarTile(didExercise: false),
-                                             dayOfWeek: "FRI",
-                                              dateRelativeToToday: .future))
-                                .frame(width: Constants.calendarTilesWidth, height: Constants.calendarTilesHeight)
-                                
-                                CalendarTileView(viewModel:
-                                        .init(calendarTileData:
-                                                CalendarTile(didExercise: false),
-                                             dayOfWeek: "SAT",
-                                              dateRelativeToToday: .future))
-                                .frame(width: Constants.calendarTilesWidth, height: Constants.calendarTilesHeight)
-                                
-                                CalendarTileView(viewModel:
-                                        .init(calendarTileData:
-                                                CalendarTile(didExercise: false),
-                                             dayOfWeek: "SUN",
-                                              dateRelativeToToday: .future))
-                                .frame(width: Constants.calendarTilesWidth, height: Constants.calendarTilesHeight)
+                                if let calendarTiles = viewModel.homeData?.calendarTiles {
+                                    let calendarTilesDateRelativeToToday = viewModel.calendarTilesDateRelativeToToday
+                                    
+                                    ForEach(calendarTiles.indices, id: \.self) { i in
+                                        CalendarTileView(viewModel:
+                                                .init(calendarTileData:
+                                                        CalendarTile(didExercise: calendarTiles[i].didExercise),
+                                                      dayOfWeek: viewModel.calendarTilesDayOfWeek[i],
+                                                      dateRelativeToToday: calendarTilesDateRelativeToToday[i]))
+                                        .frame(width: Constants.calendarTilesWidth, height: Constants.calendarTilesHeight)
+                                    }
+                                }
                                 
                                 Spacer(minLength: .mediumSpace)
                             }
@@ -150,6 +119,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(viewModel: .init())
     }
 }
