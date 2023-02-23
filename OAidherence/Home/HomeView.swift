@@ -24,6 +24,8 @@ struct HomeView: View {
     
     @StateObject var viewModel: HomeViewModel
     
+    @State private var navigationBarHidden: Bool = false
+
     var body: some View {
         VStack(spacing: .zero) {
             ZStack {
@@ -70,6 +72,9 @@ struct HomeView: View {
                                             ExerciseSetTileView(viewModel: .init(exerciseSetTileData: exerciseSetTile))
                                                 .frame(width: Constants.exerciseSetTilesWidth)
                                         }
+                                        .simultaneousGesture(TapGesture().onEnded {
+                                            self.navigationBarHidden = false
+                                        })
                                     }
                                 }
                                 
@@ -112,8 +117,10 @@ struct HomeView: View {
                 .padding(.top, Constants.sectionSpacing)
             }
         }
-        .navigationBarHidden(true)
-        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(navigationBarHidden)
+        .onAppear {
+            self.navigationBarHidden = true
+        }
     }
 }
 
