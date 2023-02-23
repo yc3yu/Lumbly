@@ -23,6 +23,9 @@
 "ResultsView.noProblemsDetected" = "No problems were detected in this session. Well done!";
 "ResultsView.solution" = "Solution";
 
+// MARK: ExerciseSetTileView
+"ExerciseSetTileView.start" = "Start";
+
 // MARK: ExerciseSetView
 "ExerciseSetView.startExerciseSet" = "Start Exercise Set";
 

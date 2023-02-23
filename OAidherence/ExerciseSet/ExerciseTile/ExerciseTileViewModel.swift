@@ -15,7 +15,7 @@ struct ExerciseTile: Decodable, Hashable {
 }
 
 extension ExerciseTileView {
-    class ExerciseTileViewModel : ObservableObject {
+    class ExerciseTileViewModel: ObservableObject {
         @Published private(set) var exerciseTileData: ExerciseTile?
         
         init(exerciseTileData: ExerciseTile?) {
