@@ -43,6 +43,8 @@
 		64D3D4FE29A5DDF80056CB75 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D4FD29A5DDF80056CB75 /* OnboardingViewController.swift */; };
 		64D3D50229A66C490056CB75 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D50129A66C490056CB75 /* HomeView.swift */; };
 		64D3D50429A66EB90056CB75 /* StyledTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D50329A66EB90056CB75 /* StyledTextFieldView.swift */; };
+		64D3D50629A6E15C0056CB75 /* ExerciseSetTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D50529A6E15C0056CB75 /* ExerciseSetTileView.swift */; };
+		64D3D50829A6E6DC0056CB75 /* ExerciseSetTileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D50729A6E6DC0056CB75 /* ExerciseSetTileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		64D3D4FD29A5DDF80056CB75 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		64D3D50129A66C490056CB75 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		64D3D50329A66EB90056CB75 /* StyledTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextFieldView.swift; sourceTree = "<group>"; };
+		64D3D50529A6E15C0056CB75 /* ExerciseSetTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSetTileView.swift; sourceTree = "<group>"; };
+		64D3D50729A6E6DC0056CB75 /* ExerciseSetTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSetTileViewModel.swift; sourceTree = "<group>"; };
 		CA73BCC58085341DDBBEE890 /* Pods-OAidherence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.release.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.release.xcconfig"; sourceTree = "<group>"; };
 		CF95655221B79C369E5AE5CB /* Pods-OAidherence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.debug.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -351,6 +355,8 @@
 		64D3D50029A66C3D0056CB75 /* ExerciseSetTile */ = {
 			isa = PBXGroup;
 			children = (
+				64D3D50529A6E15C0056CB75 /* ExerciseSetTileView.swift */,
+				64D3D50729A6E6DC0056CB75 /* ExerciseSetTileViewModel.swift */,
 			);
 			path = ExerciseSetTile;
 			sourceTree = "<group>";
@@ -548,6 +554,7 @@
 				644E35C9290E52AC0024B8A5 /* Font+Presets.swift in Sources */,
 				6488E9D929A2C5E70090554A /* ExerciseTileView.swift in Sources */,
 				640B7AB429A491F300A84FD8 /* ExerciseSetViewController.swift in Sources */,
+				64D3D50629A6E15C0056CB75 /* ExerciseSetTileView.swift in Sources */,
 				64D3D4F729A5CB4B0056CB75 /* LoginView.swift in Sources */,
 				647C9F482908F277007EFE62 /* Coordinator.swift in Sources */,
 				640B7AB329A491F300A84FD8 /* ExerciseSetView.swift in Sources */,
@@ -560,6 +567,7 @@
 				647280AB293EE15C004CCE75 /* Results.swift in Sources */,
 				6488E9DB29A2C8540090554A /* ExerciseTileViewModel.swift in Sources */,
 				6488E9EA29A4786E0090554A /* LoadingView.swift in Sources */,
+				64D3D50829A6E6DC0056CB75 /* ExerciseSetTileViewModel.swift in Sources */,
 				6488E9DD29A31F790090554A /* ExerciseTileViewController.swift in Sources */,
 				647280992936D401004CCE75 /* CGFloat+Presets.swift in Sources */,
 				647C9F8A2909E91B007EFE62 /* SceneDelegate.swift in Sources */,
