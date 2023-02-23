@@ -10,6 +10,22 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  internal enum CalendarTileView {
+    /// FRI
+    internal static let fri = L10n.tr("Localizable", "CalendarTileView.fri", fallback: "FRI")
+    /// MON
+    internal static let mon = L10n.tr("Localizable", "CalendarTileView.mon", fallback: "MON")
+    /// SAT
+    internal static let sat = L10n.tr("Localizable", "CalendarTileView.sat", fallback: "SAT")
+    /// SUN
+    internal static let sun = L10n.tr("Localizable", "CalendarTileView.sun", fallback: "SUN")
+    /// THU
+    internal static let thu = L10n.tr("Localizable", "CalendarTileView.thu", fallback: "THU")
+    /// TUE
+    internal static let tue = L10n.tr("Localizable", "CalendarTileView.tue", fallback: "TUE")
+    /// WED
+    internal static let wed = L10n.tr("Localizable", "CalendarTileView.wed", fallback: "WED")
+  }
   internal enum ExerciseSetTileView {
     /// Start
     internal static let start = L10n.tr("Localizable", "ExerciseSetTileView.start", fallback: "Start")

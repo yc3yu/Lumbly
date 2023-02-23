@@ -18,6 +18,15 @@
 "HomeView.exercises" = "Exercises";
 "HomeView.calendar" = "Calendar";
 
+// MARK: CalendarTileView
+"CalendarTileView.mon" = "MON";
+"CalendarTileView.tue" = "TUE";
+"CalendarTileView.wed" = "WED";
+"CalendarTileView.thu" = "THU";
+"CalendarTileView.fri" = "FRI";
+"CalendarTileView.sat" = "SAT";
+"CalendarTileView.sun" = "SUN";
+
 // MARK: ExerciseSetTileView
 "ExerciseSetTileView.start" = "Start";
 
