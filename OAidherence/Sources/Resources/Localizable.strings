@@ -14,6 +14,16 @@
 "Onboarding.email" = "Email";
 "Onboarding.password" = "Password";
 
+// MARK:
+"HomeView.exercises" = "Exercises";
+"HomeView.calendar" = "Calendar";
+
+// MARK: ExerciseSetTileView
+"ExerciseSetTileView.start" = "Start";
+
+// MARK: ExerciseSetView
+"ExerciseSetView.startExerciseSet" = "Start Exercise Set";
+
 // MARK: ResultsView
 "ResultsView.results" = "Results";
 "ResultsView.problemsOrWellDone" = "Problems or Well-Done";
@@ -23,9 +33,4 @@
 "ResultsView.noProblemsDetected" = "No problems were detected in this session. Well done!";
 "ResultsView.solution" = "Solution";
 
-// MARK: ExerciseSetTileView
-"ExerciseSetTileView.start" = "Start";
-
-// MARK: ExerciseSetView
-"ExerciseSetView.startExerciseSet" = "Start Exercise Set";
 

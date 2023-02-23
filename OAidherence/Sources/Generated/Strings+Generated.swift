@@ -18,6 +18,12 @@ internal enum L10n {
     /// Start Exercise Set
     internal static let startExerciseSet = L10n.tr("Localizable", "ExerciseSetView.startExerciseSet", fallback: "Start Exercise Set")
   }
+  internal enum HomeView {
+    /// Calendar
+    internal static let calendar = L10n.tr("Localizable", "HomeView.calendar", fallback: "Calendar")
+    /// Exercises
+    internal static let exercises = L10n.tr("Localizable", "HomeView.exercises", fallback: "Exercises")
+  }
   internal enum Onboarding {
     /// Email
     internal static let email = L10n.tr("Localizable", "Onboarding.email", fallback: "Email")
