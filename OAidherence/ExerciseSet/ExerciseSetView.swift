@@ -66,7 +66,7 @@ struct ExerciseSetView: View {
                     Divider()
                     
                     if let exerciseTiles = viewModel.exerciseSet?.exerciseTiles {
-                        ScrollView {
+                        ScrollView(showsIndicators: false) {
                             ForEach(exerciseTiles, id: \.self) { exerciseTile in
                                 ExerciseTileView(viewModel: .init(exerciseTileData: ExerciseTile(
                                     inlineIcon: exerciseTile.inlineIcon,
