@@ -43,7 +43,8 @@ struct OnboardingView: View {
                     .frame(width: Constants.buttonWidth, height: Constants.buttonHeight)
                 }
             }
-        }.frame(maxHeight: .infinity)
+        }
+        .frame(maxHeight: .infinity)
     }
 }
 
