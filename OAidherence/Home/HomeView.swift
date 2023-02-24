@@ -55,6 +55,7 @@ struct HomeView: View {
             
             ZStack {
                 Color.oysterBay
+                    .ignoresSafeArea(.container)
                 
                 VStack(alignment: .leading, spacing: .zero) {
                         Text(L10n.HomeView.exercises)
