@@ -42,9 +42,18 @@ struct HomeView: View {
                         
                         Spacer()
                         
-                        Image("ProfilePicture")
-                            .resizable()
-                            .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
+                        if let profilePicture = viewModel.homeData?.profilePicture {
+                            AsyncImage(url: URL(string: profilePicture), content: { image in
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
+                            }, placeholder: { })
+                        } else {
+                            Image("Physiotherapy")
+                                .resizable()
+                                .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
+                        }
                     }
                     .padding(.leading, .smallSpace)
                     .padding(.trailing, .mediumSpace)
