@@ -46,12 +46,17 @@ struct ExerciseStepView: View {
 
 struct ExerciseStepView_Previews: PreviewProvider {
     static var previews: some View {
-        VStack(spacing: .mediumSpace) {
-            ExerciseStepView(viewModel: .init(exerciseStepData: ExerciseStep(stepNumber: 1, stepString: "This is the first instruction. It takes up multiple lines. It takes up multiple lines. It takes up multiple lines. It takes up multiple lines. It takes up multiple lines.", stepImage: "https://templumblygroup.blob.core.windows.net/lumblyimage/Rectangle%208.png?sv=2021-10-04&st=2023-02-21T04%3A15%3A06Z&se=2023-05-02T03%3A15%3A00Z&sr=b&sp=r&sig=5Dtbk8LgQ%2Fyhy6Sq8k8pblmbIKRfPeFnm79%2Ftcq6pas%3D")))
-                
-            ExerciseStepView(viewModel: .init(exerciseStepData: ExerciseStep(stepNumber: 2, stepString: "This step has no image.")))
+        ZStack {
+            Color.oysterBay
+                .ignoresSafeArea(.container)
             
-            ExerciseStepView(viewModel: .init(exerciseStepData: ExerciseStep(stepNumber: 3, stepString: "This is the third instruction.", stepImage: "https://templumblygroup.blob.core.windows.net/lumblyimage/Rectangle%208.png?sv=2021-10-04&st=2023-02-21T04%3A15%3A06Z&se=2023-05-02T03%3A15%3A00Z&sr=b&sp=r&sig=5Dtbk8LgQ%2Fyhy6Sq8k8pblmbIKRfPeFnm79%2Ftcq6pas%3D")))
-        }.padding(.horizontal, .mediumSpace)
+            VStack(spacing: .mediumSpace) {
+                ExerciseStepView(viewModel: .init(exerciseStepData: ExerciseStep(stepNumber: 1, stepString: "This is the first instruction. It takes up multiple lines. It takes up multiple lines. It takes up multiple lines. It takes up multiple lines. It takes up multiple lines.", stepImage: "https://templumblygroup.blob.core.windows.net/lumblyimage/Rectangle%208.png?sv=2021-10-04&st=2023-02-21T04%3A15%3A06Z&se=2023-05-02T03%3A15%3A00Z&sr=b&sp=r&sig=5Dtbk8LgQ%2Fyhy6Sq8k8pblmbIKRfPeFnm79%2Ftcq6pas%3D")))
+                    
+                ExerciseStepView(viewModel: .init(exerciseStepData: ExerciseStep(stepNumber: 2, stepString: "This step has no image.")))
+                
+                ExerciseStepView(viewModel: .init(exerciseStepData: ExerciseStep(stepNumber: 3, stepString: "This is the third instruction.", stepImage: "https://templumblygroup.blob.core.windows.net/lumblyimage/Rectangle%208.png?sv=2021-10-04&st=2023-02-21T04%3A15%3A06Z&se=2023-05-02T03%3A15%3A00Z&sr=b&sp=r&sig=5Dtbk8LgQ%2Fyhy6Sq8k8pblmbIKRfPeFnm79%2Ftcq6pas%3D")))
+            }.padding(.horizontal, .mediumSpace)
+        }
     }
 }
