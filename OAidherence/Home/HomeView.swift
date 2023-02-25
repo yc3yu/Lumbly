@@ -22,7 +22,7 @@ struct HomeView: View {
         static let calendarTilesHeight: CGFloat = 100.0
     }
     
-    @StateObject var viewModel: HomeViewModel
+    @StateObject private var viewModel = HomeViewModel()
     
     @State private var navigationBarHidden: Bool = false
 
@@ -131,11 +131,12 @@ struct HomeView: View {
         .onAppear {
             self.navigationBarHidden = true
         }
+        .onAppear(perform: viewModel.fetchData)
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: .init())
+        HomeView()
     }
 }

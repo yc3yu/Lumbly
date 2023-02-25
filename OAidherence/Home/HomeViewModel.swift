@@ -44,16 +44,15 @@ extension HomeView {
             return result
         }
         
-        init(homeData: Home? = nil) {
-            self.homeData = homeData
+        init() {
             self.apiHandler = APIHandler()
             fetchData()
         }
 
         func fetchData() {
-//            apiHandler.fetchHomeData() { [weak self] data in
-//                self?.homeData = data
-//            }
+            apiHandler.fetchHomeData() { [weak self] homeData in
+                self?.homeData = homeData
+            }
         }
     }
 }

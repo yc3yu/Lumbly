@@ -43,7 +43,7 @@ struct LoginView: View {
                                             .textInputAutocapitalization(.never)
                                             .autocorrectionDisabled(true)))
                 
-                NavigationLink(destination: HomeView(viewModel: .init())) {
+                NavigationLink(destination: HomeView()) {
                     BlueButtonView(text: L10n.Onboarding.logIn,
                                    navLinkButton: true)
                     .frame(width: Constants.buttonWidth, height: Constants.buttonHeight)
