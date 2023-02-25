@@ -33,6 +33,11 @@
 // MARK: ExerciseSetView
 "ExerciseSetView.startExerciseSet" = "Start Exercise Set";
 
+// MARK: ExerciseInstructionsView
+"ExerciseInstructionsView.exercise" = "Exercise";
+"ExerciseInstructionsView.steps" = "Steps";
+"ExerciseInstructionsView.tips" = "Tips";
+
 // MARK: ResultsView
 "ResultsView.results" = "Results";
 "ResultsView.problemsOrWellDone" = "Problems or Well-Done";
