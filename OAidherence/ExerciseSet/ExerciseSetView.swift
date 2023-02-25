@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExerciseSetView: View {
     private struct Constants {
+        static let topPadding: CGFloat = 40.0
         static let startButtonWidth: CGFloat = 366.0
         static let startButtonHeight: CGFloat = 50.0
         static let startButtonCornerRadius: CGFloat = 15.0
@@ -100,7 +101,7 @@ struct ExerciseSetView: View {
                 }
             }
             .ignoresSafeArea(.container)
-            .padding(.top, .miniSpace)
+            .padding(.top, Constants.topPadding)
             .padding(.horizontal, .mediumSpace)
             .onAppear(perform: viewModel.fetchData)
         }
