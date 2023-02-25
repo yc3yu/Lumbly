@@ -47,11 +47,13 @@ struct HomeView: View {
                                 image
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
+                                    .clipShape(Circle())
                                     .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
                             }, placeholder: { })
                         } else {
                             Image("Physiotherapy")
                                 .resizable()
+                                .clipShape(Circle())
                                 .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
                         }
                     }
