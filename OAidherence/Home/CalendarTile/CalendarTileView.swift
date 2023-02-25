@@ -34,18 +34,18 @@ struct CalendarTileView: View {
                         .foregroundColor(tileColors.accentColor ?? .veniceBlue)
                 }
                 
-                if let didExercise = viewModel.calendarTileData?.didExercise {
-                    if didExercise {
-                        Image("DidExercise")
-                            .renderingMode(.template)
-                            .foregroundColor(tileColors.accentColor ?? .veniceBlue)
-                            .padding(.top, .smallSpace)
-                    } else {
-                        Circle()
-                            .foregroundColor(tileColors.accentColor ?? .veniceBlue)
-                            .frame(width: Constants.circleSize, height: Constants.circleSize)
-                            .padding(.top, .mediumSpace)
-                    }
+                if let didExercise = viewModel.calendarTileData?.didExercise,
+                   viewModel.dateRelativeToToday != .future,
+                   didExercise {
+                    Image("DidExercise")
+                        .renderingMode(.template)
+                        .foregroundColor(tileColors.accentColor ?? .veniceBlue)
+                        .padding(.top, .smallSpace)
+                } else {
+                    Circle()
+                        .foregroundColor(tileColors.accentColor ?? .veniceBlue)
+                        .frame(width: Constants.circleSize, height: Constants.circleSize)
+                        .padding(.top, .mediumSpace)
                 }
                  
                 Spacer()

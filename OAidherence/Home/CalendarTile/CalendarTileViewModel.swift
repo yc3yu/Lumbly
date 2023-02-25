@@ -19,11 +19,11 @@ extension CalendarTileView {
             case future
         }
         
-        @Published private(set) var calendarTileData: CalendarTile?
+        private(set) var calendarTileData: CalendarTile?
         
-        var dayOfWeek: String?
+        private(set) var dayOfWeek: String?
         
-        var dateRelativeToToday: DateRelativeToToday?
+        private(set) var dateRelativeToToday: DateRelativeToToday?
         
         init(calendarTileData: CalendarTile?, dayOfWeek: String?, dateRelativeToToday: DateRelativeToToday?) {
             self.calendarTileData = calendarTileData
