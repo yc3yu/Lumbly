@@ -27,8 +27,8 @@ extension ExerciseSetView {
         }
 
         func fetchData() {
-            apiHandler.fetchExerciseSetData() { [weak self] data in
-                self?.exerciseSet = data
+            apiHandler.fetchExerciseSetData() { [weak self] exerciseSetData in
+                self?.exerciseSet = exerciseSetData
             }
         }
     }

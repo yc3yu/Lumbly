@@ -102,6 +102,7 @@ struct ExerciseSetView: View {
             .ignoresSafeArea(.container)
             .padding(.top, .miniSpace)
             .padding(.horizontal, .mediumSpace)
+            .onAppear(perform: viewModel.fetchData)
         }
     }
 }
