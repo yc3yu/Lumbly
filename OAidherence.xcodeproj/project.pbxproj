@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34FFF6C2911170F8823E497F /* libPods-OAidherence.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 760C46A4A4C569786885BFD8 /* libPods-OAidherence.a */; };
 		640B7AB329A491F300A84FD8 /* ExerciseSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B7AB029A491F300A84FD8 /* ExerciseSetView.swift */; };
 		640B7AB429A491F300A84FD8 /* ExerciseSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B7AB129A491F300A84FD8 /* ExerciseSetViewController.swift */; };
 		640B7AB529A491F300A84FD8 /* ExerciseSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B7AB229A491F300A84FD8 /* ExerciseSetViewModel.swift */; };
@@ -117,6 +118,7 @@
 		64D3D50E29A714E70056CB75 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		64D3D51229A9D6FE0056CB75 /* ExerciseStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStepView.swift; sourceTree = "<group>"; };
 		64D3D51429A9D9EC0056CB75 /* ExerciseStepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStepViewModel.swift; sourceTree = "<group>"; };
+		760C46A4A4C569786885BFD8 /* libPods-OAidherence.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OAidherence.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA73BCC58085341DDBBEE890 /* Pods-OAidherence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.release.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.release.xcconfig"; sourceTree = "<group>"; };
 		CF95655221B79C369E5AE5CB /* Pods-OAidherence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.debug.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34FFF6C2911170F8823E497F /* libPods-OAidherence.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +214,7 @@
 				647635DD28FBA34F0043DCFD /* OAidherenceUITests */,
 				647635C128FBA34E0043DCFD /* Products */,
 				7B61B1D5BA99C86EE85E54DE /* Pods */,
+				6A1E47DDD2A7B81C9D840218 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -398,6 +402,14 @@
 				64D3D51029A9D6B10056CB75 /* ExerciseStep */,
 			);
 			path = ExerciseInstructionsView;
+			sourceTree = "<group>";
+		};
+		6A1E47DDD2A7B81C9D840218 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				760C46A4A4C569786885BFD8 /* libPods-OAidherence.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7B61B1D5BA99C86EE85E54DE /* Pods */ = {
