@@ -22,6 +22,8 @@ extension Color {
     public static let veniceBlue     = Color(UIColor(hex: "#075985") ?? .black)
     
     public static let sinbadBlue     = Color(UIColor(hex: "#A8D0D6") ?? .black)
+    
+    public static let darkGray06     = Color(UIColor(hex: "#1C1C1E") ?? .black)
 }
 
 struct ColorPresets_Previews: PreviewProvider {
@@ -78,6 +80,13 @@ struct ColorPresets_Previews: PreviewProvider {
                 Rectangle().foregroundColor(Color.sinbadBlue)
                     .frame(width: ColorPresets_Previews.boxWidth)
                 Text("sinbadBlue")
+                    .frame(width: ColorPresets_Previews.textWidth)
+            }
+            
+            HStack(spacing: ColorPresets_Previews.horizontalPadding) {
+                Rectangle().foregroundColor(Color.darkGray06)
+                    .frame(width: ColorPresets_Previews.boxWidth)
+                Text("darkGray06")
                     .frame(width: ColorPresets_Previews.textWidth)
             }
             
