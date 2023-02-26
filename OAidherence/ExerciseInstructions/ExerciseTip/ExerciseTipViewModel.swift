@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExerciseTip: Decodable {
+struct ExerciseTip: Decodable, Hashable {
     var tipName: String?
     var tipDescription: String?
     var tipImage: String?

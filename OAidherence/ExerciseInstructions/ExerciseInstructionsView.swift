@@ -78,7 +78,11 @@ struct ExerciseInstructionsView: View {
                             }
                         }
                     } else {
-                        // TODO: Add Tips tab once ExerciseTipView is implemented
+                        if let exerciseTips = viewModel.exerciseInstructionsData?.exerciseTips {
+                            ForEach(exerciseTips, id: \.self) { exerciseTip in
+                                ExerciseTipView(viewModel: .init(exerciseTipData: exerciseTip))
+                            }
+                        }
                     }
                     
                     Spacer()
