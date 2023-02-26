@@ -67,12 +67,18 @@ struct ExerciseSetView: View {
                 
                 if let exerciseTiles = viewModel.exerciseSet?.exerciseTiles {
                     ScrollView(showsIndicators: false) {
-                        ForEach(exerciseTiles, id: \.self) { exerciseTile in
-                            ExerciseTileView(viewModel: .init(exerciseTileData: ExerciseTile(
-                                inlineIcon: exerciseTile.inlineIcon,
-                                exerciseName: exerciseTile.exerciseName,
-                                reps: exerciseTile.reps,
-                                exerciseImage: exerciseTile.exerciseImage)))
+                        ForEach(exerciseTiles.indices, id: \.self) { i in
+                            NavigationLink(destination:
+                                            ExerciseInstructionsView(viewModel:
+                                                    .init(exerciseNumber: i + 1,
+                                                          exerciseInstructionsURL: exerciseTiles[i].exerciseInstructionsURL))) {
+                                ExerciseTileView(viewModel:
+                                        .init(exerciseTileData:
+                                                ExerciseTile(inlineIcon: exerciseTiles[i].inlineIcon,
+                                                             exerciseName: exerciseTiles[i].exerciseName,
+                                                             repetitions: exerciseTiles[i].repetitions,
+                                                             exerciseImage: exerciseTiles[i].exerciseImage)))
+                            }.buttonStyle(.plain)
                         }
                     }
                 } else {

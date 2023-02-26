@@ -12,6 +12,7 @@ struct ExerciseTile: Decodable, Hashable {
     var exerciseName: String?
     var repetitions: String?
     var exerciseImage: String?
+    var exerciseInstructionsURL: String?
 }
 
 extension ExerciseTileView {
