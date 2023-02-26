@@ -29,11 +29,11 @@ struct ExerciseTileView: View {
                 VStack(alignment: .leading) {
                     HStack {
                         if let inlineIcon = viewModel.exerciseTileData?.inlineIcon {
-                            AsyncImage(url: URL(string: inlineIcon), content: { image in
+                            AsyncImage(url: URL(string: inlineIcon)) { image in
                                 image.resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: .mediumSpace, height: .mediumSpace)
-                            }, placeholder: { })
+                            } placeholder: { }
                         }
                         
                         if let exerciseName = viewModel.exerciseTileData?.exerciseName {
@@ -49,11 +49,11 @@ struct ExerciseTileView: View {
                 }
                 
                 if let exerciseImage = viewModel.exerciseTileData?.exerciseImage {
-                    AsyncImage(url: URL(string: exerciseImage), content: { image in
+                    AsyncImage(url: URL(string: exerciseImage)) { image in
                         image.resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: Constants.exerciseImageWidth, height: Constants.exerciseImageHeight)
-                    }, placeholder: { })
+                    } placeholder: { }
                 }
             }
         }
