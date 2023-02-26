@@ -56,7 +56,10 @@ struct ExerciseInstructionsView: View {
                             image.resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: Constants.mainImageWidth, height: Constants.mainImageHeight)
-                        } placeholder: { }
+                        } placeholder: {
+                            Color.clear
+                                .frame(width: Constants.mainImageWidth, height: Constants.mainImageHeight)
+                        }
                     }
                     
                     Picker(L10n.ExerciseInstructionsView.stepsOrTips, selection: $stepsOrTips) {

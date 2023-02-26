@@ -49,7 +49,10 @@ struct HomeView: View {
                                     .aspectRatio(contentMode: .fit)
                                     .clipShape(Circle())
                                     .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
-                            } placeholder: { }
+                            } placeholder: {
+                                Color.clear
+                                    .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
+                            }
                         } else {
                             Image("Physiotherapy")
                                 .resizable()
