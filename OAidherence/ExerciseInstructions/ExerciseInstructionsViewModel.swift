@@ -12,7 +12,7 @@ struct ExerciseInstructions: Decodable {
     var repetitions: String?
     var mainImage: String?
     var exerciseSteps: [ExerciseStep]?
-//    var exerciseTips: [ExerciseTip]? // TODO: Add later
+    var exerciseTips: [ExerciseTip]?
 }
 
 extension ExerciseInstructionsView {
