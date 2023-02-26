@@ -32,7 +32,8 @@ struct ExerciseStepView: View {
             }
             .font(.bodyBold)
             
-            if let stepImage = viewModel.exerciseStepData?.stepImage {
+            if let stepImage = viewModel.exerciseStepData?.stepImage,
+               !stepImage.isEmpty {
                 AsyncImage(url: URL(string: stepImage), content: { image in
                     image
                         .resizable()
