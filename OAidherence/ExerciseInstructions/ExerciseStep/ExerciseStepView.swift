@@ -39,7 +39,10 @@ struct ExerciseStepView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: Constants.imageWidth, height: Constants.imageHeight)
-                } placeholder: { }
+                } placeholder: {
+                    Color.clear
+                        .frame(width: Constants.imageWidth, height: Constants.imageHeight)
+                }
             }
         }
     }

@@ -48,7 +48,10 @@ struct ExerciseSetView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: .mediumSpace, height: .mediumSpace)
-                        } placeholder: { }
+                        } placeholder: {
+                            Color.clear
+                                .frame(width: .mediumSpace, height: .mediumSpace)
+                        }
                     } else {
                         Image("Physiotherapy")
                             .frame(width: .mediumSpace, height: .mediumSpace)

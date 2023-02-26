@@ -33,7 +33,10 @@ struct ExerciseTileView: View {
                                 image.resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: .mediumSpace, height: .mediumSpace)
-                            } placeholder: { }
+                            } placeholder: {
+                                Color.clear
+                                    .frame(width: .mediumSpace, height: .mediumSpace)
+                            }
                         }
                         
                         if let exerciseName = viewModel.exerciseTileData?.exerciseName {
@@ -53,7 +56,10 @@ struct ExerciseTileView: View {
                         image.resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: Constants.exerciseImageWidth, height: Constants.exerciseImageHeight)
-                    } placeholder: { }
+                    } placeholder: {
+                        Color.clear
+                            .frame(width: Constants.exerciseImageWidth, height: Constants.exerciseImageHeight)
+                    }
                 }
             }
         }
