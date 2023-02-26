@@ -37,6 +37,10 @@
 		64979C6829A4A1C600C27768 /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64979C6729A4A1C600C27768 /* BlueButtonView.swift */; };
 		64A434392990B0F3008F8253 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A434382990B0F3008F8253 /* UIColor+Hex.swift */; };
 		64B1BBED2910BA4000AEA7E3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */; };
+		64C0441E29AAF378000F244B /* ExerciseStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0441C29AAF378000F244B /* ExerciseStepView.swift */; };
+		64C0441F29AAF378000F244B /* ExerciseStepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0441D29AAF378000F244B /* ExerciseStepViewModel.swift */; };
+		64C0442229AAF607000F244B /* ExerciseInstructionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0442029AAF607000F244B /* ExerciseInstructionsViewModel.swift */; };
+		64C0442329AAF607000F244B /* ExerciseInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0442129AAF607000F244B /* ExerciseInstructionsView.swift */; };
 		64D3D4F629A5CB4B0056CB75 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D4F229A5CB4B0056CB75 /* OnboardingView.swift */; };
 		64D3D4F729A5CB4B0056CB75 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D4F429A5CB4B0056CB75 /* LoginView.swift */; };
 		64D3D4F829A5CB4B0056CB75 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D4F529A5CB4B0056CB75 /* LoginViewController.swift */; };
@@ -49,8 +53,6 @@
 		64D3D50B29A6EACD0056CB75 /* CalendarTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D50A29A6EACD0056CB75 /* CalendarTileView.swift */; };
 		64D3D50D29A6FB5B0056CB75 /* CalendarTileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D50C29A6FB5B0056CB75 /* CalendarTileViewModel.swift */; };
 		64D3D50F29A714E70056CB75 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D50E29A714E70056CB75 /* HomeViewModel.swift */; };
-		64D3D51329A9D6FE0056CB75 /* ExerciseStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D51229A9D6FE0056CB75 /* ExerciseStepView.swift */; };
-		64D3D51529A9D9EC0056CB75 /* ExerciseStepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D51429A9D9EC0056CB75 /* ExerciseStepViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,10 @@
 		64979C6729A4A1C600C27768 /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
 		64A434382990B0F3008F8253 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		64C0441C29AAF378000F244B /* ExerciseStepView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseStepView.swift; sourceTree = "<group>"; };
+		64C0441D29AAF378000F244B /* ExerciseStepViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseStepViewModel.swift; sourceTree = "<group>"; };
+		64C0442029AAF607000F244B /* ExerciseInstructionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseInstructionsViewModel.swift; sourceTree = "<group>"; };
+		64C0442129AAF607000F244B /* ExerciseInstructionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseInstructionsView.swift; sourceTree = "<group>"; };
 		64D3D4F229A5CB4B0056CB75 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		64D3D4F429A5CB4B0056CB75 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		64D3D4F529A5CB4B0056CB75 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -116,8 +122,6 @@
 		64D3D50A29A6EACD0056CB75 /* CalendarTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTileView.swift; sourceTree = "<group>"; };
 		64D3D50C29A6FB5B0056CB75 /* CalendarTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTileViewModel.swift; sourceTree = "<group>"; };
 		64D3D50E29A714E70056CB75 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		64D3D51229A9D6FE0056CB75 /* ExerciseStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStepView.swift; sourceTree = "<group>"; };
-		64D3D51429A9D9EC0056CB75 /* ExerciseStepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStepViewModel.swift; sourceTree = "<group>"; };
 		760C46A4A4C569786885BFD8 /* libPods-OAidherence.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OAidherence.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA73BCC58085341DDBBEE890 /* Pods-OAidherence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.release.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.release.xcconfig"; sourceTree = "<group>"; };
 		CF95655221B79C369E5AE5CB /* Pods-OAidherence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.debug.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.debug.xcconfig"; sourceTree = "<group>"; };
@@ -231,10 +235,10 @@
 		647635C228FBA34E0043DCFD /* OAidherence */ = {
 			isa = PBXGroup;
 			children = (
+				64D3D51629A9DF1D0056CB75 /* ExerciseInstructions */,
 				64D3D4FF29A66C3D0056CB75 /* Home */,
 				64D3D4F029A5CB4B0056CB75 /* Onboarding */,
 				6488E9E829A478370090554A /* Loading */,
-				64D3D51129A9D6C50056CB75 /* ExerciseInstructionsView */,
 				6488E9D629A2C5C30090554A /* ExerciseSet */,
 				643382D22910BCF90067AA19 /* Sources */,
 				647C9F8C2909ECAA007EFE62 /* Info.plist */,
@@ -387,21 +391,23 @@
 			path = CalendarTile;
 			sourceTree = "<group>";
 		};
-		64D3D51029A9D6B10056CB75 /* ExerciseStep */ = {
+		64D3D51629A9DF1D0056CB75 /* ExerciseInstructions */ = {
 			isa = PBXGroup;
 			children = (
-				64D3D51229A9D6FE0056CB75 /* ExerciseStepView.swift */,
-				64D3D51429A9D9EC0056CB75 /* ExerciseStepViewModel.swift */,
+				64C0442129AAF607000F244B /* ExerciseInstructionsView.swift */,
+				64C0442029AAF607000F244B /* ExerciseInstructionsViewModel.swift */,
+				64D3D51729A9DF1D0056CB75 /* ExerciseStep */,
 			);
-			path = ExerciseStep;
+			path = ExerciseInstructions;
 			sourceTree = "<group>";
 		};
-		64D3D51129A9D6C50056CB75 /* ExerciseInstructionsView */ = {
+		64D3D51729A9DF1D0056CB75 /* ExerciseStep */ = {
 			isa = PBXGroup;
 			children = (
-				64D3D51029A9D6B10056CB75 /* ExerciseStep */,
+				64C0441C29AAF378000F244B /* ExerciseStepView.swift */,
+				64C0441D29AAF378000F244B /* ExerciseStepViewModel.swift */,
 			);
-			path = ExerciseInstructionsView;
+			path = ExerciseStep;
 			sourceTree = "<group>";
 		};
 		6A1E47DDD2A7B81C9D840218 /* Frameworks */ = {
@@ -608,10 +614,12 @@
 				640B7AB429A491F300A84FD8 /* ExerciseSetViewController.swift in Sources */,
 				64D3D50629A6E15C0056CB75 /* ExerciseSetTileView.swift in Sources */,
 				64D3D4F729A5CB4B0056CB75 /* LoginView.swift in Sources */,
+				64C0442229AAF607000F244B /* ExerciseInstructionsViewModel.swift in Sources */,
 				647C9F482908F277007EFE62 /* Coordinator.swift in Sources */,
 				640B7AB329A491F300A84FD8 /* ExerciseSetView.swift in Sources */,
 				647280A4293ECCA5004CCE75 /* ResultsViewModel.swift in Sources */,
 				64D3D4FE29A5DDF80056CB75 /* OnboardingViewController.swift in Sources */,
+				64C0441F29AAF378000F244B /* ExerciseStepViewModel.swift in Sources */,
 				6472809D29370BBE004CCE75 /* ResultsView.swift in Sources */,
 				647C9F0A2908ECCC007EFE62 /* AppCoordinator.swift in Sources */,
 				64A434392990B0F3008F8253 /* UIColor+Hex.swift in Sources */,
@@ -620,15 +628,15 @@
 				647280AB293EE15C004CCE75 /* Results.swift in Sources */,
 				6488E9DB29A2C8540090554A /* ExerciseTileViewModel.swift in Sources */,
 				6488E9EA29A4786E0090554A /* LoadingView.swift in Sources */,
-				64D3D51529A9D9EC0056CB75 /* ExerciseStepViewModel.swift in Sources */,
 				64D3D50B29A6EACD0056CB75 /* CalendarTileView.swift in Sources */,
 				64D3D50829A6E6DC0056CB75 /* ExerciseSetTileViewModel.swift in Sources */,
 				6488E9DD29A31F790090554A /* ExerciseTileViewController.swift in Sources */,
 				647280992936D401004CCE75 /* CGFloat+Presets.swift in Sources */,
 				647C9F8A2909E91B007EFE62 /* SceneDelegate.swift in Sources */,
-				64D3D51329A9D6FE0056CB75 /* ExerciseStepView.swift in Sources */,
 				643382D82910BE0D0067AA19 /* Strings+Generated.swift in Sources */,
 				644E35C7290E52940024B8A5 /* Color+Presets.swift in Sources */,
+				64C0442329AAF607000F244B /* ExerciseInstructionsView.swift in Sources */,
+				64C0441E29AAF378000F244B /* ExerciseStepView.swift in Sources */,
 				640B7AB529A491F300A84FD8 /* ExerciseSetViewModel.swift in Sources */,
 				64D3D4F629A5CB4B0056CB75 /* OnboardingView.swift in Sources */,
 				64D3D50429A66EB90056CB75 /* StyledTextFieldView.swift in Sources */,
@@ -793,6 +801,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OAidherence/Preview Content\"";
+				DEVELOPMENT_TEAM = ZMNGHMDVJ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OAidherence/Info.plist;
@@ -824,6 +833,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OAidherence/Preview Content\"";
+				DEVELOPMENT_TEAM = ZMNGHMDVJ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OAidherence/Info.plist;

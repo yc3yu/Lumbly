@@ -67,12 +67,18 @@ struct ExerciseSetView: View {
                 
                 if let exerciseTiles = viewModel.exerciseSet?.exerciseTiles {
                     ScrollView(showsIndicators: false) {
-                        ForEach(exerciseTiles, id: \.self) { exerciseTile in
-                            ExerciseTileView(viewModel: .init(exerciseTileData: ExerciseTile(
-                                inlineIcon: exerciseTile.inlineIcon,
-                                exerciseName: exerciseTile.exerciseName,
-                                reps: exerciseTile.reps,
-                                exerciseImage: exerciseTile.exerciseImage)))
+                        ForEach(exerciseTiles.indices, id: \.self) { i in
+                            NavigationLink(destination:
+                                            ExerciseInstructionsView(viewModel:
+                                                    .init(exerciseNumber: i + 1,
+                                                          exerciseInstructionsURL: exerciseTiles[i].exerciseInstructionsURL))) {
+                                ExerciseTileView(viewModel:
+                                        .init(exerciseTileData:
+                                                ExerciseTile(inlineIcon: exerciseTiles[i].inlineIcon,
+                                                             exerciseName: exerciseTiles[i].exerciseName,
+                                                             repetitions: exerciseTiles[i].repetitions,
+                                                             exerciseImage: exerciseTiles[i].exerciseImage)))
+                            }.buttonStyle(.plain)
                         }
                     }
                 } else {
@@ -81,7 +87,7 @@ struct ExerciseSetView: View {
                             ExerciseTileView(viewModel: .init(exerciseTileData: ExerciseTile(
                                 inlineIcon: "https://templumblygroup.blob.core.windows.net/lumblyimage/Physiotherapy.png?sv=2021-10-04&st=2023-02-21T04%3A14%3A20Z&se=2023-05-02T03%3A14%3A00Z&sr=b&sp=r&sig=wRkRNDHXQxlZ3QA%2BWFnCGLpMdBvROF0vDp64lO9S57I%3D",
                                 exerciseName: "Bird Dog",
-                                reps: "10 Repetitions (per side)",
+                                repetitions: "10 Repetitions (per side)",
                                 exerciseImage: "https://templumblygroup.blob.core.windows.net/lumblyimage/Rectangle%208.png?sv=2021-10-04&st=2023-02-21T04%3A15%3A06Z&se=2023-05-02T03%3A15%3A00Z&sr=b&sp=r&sig=5Dtbk8LgQ%2Fyhy6Sq8k8pblmbIKRfPeFnm79%2Ftcq6pas%3D")))
                         }
                     }

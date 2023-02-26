@@ -10,8 +10,9 @@ import SwiftUI
 struct ExerciseTile: Decodable, Hashable {
     var inlineIcon: String?
     var exerciseName: String?
-    var reps: String?
+    var repetitions: String?
     var exerciseImage: String?
+    var exerciseInstructionsURL: String?
 }
 
 extension ExerciseTileView {
