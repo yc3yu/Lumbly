@@ -52,11 +52,11 @@ struct ExerciseInstructionsView: View {
                     }
                     
                     if let mainImage = viewModel.exerciseInstructionsData?.mainImage {
-                        AsyncImage(url: URL(string: mainImage), content: { image in
+                        AsyncImage(url: URL(string: mainImage)) { image in
                             image.resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: Constants.mainImageWidth, height: Constants.mainImageHeight)
-                        }, placeholder: { })
+                        } placeholder: { }
                     }
                     
                     Picker(L10n.ExerciseInstructionsView.stepsOrTips, selection: $stepsOrTips) {

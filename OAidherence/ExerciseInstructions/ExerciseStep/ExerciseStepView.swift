@@ -34,12 +34,12 @@ struct ExerciseStepView: View {
             
             if let stepImage = viewModel.exerciseStepData?.stepImage,
                !stepImage.isEmpty {
-                AsyncImage(url: URL(string: stepImage), content: { image in
+                AsyncImage(url: URL(string: stepImage)) { image in
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: Constants.imageWidth, height: Constants.imageHeight)
-                }, placeholder: { })
+                } placeholder: { }
             }
         }
     }

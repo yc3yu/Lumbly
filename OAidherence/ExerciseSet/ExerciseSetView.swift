@@ -43,12 +43,12 @@ struct ExerciseSetView: View {
                 
                 HStack {
                     if let physiotherapyIcon = viewModel.exerciseSet?.physiotherapyIcon {
-                        AsyncImage(url: URL(string: physiotherapyIcon), content: { image in
+                        AsyncImage(url: URL(string: physiotherapyIcon)) { image in
                             image
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: .mediumSpace, height: .mediumSpace)
-                        }, placeholder: { })
+                        } placeholder: { }
                     } else {
                         Image("Physiotherapy")
                             .frame(width: .mediumSpace, height: .mediumSpace)

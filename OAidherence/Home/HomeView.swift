@@ -43,13 +43,13 @@ struct HomeView: View {
                         Spacer()
                         
                         if let profilePicture = viewModel.homeData?.profilePicture {
-                            AsyncImage(url: URL(string: profilePicture), content: { image in
+                            AsyncImage(url: URL(string: profilePicture)) { image in
                                 image
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .clipShape(Circle())
                                     .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
-                            }, placeholder: { })
+                            } placeholder: { }
                         } else {
                             Image("Physiotherapy")
                                 .resizable()
