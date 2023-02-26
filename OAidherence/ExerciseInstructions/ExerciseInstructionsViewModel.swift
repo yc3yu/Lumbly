@@ -31,6 +31,9 @@ extension ExerciseInstructionsView {
         }
 
         func fetchData() {
+            apiHandler.fetchExerciseInstructionsData(exerciseInstructionsURL: exerciseInstructionsURL) { [weak self] exerciseInstructionsData in
+                self?.exerciseInstructionsData = exerciseInstructionsData
+            }
         }
     }
 }

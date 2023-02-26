@@ -75,4 +75,27 @@ class APIHandler {
             }).resume()
         }
     }
+    
+    func fetchExerciseInstructionsData(exerciseInstructionsURL: String?, completion : @escaping ((ExerciseInstructions) -> ())) {
+        if let exerciseInstructionsURL = exerciseInstructionsURL,
+           let url = URL(string: exerciseInstructionsURL) {
+            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+                DispatchQueue.main.async {
+                    if let error = error {
+                        // TODO: Handle error
+                    } else {
+                        let jsonDecoder = JSONDecoder()
+                        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                        
+                        if let data = data,
+                           let exerciseInstructionsData = try? jsonDecoder.decode(ExerciseInstructions.self, from: data) {
+                            completion(exerciseInstructionsData)
+                        } else {
+                            // TODO: Handle error
+                        }
+                    }
+                }
+            }).resume()
+        }
+    }
 }
