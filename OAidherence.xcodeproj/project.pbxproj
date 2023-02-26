@@ -39,6 +39,8 @@
 		64B1BBED2910BA4000AEA7E3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */; };
 		64C0441E29AAF378000F244B /* ExerciseStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0441C29AAF378000F244B /* ExerciseStepView.swift */; };
 		64C0441F29AAF378000F244B /* ExerciseStepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0441D29AAF378000F244B /* ExerciseStepViewModel.swift */; };
+		64C0442229AAF607000F244B /* ExerciseInstructionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0442029AAF607000F244B /* ExerciseInstructionsViewModel.swift */; };
+		64C0442329AAF607000F244B /* ExerciseInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0442129AAF607000F244B /* ExerciseInstructionsView.swift */; };
 		64D3D4F629A5CB4B0056CB75 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D4F229A5CB4B0056CB75 /* OnboardingView.swift */; };
 		64D3D4F729A5CB4B0056CB75 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D4F429A5CB4B0056CB75 /* LoginView.swift */; };
 		64D3D4F829A5CB4B0056CB75 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D4F529A5CB4B0056CB75 /* LoginViewController.swift */; };
@@ -106,6 +108,8 @@
 		64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		64C0441C29AAF378000F244B /* ExerciseStepView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseStepView.swift; sourceTree = "<group>"; };
 		64C0441D29AAF378000F244B /* ExerciseStepViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseStepViewModel.swift; sourceTree = "<group>"; };
+		64C0442029AAF607000F244B /* ExerciseInstructionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseInstructionsViewModel.swift; sourceTree = "<group>"; };
+		64C0442129AAF607000F244B /* ExerciseInstructionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseInstructionsView.swift; sourceTree = "<group>"; };
 		64D3D4F229A5CB4B0056CB75 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		64D3D4F429A5CB4B0056CB75 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		64D3D4F529A5CB4B0056CB75 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -390,6 +394,8 @@
 		64D3D51629A9DF1D0056CB75 /* ExerciseInstructions */ = {
 			isa = PBXGroup;
 			children = (
+				64C0442129AAF607000F244B /* ExerciseInstructionsView.swift */,
+				64C0442029AAF607000F244B /* ExerciseInstructionsViewModel.swift */,
 				64D3D51729A9DF1D0056CB75 /* ExerciseStep */,
 			);
 			path = ExerciseInstructions;
@@ -608,6 +614,7 @@
 				640B7AB429A491F300A84FD8 /* ExerciseSetViewController.swift in Sources */,
 				64D3D50629A6E15C0056CB75 /* ExerciseSetTileView.swift in Sources */,
 				64D3D4F729A5CB4B0056CB75 /* LoginView.swift in Sources */,
+				64C0442229AAF607000F244B /* ExerciseInstructionsViewModel.swift in Sources */,
 				647C9F482908F277007EFE62 /* Coordinator.swift in Sources */,
 				640B7AB329A491F300A84FD8 /* ExerciseSetView.swift in Sources */,
 				647280A4293ECCA5004CCE75 /* ResultsViewModel.swift in Sources */,
@@ -628,6 +635,7 @@
 				647C9F8A2909E91B007EFE62 /* SceneDelegate.swift in Sources */,
 				643382D82910BE0D0067AA19 /* Strings+Generated.swift in Sources */,
 				644E35C7290E52940024B8A5 /* Color+Presets.swift in Sources */,
+				64C0442329AAF607000F244B /* ExerciseInstructionsView.swift in Sources */,
 				64C0441E29AAF378000F244B /* ExerciseStepView.swift in Sources */,
 				640B7AB529A491F300A84FD8 /* ExerciseSetViewModel.swift in Sources */,
 				64D3D4F629A5CB4B0056CB75 /* OnboardingView.swift in Sources */,
@@ -793,6 +801,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OAidherence/Preview Content\"";
+				DEVELOPMENT_TEAM = ZMNGHMDVJ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OAidherence/Info.plist;
@@ -824,6 +833,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OAidherence/Preview Content\"";
+				DEVELOPMENT_TEAM = ZMNGHMDVJ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OAidherence/Info.plist;
