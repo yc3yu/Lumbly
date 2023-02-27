@@ -90,16 +90,16 @@ struct ExerciseInstructionsView: View {
                 .padding(.top, Constants.topPadding)
                 .padding(.horizontal, .mediumSpace)
                 .padding(.bottom, Constants.bottomPadding)
-                .onAppear(perform: viewModel.fetchData)
             }
             
             VStack {
                 Spacer()
                 
                 BlueButtonView(text: L10n.ExerciseInstructionsView.ready, navLinkButton: true)
-                    .frame(width: Constants.readyButtonWidth, height: Constants.readyButtonHeight,alignment: .bottom)
+                    .frame(width: Constants.readyButtonWidth, height: Constants.readyButtonHeight, alignment: .bottom)
             }
         }
+        .onAppear(perform: viewModel.fetchData)
     }
 }
 
