@@ -83,7 +83,7 @@ struct HomeView: View {
                                 
                                 if let exerciseSetTiles = viewModel.homeData?.exerciseSetTiles {
                                     ForEach(exerciseSetTiles, id: \.self) { exerciseSetTile in
-                                        NavigationLink(destination: ExerciseSetView()) {
+                                        NavigationLink(destination: ExerciseSetView(viewModel: .init(exerciseSetURL: exerciseSetTile.exerciseSetURL))) {
                                             ExerciseSetTileView(viewModel: .init(exerciseSetTileData: exerciseSetTile))
                                                 .frame(width: Constants.exerciseSetTilesWidth)
                                         }

@@ -54,8 +54,10 @@ class APIHandler {
         }
     }
 
-    func fetchExerciseSetData(completion : @escaping ((ExerciseSet) -> ())) {
-        if let url = URL(string: APIEndpoints.exerciseSetURL) {
+    func fetchExerciseSetData(exerciseSetURL: String?, completion : @escaping ((ExerciseSet) -> ())) {
+        if let exerciseSetURL = exerciseSetURL,
+           let urlString = exerciseSetURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+           let url = URL(string: urlString) {
             URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
                 DispatchQueue.main.async {
                     if let error = error {
@@ -65,8 +67,8 @@ class APIHandler {
                         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                         
                         if let data = data,
-                           let exerciseSetData = try? jsonDecoder.decode([ExerciseSet].self, from: data) {
-                            completion(exerciseSetData[0])
+                           let exerciseSetData = try? jsonDecoder.decode(ExerciseSet.self, from: data) {
+                            completion(exerciseSetData)
                         } else {
                             // TODO: Handle error
                         }
