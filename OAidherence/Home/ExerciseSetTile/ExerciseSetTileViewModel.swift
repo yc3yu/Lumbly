@@ -10,6 +10,7 @@ import SwiftUI
 struct ExerciseSetTile: Decodable, Hashable {
     var exerciseSetName: String?
     var duration: String?
+    var exerciseSetURL: String?
 }
 
 extension ExerciseSetTileView {

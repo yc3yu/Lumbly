@@ -19,16 +19,18 @@ extension ExerciseSetView {
     class ExerciseSetViewModel: ObservableObject {
         private let apiHandler: APIHandler
         
-        @Published private(set) var exerciseSet: ExerciseSet? = nil
+        @Published private(set) var exerciseSetURL: String?
+        @Published private(set) var exerciseSetData: ExerciseSet? = nil
         
-        init() {
+        init(exerciseSetURL: String?) {
             self.apiHandler = APIHandler()
+            self.exerciseSetURL = exerciseSetURL
             fetchData()
         }
 
         func fetchData() {
-            apiHandler.fetchExerciseSetData() { [weak self] exerciseSetData in
-                self?.exerciseSet = exerciseSetData
+            apiHandler.fetchExerciseSetData(exerciseSetURL: exerciseSetURL) { [weak self] exerciseSetData in
+                self?.exerciseSetData = exerciseSetData
             }
         }
     }

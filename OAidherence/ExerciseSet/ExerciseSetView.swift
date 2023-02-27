@@ -15,7 +15,7 @@ struct ExerciseSetView: View {
         static let startButtonCornerRadius: CGFloat = 15.0
     }
     
-    @StateObject private var viewModel = ExerciseSetViewModel()
+    @StateObject var viewModel: ExerciseSetViewModel
     
     var body: some View {
         ZStack {
@@ -24,7 +24,7 @@ struct ExerciseSetView: View {
             
             VStack(alignment: .leading, spacing: .mediumSpace) {
                 VStack(alignment: .leading, spacing: .nanoSpace) {
-                    if let name = viewModel.exerciseSet?.name {
+                    if let name = viewModel.exerciseSetData?.name {
                         Text(name)
                             .font(.largeTitleBold)
                     } else {
@@ -32,7 +32,7 @@ struct ExerciseSetView: View {
                             .font(.largeTitleBold)
                     }
                     
-                    if let duration = viewModel.exerciseSet?.duration {
+                    if let duration = viewModel.exerciseSetData?.duration {
                         Text(duration)
                             .font(.title3Regular)
                     } else {
@@ -42,7 +42,7 @@ struct ExerciseSetView: View {
                 }
                 
                 HStack {
-                    if let physiotherapyIcon = viewModel.exerciseSet?.physiotherapyIcon {
+                    if let physiotherapyIcon = viewModel.exerciseSetData?.physiotherapyIcon {
                         AsyncImage(url: URL(string: physiotherapyIcon)) { image in
                             image
                                 .resizable()
@@ -57,7 +57,7 @@ struct ExerciseSetView: View {
                             .frame(width: .mediumSpace, height: .mediumSpace)
                     }
                     
-                    if let physiotherapyString = viewModel.exerciseSet?.physiotherapyString {
+                    if let physiotherapyString = viewModel.exerciseSetData?.physiotherapyString {
                         Text(physiotherapyString)
                             .foregroundColor(.veniceBlue)
                     } else {
@@ -68,7 +68,7 @@ struct ExerciseSetView: View {
                 
                 Divider()
                 
-                if let exerciseTiles = viewModel.exerciseSet?.exerciseTiles {
+                if let exerciseTiles = viewModel.exerciseSetData?.exerciseTiles {
                     ScrollView(showsIndicators: false) {
                         ForEach(exerciseTiles.indices, id: \.self) { i in
                             NavigationLink(destination:
@@ -119,6 +119,6 @@ struct ExerciseSetView: View {
 
 struct ExerciseSetView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseSetView()
+        ExerciseSetView(viewModel: .init(exerciseSetURL: nil))
     }
 }
