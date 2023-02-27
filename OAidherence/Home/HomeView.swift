@@ -38,6 +38,7 @@ struct HomeView: View {
                     HStack(spacing: .zero) {
                         Image("LumblyWordOnly")
                             .resizable()
+                            .aspectRatio(contentMode: .fit)
                             .frame(width: Constants.lumblyLogoWidth, height: Constants.lumblyLogoHeight)
                         
                         Spacer()
