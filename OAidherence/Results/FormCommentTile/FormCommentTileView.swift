@@ -39,7 +39,8 @@ struct FormCommentTileView: View {
                 }
             }
             
-            if let solution = viewModel.formCommentTileData?.solution {
+            if let solution = viewModel.formCommentTileData?.solution,
+               !solution.isEmpty {
                 Text(L10n.FormCommentTileView.solution)
                     .font(.caption1Bold)
                     .foregroundColor(.resolutionBlue)
