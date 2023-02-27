@@ -56,11 +56,11 @@ struct ExerciseStepView_Previews: PreviewProvider {
                 .ignoresSafeArea(.container)
             
             VStack(spacing: .mediumSpace) {
-                ExerciseStepView(viewModel: .init(exerciseStepData: ExerciseStep(stepNumber: 1, stepString: "This is the first instruction. It takes up multiple lines. It takes up multiple lines. It takes up multiple lines. It takes up multiple lines. It takes up multiple lines.", stepImage: "https://templumblygroup.blob.core.windows.net/lumblyimage/Rectangle%208.png?sv=2021-10-04&st=2023-02-21T04%3A15%3A06Z&se=2023-05-02T03%3A15%3A00Z&sr=b&sp=r&sig=5Dtbk8LgQ%2Fyhy6Sq8k8pblmbIKRfPeFnm79%2Ftcq6pas%3D")))
+                ExerciseStepView(viewModel: .init(exerciseStepData: ExerciseStep(stepNumber: 1, stepString: "This is the first instruction. It takes up multiple lines. It takes up multiple lines. It takes up multiple lines. It takes up multiple lines. It takes up multiple lines.", stepImage: "https://templumblygroup.blob.core.windows.net/lumblyimage/Bird%20Dog/Bird%20Dog.png?sv=2021-10-04&st=2023-02-26T23%3A08%3A29Z&se=2023-05-01T22%3A08%3A00Z&sr=b&sp=r&sig=JnApvY92bvlrHo49DB45zLaDK4kmWq9vaeS123uJ5hA%3D")))
                     
                 ExerciseStepView(viewModel: .init(exerciseStepData: ExerciseStep(stepNumber: 2, stepString: "This step has no image.")))
                 
-                ExerciseStepView(viewModel: .init(exerciseStepData: ExerciseStep(stepNumber: 3, stepString: "This is the third instruction.", stepImage: "https://templumblygroup.blob.core.windows.net/lumblyimage/Rectangle%208.png?sv=2021-10-04&st=2023-02-21T04%3A15%3A06Z&se=2023-05-02T03%3A15%3A00Z&sr=b&sp=r&sig=5Dtbk8LgQ%2Fyhy6Sq8k8pblmbIKRfPeFnm79%2Ftcq6pas%3D")))
+                ExerciseStepView(viewModel: .init(exerciseStepData: ExerciseStep(stepNumber: 3, stepString: "This is the third instruction.", stepImage: "https://templumblygroup.blob.core.windows.net/lumblyimage/Bird%20Dog/Bird%20Dog.png?sv=2021-10-04&st=2023-02-26T23%3A08%3A29Z&se=2023-05-01T22%3A08%3A00Z&sr=b&sp=r&sig=JnApvY92bvlrHo49DB45zLaDK4kmWq9vaeS123uJ5hA%3D")))
             }.padding(.horizontal, .mediumSpace)
         }
     }
