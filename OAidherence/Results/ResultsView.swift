@@ -127,8 +127,6 @@ struct ResultsView: View {
 }
 
 struct ResultsView_Previews: PreviewProvider {
-    static let imageURL: String = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/61f2140b-e5a4-4602-9ef0-37b979b1c377/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221206T014953Z&X-Amz-Expires=86400&X-Amz-Signature=206c9a49d0c4546fee5ccc3dc69df09a5e8c2318f91f56e7ce95fd7c5f7eb725&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject"
-    
     static var previews: some View {
         ResultsView()
     }
