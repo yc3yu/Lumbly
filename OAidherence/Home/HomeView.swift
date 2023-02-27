@@ -54,11 +54,6 @@ struct HomeView: View {
                                 Color.clear
                                     .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
                             }
-                        } else {
-                            Image("Physiotherapy")
-                                .resizable()
-                                .clipShape(Circle())
-                                .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
                         }
                     }
                     .padding(.leading, .smallSpace)
