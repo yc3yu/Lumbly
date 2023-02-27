@@ -10,7 +10,6 @@ import SwiftUI
 struct Results: Decodable {
     var exercises: [String]?
     var individualExerciseResults: [IndividualExerciseResults]?
-    var wellDoneTiles: [FormCommentTile]?
 }
 
 struct IndividualExerciseResults: Decodable {
