@@ -31,6 +31,7 @@ struct SignupView: View {
             VStack(spacing: Constants.vStackSpacing) {
                 Image("LumblyMedium")
                     .resizable()
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: Constants.logoWidth, height: Constants.logoHeight)
                 
                 StyledTextFieldView(textFieldContent:

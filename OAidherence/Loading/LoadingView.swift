@@ -26,6 +26,7 @@ struct LoadingView: View {
                 
                 Image("Loading")
                     .resizable()
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: Constants.loadingIconSize, height: Constants.loadingIconSize)
             }
         }

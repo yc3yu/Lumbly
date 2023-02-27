@@ -24,6 +24,7 @@ struct OnboardingView: View {
             VStack(spacing: .zero) {
                 Image("LumblyLarge")
                     .resizable()
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: Constants.lumblyLogoWidth, height: Constants.lumblyLogoHeight)
                     .padding(.bottom, Constants.logoToSignUpSpacing)
                 
