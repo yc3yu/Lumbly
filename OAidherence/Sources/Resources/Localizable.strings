@@ -67,7 +67,7 @@
 "ResultsView.problem" = "Problem";
 "ResultsView.noProblemsDetected" = "No problems were detected in this session. Well done!";
 "ResultsView.solution" = "Solution";
-"ResultsView.noResults" = "There are no results to show for this exercise";
+"ResultsView.noResults" = "There are no results to show for this exercise.";
 
 // MARK: FormCommentTileView
 "FormCommentTileView.solution" = "Solution";

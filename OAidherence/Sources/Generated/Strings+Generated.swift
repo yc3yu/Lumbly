@@ -114,6 +114,8 @@ internal enum L10n {
     internal static let noResults = L10n.tr("Localizable", "ResultsView.noResults", fallback: "There are no results to show for this exercise")
     /// Problem
     internal static let problem = L10n.tr("Localizable", "ResultsView.problem", fallback: "Problem")
+    /// There are no results to show for this exercise.
+    internal static let noResults = L10n.tr("Localizable", "ResultsView.noResults", fallback: "There are no results to show for this exercise.")
     /// Results
     internal static let results = L10n.tr("Localizable", "ResultsView.results", fallback: "Results")
     /// Solution
