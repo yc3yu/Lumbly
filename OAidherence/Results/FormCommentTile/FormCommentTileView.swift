@@ -40,7 +40,7 @@ struct FormCommentTileView: View {
             }
             
             if let solution = viewModel.formCommentTileData?.solution {
-                Text(L10n.ResultsView.solution)
+                Text(L10n.FormCommentTileView.solution)
                     .font(.caption1Bold)
                     .foregroundColor(.resolutionBlue)
                     .padding(.top, Constants.mainImageBottomPadding)

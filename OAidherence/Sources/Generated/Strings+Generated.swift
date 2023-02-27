@@ -54,6 +54,10 @@ internal enum L10n {
     /// Start Exercise Set
     internal static let startExerciseSet = L10n.tr("Localizable", "ExerciseSetView.startExerciseSet", fallback: "Start Exercise Set")
   }
+  internal enum FormCommentTileView {
+    /// Solution
+    internal static let solution = L10n.tr("Localizable", "FormCommentTileView.solution", fallback: "Solution")
+  }
   internal enum HomeView {
     /// Calendar
     internal static let calendar = L10n.tr("Localizable", "HomeView.calendar", fallback: "Calendar")
@@ -102,14 +106,14 @@ internal enum L10n {
     internal static let noPain = L10n.tr("Localizable", "PainLevelTileView.noPain", fallback: "No pain")
   }
   internal enum ResultsView {
+    /// Form Mistakes
+    internal static let formMistakes = L10n.tr("Localizable", "ResultsView.formMistakes", fallback: "Form Mistakes")
     /// No problems were detected in this session. Well done!
     internal static let noProblemsDetected = L10n.tr("Localizable", "ResultsView.noProblemsDetected", fallback: "No problems were detected in this session. Well done!")
+    /// There are no results to show for this exercise
+    internal static let noResults = L10n.tr("Localizable", "ResultsView.noResults", fallback: "There are no results to show for this exercise")
     /// Problem
     internal static let problem = L10n.tr("Localizable", "ResultsView.problem", fallback: "Problem")
-    /// Problems
-    internal static let problems = L10n.tr("Localizable", "ResultsView.problems", fallback: "Problems")
-    /// Problems or Well-Done
-    internal static let problemsOrWellDone = L10n.tr("Localizable", "ResultsView.problemsOrWellDone", fallback: "Problems or Well-Done")
     /// Results
     internal static let results = L10n.tr("Localizable", "ResultsView.results", fallback: "Results")
     /// Solution
