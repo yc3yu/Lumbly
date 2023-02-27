@@ -20,12 +20,11 @@ struct ExerciseTileView: View {
     
     var body: some View {
         ZStack {
-            Rectangle()
+            RoundedRectangle(cornerRadius: Constants.tileCornerRadius)
                 .frame(width: Constants.tileWidth, height: Constants.tileHeight)
                 .foregroundColor(.white)
-                .cornerRadius(Constants.tileCornerRadius)
             
-            HStack(spacing: .mediumSpace) {
+            HStack(spacing: .nanoSpace) {
                 VStack(alignment: .leading) {
                     HStack {
                         if let inlineIcon = viewModel.exerciseTileData?.inlineIcon {
@@ -51,6 +50,8 @@ struct ExerciseTileView: View {
                     }
                 }
                 
+                Spacer()
+                
                 if let exerciseImage = viewModel.exerciseTileData?.exerciseImage {
                     AsyncImage(url: URL(string: exerciseImage)) { image in
                         image.resizable()
@@ -62,6 +63,7 @@ struct ExerciseTileView: View {
                     }
                 }
             }
+            .padding(.mediumSpace)
         }
     }
 }
@@ -69,8 +71,7 @@ struct ExerciseTileView: View {
 struct ExerciseTileView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            Rectangle()
-                .foregroundColor(.oysterBay)
+            Color.oysterBay
             
             VStack(spacing: .mediumSpace) {
                 ExerciseTileView(viewModel: .init(exerciseTileData: ExerciseTile(
@@ -81,12 +82,13 @@ struct ExerciseTileView_Previews: PreviewProvider {
                 
                 ExerciseTileView(viewModel: .init(exerciseTileData: ExerciseTile(
                     inlineIcon: "https://templumblygroup.blob.core.windows.net/lumblyimage/Physiotherapy.png?sv=2021-10-04&st=2023-02-21T04%3A14%3A20Z&se=2023-05-02T03%3A14%3A00Z&sr=b&sp=r&sig=wRkRNDHXQxlZ3QA%2BWFnCGLpMdBvROF0vDp64lO9S57I%3D",
-                    exerciseName: "Bird Dog",
-                    repetitions: "10 Repetitions (per side)",
+                    exerciseName: "Cat Cow",
+                    repetitions: "10 Repetitions",
                     exerciseImage: "https://templumblygroup.blob.core.windows.net/lumblyimage/Rectangle%208.png?sv=2021-10-04&st=2023-02-21T04%3A15%3A06Z&se=2023-05-02T03%3A15%3A00Z&sr=b&sp=r&sig=5Dtbk8LgQ%2Fyhy6Sq8k8pblmbIKRfPeFnm79%2Ftcq6pas%3D")))
                 
                 Spacer()
             }
+            .padding(.mediumSpace)
         }
     }
 }
