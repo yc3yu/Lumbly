@@ -95,11 +95,15 @@ struct ExerciseSetView: View {
                 .padding(.bottom, Constants.bottomPadding)
             }
             
-            VStack {
-                Spacer()
-                
-                BlueButtonView(text: L10n.ExerciseSetView.startExerciseSet, backgroundColor: .veniceBlue, navLinkButton: true)
-                    .frame(width: Constants.startButtonWidth, height: Constants.startButtonHeight)
+            if let exerciseInstructionsURL = viewModel.exerciseSetData?.exerciseTiles?[0].exerciseInstructionsURL {
+                VStack {
+                    Spacer()
+                    
+                    NavigationLink(destination: ExerciseInstructionsView(viewModel: .init(exerciseNumber: 1, exerciseInstructionsURL: exerciseInstructionsURL))) {
+                        BlueButtonView(text: L10n.ExerciseSetView.startExerciseSet, backgroundColor: .veniceBlue, navLinkButton: true)
+                            .frame(width: Constants.startButtonWidth, height: Constants.startButtonHeight)
+                    }
+                }
             }
         }
         .onAppear(perform: viewModel.fetchData)
