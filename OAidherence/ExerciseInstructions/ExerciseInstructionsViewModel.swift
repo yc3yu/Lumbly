@@ -22,11 +22,14 @@ extension ExerciseInstructionsView {
         @Published private(set) var exerciseNumber: Int
         @Published private(set) var exerciseInstructionsURL: String?
         @Published private(set) var exerciseInstructionsData: ExerciseInstructions? = nil
+        @Published private(set) var showReadyButton: Bool
         
-        init(exerciseNumber: Int, exerciseInstructionsURL: String?) {
+        init(exerciseNumber: Int, exerciseInstructionsURL: String?, showReadyButton: Bool = false) {
             self.apiHandler = APIHandler()
             self.exerciseNumber = exerciseNumber
             self.exerciseInstructionsURL = exerciseInstructionsURL
+            self.showReadyButton = showReadyButton
+            
             fetchData()
         }
 

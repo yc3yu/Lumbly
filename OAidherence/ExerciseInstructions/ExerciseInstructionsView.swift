@@ -91,6 +91,15 @@ struct ExerciseInstructionsView: View {
                 .padding(.horizontal, .mediumSpace)
                 .padding(.bottom, Constants.bottomPadding)
             }
+            
+            if viewModel.showReadyButton {
+                VStack {
+                    Spacer()
+                    
+                    BlueButtonView(text: L10n.ExerciseInstructionsView.ready, navLinkButton: true)
+                        .frame(width: Constants.readyButtonWidth, height: Constants.readyButtonHeight, alignment: .bottom)
+                }
+            }
         }
         .onAppear(perform: viewModel.fetchData)
     }

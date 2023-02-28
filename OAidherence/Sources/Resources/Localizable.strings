@@ -38,6 +38,7 @@
 "ExerciseInstructionsView.stepsOrTips" = "Steps or Tips";
 "ExerciseInstructionsView.steps" = "Steps";
 "ExerciseInstructionsView.tips" = "Tips";
+"ExerciseInstructionsView.ready" = "Ready";
 
 // MARK: ResultsView
 "ResultsView.results" = "Results";
