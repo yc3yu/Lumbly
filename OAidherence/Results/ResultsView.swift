@@ -105,6 +105,9 @@ struct ResultsView: View {
             }
             .padding(.horizontal, .mediumSpace)
         }
+        .navigationBarItems(trailing: NavigationLink(destination: HomeView()) {
+            Text("Done")
+        })
         .onAppear(perform: viewModel.fetchData)
     }
 }
