@@ -40,6 +40,14 @@
 "ExerciseInstructionsView.tips" = "Tips";
 "ExerciseInstructionsView.ready" = "Ready";
 
+// MARK: PainLevelTileView
+"PainLevelTileView.noPain" = "No pain";
+"PainLevelTileView.hurtsALittle" = "Hurts a little";
+"PainLevelTileView.hurtsALittleMore" = "Hurts a little more";
+"PainLevelTileView.hurtsEvenMore" = "Hurts even more";
+"PainLevelTileView.hurtsAWholeLot" = "Hurts a whole lot";
+"PainLevelTileView.hurtsTheWorst" = "Hurts the worst";
+
 // MARK: ResultsView
 "ResultsView.results" = "Results";
 "ResultsView.problemsOrWellDone" = "Problems or Well-Done";

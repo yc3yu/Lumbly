@@ -69,6 +69,20 @@ internal enum L10n {
     ///   Created by Yue chen Yu on 2022-10-31.
     internal static let signUp = L10n.tr("Localizable", "Onboarding.signUp", fallback: "Sign up")
   }
+  internal enum PainLevelTileView {
+    /// Hurts a little
+    internal static let hurtsALittle = L10n.tr("Localizable", "PainLevelTileView.hurtsALittle", fallback: "Hurts a little")
+    /// Hurts a little more
+    internal static let hurtsALittleMore = L10n.tr("Localizable", "PainLevelTileView.hurtsALittleMore", fallback: "Hurts a little more")
+    /// Hurts a whole lot
+    internal static let hurtsAWholeLot = L10n.tr("Localizable", "PainLevelTileView.hurtsAWholeLot", fallback: "Hurts a whole lot")
+    /// Hurts even more
+    internal static let hurtsEvenMore = L10n.tr("Localizable", "PainLevelTileView.hurtsEvenMore", fallback: "Hurts even more")
+    /// Hurts the worst
+    internal static let hurtsTheWorst = L10n.tr("Localizable", "PainLevelTileView.hurtsTheWorst", fallback: "Hurts the worst")
+    /// No pain
+    internal static let noPain = L10n.tr("Localizable", "PainLevelTileView.noPain", fallback: "No pain")
+  }
   internal enum ResultsView {
     /// No problems were detected in this session. Well done!
     internal static let noProblemsDetected = L10n.tr("Localizable", "ResultsView.noProblemsDetected", fallback: "No problems were detected in this session. Well done!")
