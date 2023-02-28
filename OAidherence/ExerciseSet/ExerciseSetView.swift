@@ -99,7 +99,10 @@ struct ExerciseSetView: View {
                 VStack {
                     Spacer()
                     
-                    NavigationLink(destination: ExerciseInstructionsView(viewModel: .init(exerciseNumber: 1, exerciseInstructionsURL: exerciseInstructionsURL))) {
+                    NavigationLink(destination: ExerciseInstructionsView(viewModel:
+                            .init(exerciseNumber: 1,
+                                  exerciseInstructionsURL: exerciseInstructionsURL,
+                                 showReadyButton: true))) {
                         BlueButtonView(text: L10n.ExerciseSetView.startExerciseSet, backgroundColor: .veniceBlue, navLinkButton: true)
                             .frame(width: Constants.startButtonWidth, height: Constants.startButtonHeight)
                     }
