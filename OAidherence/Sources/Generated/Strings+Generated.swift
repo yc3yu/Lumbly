@@ -71,11 +71,12 @@ internal enum L10n {
     internal static let password = L10n.tr("Localizable", "Onboarding.password", fallback: "Password")
     /// Physiotherapist code
     internal static let physiotherapistCode = L10n.tr("Localizable", "Onboarding.physiotherapistCode", fallback: "Physiotherapist code")
-    /// Localizable.strings
-    ///   OAidherence
-    /// 
-    ///   Created by Yue chen Yu on 2022-10-31.
+    /// Sign up
     internal static let signUp = L10n.tr("Localizable", "Onboarding.signUp", fallback: "Sign up")
+  }
+  internal enum PainLevelRatingView {
+    /// Rate your back pain
+    internal static let rateYourBackPain = L10n.tr("Localizable", "PainLevelRatingView.rateYourBackPain", fallback: "Rate your back pain")
   }
   internal enum PainLevelTileView {
     /// Hurts a little
