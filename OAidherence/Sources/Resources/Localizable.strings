@@ -6,6 +6,10 @@
   
 */
 
+// MARK: NavigationBarItem
+"NavigationBarItem.skip" = "Skip";
+"NavigationBarItem.done" = "Done";
+
 // MARK: Onboarding
 "Onboarding.signUp" = "Sign up";
 "Onboarding.logIn" = "Log in";
@@ -39,6 +43,9 @@
 "ExerciseInstructionsView.steps" = "Steps";
 "ExerciseInstructionsView.tips" = "Tips";
 "ExerciseInstructionsView.ready" = "Ready";
+
+// MARK: PainLevelRatingView
+"PainLevelRatingView.rateYourBackPain" = "Rate your back pain";
 
 // MARK: PainLevelTileView
 "PainLevelTileView.noPain" = "No pain";
