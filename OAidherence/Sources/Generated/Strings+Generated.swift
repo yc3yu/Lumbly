@@ -60,6 +60,15 @@ internal enum L10n {
     /// Exercises
     internal static let exercises = L10n.tr("Localizable", "HomeView.exercises", fallback: "Exercises")
   }
+  internal enum NavigationBarItem {
+    /// Done
+    internal static let done = L10n.tr("Localizable", "NavigationBarItem.done", fallback: "Done")
+    /// Localizable.strings
+    ///   OAidherence
+    /// 
+    ///   Created by Yue chen Yu on 2022-10-31.
+    internal static let skip = L10n.tr("Localizable", "NavigationBarItem.skip", fallback: "Skip")
+  }
   internal enum Onboarding {
     /// Email
     internal static let email = L10n.tr("Localizable", "Onboarding.email", fallback: "Email")
