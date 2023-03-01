@@ -47,6 +47,9 @@
 // MARK: PainLevelRatingView
 "PainLevelRatingView.rateYourBackPain" = "Rate your back pain";
 
+// MARK: ExerciseRatingView
+"ExerciseRatingView.rateYourExercises" = "Rate your exercises";
+
 // MARK: PainLevelTileView
 "PainLevelTileView.noPain" = "No pain";
 "PainLevelTileView.hurtsALittle" = "Hurts a little";
