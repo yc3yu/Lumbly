@@ -38,6 +38,14 @@ internal enum L10n {
     /// Tips
     internal static let tips = L10n.tr("Localizable", "ExerciseInstructionsView.tips", fallback: "Tips")
   }
+  internal enum ExerciseRatingTileView {
+    /// Disliked it
+    internal static let dislikedIt = L10n.tr("Localizable", "ExerciseRatingTileView.dislikedIt", fallback: "Disliked it")
+    /// Liked it
+    internal static let likedIt = L10n.tr("Localizable", "ExerciseRatingTileView.likedIt", fallback: "Liked it")
+    /// Neutral
+    internal static let neutral = L10n.tr("Localizable", "ExerciseRatingTileView.neutral", fallback: "Neutral")
+  }
   internal enum ExerciseSetTileView {
     /// Start
     internal static let start = L10n.tr("Localizable", "ExerciseSetTileView.start", fallback: "Start")
