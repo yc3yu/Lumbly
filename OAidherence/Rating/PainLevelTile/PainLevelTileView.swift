@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PainLevelTileView: View {
     private struct Constants {
-        static let textHeight: CGFloat = 42
+        static let textHeight: CGFloat = 28.2
         static let textImageSpacing: CGFloat = 10.24
         static let tileTopPadding: CGFloat = 14.56
         static let tileSidePadding: CGFloat = 12.0
@@ -31,6 +31,7 @@ struct PainLevelTileView: View {
                         .font(.caption1Bold)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.sinbadBlue)
+                        .fixedSize(horizontal: false, vertical: true)
                         .frame(height: Constants.textHeight, alignment: .center)
                     
                     Image(painLevel)
