@@ -37,7 +37,6 @@
 		647C9F0A2908ECCC007EFE62 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647C9F092908ECCC007EFE62 /* AppCoordinator.swift */; };
 		647C9F482908F277007EFE62 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647C9F472908F277007EFE62 /* Coordinator.swift */; };
 		647C9F8A2909E91B007EFE62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647C9F892909E91B007EFE62 /* SceneDelegate.swift */; };
-		64879C6329101E670071AB5A /* .gitignore.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 64879C6229101E670071AB5A /* .gitignore.rtf */; };
 		6488E9D929A2C5E70090554A /* ExerciseTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E9D829A2C5E70090554A /* ExerciseTileView.swift */; };
 		6488E9DB29A2C8540090554A /* ExerciseTileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E9DA29A2C8540090554A /* ExerciseTileViewModel.swift */; };
 		6488E9DD29A31F790090554A /* ExerciseTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E9DC29A31F790090554A /* ExerciseTileViewController.swift */; };
@@ -611,7 +610,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64879C6329101E670071AB5A /* .gitignore.rtf in Resources */,
 				643382D62910BD140067AA19 /* Localizable.strings in Resources */,
 				647635C828FBA34F0043DCFD /* Assets.xcassets in Resources */,
 				64B1BBED2910BA4000AEA7E3 /* swiftgen.yml in Resources */,
