@@ -29,6 +29,7 @@ struct ExerciseSetView: View {
                         if let name = viewModel.exerciseSetData?.name {
                             Text(name)
                                 .font(.largeTitleBold)
+                                .foregroundColor(.blueCharcoal)
                         } else {
                             Text("Lower Back Exercises")
                                 .font(.largeTitleBold)
@@ -37,6 +38,7 @@ struct ExerciseSetView: View {
                         if let duration = viewModel.exerciseSetData?.duration {
                             Text(duration)
                                 .font(.title3Regular)
+                                .foregroundColor(.darkGray06)
                         } else {
                             Text("5 min")
                                 .font(.title3Regular)

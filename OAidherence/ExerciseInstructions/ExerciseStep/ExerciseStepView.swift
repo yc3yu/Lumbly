@@ -31,6 +31,7 @@ struct ExerciseStepView: View {
                 Spacer()
             }
             .font(.bodyBold)
+            .foregroundColor(.blueCharcoal)
             
             if let stepImage = viewModel.exerciseStepData?.stepImage,
                !stepImage.isEmpty {

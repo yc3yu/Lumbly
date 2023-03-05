@@ -47,6 +47,7 @@ struct ExerciseTileView: View {
                     if let repetitions = viewModel.exerciseTileData?.repetitions {
                         Text(repetitions)
                             .font(.caption1Bold)
+                            .foregroundColor(.darkGray03)
                     }
                 }
                 
