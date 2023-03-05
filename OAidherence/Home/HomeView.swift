@@ -70,6 +70,7 @@ struct HomeView: View {
                 VStack(alignment: .leading, spacing: .zero) {
                         Text(L10n.HomeView.exercises)
                             .font(.title2Bold)
+                            .foregroundColor(.blueCharcoal)
                             .padding(.horizontal, .mediumSpace)
                             .padding(.bottom, .smallSpace)
                         
@@ -98,6 +99,7 @@ struct HomeView: View {
                     VStack(alignment: .leading) {
                         Text(L10n.HomeView.calendar)
                             .font(.title2Bold)
+                            .foregroundColor(.blueCharcoal)
                             .padding(.horizontal, .mediumSpace)
                             .padding(.bottom, .smallSpace)
                         

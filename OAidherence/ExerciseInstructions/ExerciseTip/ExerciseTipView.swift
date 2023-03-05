@@ -23,11 +23,13 @@ struct ExerciseTipView: View {
                 if let tipName = viewModel.exerciseTipData?.tipName {
                     Text(tipName)
                         .font(.bodyBold)
+                        .foregroundColor(.blueCharcoal)
                 }
                 
                 if let tipDescription = viewModel.exerciseTipData?.tipDescription {
                     Text(tipDescription)
                         .font(.caption1Regular)
+                        .foregroundColor(.blueCharcoal)
                 }
             }
             .frame(width: Constants.textWidth, alignment: .leading)
