@@ -108,12 +108,10 @@ internal enum L10n {
   internal enum ResultsView {
     /// Form Mistakes
     internal static let formMistakes = L10n.tr("Localizable", "ResultsView.formMistakes", fallback: "Form Mistakes")
-    /// No problems were detected in this session. Well done!
-    internal static let noProblemsDetected = L10n.tr("Localizable", "ResultsView.noProblemsDetected", fallback: "No problems were detected in this session. Well done!")
-    /// There are no results to show for this exercise.
-    internal static let noResults = L10n.tr("Localizable", "ResultsView.noResults", fallback: "There are no results to show for this exercise.")
-    /// Problem
-    internal static let problem = L10n.tr("Localizable", "ResultsView.problem", fallback: "Problem")
+    /// No form mistakes were detected for this exercise. Well done!
+    internal static let noResultsForThisExercise = L10n.tr("Localizable", "ResultsView.noResultsForThisExercise", fallback: "No form mistakes were detected for this exercise. Well done!")
+    /// No form mistakes were detected in this session. Well done!
+    internal static let noResultsForThisSession = L10n.tr("Localizable", "ResultsView.noResultsForThisSession", fallback: "No form mistakes were detected in this session. Well done!")
     /// Results
     internal static let results = L10n.tr("Localizable", "ResultsView.results", fallback: "Results")
     /// Solution
