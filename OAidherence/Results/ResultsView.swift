@@ -32,7 +32,8 @@ struct ResultsView: View {
 
                         Spacer()
 
-                        if let exercises = viewModel.results?.exercises {
+                        if let exercises = viewModel.results?.exercises,
+                           exercises.count > 0 {
                             Menu {
                                 ForEach(exercises.indices, id: \.self) { i in
                                     Button {
@@ -63,36 +64,44 @@ struct ResultsView: View {
                     }
                     .padding(.bottom, .mediumSpace)
 
-                    if let individualExerciseResults = viewModel.results?.individualExerciseResults,
-                       $selectedExercise.wrappedValue < individualExerciseResults.count,
-                       let currentExerciseResults = individualExerciseResults[$selectedExercise.wrappedValue] {
-                        if let formMistakesTiles = currentExerciseResults.formMistakesTiles {
-                            Text(L10n.ResultsView.formMistakes)
-                                .font(.title3Bold)
-                                .foregroundColor(.prussianBlue)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .padding(.bottom, Constants.headerBottomSpacing)
-                            
-                            ForEach(formMistakesTiles, id: \.self) { formMistakeTile in
-                                FormCommentTileView(viewModel: .init(formCommentTileData: formMistakeTile))
+                    if let exercises = viewModel.results?.exercises,
+                       exercises.count > 0 {
+                        if let individualExerciseResults = viewModel.results?.individualExerciseResults,
+                           $selectedExercise.wrappedValue < individualExerciseResults.count,
+                           let currentExerciseResults = individualExerciseResults[$selectedExercise.wrappedValue] {
+                            if let formMistakesTiles = currentExerciseResults.formMistakesTiles {
+                                Text(L10n.ResultsView.formMistakes)
+                                    .font(.title3Bold)
+                                    .foregroundColor(.prussianBlue)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.bottom, Constants.headerBottomSpacing)
+                                
+                                ForEach(formMistakesTiles, id: \.self) { formMistakeTile in
+                                    FormCommentTileView(viewModel: .init(formCommentTileData: formMistakeTile))
+                                }
                             }
                             
-                        }
-                        
-                        if let wellDoneTiles = currentExerciseResults.wellDoneTiles {
-                            Text(L10n.ResultsView.welldone)
-                                .font(.title3Bold)
-                                .foregroundColor(.prussianBlue)
-                                .frame(maxWidth: .infinity, alignment: .leading)
+                            if let wellDoneTiles = currentExerciseResults.wellDoneTiles {
+                                Text(L10n.ResultsView.welldone)
+                                    .font(.title3Bold)
+                                    .foregroundColor(.prussianBlue)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.top, Constants.largePadding)
+                                    .padding(.bottom, Constants.headerBottomSpacing)
+                                
+                                ForEach(wellDoneTiles, id: \.self) { wellDoneTile in
+                                    FormCommentTileView(viewModel: .init(formCommentTileData: wellDoneTile))
+                                }
+                            }
+                        } else {
+                            Text(L10n.ResultsView.noResultsForThisExercise)
+                                .font(.bodyBold)
+                                .foregroundColor(.blueCharcoal)
+                                .multilineTextAlignment(.center)
                                 .padding(.top, Constants.largePadding)
-                                .padding(.bottom, Constants.headerBottomSpacing)
-                            
-                            ForEach(wellDoneTiles, id: \.self) { wellDoneTile in
-                                FormCommentTileView(viewModel: .init(formCommentTileData: wellDoneTile))
-                            }
                         }
                     } else {
-                        Text(L10n.ResultsView.noResults)
+                        Text(L10n.ResultsView.noResultsForThisSession)
                             .font(.bodyBold)
                             .foregroundColor(.blueCharcoal)
                             .multilineTextAlignment(.center)
