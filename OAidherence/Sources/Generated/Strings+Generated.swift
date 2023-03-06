@@ -54,6 +54,10 @@ internal enum L10n {
     /// Start Exercise Set
     internal static let startExerciseSet = L10n.tr("Localizable", "ExerciseSetView.startExerciseSet", fallback: "Start Exercise Set")
   }
+  internal enum FormCommentTileView {
+    /// Solution
+    internal static let solution = L10n.tr("Localizable", "FormCommentTileView.solution", fallback: "Solution")
+  }
   internal enum HomeView {
     /// Calendar
     internal static let calendar = L10n.tr("Localizable", "HomeView.calendar", fallback: "Calendar")
@@ -102,14 +106,12 @@ internal enum L10n {
     internal static let noPain = L10n.tr("Localizable", "PainLevelTileView.noPain", fallback: "No pain")
   }
   internal enum ResultsView {
-    /// No problems were detected in this session. Well done!
-    internal static let noProblemsDetected = L10n.tr("Localizable", "ResultsView.noProblemsDetected", fallback: "No problems were detected in this session. Well done!")
-    /// Problem
-    internal static let problem = L10n.tr("Localizable", "ResultsView.problem", fallback: "Problem")
-    /// Problems
-    internal static let problems = L10n.tr("Localizable", "ResultsView.problems", fallback: "Problems")
-    /// Problems or Well-Done
-    internal static let problemsOrWellDone = L10n.tr("Localizable", "ResultsView.problemsOrWellDone", fallback: "Problems or Well-Done")
+    /// Form Mistakes
+    internal static let formMistakes = L10n.tr("Localizable", "ResultsView.formMistakes", fallback: "Form Mistakes")
+    /// No form mistakes were detected for this exercise. Well done!
+    internal static let noResultsForThisExercise = L10n.tr("Localizable", "ResultsView.noResultsForThisExercise", fallback: "No form mistakes were detected for this exercise. Well done!")
+    /// No form mistakes were detected in this session. Well done!
+    internal static let noResultsForThisSession = L10n.tr("Localizable", "ResultsView.noResultsForThisSession", fallback: "No form mistakes were detected in this session. Well done!")
     /// Results
     internal static let results = L10n.tr("Localizable", "ResultsView.results", fallback: "Results")
     /// Solution

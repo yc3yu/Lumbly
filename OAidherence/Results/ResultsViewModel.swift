@@ -7,11 +7,21 @@
 
 import SwiftUI
 
+struct Results: Decodable {
+    var exercises: [String]?
+    var individualExerciseResults: [IndividualExerciseResults?]?
+}
+
+struct IndividualExerciseResults: Decodable {
+    var formMistakesTiles: [FormCommentTile]?
+    var wellDoneTiles: [FormCommentTile]?
+}
+
 extension ResultsView {
     class ResultsViewModel: ObservableObject {
         private let apiHandler: APIHandler
         
-        @Published private(set) var results: Results? = nil 
+        @Published private(set) var results: Results? = nil
         
         init() {
             self.apiHandler = APIHandler()
@@ -25,5 +35,3 @@ extension ResultsView {
         }
     }
 }
-
-
