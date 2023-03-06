@@ -1,13 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/cocoapods,swift,xcode
-# Edit at https://www.toptal.com/developers/gitignore?templates=cocoapods,swift,xcode
-
-### CocoaPods ###
-## CocoaPods GitIgnore Template
-
-# CocoaPods - Only use to conserve bandwidth / Save time on Pushing
-#           - Also handy if you have a large number of dependant pods
-#           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
-Pods/
+# Created by https://www.toptal.com/developers/gitignore/api/swift
+# Edit at https://www.toptal.com/developers/gitignore?templates=swift
 
 ### Swift ###
 # Xcode
@@ -57,7 +49,6 @@ playground.xcworkspace
 # .swiftpm
 
 .build/
-**/.DS_Store
 
 # CocoaPods
 # We recommend against adding the Pods directory to your .gitignore. However
@@ -94,17 +85,13 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-### Xcode ###
+# End of https://www.toptal.com/developers/gitignore/api/swift
 
-## Xcode 8 and earlier
+# Ignore user-specific project files
+**/xcuserdata
+UserInterfaceState.xcuserstate
+Breakpoints_v2.xcbkptlist
 
-### Xcode Patch ###
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcodeproj/project.xcworkspace/
-!*.xcworkspace/contents.xcworkspacedata
-/*.gcno
-**/xcshareddata/WorkspaceSettings.xcsettings
+# Ignore Mac system files
+.DS_store
 
-# End of https://www.toptal.com/developers/gitignore/api/cocoapods,swift,xcode
