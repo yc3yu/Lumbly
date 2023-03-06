@@ -6,7 +6,7 @@
 //
 
 struct APIEndpoints {
-    static let resultsURL = "http://localhost:5000/api/results"
+    static let resultsURL = "https://temporarylumblyfunction.azurewebsites.net/api/results/TestUser1/202303011100||Lower Back Exercises"
     
     static let homeURL = "https://temporarylumblyfunction.azurewebsites.net/api/home"
     
