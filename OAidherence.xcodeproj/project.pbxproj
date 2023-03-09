@@ -318,7 +318,6 @@
 				647C9F092908ECCC007EFE62 /* AppCoordinator.swift */,
 				647280A5293ED94B004CCE75 /* APIHandler */,
 				647C9F0D2908F07A007EFE62 /* Coordinators */,
-				647C9F4B2909989F007EFE62 /* Preview Content */,
 			);
 			path = OAidherence;
 			sourceTree = "<group>";
@@ -346,13 +345,6 @@
 				647C9F472908F277007EFE62 /* Coordinator.swift */,
 			);
 			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		647C9F4B2909989F007EFE62 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		6488E9D629A2C5C30090554A /* ExerciseSet */ = {
