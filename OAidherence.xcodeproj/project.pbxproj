@@ -206,6 +206,27 @@
 			path = PainRating;
 			sourceTree = "<group>";
 		};
+		64028B9229B99D24009C104B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				64D3D4F029A5CB4B0056CB75 /* Onboarding */,
+				64D3D4FF29A66C3D0056CB75 /* Home */,
+				6488E9D629A2C5C30090554A /* ExerciseSet */,
+				64D3D51629A9DF1D0056CB75 /* ExerciseInstructions */,
+				64028B7C29AE5279009C104B /* Rating */,
+				6472809B29370BA5004CCE75 /* Results */,
+				6488E9E829A478370090554A /* Loading */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		64028B9329B99EEC009C104B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		6419AF5F29ABDF2B00667F4C /* FormCommentTile */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,21 +317,15 @@
 		647635C228FBA34E0043DCFD /* OAidherence */ = {
 			isa = PBXGroup;
 			children = (
-				64028B7C29AE5279009C104B /* Rating */,
-				64D3D51629A9DF1D0056CB75 /* ExerciseInstructions */,
-				64D3D4FF29A66C3D0056CB75 /* Home */,
-				64D3D4F029A5CB4B0056CB75 /* Onboarding */,
-				6488E9E829A478370090554A /* Loading */,
-				6488E9D629A2C5C30090554A /* ExerciseSet */,
+				64028B9229B99D24009C104B /* Features */,
 				643382D22910BCF90067AA19 /* Sources */,
 				647C9F8C2909ECAA007EFE62 /* Info.plist */,
 				647635C728FBA34F0043DCFD /* Assets.xcassets */,
 				647C9F892909E91B007EFE62 /* SceneDelegate.swift */,
 				647C9F092908ECCC007EFE62 /* AppCoordinator.swift */,
+				64028B9329B99EEC009C104B /* Preview Content */,
 				647280A5293ED94B004CCE75 /* APIHandler */,
-				6472809B29370BA5004CCE75 /* Results */,
 				647C9F0D2908F07A007EFE62 /* Coordinators */,
-				647C9F4B2909989F007EFE62 /* Preview Content */,
 			);
 			path = OAidherence;
 			sourceTree = "<group>";
@@ -338,13 +353,6 @@
 				647C9F472908F277007EFE62 /* Coordinator.swift */,
 			);
 			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		647C9F4B2909989F007EFE62 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		6488E9D629A2C5C30090554A /* ExerciseSet */ = {
