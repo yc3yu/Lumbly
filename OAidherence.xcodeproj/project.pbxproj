@@ -113,7 +113,6 @@
 		647C9F472908F277007EFE62 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		647C9F892909E91B007EFE62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		647C9F8C2909ECAA007EFE62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		64879C6229101E670071AB5A /* .gitignore.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = .gitignore.rtf; sourceTree = "<group>"; };
 		6488E9D829A2C5E70090554A /* ExerciseTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTileView.swift; sourceTree = "<group>"; };
 		6488E9DA29A2C8540090554A /* ExerciseTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTileViewModel.swift; sourceTree = "<group>"; };
 		6488E9DC29A31F790090554A /* ExerciseTileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTileViewController.swift; sourceTree = "<group>"; };
@@ -274,7 +273,6 @@
 			isa = PBXGroup;
 			children = (
 				64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */,
-				64879C6229101E670071AB5A /* .gitignore.rtf */,
 				647635C228FBA34E0043DCFD /* OAidherence */,
 				644E35C5290E52650024B8A5 /* OAidherenceCore */,
 				647635D328FBA34F0043DCFD /* OAidherenceTests */,
