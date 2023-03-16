@@ -36,24 +36,24 @@ class RecordingViewController: UIViewController {
         
         switch UIDevice.current.orientation {
             // Home button on top
-            case UIDeviceOrientation.portraitUpsideDown:
-                self.previewLayer.connection?.videoOrientation = .portraitUpsideDown
-             
+        case UIDeviceOrientation.portraitUpsideDown:
+            self.previewLayer.connection?.videoOrientation = .portraitUpsideDown
+            
             // Home button on right
-            case UIDeviceOrientation.landscapeLeft:
-                self.previewLayer.connection?.videoOrientation = .landscapeRight
+        case UIDeviceOrientation.landscapeLeft:
+            self.previewLayer.connection?.videoOrientation = .landscapeRight
             
             // Home button on left
-            case UIDeviceOrientation.landscapeRight:
-                self.previewLayer.connection?.videoOrientation = .landscapeLeft
-             
+        case UIDeviceOrientation.landscapeRight:
+            self.previewLayer.connection?.videoOrientation = .landscapeLeft
+            
             // Home button at bottom
-            case UIDeviceOrientation.portrait:
-                self.previewLayer.connection?.videoOrientation = .portrait
-                
-            default:
-                break
-            }
+        case UIDeviceOrientation.portrait:
+            self.previewLayer.connection?.videoOrientation = .portrait
+            
+        default:
+            break
+        }
     }
     
     func checkPermission() {
