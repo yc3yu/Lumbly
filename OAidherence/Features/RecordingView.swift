@@ -10,6 +10,6 @@ import SwiftUI
 struct RecordingView: View {
     var body: some View {
         HostedRecordingViewController()
-            .ignoresSafeArea()
+            .ignoresSafeArea(.container, edges: .horizontal)
     }
 }
