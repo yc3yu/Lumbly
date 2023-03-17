@@ -26,6 +26,7 @@
 		644E35C7290E52940024B8A5 /* Color+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E35C6290E52930024B8A5 /* Color+Presets.swift */; };
 		644E35C9290E52AC0024B8A5 /* Font+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E35C8290E52AC0024B8A5 /* Font+Presets.swift */; };
 		6460E3A229C3FBB500A0884D /* HostedRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460E3A129C3FBB500A0884D /* HostedRecordingViewController.swift */; };
+		6460E3A429C4022E00A0884D /* ViewControllerLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460E3A329C4022E00A0884D /* ViewControllerLink.swift */; };
 		6460E3A629C4056900A0884D /* ViewControllerLinkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460E3A529C4056900A0884D /* ViewControllerLinkable.swift */; };
 		647280992936D401004CCE75 /* CGFloat+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647280982936D401004CCE75 /* CGFloat+Presets.swift */; };
 		6472809D29370BBE004CCE75 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6472809C29370BBE004CCE75 /* ResultsView.swift */; };
@@ -103,6 +104,7 @@
 		644E35C6290E52930024B8A5 /* Color+Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Presets.swift"; sourceTree = "<group>"; };
 		644E35C8290E52AC0024B8A5 /* Font+Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Presets.swift"; sourceTree = "<group>"; };
 		6460E3A129C3FBB500A0884D /* HostedRecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedRecordingViewController.swift; sourceTree = "<group>"; };
+		6460E3A329C4022E00A0884D /* ViewControllerLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLink.swift; sourceTree = "<group>"; };
 		6460E3A529C4056900A0884D /* ViewControllerLinkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLinkable.swift; sourceTree = "<group>"; };
 		647280982936D401004CCE75 /* CGFloat+Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Presets.swift"; sourceTree = "<group>"; };
 		6472809C29370BBE004CCE75 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				64028B9929C2D6E1009C104B /* RecordingView.swift */,
 				64028B9B29C2D708009C104B /* RecordingViewController.swift */,
 				6460E3A129C3FBB500A0884D /* HostedRecordingViewController.swift */,
+				6460E3A329C4022E00A0884D /* ViewControllerLink.swift */,
 				6460E3A529C4056900A0884D /* ViewControllerLinkable.swift */,
 			);
 			path = Recording;
@@ -711,6 +714,7 @@
 				647280A9293EDBC8004CCE75 /* APIEndpoints.swift in Sources */,
 				6472809F29370BCB004CCE75 /* ResultsViewController.swift in Sources */,
 				64028B8629AEFDA1009C104B /* ExerciseRatingTileViewModel.swift in Sources */,
+				6460E3A429C4022E00A0884D /* ViewControllerLink.swift in Sources */,
 				644E35C9290E52AC0024B8A5 /* Font+Presets.swift in Sources */,
 				6488E9D929A2C5E70090554A /* ExerciseTileView.swift in Sources */,
 				640B7AB429A491F300A84FD8 /* ExerciseSetViewController.swift in Sources */,

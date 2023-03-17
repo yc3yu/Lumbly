@@ -12,8 +12,6 @@ struct RecordingView: View {
         static let recordingButtonSize: CGFloat = 72.0
     }
     
-    private var viewController = HostedRecordingViewController()
-    
     @State private var isRecording: Bool = false
     @State private var orientation = UIDeviceOrientation.portrait
     
@@ -25,9 +23,11 @@ struct RecordingView: View {
         }
     }
     
+    @ObservedObject var viewControllerLink = ViewControllerLink()
+    
     var body: some View {
         ZStack {
-            viewController
+            HostedRecordingViewController(viewControllerLink: viewControllerLink)
                 .ignoresSafeArea(.container, edges: .horizontal)
 
             Group {
