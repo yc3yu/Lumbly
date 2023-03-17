@@ -101,12 +101,3 @@ class RecordingViewController: UIViewController {
         }
     }
 }
-
-struct HostedRecordingViewController: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> UIViewController {
-        return RecordingViewController()
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-    }
-}
