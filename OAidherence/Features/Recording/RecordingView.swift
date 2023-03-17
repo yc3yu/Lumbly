@@ -36,45 +36,40 @@ struct RecordingView: View {
                     VStack {
                         Spacer()
                         
-                        Button(action: {
+                        makeRecordingButton(buttonAction: {
                             self.isRecording.toggle()
-                        }) {
-                            Image(recordingButtonImage)
-                                .resizable()
-                                .frame(width: Constants.recordingButtonSize, height: Constants.recordingButtonSize)
-                                .padding(.bottom, .smallSpace)
-                        }
+                        }, paddingEdges: .bottom, paddingLength: .smallSpace)
                     }
                 case .landscapeRight:
                     HStack {
                         Spacer()
                         
-                        Button(action: {
+                        makeRecordingButton(buttonAction: {
                             self.isRecording.toggle()
-                        }) {
-                            Image(recordingButtonImage)
-                                .resizable()
-                                .frame(width: Constants.recordingButtonSize, height: Constants.recordingButtonSize)
-                        }
+                        })
                     }
                 default:
                     HStack {
                         Spacer()
                         
-                        Button(action: {
+                        makeRecordingButton(buttonAction: {
                             self.isRecording.toggle()
-                        }) {
-                            Image(recordingButtonImage)
-                                .resizable()
-                                .frame(width: Constants.recordingButtonSize, height: Constants.recordingButtonSize)
-                                .padding(.trailing, .smallSpace)
-                        }
+                        }, paddingEdges: .trailing, paddingLength: .smallSpace)
                     }
                 }
             }
             .onRotate { newOrientation in
                 orientation = newOrientation
             }
+        }
+    }
+    
+    func makeRecordingButton(buttonAction: @escaping () -> () = { }, paddingEdges: Edge.Set = .all, paddingLength: CGFloat? = 0) -> some View {
+        Button(action: buttonAction) {
+            Image(recordingButtonImage)
+                .resizable()
+                .frame(width: Constants.recordingButtonSize, height: Constants.recordingButtonSize)
+                .padding(paddingEdges, paddingLength)
         }
     }
 }
