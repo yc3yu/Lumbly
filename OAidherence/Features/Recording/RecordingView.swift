@@ -41,7 +41,7 @@ struct RecordingView: View {
 
             Group {
                 switch orientation {
-                case .portrait:
+                case .portrait, .faceUp, .faceDown:
                     VStack {
                         Spacer()
                         
