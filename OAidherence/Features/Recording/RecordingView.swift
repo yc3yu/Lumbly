@@ -13,7 +13,7 @@ struct RecordingView: View {
     }
     
     @State private var isRecording: Bool = false
-    @State private var orientation = UIDeviceOrientation.portrait
+    @State private var orientation = UIDevice.current.orientation
     
     private var recordingButtonImage: String {
         if self.isRecording {
