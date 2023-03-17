@@ -81,12 +81,13 @@ class RecordingViewController: UIViewController {
     
     func setupCaptureSession() {
         // Camera input
+        captureSession.beginConfiguration()
         guard let videoDevice = AVCaptureDevice.default(.builtInWideAngleCamera,for: .video, position: .front) else { return }
         guard let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else { return }
-           
         guard captureSession.canAddInput(videoDeviceInput) else { return }
         captureSession.addInput(videoDeviceInput)
-                         
+        captureSession.commitConfiguration()
+
         // Preview layer
         screenRect = UIScreen.main.bounds
         
