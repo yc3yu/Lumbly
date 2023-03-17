@@ -5,9 +5,9 @@
 //  Created by Yue chen Yu on 2023-03-16.
 //
 
-import UIKit
-import SwiftUI
 import AVFoundation
+import SwiftUI
+import UIKit
 
 class RecordingViewController: UIViewController {
     private let captureSession = AVCaptureSession()
@@ -17,7 +17,7 @@ class RecordingViewController: UIViewController {
     private var previewLayer = AVCaptureVideoPreviewLayer()
 
     var screenRect: CGRect! = nil // For view dimensions
-      
+
     override func viewDidLoad() {
         checkPermission()
         
@@ -59,16 +59,16 @@ class RecordingViewController: UIViewController {
     func checkPermission() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
             // Permission has been granted before
-            case .authorized:
-                permissionGranted = true
-                
+        case .authorized:
+            permissionGranted = true
+            
             // Permission has not been requested yet
-            case .notDetermined:
-                requestPermission()
-                    
-            default:
-                permissionGranted = false
-            }
+        case .notDetermined:
+            requestPermission()
+            
+        default:
+            permissionGranted = false
+        }
     }
     
     func requestPermission() {
@@ -87,7 +87,7 @@ class RecordingViewController: UIViewController {
         guard captureSession.canAddInput(videoDeviceInput) else { return }
         captureSession.addInput(videoDeviceInput)
         captureSession.commitConfiguration()
-
+        
         // Preview layer
         screenRect = UIScreen.main.bounds
         
