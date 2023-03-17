@@ -80,15 +80,21 @@ class RecordingViewController: UIViewController {
     }
     
     func setupCaptureSession() {
-        // Camera input
+        setupInputs()
+        
+        setupPreviewLayer()
+    }
+    
+    func setupInputs() {
         captureSession.beginConfiguration()
         guard let videoDevice = AVCaptureDevice.default(.builtInWideAngleCamera,for: .video, position: .front) else { return }
         guard let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else { return }
         guard captureSession.canAddInput(videoDeviceInput) else { return }
         captureSession.addInput(videoDeviceInput)
         captureSession.commitConfiguration()
-        
-        // Preview layer
+    }
+    
+    func setupPreviewLayer() {
         screenRect = UIScreen.main.bounds
         
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
@@ -96,7 +102,6 @@ class RecordingViewController: UIViewController {
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill // Fill screen
         previewLayer.connection?.videoOrientation = .portrait
         
-        // Updates to UI must be on main queue
         DispatchQueue.main.async { [weak self] in
             self!.view.layer.addSublayer(self!.previewLayer)
         }
