@@ -23,6 +23,15 @@ struct RecordingView: View {
         }
     }
     
+    private var buttonAction: LinkAction {
+        switch isRecording {
+        case true:
+            return .stopRecording
+        case false:
+            return .startRecording
+        }
+    }
+    
     @ObservedObject var viewControllerLink = ViewControllerLink()
     
     var body: some View {
@@ -37,6 +46,7 @@ struct RecordingView: View {
                         Spacer()
                         
                         makeRecordingButton(buttonAction: {
+                            viewControllerLink.performAction(action: buttonAction)
                             self.isRecording.toggle()
                         }, paddingEdges: .bottom, paddingLength: .smallSpace)
                     }
@@ -45,6 +55,7 @@ struct RecordingView: View {
                         Spacer()
                         
                         makeRecordingButton(buttonAction: {
+                            viewControllerLink.performAction(action: buttonAction)
                             self.isRecording.toggle()
                         })
                     }
@@ -53,6 +64,7 @@ struct RecordingView: View {
                         Spacer()
                         
                         makeRecordingButton(buttonAction: {
+                            viewControllerLink.performAction(action: buttonAction)
                             self.isRecording.toggle()
                         }, paddingEdges: .trailing, paddingLength: .smallSpace)
                     }
