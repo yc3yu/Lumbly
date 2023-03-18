@@ -21,6 +21,8 @@ class RecordingViewController: UIViewController {
     private var previewLayer = AVCaptureVideoPreviewLayer()
 
     private var screenRect: CGRect! = nil // For view dimensions
+    
+    private var temporaryVideoFileURL: String = ""
 
     override func viewDidLoad() {
         checkPermission()
@@ -133,6 +135,45 @@ class RecordingViewController: UIViewController {
 
 extension RecordingViewController: RecordingViewControllerLinkable {
     func action(_ action : RecordingLinkAction) {
-        print("\(action)")
+        switch action {
+        case .startRecording:
+            startRecording()
+        case .stopRecording:
+            stopRecording()
+        }
+    }
+    
+    func startRecording() {
+        func getCurrentDateString() -> String {
+            let today = Date.now
+            let dateFormatter = DateFormatter()
+            
+            dateFormatter.dateFormat = "yyyyMMdd-HHmmss"
+            
+            return dateFormatter.string(from: today)
+        }
+        
+        let videoPreviewLayerOrientation = previewLayer.connection?.videoOrientation
+        
+        sessionQueue.async {
+            // Update the orientation on the movie file output video connection before recording.
+            let movieFileOutputConnection = self.movieFileOutput.connection(with: .video)
+            movieFileOutputConnection?.videoOrientation = videoPreviewLayerOrientation ?? .landscapeLeft
+            
+            let availableVideoCodecTypes = self.movieFileOutput.availableVideoCodecTypes
+            
+            if availableVideoCodecTypes.contains(.hevc) {
+                self.movieFileOutput.setOutputSettings([AVVideoCodecKey: AVVideoCodecType.hevc], for: movieFileOutputConnection!)
+            }
+            
+            // Start recording video to a temporary file.
+            let outputFileName = getCurrentDateString()
+            self.temporaryVideoFileURL = (NSTemporaryDirectory() as NSString).appendingPathComponent((outputFileName as NSString).appendingPathExtension("mov")!)
+            self.movieFileOutput.startRecording(to: URL(fileURLWithPath: self.temporaryVideoFileURL), recordingDelegate: self)
+        }
+    }
+    
+    func stopRecording() {
+        movieFileOutput.stopRecording()
     }
 }
