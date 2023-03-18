@@ -14,8 +14,6 @@
 		64028B8629AEFDA1009C104B /* ExerciseRatingTileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64028B8529AEFDA1009C104B /* ExerciseRatingTileViewModel.swift */; };
 		64028B8929AF033D009C104B /* PainLevelRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64028B8829AF033D009C104B /* PainLevelRatingView.swift */; };
 		64028B8B29AF0F98009C104B /* PainLevelRatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64028B8A29AF0F98009C104B /* PainLevelRatingViewModel.swift */; };
-		64028B9A29C2D6E1009C104B /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64028B9929C2D6E1009C104B /* RecordingView.swift */; };
-		64028B9C29C2D708009C104B /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64028B9B29C2D708009C104B /* RecordingViewController.swift */; };
 		640B7AB329A491F300A84FD8 /* ExerciseSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B7AB029A491F300A84FD8 /* ExerciseSetView.swift */; };
 		640B7AB429A491F300A84FD8 /* ExerciseSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B7AB129A491F300A84FD8 /* ExerciseSetViewController.swift */; };
 		640B7AB529A491F300A84FD8 /* ExerciseSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B7AB229A491F300A84FD8 /* ExerciseSetViewModel.swift */; };
@@ -28,6 +26,8 @@
 		6460E3A229C3FBB500A0884D /* HostedRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460E3A129C3FBB500A0884D /* HostedRecordingViewController.swift */; };
 		6460E3A429C4022E00A0884D /* RecordingViewControllerLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460E3A329C4022E00A0884D /* RecordingViewControllerLink.swift */; };
 		6460E3A629C4056900A0884D /* RecordingViewControllerLinkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460E3A529C4056900A0884D /* RecordingViewControllerLinkable.swift */; };
+		6460E3AB29C64D5900A0884D /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460E3A929C64D5900A0884D /* RecordingView.swift */; };
+		6460E3AC29C64D5900A0884D /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460E3AA29C64D5900A0884D /* RecordingViewController.swift */; };
 		647280992936D401004CCE75 /* CGFloat+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647280982936D401004CCE75 /* CGFloat+Presets.swift */; };
 		6472809D29370BBE004CCE75 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6472809C29370BBE004CCE75 /* ResultsView.swift */; };
 		6472809F29370BCB004CCE75 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6472809E29370BCB004CCE75 /* ResultsViewController.swift */; };
@@ -92,8 +92,6 @@
 		64028B8529AEFDA1009C104B /* ExerciseRatingTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRatingTileViewModel.swift; sourceTree = "<group>"; };
 		64028B8829AF033D009C104B /* PainLevelRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevelRatingView.swift; sourceTree = "<group>"; };
 		64028B8A29AF0F98009C104B /* PainLevelRatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevelRatingViewModel.swift; sourceTree = "<group>"; };
-		64028B9929C2D6E1009C104B /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordingView.swift; path = OAidherence/Features/Recording/RecordingView.swift; sourceTree = SOURCE_ROOT; };
-		64028B9B29C2D708009C104B /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordingViewController.swift; path = OAidherence/Features/Recording/RecordingViewController.swift; sourceTree = SOURCE_ROOT; };
 		640B7AB029A491F300A84FD8 /* ExerciseSetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSetView.swift; sourceTree = "<group>"; };
 		640B7AB129A491F300A84FD8 /* ExerciseSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSetViewController.swift; sourceTree = "<group>"; };
 		640B7AB229A491F300A84FD8 /* ExerciseSetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSetViewModel.swift; sourceTree = "<group>"; };
@@ -106,6 +104,8 @@
 		6460E3A129C3FBB500A0884D /* HostedRecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedRecordingViewController.swift; sourceTree = "<group>"; };
 		6460E3A329C4022E00A0884D /* RecordingViewControllerLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewControllerLink.swift; sourceTree = "<group>"; };
 		6460E3A529C4056900A0884D /* RecordingViewControllerLinkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewControllerLinkable.swift; sourceTree = "<group>"; };
+		6460E3A929C64D5900A0884D /* RecordingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		6460E3AA29C64D5900A0884D /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		647280982936D401004CCE75 /* CGFloat+Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Presets.swift"; sourceTree = "<group>"; };
 		6472809C29370BBE004CCE75 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		6472809E29370BCB004CCE75 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 				64D3D4FF29A66C3D0056CB75 /* Home */,
 				6488E9D629A2C5C30090554A /* ExerciseSet */,
 				64D3D51629A9DF1D0056CB75 /* ExerciseInstructions */,
-				6460E39C29C3C3D600A0884D /* Recording */,
+				6460E3A829C64CCC00A0884D /* Video */,
 				64028B7C29AE5279009C104B /* Rating */,
 				6472809B29370BA5004CCE75 /* Results */,
 				6488E9E829A478370090554A /* Loading */,
@@ -284,13 +284,21 @@
 		6460E39C29C3C3D600A0884D /* Recording */ = {
 			isa = PBXGroup;
 			children = (
-				64028B9929C2D6E1009C104B /* RecordingView.swift */,
-				64028B9B29C2D708009C104B /* RecordingViewController.swift */,
+				6460E3A929C64D5900A0884D /* RecordingView.swift */,
+				6460E3AA29C64D5900A0884D /* RecordingViewController.swift */,
 				6460E3A129C3FBB500A0884D /* HostedRecordingViewController.swift */,
 				6460E3A329C4022E00A0884D /* RecordingViewControllerLink.swift */,
 				6460E3A529C4056900A0884D /* RecordingViewControllerLinkable.swift */,
 			);
 			path = Recording;
+			sourceTree = "<group>";
+		};
+		6460E3A829C64CCC00A0884D /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				6460E39C29C3C3D600A0884D /* Recording */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 		6472809B29370BA5004CCE75 /* Results */ = {
@@ -725,15 +733,16 @@
 				640B7AB329A491F300A84FD8 /* ExerciseSetView.swift in Sources */,
 				647280A4293ECCA5004CCE75 /* ResultsViewModel.swift in Sources */,
 				6419AF6329ABE6CF00667F4C /* FormCommentTileViewModel.swift in Sources */,
-				64028B9C29C2D708009C104B /* RecordingViewController.swift in Sources */,
 				64C0442829ABB2CF000F244B /* ExerciseTipViewModel.swift in Sources */,
 				64028B8429AEFD30009C104B /* ExerciseRatingTileView.swift in Sources */,
 				64D3D4FE29A5DDF80056CB75 /* OnboardingViewController.swift in Sources */,
 				64C0441F29AAF378000F244B /* ExerciseStepViewModel.swift in Sources */,
+				6460E3AB29C64D5900A0884D /* RecordingView.swift in Sources */,
 				6472809D29370BBE004CCE75 /* ResultsView.swift in Sources */,
 				647C9F0A2908ECCC007EFE62 /* AppCoordinator.swift in Sources */,
 				64A434392990B0F3008F8253 /* UIColor+Hex.swift in Sources */,
 				64D3D50F29A714E70056CB75 /* HomeViewModel.swift in Sources */,
+				6460E3AC29C64D5900A0884D /* RecordingViewController.swift in Sources */,
 				64D3D4F829A5CB4B0056CB75 /* LoginViewController.swift in Sources */,
 				64028B8B29AF0F98009C104B /* PainLevelRatingViewModel.swift in Sources */,
 				6488E9DB29A2C8540090554A /* ExerciseTileViewModel.swift in Sources */,
@@ -748,7 +757,6 @@
 				647280992936D401004CCE75 /* CGFloat+Presets.swift in Sources */,
 				647C9F8A2909E91B007EFE62 /* SceneDelegate.swift in Sources */,
 				643382D82910BE0D0067AA19 /* Strings+Generated.swift in Sources */,
-				64028B9A29C2D6E1009C104B /* RecordingView.swift in Sources */,
 				644E35C7290E52940024B8A5 /* Color+Presets.swift in Sources */,
 				64C0442329AAF607000F244B /* ExerciseInstructionsView.swift in Sources */,
 				64C0441E29AAF378000F244B /* ExerciseStepView.swift in Sources */,
