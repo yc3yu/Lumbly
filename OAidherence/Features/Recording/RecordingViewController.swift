@@ -11,14 +11,16 @@ import UIKit
 
 class RecordingViewController: UIViewController {
     private let captureSession = AVCaptureSession()
+    
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
     
     private var movieFileOutput = AVCaptureMovieFileOutput()
 
     private var permissionGranted = false // Flag for permission
+    
     private var previewLayer = AVCaptureVideoPreviewLayer()
 
-    var screenRect: CGRect! = nil // For view dimensions
+    private var screenRect: CGRect! = nil // For view dimensions
 
     override func viewDidLoad() {
         checkPermission()
