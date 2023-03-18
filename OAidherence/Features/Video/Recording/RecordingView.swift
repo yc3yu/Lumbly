@@ -45,28 +45,21 @@ struct RecordingView: View {
                     VStack {
                         Spacer()
                         
-                        makeRecordingButton(buttonAction: {
-                            viewControllerLink.performAction(action: buttonAction)
-                            self.isRecording.toggle()
-                        }, paddingEdges: .bottom, paddingLength: .smallSpace)
+                        makeRecordingButton()
+                            .padding(.bottom, .smallSpace)
                     }
                 case .landscapeRight:
                     HStack {
                         Spacer()
                         
-                        makeRecordingButton(buttonAction: {
-                            viewControllerLink.performAction(action: buttonAction)
-                            self.isRecording.toggle()
-                        })
+                        makeRecordingButton()
                     }
                 default:
                     HStack {
                         Spacer()
                         
-                        makeRecordingButton(buttonAction: {
-                            viewControllerLink.performAction(action: buttonAction)
-                            self.isRecording.toggle()
-                        }, paddingEdges: .trailing, paddingLength: .smallSpace)
+                        makeRecordingButton()
+                            .padding(.trailing, .smallSpace)
                     }
                 }
             }
@@ -76,13 +69,15 @@ struct RecordingView: View {
         }
     }
     
-    func makeRecordingButton(buttonAction: @escaping () -> () = { }, paddingEdges: Edge.Set = .all, paddingLength: CGFloat? = 0) -> some View {
-        Button(action: buttonAction) {
+    func makeRecordingButton() -> some View {
+        Button(action: {
+            viewControllerLink.performAction(action: buttonAction)
+            isRecording.toggle()
+        }) {
             Image(recordingButtonImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: Constants.recordingButtonSize, height: Constants.recordingButtonSize)
-                .padding(paddingEdges, paddingLength)
         }
     }
 }
