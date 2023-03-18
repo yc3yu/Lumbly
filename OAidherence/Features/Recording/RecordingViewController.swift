@@ -16,7 +16,7 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
     
     private var movieFileOutput = AVCaptureMovieFileOutput()
 
-    private var permissionGranted = false // Flag for permission
+    private var permissionGranted = false
     
     private var previewLayer = AVCaptureVideoPreviewLayer()
 
@@ -64,11 +64,9 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
     
     func checkPermission() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
-            // Permission has been granted before
         case .authorized:
             permissionGranted = true
             
-            // Permission has not been requested yet
         case .notDetermined:
             requestPermission()
             
@@ -107,7 +105,7 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
         
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.frame = CGRect(x: 0, y: 0, width: screenRect.size.width, height: screenRect.size.height)
-        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill // Fill screen
+        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         previewLayer.connection?.videoOrientation = .portrait
         
         DispatchQueue.main.async { [weak self] in
@@ -169,7 +167,7 @@ extension RecordingViewController: RecordingViewControllerLinkable {
         let videoPreviewLayerOrientation = previewLayer.connection?.videoOrientation
         
         sessionQueue.async {
-            // Update the orientation on the movie file output video connection before recording.
+            /// Update the orientation on the movie file output video connection before recording.
             let movieFileOutputConnection = self.movieFileOutput.connection(with: .video)
             movieFileOutputConnection?.videoOrientation = videoPreviewLayerOrientation ?? .landscapeLeft
             
@@ -179,7 +177,7 @@ extension RecordingViewController: RecordingViewControllerLinkable {
                 self.movieFileOutput.setOutputSettings([AVVideoCodecKey: AVVideoCodecType.hevc], for: movieFileOutputConnection!)
             }
             
-            // Start recording video to a temporary file.
+            /// Start recording video to a temporary file.
             let outputFileName = getCurrentDateString()
             self.temporaryVideoFileURL = (NSTemporaryDirectory() as NSString).appendingPathComponent((outputFileName as NSString).appendingPathExtension("mov")!)
             self.movieFileOutput.startRecording(to: URL(fileURLWithPath: self.temporaryVideoFileURL), recordingDelegate: self)
