@@ -80,6 +80,7 @@ struct RecordingView: View {
         Button(action: buttonAction) {
             Image(recordingButtonImage)
                 .resizable()
+                .aspectRatio(contentMode: .fit)
                 .frame(width: Constants.recordingButtonSize, height: Constants.recordingButtonSize)
                 .padding(paddingEdges, paddingLength)
         }
