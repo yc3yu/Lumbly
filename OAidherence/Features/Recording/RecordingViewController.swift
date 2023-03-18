@@ -108,8 +108,8 @@ class RecordingViewController: UIViewController {
     }
 }
 
-extension RecordingViewController: ViewControllerLinkable {
-    func action(_ action : LinkAction) {
+extension RecordingViewController: RecordingViewControllerLinkable {
+    func action(_ action : RecordingLinkAction) {
         print("\(action)")
     }
 }

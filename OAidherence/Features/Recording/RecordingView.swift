@@ -23,7 +23,7 @@ struct RecordingView: View {
         }
     }
     
-    private var buttonAction: LinkAction {
+    private var buttonAction: RecordingLinkAction {
         switch isRecording {
         case true:
             return .stopRecording
@@ -32,7 +32,7 @@ struct RecordingView: View {
         }
     }
     
-    @ObservedObject var viewControllerLink = ViewControllerLink()
+    @ObservedObject var viewControllerLink = RecordingViewControllerLink()
     
     var body: some View {
         ZStack {
