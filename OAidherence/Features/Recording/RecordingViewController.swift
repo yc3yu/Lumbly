@@ -131,6 +131,11 @@ class RecordingViewController: UIViewController {
         }
         captureSession.commitConfiguration()
     }
+    
+    /// Disable autorotation of the interface when recording is in progress.
+    override var shouldAutorotate: Bool {
+        return !movieFileOutput.isRecording
+    }
 }
 
 extension RecordingViewController: RecordingViewControllerLinkable {
