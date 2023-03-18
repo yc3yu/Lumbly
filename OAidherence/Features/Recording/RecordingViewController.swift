@@ -9,7 +9,7 @@ import AVFoundation
 import SwiftUI
 import UIKit
 
-class RecordingViewController: UIViewController {
+class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
     private let captureSession = AVCaptureSession()
     
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
@@ -135,6 +135,14 @@ class RecordingViewController: UIViewController {
     /// Disable autorotation of the interface when recording is in progress.
     override var shouldAutorotate: Bool {
         return !movieFileOutput.isRecording
+    }
+
+    func fileOutput(_ output: AVCaptureFileOutput, didStartRecordingTo fileURL: URL, from connections: [AVCaptureConnection]) {
+        
+    }
+    
+    func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
+    
     }
 }
 
