@@ -12,6 +12,8 @@ import UIKit
 class RecordingViewController: UIViewController {
     private let captureSession = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
+    
+    private var movieFileOutput = AVCaptureMovieFileOutput()
 
     private var permissionGranted = false // Flag for permission
     private var previewLayer = AVCaptureVideoPreviewLayer()
@@ -83,6 +85,8 @@ class RecordingViewController: UIViewController {
         setupInputs()
         
         setupPreviewLayer()
+        
+        setupOutputs()
     }
     
     func setupInputs() {
@@ -105,6 +109,23 @@ class RecordingViewController: UIViewController {
         DispatchQueue.main.async { [weak self] in
             self!.view.layer.addSublayer(self!.previewLayer)
         }
+    }
+    
+    func setupOutputs() {
+        guard captureSession.canAddOutput(movieFileOutput) else {
+            fatalError("Could not add video output.")
+        }
+        
+        captureSession.beginConfiguration()
+        captureSession.addOutput(movieFileOutput)
+        captureSession.sessionPreset = .high
+        
+        if let connection = movieFileOutput.connection(with: .video) {
+            if connection.isVideoStabilizationSupported {
+                connection.preferredVideoStabilizationMode = .auto
+            }
+        }
+        captureSession.commitConfiguration()
     }
 }
 
