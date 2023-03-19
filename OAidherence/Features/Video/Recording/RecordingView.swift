@@ -72,6 +72,7 @@ struct RecordingView: View {
                 orientation = newOrientation
             }
         }
+        .navigationBarBackButtonHidden(isRecording)
     }
     
     func makeRecordingButton() -> some View {
