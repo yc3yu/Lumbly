@@ -12,7 +12,14 @@ struct RecordingView: View {
         static let recordingButtonSize: CGFloat = 72.0
     }
     
-    @State private var isRecording: Bool = false
+    @ObservedObject var viewControllerLink = RecordingViewControllerLink()
+    
+    @State var videoFileURL: URL? = nil
+    
+    @State private var isRecording = false
+    
+    @State private var shouldPresentPlayback = false
+    
     @State private var orientation = UIDevice.current.orientation
     
     private var recordingButtonImage: String {
@@ -23,7 +30,7 @@ struct RecordingView: View {
         }
     }
     
-    private var buttonAction: LinkAction {
+    private var buttonAction: RecordingLinkAction {
         switch isRecording {
         case true:
             return .stopRecording
@@ -32,11 +39,9 @@ struct RecordingView: View {
         }
     }
     
-    @ObservedObject var viewControllerLink = ViewControllerLink()
-    
     var body: some View {
         ZStack {
-            HostedRecordingViewController(viewControllerLink: viewControllerLink)
+            HostedRecordingViewController(videoFileURL: $videoFileURL, viewControllerLink: viewControllerLink)
                 .ignoresSafeArea(.container, edges: .horizontal)
 
             Group {
@@ -45,28 +50,21 @@ struct RecordingView: View {
                     VStack {
                         Spacer()
                         
-                        makeRecordingButton(buttonAction: {
-                            viewControllerLink.performAction(action: buttonAction)
-                            self.isRecording.toggle()
-                        }, paddingEdges: .bottom, paddingLength: .smallSpace)
+                        makeRecordingButton()
+                            .padding(.bottom, .smallSpace)
                     }
                 case .landscapeRight:
                     HStack {
                         Spacer()
                         
-                        makeRecordingButton(buttonAction: {
-                            viewControllerLink.performAction(action: buttonAction)
-                            self.isRecording.toggle()
-                        })
+                        makeRecordingButton()
                     }
                 default:
                     HStack {
                         Spacer()
                         
-                        makeRecordingButton(buttonAction: {
-                            viewControllerLink.performAction(action: buttonAction)
-                            self.isRecording.toggle()
-                        }, paddingEdges: .trailing, paddingLength: .smallSpace)
+                        makeRecordingButton()
+                            .padding(.trailing, .smallSpace)
                     }
                 }
             }
@@ -74,14 +72,28 @@ struct RecordingView: View {
                 orientation = newOrientation
             }
         }
+        .navigationBarBackButtonHidden(isRecording)
     }
     
-    func makeRecordingButton(buttonAction: @escaping () -> () = { }, paddingEdges: Edge.Set = .all, paddingLength: CGFloat? = 0) -> some View {
-        Button(action: buttonAction) {
+    func makeRecordingButton() -> some View {
+        Button(action: {
+            viewControllerLink.performAction(action: buttonAction)
+            
+            isRecording.toggle()
+            
+            if !isRecording {
+                shouldPresentPlayback = true
+            }
+        }) {
             Image(recordingButtonImage)
                 .resizable()
+                .aspectRatio(contentMode: .fit)
                 .frame(width: Constants.recordingButtonSize, height: Constants.recordingButtonSize)
-                .padding(paddingEdges, paddingLength)
+        }
+        .navigationDestination(isPresented: $shouldPresentPlayback) {
+            if let videoFileURL = videoFileURL {
+                PlaybackView(videoFileURL: videoFileURL)
+            }
         }
     }
 }

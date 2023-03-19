@@ -72,6 +72,8 @@ internal enum L10n {
     /// 
     ///   Created by Yue chen Yu on 2022-10-31.
     internal static let skip = L10n.tr("Localizable", "NavigationBarItem.skip", fallback: "Skip")
+    /// Submit
+    internal static let submit = L10n.tr("Localizable", "NavigationBarItem.submit", fallback: "Submit")
   }
   internal enum Onboarding {
     /// Email
