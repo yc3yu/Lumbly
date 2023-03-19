@@ -41,6 +41,7 @@
 		6488E9D929A2C5E70090554A /* ExerciseTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E9D829A2C5E70090554A /* ExerciseTileView.swift */; };
 		6488E9DB29A2C8540090554A /* ExerciseTileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E9DA29A2C8540090554A /* ExerciseTileViewModel.swift */; };
 		6488E9EA29A4786E0090554A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E9E929A4786E0090554A /* LoadingView.swift */; };
+		64922EBF29C799CD0025B2A9 /* PlaybackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64922EBE29C799CD0025B2A9 /* PlaybackViewModel.swift */; };
 		64979C6829A4A1C600C27768 /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64979C6729A4A1C600C27768 /* BlueButtonView.swift */; };
 		64A434392990B0F3008F8253 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A434382990B0F3008F8253 /* UIColor+Hex.swift */; };
 		64B1BBED2910BA4000AEA7E3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */; };
@@ -119,6 +120,7 @@
 		6488E9DA29A2C8540090554A /* ExerciseTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTileViewModel.swift; sourceTree = "<group>"; };
 		6488E9E929A4786E0090554A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		64922EBD29C792690025B2A9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		64922EBE29C799CD0025B2A9 /* PlaybackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackViewModel.swift; sourceTree = "<group>"; };
 		64979C6729A4A1C600C27768 /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
 		64A434382990B0F3008F8253 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				6460E3AE29C64DEF00A0884D /* PlaybackView.swift */,
+				64922EBE29C799CD0025B2A9 /* PlaybackViewModel.swift */,
 			);
 			path = Playback;
 			sourceTree = "<group>";
@@ -738,6 +741,7 @@
 				64D3D50829A6E6DC0056CB75 /* ExerciseSetTileViewModel.swift in Sources */,
 				647280992936D401004CCE75 /* CGFloat+Presets.swift in Sources */,
 				64D7261329C6DA1800C5200E /* OAidherenceApp.swift in Sources */,
+				64922EBF29C799CD0025B2A9 /* PlaybackViewModel.swift in Sources */,
 				643382D82910BE0D0067AA19 /* Strings+Generated.swift in Sources */,
 				644E35C7290E52940024B8A5 /* Color+Presets.swift in Sources */,
 				64C0442329AAF607000F244B /* ExerciseInstructionsView.swift in Sources */,
