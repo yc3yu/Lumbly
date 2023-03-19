@@ -78,18 +78,19 @@ struct RecordingView: View {
     func makeRecordingButton() -> some View {
         Button(action: {
             viewControllerLink.performAction(action: buttonAction)
-            if isRecording {
-                shouldPresentPlayback = true
-            }
             
             isRecording.toggle()
+            
+            if !isRecording {
+                shouldPresentPlayback = true
+            }
         }) {
             Image(recordingButtonImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: Constants.recordingButtonSize, height: Constants.recordingButtonSize)
         }
-        .fullScreenCover(isPresented: $shouldPresentPlayback) {
+        .navigationDestination(isPresented: $shouldPresentPlayback) {
             if let videoFileURL = videoFileURL {
                 PlaybackView(videoFileURL: videoFileURL)
             }
