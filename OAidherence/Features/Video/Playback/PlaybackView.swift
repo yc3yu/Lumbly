@@ -22,6 +22,8 @@ struct PlaybackView: View {
             }
             .navigationBarItems(trailing: NavigationLink(destination: ResultsView()) {
                 Text(L10n.NavigationBarItem.submit)
-            })
+            }.simultaneousGesture(TapGesture().onEnded {
+                viewModel.uploadVideo()
+            }))
     }
 }
