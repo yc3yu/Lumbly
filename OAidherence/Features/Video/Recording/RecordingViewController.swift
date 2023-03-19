@@ -132,11 +132,6 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
         captureSession.commitConfiguration()
     }
     
-    /// Disable autorotation of the interface when recording is in progress.
-    override var shouldAutorotate: Bool {
-        return !movieFileOutput.isRecording
-    }
-
     func fileOutput(_ output: AVCaptureFileOutput, didStartRecordingTo fileURL: URL, from connections: [AVCaptureConnection]) {
         
     }
