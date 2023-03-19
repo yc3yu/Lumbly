@@ -17,6 +17,5 @@ class RecordingViewControllerLink: ObservableObject {
     
     func performAction(action: RecordingLinkAction) {
         self.action = action
-        print("\(action)")
     }
 }
