@@ -120,7 +120,7 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
         
         captureSession.beginConfiguration()
         captureSession.addOutput(movieFileOutput)
-        captureSession.sessionPreset = .high
+        captureSession.sessionPreset = .medium
         
         if let connection = movieFileOutput.connection(with: .video) {
             if connection.isVideoStabilizationSupported {
