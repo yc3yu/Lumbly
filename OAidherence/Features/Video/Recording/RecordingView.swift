@@ -12,7 +12,14 @@ struct RecordingView: View {
         static let recordingButtonSize: CGFloat = 72.0
     }
     
-    @State private var isRecording: Bool = false
+    @ObservedObject var viewControllerLink = RecordingViewControllerLink()
+    
+    @State var videoFileURL: URL? = nil
+    
+    @State private var isRecording = false
+    
+    @State private var shouldPresentPlayback = false
+    
     @State private var orientation = UIDevice.current.orientation
     
     private var recordingButtonImage: String {
@@ -32,11 +39,9 @@ struct RecordingView: View {
         }
     }
     
-    @ObservedObject var viewControllerLink = RecordingViewControllerLink()
-    
     var body: some View {
         ZStack {
-            HostedRecordingViewController(viewControllerLink: viewControllerLink)
+            HostedRecordingViewController(videoFileURL: $videoFileURL, viewControllerLink: viewControllerLink)
                 .ignoresSafeArea(.container, edges: .horizontal)
 
             Group {
@@ -72,12 +77,21 @@ struct RecordingView: View {
     func makeRecordingButton() -> some View {
         Button(action: {
             viewControllerLink.performAction(action: buttonAction)
+            if isRecording {
+                shouldPresentPlayback = true
+            }
+            
             isRecording.toggle()
         }) {
             Image(recordingButtonImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: Constants.recordingButtonSize, height: Constants.recordingButtonSize)
+        }
+        .fullScreenCover(isPresented: $shouldPresentPlayback) {
+            if let videoFileURL = videoFileURL {
+                PlaybackView(videoFileURL: videoFileURL)
+            }
         }
     }
 }

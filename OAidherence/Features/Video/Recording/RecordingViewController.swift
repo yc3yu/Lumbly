@@ -22,8 +22,8 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
 
     private var screenRect: CGRect! = nil // For view dimensions
     
-    private var temporaryVideoFileURL: String = ""
-
+    weak var delegate: RecordingViewControllerDelegate?
+    
     override func viewDidLoad() {
         checkPermission()
         
@@ -140,7 +140,22 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
     }
     
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
-    
+        let videoData: Data?
+        do {
+            videoData = try Data(contentsOf: outputFileURL)
+        } catch {
+            fatalError("Could not extract data from \(outputFileURL.absoluteString).")
+        }
+        
+        let path = outputFileURL.path
+        let fileName: String = outputFileURL.deletingPathExtension().lastPathComponent
+        let newTemporaryFileURL: URL = FileManager.default.temporaryDirectory.appendingPathComponent("\(fileName).mov")
+        do {
+            try videoData?.write(to: newTemporaryFileURL)
+            self.delegate?.videoFileUrlSet(self, videoFileURL: newTemporaryFileURL)
+        } catch {
+            fatalError("Could not write to \(newTemporaryFileURL.path).")
+        }
     }
 }
 
@@ -179,8 +194,8 @@ extension RecordingViewController: RecordingViewControllerLinkable {
             
             /// Start recording video to a temporary file.
             let outputFileName = getCurrentDateString()
-            self.temporaryVideoFileURL = (NSTemporaryDirectory() as NSString).appendingPathComponent((outputFileName as NSString).appendingPathExtension("mov")!)
-            self.movieFileOutput.startRecording(to: URL(fileURLWithPath: self.temporaryVideoFileURL), recordingDelegate: self)
+            let temporaryVideoFileURLString = (NSTemporaryDirectory() as NSString).appendingPathComponent((outputFileName as NSString).appendingPathExtension("mov")!)
+            self.movieFileOutput.startRecording(to: URL(fileURLWithPath: temporaryVideoFileURLString), recordingDelegate: self)
         }
     }
     
