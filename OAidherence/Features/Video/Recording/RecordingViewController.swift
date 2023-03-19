@@ -22,6 +22,8 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
 
     private var screenRect: CGRect! = nil // For view dimensions
     
+    private var backgroundRecordingID: UIBackgroundTaskIdentifier?
+    
     weak var delegate: RecordingViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -140,6 +142,9 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
     }
     
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
+        if let currentBackgroundRecordingID = backgroundRecordingID {
+            UIApplication.shared.endBackgroundTask(currentBackgroundRecordingID)
+        }
     }
 }
 
@@ -166,6 +171,10 @@ extension RecordingViewController: RecordingViewControllerLinkable {
         let videoPreviewLayerOrientation = previewLayer.connection?.videoOrientation
         
         sessionQueue.async {
+            if UIDevice.current.isMultitaskingSupported {
+                self.backgroundRecordingID = UIApplication.shared.beginBackgroundTask(expirationHandler: nil)
+            }
+            
             /// Update the orientation on the movie file output video connection before recording.
             let movieFileOutputConnection = self.movieFileOutput.connection(with: .video)
             movieFileOutputConnection?.videoOrientation = videoPreviewLayerOrientation ?? .landscapeLeft
