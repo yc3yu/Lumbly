@@ -1,8 +1,11 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
+platform :ios, '8.0'
+
 target 'OAidherence' do
   pod 'SwiftGen', '~> 6.0'
+  pod 'AZSClient'
 end
 
 post_install do |installer|
