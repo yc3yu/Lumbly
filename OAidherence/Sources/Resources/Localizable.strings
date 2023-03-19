@@ -9,6 +9,7 @@
 // MARK: NavigationBarItem
 "NavigationBarItem.skip" = "Skip";
 "NavigationBarItem.done" = "Done";
+"NavigationBarItem.submit" = "Submit";
 
 // MARK: Onboarding
 "Onboarding.signUp" = "Sign up";

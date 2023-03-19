@@ -20,5 +20,8 @@ struct PlaybackView: View {
                 player = AVPlayer(url: videoFileURL)
                 player.play()
             }
+            .navigationBarItems(trailing: NavigationLink(destination: ResultsView()) {
+                Text(L10n.NavigationBarItem.submit)
+            })
     }
 }
