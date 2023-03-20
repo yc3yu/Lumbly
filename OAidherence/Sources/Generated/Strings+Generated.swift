@@ -51,6 +51,8 @@ internal enum L10n {
     internal static let start = L10n.tr("Localizable", "ExerciseSetTileView.start", fallback: "Start")
   }
   internal enum ExerciseSetView {
+    /// There are no exercises to show for this exercise set.
+    internal static let noExercises = L10n.tr("Localizable", "ExerciseSetView.noExercises", fallback: "There are no exercises to show for this exercise set.")
     /// Start Exercise Set
     internal static let startExerciseSet = L10n.tr("Localizable", "ExerciseSetView.startExerciseSet", fallback: "Start Exercise Set")
   }

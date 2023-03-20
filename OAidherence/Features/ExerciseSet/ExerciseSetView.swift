@@ -59,7 +59,8 @@ struct ExerciseSetView: View {
                 
                 Divider()
                 
-                if let exerciseTiles = viewModel.exerciseSetData?.exerciseTiles {
+                if let exerciseTiles = viewModel.exerciseSetData?.exerciseTiles,
+                   exerciseTiles.count > 0 {
                     ScrollView(showsIndicators: false) {
                         ForEach(exerciseTiles.indices, id: \.self) { i in
                             NavigationLink(destination:
@@ -75,6 +76,15 @@ struct ExerciseSetView: View {
                             }.buttonStyle(.plain)
                         }
                     }
+                    
+                    Spacer()
+                } else if !viewModel.isLoading {
+                    Text(L10n.ExerciseSetView.noExercises)
+                        .font(.bodyBold)
+                        .foregroundColor(.blueCharcoal)
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.top, Constants.topPadding)
                     
                     Spacer()
                 }

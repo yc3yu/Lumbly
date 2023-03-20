@@ -37,6 +37,7 @@
 
 // MARK: ExerciseSetView
 "ExerciseSetView.startExerciseSet" = "Start Exercise Set";
+"ExerciseSetView.noExercises" = "There are no exercises to show for this exercise set.";
 
 // MARK: ExerciseInstructionsView
 "ExerciseInstructionsView.exercise" = "Exercise";
