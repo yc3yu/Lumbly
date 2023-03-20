@@ -1,16 +1,20 @@
 PODS:
+  - AZSClient (0.2.6)
   - SwiftGen (6.6.2)
 
 DEPENDENCIES:
+  - AZSClient
   - SwiftGen (~> 6.0)
 
 SPEC REPOS:
   trunk:
+    - AZSClient
     - SwiftGen
 
 SPEC CHECKSUMS:
+  AZSClient: efd576cabf56f97e38cb1b614739f4b0c1906392
   SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
 
-PODFILE CHECKSUM: 6202ee6b8af4ad9b8e2370927d5cbbedf0cf8a9d
+PODFILE CHECKSUM: d0e71264ddda04e1988bbc90a44c1d9dd7b06a8f
 
 COCOAPODS: 1.11.3

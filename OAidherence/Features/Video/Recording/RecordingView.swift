@@ -92,7 +92,7 @@ struct RecordingView: View {
         }
         .navigationDestination(isPresented: $shouldPresentPlayback) {
             if let videoFileURL = videoFileURL {
-                PlaybackView(videoFileURL: videoFileURL)
+                PlaybackView(viewModel: .init(videoFileURL: videoFileURL))
             }
         }
     }

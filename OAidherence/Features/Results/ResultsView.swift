@@ -114,6 +114,7 @@ struct ResultsView: View {
             }
             .padding(.horizontal, .mediumSpace)
         }
+        .navigationBarBackButtonHidden(true)
         .navigationBarItems(trailing: NavigationLink(destination: HomeView()) {
             Text("Done")
         })

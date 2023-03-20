@@ -11,17 +11,19 @@ import SwiftUI
 struct PlaybackView: View {
     @State private var player = AVPlayer()
     
-    var videoFileURL: URL
+    var viewModel: PlaybackViewModel
     
     var body: some View {
         VideoPlayer(player: player)
             .ignoresSafeArea()
             .onAppear() {
-                player = AVPlayer(url: videoFileURL)
+                player = AVPlayer(url: viewModel.videoFileURL)
                 player.play()
             }
             .navigationBarItems(trailing: NavigationLink(destination: ResultsView()) {
                 Text(L10n.NavigationBarItem.submit)
-            })
+            }.simultaneousGesture(TapGesture().onEnded {
+                viewModel.uploadVideo()
+            }))
     }
 }

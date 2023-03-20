@@ -38,10 +38,10 @@
 		647635D528FBA34F0043DCFD /* OAidherenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647635D428FBA34F0043DCFD /* OAidherenceTests.swift */; };
 		647635DF28FBA34F0043DCFD /* OAidherenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647635DE28FBA34F0043DCFD /* OAidherenceUITests.swift */; };
 		647635E128FBA34F0043DCFD /* OAidherenceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647635E028FBA34F0043DCFD /* OAidherenceUITestsLaunchTests.swift */; };
-		647C9F482908F277007EFE62 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647C9F472908F277007EFE62 /* Coordinator.swift */; };
 		6488E9D929A2C5E70090554A /* ExerciseTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E9D829A2C5E70090554A /* ExerciseTileView.swift */; };
 		6488E9DB29A2C8540090554A /* ExerciseTileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E9DA29A2C8540090554A /* ExerciseTileViewModel.swift */; };
 		6488E9EA29A4786E0090554A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E9E929A4786E0090554A /* LoadingView.swift */; };
+		64922EBF29C799CD0025B2A9 /* PlaybackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64922EBE29C799CD0025B2A9 /* PlaybackViewModel.swift */; };
 		64979C6829A4A1C600C27768 /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64979C6729A4A1C600C27768 /* BlueButtonView.swift */; };
 		64A434392990B0F3008F8253 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A434382990B0F3008F8253 /* UIColor+Hex.swift */; };
 		64B1BBED2910BA4000AEA7E3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */; };
@@ -115,11 +115,12 @@
 		647635DA28FBA34F0043DCFD /* OAidherenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OAidherenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		647635DE28FBA34F0043DCFD /* OAidherenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAidherenceUITests.swift; sourceTree = "<group>"; };
 		647635E028FBA34F0043DCFD /* OAidherenceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAidherenceUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		647C9F472908F277007EFE62 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		647C9F8C2909ECAA007EFE62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6488E9D829A2C5E70090554A /* ExerciseTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTileView.swift; sourceTree = "<group>"; };
 		6488E9DA29A2C8540090554A /* ExerciseTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTileViewModel.swift; sourceTree = "<group>"; };
 		6488E9E929A4786E0090554A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		64922EBD29C792690025B2A9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		64922EBE29C799CD0025B2A9 /* PlaybackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackViewModel.swift; sourceTree = "<group>"; };
 		64979C6729A4A1C600C27768 /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
 		64A434382990B0F3008F8253 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
@@ -299,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				6460E3AE29C64DEF00A0884D /* PlaybackView.swift */,
+				64922EBE29C799CD0025B2A9 /* PlaybackViewModel.swift */,
 			);
 			path = Playback;
 			sourceTree = "<group>";
@@ -318,6 +320,7 @@
 			children = (
 				647280A6293ED960004CCE75 /* APIHandler.swift */,
 				647280A8293EDBC8004CCE75 /* APIEndpoints.swift */,
+				64922EBD29C792690025B2A9 /* Bridging-Header.h */,
 			);
 			path = APIHandler;
 			sourceTree = "<group>";
@@ -356,7 +359,6 @@
 				647635C728FBA34F0043DCFD /* Assets.xcassets */,
 				64028B9329B99EEC009C104B /* Preview Content */,
 				647280A5293ED94B004CCE75 /* APIHandler */,
-				647C9F0D2908F07A007EFE62 /* Coordinators */,
 			);
 			path = OAidherence;
 			sourceTree = "<group>";
@@ -376,14 +378,6 @@
 				647635E028FBA34F0043DCFD /* OAidherenceUITestsLaunchTests.swift */,
 			);
 			path = OAidherenceUITests;
-			sourceTree = "<group>";
-		};
-		647C9F0D2908F07A007EFE62 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				647C9F472908F277007EFE62 /* Coordinator.swift */,
-			);
-			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		6488E9D629A2C5C30090554A /* ExerciseSet */ = {
@@ -724,7 +718,6 @@
 				64D3D50629A6E15C0056CB75 /* ExerciseSetTileView.swift in Sources */,
 				64D3D4F729A5CB4B0056CB75 /* LoginView.swift in Sources */,
 				64C0442229AAF607000F244B /* ExerciseInstructionsViewModel.swift in Sources */,
-				647C9F482908F277007EFE62 /* Coordinator.swift in Sources */,
 				640B7AB329A491F300A84FD8 /* ExerciseSetView.swift in Sources */,
 				647280A4293ECCA5004CCE75 /* ResultsViewModel.swift in Sources */,
 				6419AF6329ABE6CF00667F4C /* FormCommentTileViewModel.swift in Sources */,
@@ -748,6 +741,7 @@
 				64D3D50829A6E6DC0056CB75 /* ExerciseSetTileViewModel.swift in Sources */,
 				647280992936D401004CCE75 /* CGFloat+Presets.swift in Sources */,
 				64D7261329C6DA1800C5200E /* OAidherenceApp.swift in Sources */,
+				64922EBF29C799CD0025B2A9 /* PlaybackViewModel.swift in Sources */,
 				643382D82910BE0D0067AA19 /* Strings+Generated.swift in Sources */,
 				644E35C7290E52940024B8A5 /* Color+Presets.swift in Sources */,
 				64C0442329AAF607000F244B /* ExerciseInstructionsView.swift in Sources */,
@@ -937,6 +931,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuechenyu.OAidherence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "OAidherence/APIHandler/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -971,6 +966,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuechenyu.OAidherence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "OAidherence/APIHandler/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
