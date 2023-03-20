@@ -23,67 +23,65 @@ struct ExerciseSetView: View {
             Color.oysterBay
                 .edgesIgnoringSafeArea([.leading, .trailing, .bottom])
             
-            ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: .mediumSpace) {
-                    VStack(alignment: .leading, spacing: .nanoSpace) {
-                        if let name = viewModel.exerciseSetData?.name {
-                            Text(name)
-                                .font(.largeTitleBold)
-                                .foregroundColor(.blueCharcoal)
-                        }
-                        
-                        if let duration = viewModel.exerciseSetData?.duration {
-                            Text(duration)
-                                .font(.title3Regular)
-                                .foregroundColor(.darkGray06)
+            VStack(alignment: .leading, spacing: .mediumSpace) {
+                VStack(alignment: .leading, spacing: .nanoSpace) {
+                    if let name = viewModel.exerciseSetData?.name {
+                        Text(name)
+                            .font(.largeTitleBold)
+                            .foregroundColor(.blueCharcoal)
+                    }
+                    
+                    if let duration = viewModel.exerciseSetData?.duration {
+                        Text(duration)
+                            .font(.title3Regular)
+                            .foregroundColor(.darkGray06)
+                    }
+                }
+                
+                HStack {
+                    if let physiotherapyIcon = viewModel.exerciseSetData?.physiotherapyIcon {
+                        AsyncImage(url: URL(string: physiotherapyIcon)) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: .mediumSpace, height: .mediumSpace)
+                        } placeholder: {
+                            Color.clear
+                                .frame(width: .mediumSpace, height: .mediumSpace)
                         }
                     }
                     
-                    HStack {
-                        if let physiotherapyIcon = viewModel.exerciseSetData?.physiotherapyIcon {
-                            AsyncImage(url: URL(string: physiotherapyIcon)) { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: .mediumSpace, height: .mediumSpace)
-                            } placeholder: {
-                                Color.clear
-                                    .frame(width: .mediumSpace, height: .mediumSpace)
-                            }
-                        }
-                        
-                        if let physiotherapyString = viewModel.exerciseSetData?.physiotherapyString {
-                            Text(physiotherapyString)
-                                .foregroundColor(.veniceBlue)
-                        }
+                    if let physiotherapyString = viewModel.exerciseSetData?.physiotherapyString {
+                        Text(physiotherapyString)
+                            .foregroundColor(.veniceBlue)
                     }
-                    
-                    Divider()
-                    
-                    if let exerciseTiles = viewModel.exerciseSetData?.exerciseTiles {
-                        ScrollView(showsIndicators: false) {
-                            ForEach(exerciseTiles.indices, id: \.self) { i in
-                                NavigationLink(destination:
-                                                ExerciseInstructionsView(viewModel:
-                                                        .init(exerciseNumber: i + 1,
-                                                              exerciseInstructionsURL: exerciseTiles[i].exerciseInstructionsURL))) {
-                                    ExerciseTileView(viewModel:
-                                            .init(exerciseTileData:
-                                                    ExerciseTile(inlineIcon: exerciseTiles[i].inlineIcon,
-                                                                 exerciseName: exerciseTiles[i].exerciseName,
-                                                                 repetitions: exerciseTiles[i].repetitions,
-                                                                 exerciseImage: exerciseTiles[i].exerciseImage)))
-                                }.buttonStyle(.plain)
-                            }
+                }
+                
+                Divider()
+                
+                if let exerciseTiles = viewModel.exerciseSetData?.exerciseTiles {
+                    ScrollView(showsIndicators: false) {
+                        ForEach(exerciseTiles.indices, id: \.self) { i in
+                            NavigationLink(destination:
+                                            ExerciseInstructionsView(viewModel:
+                                                    .init(exerciseNumber: i + 1,
+                                                          exerciseInstructionsURL: exerciseTiles[i].exerciseInstructionsURL))) {
+                                ExerciseTileView(viewModel:
+                                        .init(exerciseTileData:
+                                                ExerciseTile(inlineIcon: exerciseTiles[i].inlineIcon,
+                                                             exerciseName: exerciseTiles[i].exerciseName,
+                                                             repetitions: exerciseTiles[i].repetitions,
+                                                             exerciseImage: exerciseTiles[i].exerciseImage)))
+                            }.buttonStyle(.plain)
                         }
                     }
                     
                     Spacer()
                 }
-                .padding(.top, Constants.topPadding)
-                .padding(.horizontal, .mediumSpace)
-                .padding(.bottom, Constants.bottomPadding)
             }
+            .padding(.top, Constants.topPadding)
+            .padding(.horizontal, .mediumSpace)
+            .padding(.bottom, Constants.bottomPadding)
             
             if let exerciseTiles = viewModel.exerciseSetData?.exerciseTiles,
                exerciseTiles.count > 0,
