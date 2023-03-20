@@ -23,81 +23,79 @@ struct ExerciseSetView: View {
             Color.oysterBay
                 .edgesIgnoringSafeArea([.leading, .trailing, .bottom])
             
-            ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: .mediumSpace) {
-                    VStack(alignment: .leading, spacing: .nanoSpace) {
-                        if let name = viewModel.exerciseSetData?.name {
-                            Text(name)
-                                .font(.largeTitleBold)
-                                .foregroundColor(.blueCharcoal)
-                        } else {
-                            Text("Lower Back Exercises")
-                                .font(.largeTitleBold)
-                        }
-                        
-                        if let duration = viewModel.exerciseSetData?.duration {
-                            Text(duration)
-                                .font(.title3Regular)
-                                .foregroundColor(.darkGray06)
-                        } else {
-                            Text("5 min")
-                                .font(.title3Regular)
-                        }
+            VStack(alignment: .leading, spacing: .mediumSpace) {
+                VStack(alignment: .leading, spacing: .nanoSpace) {
+                    if let name = viewModel.exerciseSetData?.name {
+                        Text(name)
+                            .font(.largeTitleBold)
+                            .foregroundColor(.blueCharcoal)
                     }
                     
-                    HStack {
-                        if let physiotherapyIcon = viewModel.exerciseSetData?.physiotherapyIcon {
-                            AsyncImage(url: URL(string: physiotherapyIcon)) { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: .mediumSpace, height: .mediumSpace)
-                            } placeholder: {
-                                Color.clear
-                                    .frame(width: .mediumSpace, height: .mediumSpace)
-                            }
-                        } else {
-                            Image("Physiotherapy")
+                    if let duration = viewModel.exerciseSetData?.duration {
+                        Text(duration)
+                            .font(.title3Regular)
+                            .foregroundColor(.darkGray06)
+                    }
+                }
+                
+                HStack {
+                    if let physiotherapyIcon = viewModel.exerciseSetData?.physiotherapyIcon {
+                        AsyncImage(url: URL(string: physiotherapyIcon)) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: .mediumSpace, height: .mediumSpace)
+                        } placeholder: {
+                            Color.clear
                                 .frame(width: .mediumSpace, height: .mediumSpace)
                         }
-                        
-                        if let physiotherapyString = viewModel.exerciseSetData?.physiotherapyString {
-                            Text(physiotherapyString)
-                                .foregroundColor(.veniceBlue)
-                        } else {
-                            Text("Chosen by your physiotherapist")
-                                .foregroundColor(.veniceBlue)
-                        }
                     }
                     
-                    Divider()
-                    
-                    if let exerciseTiles = viewModel.exerciseSetData?.exerciseTiles {
-                        ScrollView(showsIndicators: false) {
-                            ForEach(exerciseTiles.indices, id: \.self) { i in
-                                NavigationLink(destination:
-                                                ExerciseInstructionsView(viewModel:
-                                                        .init(exerciseNumber: i + 1,
-                                                              exerciseInstructionsURL: exerciseTiles[i].exerciseInstructionsURL))) {
-                                    ExerciseTileView(viewModel:
-                                            .init(exerciseTileData:
-                                                    ExerciseTile(inlineIcon: exerciseTiles[i].inlineIcon,
-                                                                 exerciseName: exerciseTiles[i].exerciseName,
-                                                                 repetitions: exerciseTiles[i].repetitions,
-                                                                 exerciseImage: exerciseTiles[i].exerciseImage)))
-                                }.buttonStyle(.plain)
-                            }
+                    if let physiotherapyString = viewModel.exerciseSetData?.physiotherapyString {
+                        Text(physiotherapyString)
+                            .foregroundColor(.veniceBlue)
+                    }
+                }
+                
+                Divider()
+                
+                if let exerciseTiles = viewModel.exerciseSetData?.exerciseTiles,
+                   exerciseTiles.count > 0 {
+                    ScrollView(showsIndicators: false) {
+                        ForEach(exerciseTiles.indices, id: \.self) { i in
+                            NavigationLink(destination:
+                                            ExerciseInstructionsView(viewModel:
+                                                    .init(exerciseNumber: i + 1,
+                                                          exerciseInstructionsURL: exerciseTiles[i].exerciseInstructionsURL))) {
+                                ExerciseTileView(viewModel:
+                                        .init(exerciseTileData:
+                                                ExerciseTile(inlineIcon: exerciseTiles[i].inlineIcon,
+                                                             exerciseName: exerciseTiles[i].exerciseName,
+                                                             repetitions: exerciseTiles[i].repetitions,
+                                                             exerciseImage: exerciseTiles[i].exerciseImage)))
+                            }.buttonStyle(.plain)
                         }
                     }
                     
                     Spacer()
+                } else if !viewModel.isLoading {
+                    Text(L10n.ExerciseSetView.noExercises)
+                        .font(.bodyBold)
+                        .foregroundColor(.blueCharcoal)
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.top, Constants.topPadding)
+                    
+                    Spacer()
                 }
-                .padding(.top, Constants.topPadding)
-                .padding(.horizontal, .mediumSpace)
-                .padding(.bottom, Constants.bottomPadding)
             }
+            .padding(.top, Constants.topPadding)
+            .padding(.horizontal, .mediumSpace)
+            .padding(.bottom, Constants.bottomPadding)
             
-            if let exerciseInstructionsURL = viewModel.exerciseSetData?.exerciseTiles?[0].exerciseInstructionsURL {
+            if let exerciseTiles = viewModel.exerciseSetData?.exerciseTiles,
+               exerciseTiles.count > 0,
+               let exerciseInstructionsURL = viewModel.exerciseSetData?.exerciseTiles?[0].exerciseInstructionsURL {
                 VStack {
                     Spacer()
                     

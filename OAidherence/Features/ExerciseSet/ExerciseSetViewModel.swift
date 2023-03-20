@@ -21,6 +21,7 @@ extension ExerciseSetView {
         
         @Published private(set) var exerciseSetURL: String?
         @Published private(set) var exerciseSetData: ExerciseSet? = nil
+        @Published var isLoading: Bool = false
         
         init(exerciseSetURL: String?) {
             self.apiHandler = APIHandler()
@@ -29,8 +30,10 @@ extension ExerciseSetView {
         }
 
         func fetchData() {
+            isLoading = true
             apiHandler.fetchExerciseSetData(exerciseSetURL: exerciseSetURL) { [weak self] exerciseSetData in
                 self?.exerciseSetData = exerciseSetData
+                self?.isLoading = false
             }
         }
     }
