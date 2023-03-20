@@ -36,6 +36,7 @@ struct RecordingView: View {
         }
     }
 
+    var parentExerciseSet: String
     var exerciseName: String
 
     var body: some View {
@@ -91,7 +92,7 @@ struct RecordingView: View {
         }
         .navigationDestination(isPresented: $shouldPresentPlayback) {
             if let videoFileURL = videoFileURL {
-                PlaybackView(viewModel: .init(exerciseName: exerciseName, videoFileURL: videoFileURL))
+                PlaybackView(viewModel: .init(parentExerciseSet: parentExerciseSet, exerciseName: exerciseName, videoFileURL: videoFileURL))
             }
         }
     }

@@ -60,12 +60,14 @@ struct ExerciseSetView: View {
                 Divider()
                 
                 if let exerciseTiles = viewModel.exerciseSetData?.exerciseTiles,
-                   exerciseTiles.count > 0 {
+                   exerciseTiles.count > 0,
+                   let name = viewModel.exerciseSetData?.name {
                     ScrollView(showsIndicators: false) {
                         ForEach(exerciseTiles.indices, id: \.self) { i in
                             NavigationLink(destination:
                                             ExerciseInstructionsView(viewModel:
-                                                    .init(exerciseNumber: i + 1,
+                                                    .init(parentExerciseSet: name,
+                                                          exerciseNumber: i + 1,
                                                           exerciseInstructionsURL: exerciseTiles[i].exerciseInstructionsURL))) {
                                 ExerciseTileView(viewModel:
                                         .init(exerciseTileData:
@@ -95,12 +97,14 @@ struct ExerciseSetView: View {
             
             if let exerciseTiles = viewModel.exerciseSetData?.exerciseTiles,
                exerciseTiles.count > 0,
-               let exerciseInstructionsURL = viewModel.exerciseSetData?.exerciseTiles?[0].exerciseInstructionsURL {
+               let exerciseInstructionsURL = viewModel.exerciseSetData?.exerciseTiles?[0].exerciseInstructionsURL,
+               let name = viewModel.exerciseSetData?.name {
                 VStack {
                     Spacer()
                     
                     NavigationLink(destination: ExerciseInstructionsView(viewModel:
-                            .init(exerciseNumber: 1,
+                            .init(parentExerciseSet: name,
+                                  exerciseNumber: 1,
                                   exerciseInstructionsURL: exerciseInstructionsURL,
                                  showReadyButton: true))) {
                         BlueButtonView(text: L10n.ExerciseSetView.startExerciseSet, backgroundColor: .veniceBlue, navLinkButton: true)

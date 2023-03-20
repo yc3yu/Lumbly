@@ -10,17 +10,19 @@ import SwiftUI
 extension PlaybackView {
     class PlaybackViewModel {
         private var apiHandler: APIHandler
+        var parentExerciseSet: String
         var exerciseName: String
         var videoFileURL: URL
         
-        init(exerciseName: String, videoFileURL: URL) {
+        init(parentExerciseSet: String, exerciseName: String, videoFileURL: URL) {
             self.apiHandler = APIHandler()
+            self.parentExerciseSet = parentExerciseSet
             self.exerciseName = exerciseName
             self.videoFileURL = videoFileURL
         }
         
         func uploadVideo() {
-            apiHandler.uploadVideo(exerciseName: exerciseName, videoFileURL: videoFileURL) { [weak self] in
+            apiHandler.uploadVideo(parentExerciseSet: parentExerciseSet, exerciseName: exerciseName, videoFileURL: videoFileURL) { [weak self] in
                 if let videoFileURL = self?.videoFileURL {
                     let path = videoFileURL.path
                     
