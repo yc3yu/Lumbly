@@ -68,7 +68,7 @@ struct HomeView: View {
                     .ignoresSafeArea(.container)
                 
                 VStack(alignment: .leading, spacing: .zero) {
-                        Text(L10n.HomeView.exercises)
+                        Text(L10n.HomeView.exerciseSets)
                             .font(.title2Bold)
                             .foregroundColor(.blueCharcoal)
                             .padding(.horizontal, .mediumSpace)

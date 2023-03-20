@@ -20,7 +20,7 @@
 "Onboarding.password" = "Password";
 
 // MARK: HomeView
-"HomeView.exercises" = "Exercises";
+"HomeView.exerciseSets" = "Exercise Sets";
 "HomeView.calendar" = "Calendar";
 
 // MARK: CalendarTileView
