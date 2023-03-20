@@ -23,6 +23,7 @@ extension ExerciseInstructionsView {
         @Published private(set) var exerciseInstructionsURL: String?
         @Published private(set) var exerciseInstructionsData: ExerciseInstructions? = nil
         @Published private(set) var showReadyButton: Bool
+        @Published var isLoading: Bool = false
         
         init(exerciseNumber: Int, exerciseInstructionsURL: String?, showReadyButton: Bool = false) {
             self.apiHandler = APIHandler()
@@ -34,8 +35,10 @@ extension ExerciseInstructionsView {
         }
 
         func fetchData() {
+            isLoading = true
             apiHandler.fetchExerciseInstructionsData(exerciseInstructionsURL: exerciseInstructionsURL) { [weak self] exerciseInstructionsData in
                 self?.exerciseInstructionsData = exerciseInstructionsData
+                self?.isLoading = false
             }
         }
     }

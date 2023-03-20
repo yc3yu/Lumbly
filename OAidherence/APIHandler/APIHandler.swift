@@ -134,6 +134,7 @@ class APIHandler {
                             completion(exerciseInstructionsData)
                         } else {
                             // TODO: Handle error
+                            completion(ExerciseInstructions())
                         }
                     }
                 }
