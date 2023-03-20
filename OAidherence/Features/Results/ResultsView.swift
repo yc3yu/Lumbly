@@ -116,7 +116,7 @@ struct ResultsView: View {
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(trailing: NavigationLink(destination: HomeView()) {
-            Text("Done")
+            Text(L10n.NavigationBarItem.done)
         })
         .onAppear(perform: viewModel.fetchData)
     }
