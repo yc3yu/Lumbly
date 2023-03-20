@@ -63,8 +63,8 @@ internal enum L10n {
   internal enum HomeView {
     /// Calendar
     internal static let calendar = L10n.tr("Localizable", "HomeView.calendar", fallback: "Calendar")
-    /// Exercises
-    internal static let exercises = L10n.tr("Localizable", "HomeView.exercises", fallback: "Exercises")
+    /// Exercise Sets
+    internal static let exerciseSets = L10n.tr("Localizable", "HomeView.exerciseSets", fallback: "Exercise Sets")
   }
   internal enum NavigationBarItem {
     /// Done
