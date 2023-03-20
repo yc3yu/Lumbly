@@ -15,11 +15,8 @@ struct RecordingView: View {
     @ObservedObject var viewControllerLink = RecordingViewControllerLink()
     
     @State var videoFileURL: URL? = nil
-    
     @State private var isRecording = false
-    
     @State private var shouldPresentPlayback = false
-    
     @State private var orientation = UIDevice.current.orientation
     
     private var recordingButtonImage: String {
@@ -38,7 +35,9 @@ struct RecordingView: View {
             return .startRecording
         }
     }
-    
+
+    var exerciseName: String
+
     var body: some View {
         ZStack {
             HostedRecordingViewController(videoFileURL: $videoFileURL, viewControllerLink: viewControllerLink)
@@ -92,7 +91,7 @@ struct RecordingView: View {
         }
         .navigationDestination(isPresented: $shouldPresentPlayback) {
             if let videoFileURL = videoFileURL {
-                PlaybackView(viewModel: .init(videoFileURL: videoFileURL))
+                PlaybackView(viewModel: .init(exerciseName: exerciseName, videoFileURL: videoFileURL))
             }
         }
     }

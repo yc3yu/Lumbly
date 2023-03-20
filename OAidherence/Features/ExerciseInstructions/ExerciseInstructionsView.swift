@@ -98,8 +98,10 @@ struct ExerciseInstructionsView: View {
                     VStack {
                         Spacer()
                         
-                        BlueButtonView(text: L10n.ExerciseInstructionsView.ready, navLinkButton: true)
-                            .frame(width: Constants.readyButtonWidth, height: Constants.readyButtonHeight, alignment: .bottom)
+                        NavigationLink(destination: RecordingView(exerciseName: exerciseName)) {
+                            BlueButtonView(text: L10n.ExerciseInstructionsView.ready, navLinkButton: true)
+                                .frame(width: Constants.readyButtonWidth, height: Constants.readyButtonHeight, alignment: .bottom)
+                        }
                     }
                 }
             } else if !viewModel.isLoading {
