@@ -29,6 +29,8 @@ internal enum L10n {
   internal enum ExerciseInstructionsView {
     /// Exercise
     internal static let exercise = L10n.tr("Localizable", "ExerciseInstructionsView.exercise", fallback: "Exercise")
+    /// There are no instructions to show for this exercise.
+    internal static let noInstructions = L10n.tr("Localizable", "ExerciseInstructionsView.noInstructions", fallback: "There are no instructions to show for this exercise.")
     /// Ready
     internal static let ready = L10n.tr("Localizable", "ExerciseInstructionsView.ready", fallback: "Ready")
     /// Steps
