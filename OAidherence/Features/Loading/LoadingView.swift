@@ -17,7 +17,7 @@ struct LoadingView: View {
     var body: some View {
         ZStack {
             Color.oysterBay
-                .edgesIgnoringSafeArea(.all)
+                .ignoresSafeArea(.all)
             
             VStack(spacing: .largeSpace) {
                 Text(loadingText ?? "")

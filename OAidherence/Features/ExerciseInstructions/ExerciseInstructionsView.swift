@@ -25,7 +25,7 @@ struct ExerciseInstructionsView: View {
     var body: some View {
         ZStack {
             Color.oysterBay
-                .edgesIgnoringSafeArea([.leading, .trailing, .bottom])
+                .ignoresSafeArea(edges: [.leading, .trailing, .bottom])
             
             if let exerciseName = viewModel.exerciseInstructionsData?.exerciseName,
                !exerciseName.isEmpty {

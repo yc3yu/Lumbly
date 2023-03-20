@@ -21,7 +21,7 @@ struct ExerciseSetView: View {
     var body: some View {
         ZStack {
             Color.oysterBay
-                .edgesIgnoringSafeArea([.leading, .trailing, .bottom])
+                .ignoresSafeArea(edges: [.leading, .trailing, .bottom])
             
             VStack(alignment: .leading, spacing: .mediumSpace) {
                 VStack(alignment: .leading, spacing: .nanoSpace) {

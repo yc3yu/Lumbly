@@ -21,7 +21,7 @@ struct ResultsView: View {
     var body: some View {
         ZStack {
             Color.oysterBay
-                .edgesIgnoringSafeArea([.leading, .trailing, .bottom])
+                .ignoresSafeArea(edges: [.leading, .trailing, .bottom])
             
             ScrollView(showsIndicators: false) {
                 VStack(spacing: .zero) {
