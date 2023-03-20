@@ -30,18 +30,12 @@ struct ExerciseSetView: View {
                             Text(name)
                                 .font(.largeTitleBold)
                                 .foregroundColor(.blueCharcoal)
-                        } else {
-                            Text("Lower Back Exercises")
-                                .font(.largeTitleBold)
                         }
                         
                         if let duration = viewModel.exerciseSetData?.duration {
                             Text(duration)
                                 .font(.title3Regular)
                                 .foregroundColor(.darkGray06)
-                        } else {
-                            Text("5 min")
-                                .font(.title3Regular)
                         }
                     }
                     
@@ -56,16 +50,10 @@ struct ExerciseSetView: View {
                                 Color.clear
                                     .frame(width: .mediumSpace, height: .mediumSpace)
                             }
-                        } else {
-                            Image("Physiotherapy")
-                                .frame(width: .mediumSpace, height: .mediumSpace)
                         }
                         
                         if let physiotherapyString = viewModel.exerciseSetData?.physiotherapyString {
                             Text(physiotherapyString)
-                                .foregroundColor(.veniceBlue)
-                        } else {
-                            Text("Chosen by your physiotherapist")
                                 .foregroundColor(.veniceBlue)
                         }
                     }
