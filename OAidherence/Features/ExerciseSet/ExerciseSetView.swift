@@ -97,7 +97,9 @@ struct ExerciseSetView: View {
                 .padding(.bottom, Constants.bottomPadding)
             }
             
-            if let exerciseInstructionsURL = viewModel.exerciseSetData?.exerciseTiles?[0].exerciseInstructionsURL {
+            if let exerciseTiles = viewModel.exerciseSetData?.exerciseTiles,
+               exerciseTiles.count > 0,
+               let exerciseInstructionsURL = viewModel.exerciseSetData?.exerciseTiles?[0].exerciseInstructionsURL {
                 VStack {
                     Spacer()
                     
