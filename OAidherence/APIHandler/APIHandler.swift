@@ -15,7 +15,7 @@ class APIHandler {
     
     // MARK: Upload data
     
-    func uploadVideo(videoFileURL: URL, completion: @escaping () -> ()) {
+    func uploadVideo(parentExerciseSet: String, exerciseName: String, videoFileURL: URL, completion: @escaping () -> ()) {
         fetchConnectionString() { [weak self] connectionString in
             do {
                 guard let containerName = self?.containerName  else { return }
@@ -30,7 +30,7 @@ class APIHandler {
                         print(error.debugDescription)
                     }
                     else {
-                        let fileName = "video/\(videoFileURL.lastPathComponent)"
+                        let fileName = "\(parentExerciseSet)/\(exerciseName)/\(videoFileURL.lastPathComponent)"
                         let blob: AZSCloudBlockBlob = blobContainer.blockBlobReference(fromName: fileName)
                         
                         do {

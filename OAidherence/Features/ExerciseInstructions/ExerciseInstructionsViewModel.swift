@@ -25,8 +25,11 @@ extension ExerciseInstructionsView {
         @Published private(set) var showReadyButton: Bool
         @Published var isLoading: Bool = false
         
-        init(exerciseNumber: Int, exerciseInstructionsURL: String?, showReadyButton: Bool = false) {
+        var parentExerciseSet: String
+        
+        init(parentExerciseSet: String, exerciseNumber: Int, exerciseInstructionsURL: String?, showReadyButton: Bool = false) {
             self.apiHandler = APIHandler()
+            self.parentExerciseSet = parentExerciseSet
             self.exerciseNumber = exerciseNumber
             self.exerciseInstructionsURL = exerciseInstructionsURL
             self.showReadyButton = showReadyButton

@@ -11,17 +11,12 @@ import UIKit
 
 class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
     private let captureSession = AVCaptureSession()
-    
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
     
     private var movieFileOutput = AVCaptureMovieFileOutput()
-
     private var permissionGranted = false
-    
     private var previewLayer = AVCaptureVideoPreviewLayer()
-
     private var screenRect: CGRect! = nil // For view dimensions
-    
     private var backgroundRecordingID: UIBackgroundTaskIdentifier?
     
     weak var delegate: RecordingViewControllerDelegate?

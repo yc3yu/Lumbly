@@ -98,8 +98,10 @@ struct ExerciseInstructionsView: View {
                     VStack {
                         Spacer()
                         
-                        BlueButtonView(text: L10n.ExerciseInstructionsView.ready, navLinkButton: true)
-                            .frame(width: Constants.readyButtonWidth, height: Constants.readyButtonHeight, alignment: .bottom)
+                        NavigationLink(destination: RecordingView(parentExerciseSet: viewModel.parentExerciseSet, exerciseName: exerciseName)) {
+                            BlueButtonView(text: L10n.ExerciseInstructionsView.ready, navLinkButton: true)
+                                .frame(width: Constants.readyButtonWidth, height: Constants.readyButtonHeight, alignment: .bottom)
+                        }
                     }
                 }
             } else if !viewModel.isLoading {
@@ -116,6 +118,6 @@ struct ExerciseInstructionsView: View {
 
 struct ExerciseInstructionsView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseInstructionsView(viewModel: .init(exerciseNumber: 1, exerciseInstructionsURL: nil))
+        ExerciseInstructionsView(viewModel: .init(parentExerciseSet: "", exerciseNumber: 1, exerciseInstructionsURL: nil))
     }
 }

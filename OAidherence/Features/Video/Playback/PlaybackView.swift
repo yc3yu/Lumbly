@@ -20,7 +20,7 @@ struct PlaybackView: View {
                 player = AVPlayer(url: viewModel.videoFileURL)
                 player.play()
             }
-            .navigationBarItems(trailing: NavigationLink(destination: ResultsView()) {
+            .navigationBarItems(trailing: NavigationLink(destination: PainLevelRatingView()) {
                 Text(L10n.NavigationBarItem.submit)
             }.simultaneousGesture(TapGesture().onEnded {
                 viewModel.uploadVideo()
