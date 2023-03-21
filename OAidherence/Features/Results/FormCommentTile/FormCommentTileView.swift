@@ -37,6 +37,7 @@ struct FormCommentTileView: View {
                     Color.clear
                         .frame(width: Constants.imageWidth, height: Constants.mainImageHeight)
                 }
+                .padding(.top, .smallSpace)
             }
             
             if let solution = viewModel.formCommentTileData?.solution,
