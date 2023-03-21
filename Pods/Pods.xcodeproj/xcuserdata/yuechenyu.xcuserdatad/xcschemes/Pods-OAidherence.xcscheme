@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C77B3C868825E618E64F2F1A50E08BB6"
-               BuildableName = "libPods-OAidherence.a"
+               BuildableName = "Pods_OAidherence.framework"
                BlueprintName = "Pods-OAidherence"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

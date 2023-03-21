@@ -5,6 +5,7 @@
 //  Created by Yue chen Yu on 2023-02-25.
 //
 
+import JellyGif
 import SwiftUI
 
 struct ExerciseInstructionsView: View {
@@ -53,15 +54,9 @@ struct ExerciseInstructionsView: View {
                             Spacer()
                         }
                         
-                        if let mainImage = viewModel.exerciseInstructionsData?.mainImage {
-                            AsyncImage(url: URL(string: mainImage)) { image in
-                                image.resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: Constants.mainImageWidth, height: Constants.mainImageHeight)
-                            } placeholder: {
-                                Color.clear
-                                    .frame(width: Constants.mainImageWidth, height: Constants.mainImageHeight)
-                            }
+                        if let mainImage = viewModel.exerciseInstructionsData?.mainImage,
+                           let imageURL = URL(string: mainImage) {
+                            GifView(url: imageURL, frame: CGRect(x: 0, y: 0, width: Constants.mainImageWidth, height: Constants.mainImageHeight))
                         }
                         
                         Picker(L10n.ExerciseInstructionsView.stepsOrTips, selection: $stepsOrTips) {

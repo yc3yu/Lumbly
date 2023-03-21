@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34FFF6C2911170F8823E497F /* libPods-OAidherence.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 760C46A4A4C569786885BFD8 /* libPods-OAidherence.a */; };
+		25DD72EB3B14CC7AFAD5513A /* Pods_OAidherence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56746F879F07615DC6138165 /* Pods_OAidherence.framework */; };
 		64028B7F29AE5299009C104B /* PainLevelTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64028B7E29AE5299009C104B /* PainLevelTileView.swift */; };
 		64028B8129AEB318009C104B /* PainLevelTileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64028B8029AEB318009C104B /* PainLevelTileViewModel.swift */; };
 		64028B8429AEFD30009C104B /* ExerciseRatingTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64028B8329AEFD30009C104B /* ExerciseRatingTileView.swift */; };
 		64028B8629AEFDA1009C104B /* ExerciseRatingTileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64028B8529AEFDA1009C104B /* ExerciseRatingTileViewModel.swift */; };
 		64028B8929AF033D009C104B /* PainLevelRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64028B8829AF033D009C104B /* PainLevelRatingView.swift */; };
 		64028B8B29AF0F98009C104B /* PainLevelRatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64028B8A29AF0F98009C104B /* PainLevelRatingViewModel.swift */; };
+		640781F629C9719E005050F9 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640781F529C9719E005050F9 /* GifView.swift */; };
 		640B7AB329A491F300A84FD8 /* ExerciseSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B7AB029A491F300A84FD8 /* ExerciseSetView.swift */; };
 		640B7AB529A491F300A84FD8 /* ExerciseSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B7AB229A491F300A84FD8 /* ExerciseSetViewModel.swift */; };
 		6419AF6129ABDF3700667F4C /* FormCommentTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419AF6029ABDF3700667F4C /* FormCommentTileView.swift */; };
@@ -82,12 +83,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56746F879F07615DC6138165 /* Pods_OAidherence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OAidherence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64028B7E29AE5299009C104B /* PainLevelTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevelTileView.swift; sourceTree = "<group>"; };
 		64028B8029AEB318009C104B /* PainLevelTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevelTileViewModel.swift; sourceTree = "<group>"; };
 		64028B8329AEFD30009C104B /* ExerciseRatingTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRatingTileView.swift; sourceTree = "<group>"; };
 		64028B8529AEFDA1009C104B /* ExerciseRatingTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRatingTileViewModel.swift; sourceTree = "<group>"; };
 		64028B8829AF033D009C104B /* PainLevelRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevelRatingView.swift; sourceTree = "<group>"; };
 		64028B8A29AF0F98009C104B /* PainLevelRatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevelRatingViewModel.swift; sourceTree = "<group>"; };
+		640781F529C9719E005050F9 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
 		640B7AB029A491F300A84FD8 /* ExerciseSetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSetView.swift; sourceTree = "<group>"; };
 		640B7AB229A491F300A84FD8 /* ExerciseSetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSetViewModel.swift; sourceTree = "<group>"; };
 		6419AF6029ABDF3700667F4C /* FormCommentTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCommentTileView.swift; sourceTree = "<group>"; };
@@ -141,7 +144,6 @@
 		64D3D50C29A6FB5B0056CB75 /* CalendarTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTileViewModel.swift; sourceTree = "<group>"; };
 		64D3D50E29A714E70056CB75 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		64D7261229C6DA1800C5200E /* OAidherenceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAidherenceApp.swift; sourceTree = "<group>"; };
-		760C46A4A4C569786885BFD8 /* libPods-OAidherence.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OAidherence.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA73BCC58085341DDBBEE890 /* Pods-OAidherence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.release.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.release.xcconfig"; sourceTree = "<group>"; };
 		CF95655221B79C369E5AE5CB /* Pods-OAidherence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.debug.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,7 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34FFF6C2911170F8823E497F /* libPods-OAidherence.a in Frameworks */,
+				25DD72EB3B14CC7AFAD5513A /* Pods_OAidherence.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +425,7 @@
 			children = (
 				64979C6729A4A1C600C27768 /* BlueButtonView.swift */,
 				64D3D50329A66EB90056CB75 /* StyledTextFieldView.swift */,
+				640781F529C9719E005050F9 /* GifView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -514,7 +517,7 @@
 		6A1E47DDD2A7B81C9D840218 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				760C46A4A4C569786885BFD8 /* libPods-OAidherence.a */,
+				56746F879F07615DC6138165 /* Pods_OAidherence.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				647635BC28FBA34E0043DCFD /* Sources */,
 				647635BD28FBA34E0043DCFD /* Frameworks */,
 				647635BE28FBA34E0043DCFD /* Resources */,
+				064FD4E9E2D3FDF53144D24C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -657,6 +661,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		064FD4E9E2D3FDF53144D24C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OAidherence/Pods-OAidherence-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OAidherence/Pods-OAidherence-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OAidherence/Pods-OAidherence-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		64B1BBE92910B8CD00AEA7E3 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -743,6 +764,7 @@
 				64D7261329C6DA1800C5200E /* OAidherenceApp.swift in Sources */,
 				64922EBF29C799CD0025B2A9 /* PlaybackViewModel.swift in Sources */,
 				643382D82910BE0D0067AA19 /* Strings+Generated.swift in Sources */,
+				640781F629C9719E005050F9 /* GifView.swift in Sources */,
 				644E35C7290E52940024B8A5 /* Color+Presets.swift in Sources */,
 				64C0442329AAF607000F244B /* ExerciseInstructionsView.swift in Sources */,
 				64C0441E29AAF378000F244B /* ExerciseStepView.swift in Sources */,
