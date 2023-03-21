@@ -93,7 +93,7 @@ struct ExerciseSetView: View {
             }
             .padding(.top, Constants.topPadding)
             .padding(.horizontal, .mediumSpace)
-            .padding(.bottom, Constants.bottomPadding)
+            .ignoresSafeArea(edges: .bottom)
             
             if let exerciseTiles = viewModel.exerciseSetData?.exerciseTiles,
                exerciseTiles.count > 0,
