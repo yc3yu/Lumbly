@@ -15,9 +15,11 @@ struct ExerciseTip: Decodable, Hashable {
 
 extension ExerciseTipView {
     class ExerciseTipViewModel: ObservableObject {
+        @Published private(set) var tipNumber: Int?
         @Published private(set) var exerciseTipData: ExerciseTip?
         
-        init(exerciseTipData: ExerciseTip?) {
+        init(tipNumber: Int, exerciseTipData: ExerciseTip?) {
+            self.tipNumber = tipNumber
             self.exerciseTipData = exerciseTipData
         }
     }

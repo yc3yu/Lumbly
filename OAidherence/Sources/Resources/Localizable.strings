@@ -47,6 +47,9 @@
 "ExerciseInstructionsView.ready" = "Ready";
 "ExerciseInstructionsView.noInstructions" = "There are no instructions to show for this exercise.";
 
+// MARK: ExerciseTipView
+"ExerciseTipView.tipNumber" =  "TIP #";
+
 // MARK: PainLevelRatingView
 "PainLevelRatingView.rateYourBackPain" = "Rate your back pain";
 

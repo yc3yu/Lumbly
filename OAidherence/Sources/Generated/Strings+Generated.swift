@@ -58,6 +58,10 @@ internal enum L10n {
     /// Start Exercise Set
     internal static let startExerciseSet = L10n.tr("Localizable", "ExerciseSetView.startExerciseSet", fallback: "Start Exercise Set")
   }
+  internal enum ExerciseTipView {
+    /// TIP #
+    internal static let tipNumber = L10n.tr("Localizable", "ExerciseTipView.tipNumber", fallback: "TIP #")
+  }
   internal enum FormCommentTileView {
     /// Solution
     internal static let solution = L10n.tr("Localizable", "FormCommentTileView.solution", fallback: "Solution")
