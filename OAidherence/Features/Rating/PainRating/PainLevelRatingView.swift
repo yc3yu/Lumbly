@@ -36,14 +36,16 @@ struct PainLevelRatingView: View {
                 
                 LazyVGrid(columns: layout, spacing: .mediumSpace) {
                     ForEach(viewModel.painLevelOptions, id: \.self) { ratingOption in
-                        PainLevelTileView(viewModel: .init(painLevel: ratingOption))
+                        NavigationLink(destination: ResultsView()) {
+                            PainLevelTileView(viewModel: .init(painLevel: ratingOption))
+                        }
                     }
                 }
             }
             .padding(.mediumSpace)
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(trailing: NavigationLink(destination: HomeView()) {
+        .navigationBarItems(trailing: NavigationLink(destination: ResultsView()) {
             Text(L10n.NavigationBarItem.skip)
         })
     }
