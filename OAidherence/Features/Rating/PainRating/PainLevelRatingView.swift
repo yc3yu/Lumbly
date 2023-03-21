@@ -20,6 +20,7 @@ struct PainLevelRatingView: View {
     @StateObject var viewModel = PainLevelRatingViewModel()
     
     var body: some View {
+        // TODO: Change to navigate to exercise rating view
         ZStack {
             Color.oysterBay
                 .ignoresSafeArea(edges: [.leading, .trailing, .bottom])
