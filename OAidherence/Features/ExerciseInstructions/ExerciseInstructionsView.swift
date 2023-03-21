@@ -81,8 +81,10 @@ struct ExerciseInstructionsView: View {
                             }
                         } else {
                             if let exerciseTips = viewModel.exerciseInstructionsData?.exerciseTips {
-                                ForEach(exerciseTips, id: \.self) { exerciseTip in
-                                    ExerciseTipView(viewModel: .init(exerciseTipData: exerciseTip))
+                                ForEach(exerciseTips.indices, id: \.self) { i in
+                                    ExerciseTipView(viewModel:
+                                            .init(tipNumber: i + 1,
+                                                  exerciseTipData: exerciseTips[i]))
                                 }
                             }
                         }

@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ExerciseTipView: View {
     private struct Constants {
-        static let textWidth: CGFloat = 278.0
         static let textAndImageSpacing: CGFloat = 12.0
         static let imageWidth: CGFloat = 286.0
         static let imageHeight: CGFloat = 148.0
+        static let rectangleContentPadding: CGFloat = 12.0
+        static let tileCornerRadius: CGFloat = 15.0
     }
     
     @StateObject var viewModel: ExerciseTipViewModel
@@ -20,19 +21,25 @@ struct ExerciseTipView: View {
     var body: some View {
         VStack(spacing: Constants.textAndImageSpacing) {
             VStack(alignment: .leading, spacing: .miniSpace) {
+                if let tipNumber = viewModel.tipNumber {
+                    Text("\(L10n.ExerciseTipView.tipNumber)\(tipNumber)")
+                        .font(.caption1Bold)
+                        .foregroundColor(.resolutionBlue)
+                }
+                
                 if let tipName = viewModel.exerciseTipData?.tipName {
                     Text(tipName)
-                        .font(.bodyBold)
-                        .foregroundColor(.blueCharcoal)
+                        .font(.title3Bold)
                 }
                 
                 if let tipDescription = viewModel.exerciseTipData?.tipDescription {
                     Text(tipDescription)
-                        .font(.caption1Regular)
-                        .foregroundColor(.blueCharcoal)
+                        .font(.bodyRegular)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
             }
-            .frame(width: Constants.textWidth, alignment: .leading)
+            .frame(maxWidth: .infinity, alignment: .leading)
             
             if let tipImage = viewModel.exerciseTipData?.tipImage {
                 AsyncImage(url: URL(string: tipImage)) { image in
@@ -46,6 +53,11 @@ struct ExerciseTipView: View {
                 }
             }
         }
+        .padding(Constants.rectangleContentPadding)
+        .background(
+            RoundedRectangle(cornerRadius: Constants.tileCornerRadius, style: .continuous)
+                .foregroundColor(.white)
+        )
     }
 }
 
