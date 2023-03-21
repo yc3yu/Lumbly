@@ -8,7 +8,7 @@
 struct APIEndpoints {
     static let connectionStringURL = "https://temporarylumblyfunction.azurewebsites.net/api/connection_string"
     
-    static let resultsURL = "https://temporarylumblyfunction.azurewebsites.net/api/results/TestUser1/202303011100||Lower Back Exercises"
+    static let resultsURL = "https://temporarylumblyfunction.azurewebsites.net/api/results/testuser1/Lower Back Exercises/20230301-123456"
     
     static let homeURL = "https://temporarylumblyfunction.azurewebsites.net/api/home"
     
