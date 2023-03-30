@@ -51,6 +51,13 @@ struct CalendarTileView: View {
                 Spacer()
             }
             .padding(.top, .smallSpace)
+            
+            if let didExercise = viewModel.calendarTileData?.didExercise,
+               viewModel.dateRelativeToToday != .future {
+                NavigationLink(destination: ResultsForDayView(dayOfWeek: viewModel.dayOfWeek ?? "", didExercise: didExercise)) {
+                    Color.clear
+                }
+            }
         }
     }
     
