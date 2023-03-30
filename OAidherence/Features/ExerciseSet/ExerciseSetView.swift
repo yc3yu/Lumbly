@@ -13,7 +13,7 @@ struct ExerciseSetView: View {
         static let startButtonWidth: CGFloat = 366.0
         static let startButtonHeight: CGFloat = 50.0
         static let startButtonCornerRadius: CGFloat = 15.0
-        static let bottomPadding: CGFloat = 50.0
+        static let bottomPadding: CGFloat = 80.0
     }
     
     @StateObject var viewModel: ExerciseSetViewModel
@@ -79,7 +79,7 @@ struct ExerciseSetView: View {
                         }
                     }
                     
-                    Spacer()
+                    Spacer(minLength: Constants.bottomPadding)
                 } else if !viewModel.isLoading {
                     Text(L10n.ExerciseSetView.noExercises)
                         .font(.bodyBold)
