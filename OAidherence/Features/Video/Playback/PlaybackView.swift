@@ -14,16 +14,17 @@ struct PlaybackView: View {
     var viewModel: PlaybackViewModel
     
     var body: some View {
-        VideoPlayer(player: player)
-            .ignoresSafeArea()
-            .onAppear() {
-                player = AVPlayer(url: viewModel.videoFileURL)
-                player.play()
-            }
-            .navigationBarItems(trailing: NavigationLink(destination: PainLevelRatingView()) {
-                Text(L10n.NavigationBarItem.submit)
-            }.simultaneousGesture(TapGesture().onEnded {
-                viewModel.uploadVideo()
-            }))
+        ZStack {
+            Color.oysterBay
+                .ignoresSafeArea(edges: [.horizontal, .bottom])
+
+            Text("Immediately after recording, the video will play back here. Press 'Submit' to continue.\n\n(This view is to be updated.)")
+                .font(.bodyBold)
+                .foregroundColor(.blueCharcoal)
+                .multilineTextAlignment(.center)
+        }
+        .navigationBarItems(trailing: NavigationLink(destination: PainLevelRatingView()) {
+            Text(L10n.NavigationBarItem.submit)
+        })
     }
 }

@@ -27,7 +27,7 @@ struct ResultsView: View {
                 VStack(spacing: .zero) {
                     HStack(alignment: .center, spacing: .mediumSpace) {
                         Text(L10n.ResultsView.results)
-                            .font(.title1Bold)
+                            .font(.largeTitleBold)
                             .foregroundColor(.darkGray06)
 
                         Spacer()
