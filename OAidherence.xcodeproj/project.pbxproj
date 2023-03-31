@@ -46,6 +46,7 @@
 		6488E9EA29A4786E0090554A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E9E929A4786E0090554A /* LoadingView.swift */; };
 		64922EBF29C799CD0025B2A9 /* PlaybackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64922EBE29C799CD0025B2A9 /* PlaybackViewModel.swift */; };
 		649581B829D553C300973A0C /* RecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649581B729D553C300973A0C /* RecordingViewModel.swift */; };
+		649581BB29D6AA9900973A0C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649581BA29D6AA9900973A0C /* ErrorView.swift */; };
 		64979C6829A4A1C600C27768 /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64979C6729A4A1C600C27768 /* BlueButtonView.swift */; };
 		64A434392990B0F3008F8253 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A434382990B0F3008F8253 /* UIColor+Hex.swift */; };
 		64B1BBED2910BA4000AEA7E3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */; };
@@ -130,6 +131,7 @@
 		64922EBD29C792690025B2A9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		64922EBE29C799CD0025B2A9 /* PlaybackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackViewModel.swift; sourceTree = "<group>"; };
 		649581B729D553C300973A0C /* RecordingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewModel.swift; sourceTree = "<group>"; };
+		649581BA29D6AA9900973A0C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		64979C6729A4A1C600C27768 /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
 		64A434382990B0F3008F8253 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				64028B7C29AE5279009C104B /* Rating */,
 				6472809B29370BA5004CCE75 /* Results */,
 				6488E9E829A478370090554A /* Loading */,
+				649581B929D6AA7000973A0C /* Error */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -415,6 +418,14 @@
 				6488E9E929A4786E0090554A /* LoadingView.swift */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		649581B929D6AA7000973A0C /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				649581BA29D6AA9900973A0C /* ErrorView.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		64979C6529A4A19B00C27768 /* Presets */ = {
@@ -743,6 +754,7 @@
 				647280A9293EDBC8004CCE75 /* APIEndpoints.swift in Sources */,
 				64028B8629AEFDA1009C104B /* ExerciseRatingTileViewModel.swift in Sources */,
 				6460E3A429C4022E00A0884D /* RecordingViewControllerLink.swift in Sources */,
+				649581BB29D6AA9900973A0C /* ErrorView.swift in Sources */,
 				644E35C9290E52AC0024B8A5 /* Font+Presets.swift in Sources */,
 				6488E9D929A2C5E70090554A /* ExerciseTileView.swift in Sources */,
 				64D3D50629A6E15C0056CB75 /* ExerciseSetTileView.swift in Sources */,
