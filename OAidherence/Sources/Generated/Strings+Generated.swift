@@ -75,6 +75,8 @@ internal enum L10n {
   internal enum NavigationBarItem {
     /// Done
     internal static let done = L10n.tr("Localizable", "NavigationBarItem.done", fallback: "Done")
+    /// Exit
+    internal static let exit = L10n.tr("Localizable", "NavigationBarItem.exit", fallback: "Exit")
     /// Localizable.strings
     ///   OAidherence
     /// 
@@ -116,8 +118,12 @@ internal enum L10n {
     internal static let noPain = L10n.tr("Localizable", "PainLevelTileView.noPain", fallback: "No pain")
   }
   internal enum ResultsView {
+    /// Oops! There was an error retrieving your data.
+    internal static let error = L10n.tr("Localizable", "ResultsView.error", fallback: "Oops! There was an error retrieving your data.")
     /// Form Mistakes
     internal static let formMistakes = L10n.tr("Localizable", "ResultsView.formMistakes", fallback: "Form Mistakes")
+    /// Detecting form errors...
+    internal static let loading = L10n.tr("Localizable", "ResultsView.loading", fallback: "Detecting form errors...")
     /// No form mistakes were detected for this exercise. Well done!
     internal static let noResultsForThisExercise = L10n.tr("Localizable", "ResultsView.noResultsForThisExercise", fallback: "No form mistakes were detected for this exercise. Well done!")
     /// No form mistakes were detected in this session. Well done!
