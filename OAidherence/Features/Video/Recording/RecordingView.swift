@@ -39,9 +39,10 @@ struct RecordingView: View {
     var parentExerciseSet: String
     var exerciseName: String
 
+    @State var timestamp: String? = nil
     var body: some View {
         ZStack {
-            HostedRecordingViewController(videoFileURL: $videoFileURL, viewControllerLink: viewControllerLink)
+            HostedRecordingViewController(videoFileURL: $videoFileURL, timestamp: $timestamp, viewControllerLink: viewControllerLink)
                 .ignoresSafeArea(.container, edges: .horizontal)
 
             Group {
@@ -92,7 +93,12 @@ struct RecordingView: View {
         }
         .navigationDestination(isPresented: $shouldPresentPlayback) {
             if let videoFileURL = videoFileURL {
-                PlaybackView(viewModel: .init(parentExerciseSet: parentExerciseSet, exerciseName: exerciseName, videoFileURL: videoFileURL))
+                PlaybackView(viewModel:
+                        .init(recordingViewModel:
+                                .init(parentExerciseSet: viewModel.parentExerciseSet,
+                                      exerciseName: viewModel.exerciseName,
+                                      timestamp: timestamp),
+                              videoFileURL: videoFileURL))
             }
         }
     }
