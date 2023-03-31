@@ -20,11 +20,15 @@ struct IndividualExerciseResults: Decodable {
 extension ResultsView {
     class ResultsViewModel: ObservableObject {
         private let apiHandler: APIHandler
+        private var recordingViewModel: RecordingView.RecordingViewModel
         
         @Published private(set) var results: Results? = nil
+        @Published var isLoading: Bool = false
+        @Published var dataAvailability: ResultsAvailability = .unavailable
         
-        init() {
+        init(recordingViewModel: RecordingView.RecordingViewModel) {
             self.apiHandler = APIHandler()
+            self.recordingViewModel = recordingViewModel
             fetchData()
         }
 

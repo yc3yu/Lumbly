@@ -15,5 +15,13 @@ extension PainLevelRatingView {
                                           L10n.PainLevelTileView.hurtsEvenMore,
                                           L10n.PainLevelTileView.hurtsAWholeLot,
                                           L10n.PainLevelTileView.hurtsTheWorst]
+        
+        var recordingViewModel: RecordingView.RecordingViewModel
+        
+        init(recordingViewModel: RecordingView.RecordingViewModel) {
+            self.recordingViewModel = recordingViewModel
+        }
+        
+        // TODO: Save user's selection to server with URL based on information in recordingViewModel
     }
 }

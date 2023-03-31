@@ -16,7 +16,7 @@ struct ResultsView: View {
     }
     
     @State private var selectedExercise: Int = 0
-    @StateObject private var viewModel = ResultsViewModel()
+    @StateObject var viewModel: ResultsViewModel
     
     var body: some View {
         ZStack {
@@ -124,7 +124,11 @@ struct ResultsView: View {
 
 struct ResultsView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultsView()
+        ResultsView(viewModel:
+                .init(recordingViewModel:
+                        .init(parentExerciseSet: "",
+                              exerciseName: "",
+                              timestamp: nil)))
     }
 }
 

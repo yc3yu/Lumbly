@@ -17,7 +17,7 @@ struct PainLevelRatingView: View {
                           GridItem(.fixed(Constants.tileWidth), spacing: .mediumSpace),
                           GridItem(.fixed(Constants.tileWidth), spacing: .mediumSpace)]
     
-    @StateObject var viewModel = PainLevelRatingViewModel()
+    @StateObject var viewModel: PainLevelRatingViewModel
     
     var body: some View {
         // TODO: Change to navigate to exercise rating view
@@ -36,16 +36,16 @@ struct PainLevelRatingView: View {
                 
                 LazyVGrid(columns: layout, spacing: .mediumSpace) {
                     ForEach(viewModel.painLevelOptions, id: \.self) { ratingOption in
-                        NavigationLink(destination: ResultsView()) {
+                        NavigationLink(destination: ResultsView(viewModel: .init(recordingViewModel: viewModel.recordingViewModel))) {
                             PainLevelTileView(viewModel: .init(painLevel: ratingOption))
-                        }
+                        } // TODO: Save user's selection to server with URL based on information in recordingViewModel
                     }
                 }
             }
             .padding(.mediumSpace)
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(trailing: NavigationLink(destination: ResultsView()) {
+        .navigationBarItems(trailing: NavigationLink(destination: ResultsView(viewModel: .init(recordingViewModel: viewModel.recordingViewModel))) {
             Text(L10n.NavigationBarItem.skip)
         })
     }
@@ -53,6 +53,6 @@ struct PainLevelRatingView: View {
 
 struct PainLevelRatingView_Previews: PreviewProvider {
     static var previews: some View {
-        PainLevelRatingView()
+        PainLevelRatingView(viewModel: .init(recordingViewModel: .init(parentExerciseSet: "", exerciseName: "", timestamp: "")))
     }
 }

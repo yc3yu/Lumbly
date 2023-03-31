@@ -12,13 +12,6 @@ struct RecordingView: View {
         static let recordingButtonSize: CGFloat = 72.0
     }
     
-    @ObservedObject var viewControllerLink = RecordingViewControllerLink()
-    
-    @State var videoFileURL: URL? = nil
-    @State private var isRecording = false
-    @State private var shouldPresentPlayback = false
-    @State private var orientation = UIDevice.current.orientation
-    
     private var recordingButtonImage: String {
         if self.isRecording {
             return "RecordingButtonStop"
@@ -35,11 +28,16 @@ struct RecordingView: View {
             return .startRecording
         }
     }
-
-    var parentExerciseSet: String
-    var exerciseName: String
-
+    
+    @State private var isRecording = false
+    @State private var shouldPresentPlayback = false
+    @State private var orientation = UIDevice.current.orientation
+    
+    @ObservedObject var viewControllerLink = RecordingViewControllerLink()
+    @State var videoFileURL: URL? = nil
     @State var timestamp: String? = nil
+    @State var viewModel: RecordingViewModel
+    
     var body: some View {
         ZStack {
             HostedRecordingViewController(videoFileURL: $videoFileURL, timestamp: $timestamp, viewControllerLink: viewControllerLink)
