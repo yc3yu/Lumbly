@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+struct ResultsAvailability: Decodable {
+    var status: AvailabilityStatus
+    
+    enum AvailabilityStatus: Decodable {
+        case available
+        case unavailable
+        case error
+    }
+}
+
 struct Results: Decodable {
     var exercises: [String]?
     var individualExerciseResults: [IndividualExerciseResults?]?
@@ -24,7 +34,7 @@ extension ResultsView {
         
         @Published private(set) var results: Results? = nil
         @Published var isLoading: Bool = false
-        @Published var dataAvailability: ResultsAvailability = .unavailable
+        @Published var dataAvailability: ResultsAvailability = ResultsAvailability(status: .unavailable)
         
         init(recordingViewModel: RecordingView.RecordingViewModel) {
             self.apiHandler = APIHandler()

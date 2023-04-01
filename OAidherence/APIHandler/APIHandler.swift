@@ -142,9 +142,40 @@ class APIHandler {
         }
     }
     
-    func fetchResultsData(completion: @escaping ((Results) -> ())) {
-        if let urlString = APIEndpoints.resultsURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-           let url = URL(string: urlString) {
+    func fetchResultsDataAvailability(parentExerciseSet: String, exerciseName: String, timestamp: String, completion: @escaping ((ResultsAvailability) -> ())) {
+        func makeURL(parentExerciseSet: String, exerciseName: String, timestamp: String) -> String {
+            return "\(APIEndpoints.containerURL)/\(parentExerciseSet)/\(timestamp)?flags=dataAvailability"
+        }
+        
+        let urlString = makeURL(parentExerciseSet: parentExerciseSet, exerciseName: exerciseName, timestamp: timestamp)
+        if let url = URL(string: urlString) {
+            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+                DispatchQueue.main.async {
+                    if error != nil {
+                        completion(ResultsAvailability(status: .error))
+                    } else {
+                        let jsonDecoder = JSONDecoder()
+                        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                        
+                        if let data = data,
+                           let results = try? jsonDecoder.decode(ResultsAvailability.self, from: data) {
+                            completion(results)
+                        } else {
+                            completion(ResultsAvailability(status: .error))
+                        }
+                    }
+                }
+            }).resume()
+        }
+    }
+
+    func fetchResultsData(parentExerciseSet: String, exerciseName: String, timestamp: String, completion: @escaping ((Results) -> ())) {
+        func makeURL(parentExerciseSet: String, exerciseName: String, timestamp: String) -> String {
+            return "\(APIEndpoints.containerURL)/\(parentExerciseSet)/\(timestamp)"
+        }
+        
+        let urlString = makeURL(parentExerciseSet: parentExerciseSet, exerciseName: exerciseName, timestamp: timestamp)
+        if let url = URL(string: urlString) {
             URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
                 DispatchQueue.main.async {
                     if let error = error {
