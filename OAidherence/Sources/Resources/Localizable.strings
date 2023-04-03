@@ -10,6 +10,7 @@
 "NavigationBarItem.skip" = "Skip";
 "NavigationBarItem.done" = "Done";
 "NavigationBarItem.submit" = "Submit";
+"NavigationBarItem.exit" = "Exit";
 
 // MARK: Onboarding
 "Onboarding.signUp" = "Sign up";
@@ -67,6 +68,8 @@
 "ExerciseRatingTileView.dislikedIt" = "Disliked it";
 
 // MARK: ResultsView
+"ResultsView.loading" = "Detecting form errors...";
+"ResultsView.error" = "Oops! There was an error retrieving your data.";
 "ResultsView.results" = "Results";
 "ResultsView.formMistakes" = "Form Mistakes";
 "ResultsView.welldone" = "Well-Done";

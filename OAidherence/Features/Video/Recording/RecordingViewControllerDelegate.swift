@@ -8,5 +8,5 @@
 import Foundation
 
 protocol RecordingViewControllerDelegate: AnyObject {
-    func videoFileUrlSet(_ viewController: RecordingViewController, videoFileURL: URL)
+    func videoFileUrlSet(_ viewController: RecordingViewController, videoFileURL: URL, timestamp: String)
 }

@@ -22,6 +22,7 @@ struct LoadingView: View {
             VStack(spacing: .largeSpace) {
                 Text(loadingText ?? "")
                     .font(.title2Bold)
+                    .multilineTextAlignment(.center)
                     .foregroundColor(.resolutionBlue)
                 
                 Image("Loading")
@@ -29,6 +30,7 @@ struct LoadingView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: Constants.loadingIconSize, height: Constants.loadingIconSize)
             }
+            .padding(.mediumSpace)
         }
     }
 }

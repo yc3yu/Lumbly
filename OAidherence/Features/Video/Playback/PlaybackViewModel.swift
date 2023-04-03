@@ -10,27 +10,26 @@ import SwiftUI
 extension PlaybackView {
     class PlaybackViewModel {
         private var apiHandler: APIHandler
-        var parentExerciseSet: String
-        var exerciseName: String
-        var videoFileURL: URL
+        var videoFileURL: URL?
+        var recordingViewModel: RecordingView.RecordingViewModel
         
-        init(parentExerciseSet: String, exerciseName: String, videoFileURL: URL) {
+        init(recordingViewModel: RecordingView.RecordingViewModel, videoFileURL: URL?) {
             self.apiHandler = APIHandler()
-            self.parentExerciseSet = parentExerciseSet
-            self.exerciseName = exerciseName
+            self.recordingViewModel = recordingViewModel
             self.videoFileURL = videoFileURL
         }
         
         func uploadVideo() {
-            apiHandler.uploadVideo(parentExerciseSet: parentExerciseSet, exerciseName: exerciseName, videoFileURL: videoFileURL) { [weak self] in
-                if let videoFileURL = self?.videoFileURL {
+            if let videoFileURL = videoFileURL {
+                apiHandler.uploadVideo(parentExerciseSet: recordingViewModel.parentExerciseSet,
+                                       exerciseName: recordingViewModel.exerciseName,
+                                       videoFileURL: videoFileURL) { [weak self] in
                     let path = videoFileURL.path
                     
                     guard FileManager.default.fileExists(atPath: path) else { return }
                     
                     do {
                         try FileManager.default.removeItem(atPath: path)
-                        //for testing
                     } catch {
                         print("Error removing file at url: \(videoFileURL)")
                     }

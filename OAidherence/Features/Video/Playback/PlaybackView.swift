@@ -14,17 +14,18 @@ struct PlaybackView: View {
     var viewModel: PlaybackViewModel
     
     var body: some View {
-        ZStack {
-            Color.oysterBay
-                .ignoresSafeArea(edges: [.horizontal, .bottom])
-
-            Text("Immediately after recording, the video will play back here. Press 'Submit' to continue.\n\n(This view is to be updated.)")
-                .font(.bodyBold)
-                .foregroundColor(.blueCharcoal)
-                .multilineTextAlignment(.center)
-        }
-        .navigationBarItems(trailing: NavigationLink(destination: PainLevelRatingView()) {
-            Text(L10n.NavigationBarItem.submit)
-        })
+        if let videoFileURL = viewModel.videoFileURL {
+            VideoPlayer(player: player)
+                .ignoresSafeArea()
+                .onAppear() {
+                    player = AVPlayer(url: videoFileURL)
+                    player.play()
+                }
+                .navigationBarItems(trailing: NavigationLink(destination: PainLevelRatingView(viewModel: .init(recordingViewModel: viewModel.recordingViewModel))) {
+                    Text(L10n.NavigationBarItem.submit)
+                }.simultaneousGesture(TapGesture().onEnded {
+                    viewModel.uploadVideo()
+                }))
+        } // TODO: Handle error case (show error screen or modal and ask them to retry recording)
     }
 }

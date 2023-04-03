@@ -16,115 +16,133 @@ struct ResultsView: View {
     }
     
     @State private var selectedExercise: Int = 0
-    @StateObject private var viewModel = ResultsViewModel()
+    @StateObject var viewModel: ResultsViewModel
     
     var body: some View {
-        ZStack {
-            Color.oysterBay
-                .ignoresSafeArea(edges: [.leading, .trailing, .bottom])
-            
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: .zero) {
-                    HStack(alignment: .center, spacing: .mediumSpace) {
-                        Text(L10n.ResultsView.results)
-                            .font(.largeTitleBold)
-                            .foregroundColor(.darkGray06)
-
-                        Spacer()
-
-                        if let exercises = viewModel.results?.exercises,
-                           exercises.count > 0 {
-                            Menu {
-                                ForEach(exercises.indices, id: \.self) { i in
-                                    Button {
-                                        selectedExercise = i
+        Group {
+            if viewModel.dataAvailability.status == .error {
+                ErrorView(errorText: L10n.ResultsView.error)
+                .navigationBarItems(trailing: NavigationLink(destination: HomeView()) {
+                    Text(L10n.NavigationBarItem.done)
+                })
+            } else if !viewModel.isLoading && viewModel.dataAvailability.status == .available {
+                ZStack {
+                    Color.oysterBay
+                        .ignoresSafeArea(edges: [.leading, .trailing, .bottom])
+                    
+                    ScrollView(showsIndicators: false) {
+                        VStack(spacing: .zero) {
+                            HStack(alignment: .center, spacing: .mediumSpace) {
+                                Text(L10n.ResultsView.results)
+                                    .font(.largeTitleBold)
+                                    .foregroundColor(.darkGray06)
+                                
+                                Spacer()
+                                
+                                if let exercises = viewModel.results?.exercises,
+                                   exercises.count > 0 {
+                                    Menu {
+                                        ForEach(exercises.indices, id: \.self) { i in
+                                            Button {
+                                                selectedExercise = i
+                                            } label: {
+                                                Text(exercises[i])
+                                            }
+                                        }
                                     } label: {
-                                        Text(exercises[i])
+                                        HStack(spacing: .smallSpace) {
+                                            Text(exercises[$selectedExercise.wrappedValue])
+                                                .foregroundColor(.resolutionBlue)
+                                                .lineLimit(1)
+                                                .truncationMode(.tail)
+                                            
+                                            Image("Expand Arrow")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: Constants.dropDownArrowSize, height: Constants.dropDownArrowSize)
+                                        }
+                                        .padding(.miniSpace)
+                                        .background(
+                                            RoundedRectangle(cornerRadius: Constants.dropDownCornerRadius)
+                                                .foregroundColor(.mercuryGrey)
+                                        )
                                     }
                                 }
-                            } label: {
-                                HStack(spacing: .smallSpace) {
-                                    Text(exercises[$selectedExercise.wrappedValue])
-                                        .foregroundColor(.resolutionBlue)
-                                        .lineLimit(1)
-                                        .truncationMode(.tail)
-
-                                    Image("Expand Arrow")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: Constants.dropDownArrowSize, height: Constants.dropDownArrowSize)
-                                }
-                                .padding(.miniSpace)
-                                .background(
-                                    RoundedRectangle(cornerRadius: Constants.dropDownCornerRadius)
-                                        .foregroundColor(.mercuryGrey)
-                                )
                             }
-                        }
-                    }
-                    .padding(.bottom, .mediumSpace)
-
-                    if let exercises = viewModel.results?.exercises,
-                       exercises.count > 0 {
-                        if let individualExerciseResults = viewModel.results?.individualExerciseResults,
-                           $selectedExercise.wrappedValue < individualExerciseResults.count,
-                           let currentExerciseResults = individualExerciseResults[$selectedExercise.wrappedValue] {
-                            if let formMistakesTiles = currentExerciseResults.formMistakesTiles {
-                                Text(L10n.ResultsView.formMistakes)
-                                    .font(.title3Bold)
-                                    .foregroundColor(.prussianBlue)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .padding(.bottom, Constants.headerBottomSpacing)
-                                
-                                ForEach(formMistakesTiles, id: \.self) { formMistakeTile in
-                                    FormCommentTileView(viewModel: .init(formCommentTileData: formMistakeTile))
+                            .padding(.bottom, .mediumSpace)
+                            
+                            if let exercises = viewModel.results?.exercises,
+                               exercises.count > 0 {
+                                if let individualExerciseResults = viewModel.results?.individualExerciseResults,
+                                   $selectedExercise.wrappedValue < individualExerciseResults.count,
+                                   let currentExerciseResults = individualExerciseResults[$selectedExercise.wrappedValue] {
+                                    if let formMistakesTiles = currentExerciseResults.formMistakesTiles {
+                                        Text(L10n.ResultsView.formMistakes)
+                                            .font(.title3Bold)
+                                            .foregroundColor(.prussianBlue)
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .padding(.bottom, Constants.headerBottomSpacing)
+                                        
+                                        ForEach(formMistakesTiles, id: \.self) { formMistakeTile in
+                                            FormCommentTileView(viewModel: .init(formCommentTileData: formMistakeTile))
+                                        }
+                                    }
+                                    
+                                    if let wellDoneTiles = currentExerciseResults.wellDoneTiles {
+                                        Text(L10n.ResultsView.welldone)
+                                            .font(.title3Bold)
+                                            .foregroundColor(.prussianBlue)
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .padding(.top, Constants.largePadding)
+                                            .padding(.bottom, Constants.headerBottomSpacing)
+                                        
+                                        ForEach(wellDoneTiles, id: \.self) { wellDoneTile in
+                                            FormCommentTileView(viewModel: .init(formCommentTileData: wellDoneTile))
+                                        }
+                                    }
+                                } else {
+                                    Text(L10n.ResultsView.noResultsForThisExercise)
+                                        .font(.bodyBold)
+                                        .foregroundColor(.blueCharcoal)
+                                        .multilineTextAlignment(.center)
+                                        .padding(.top, Constants.largePadding)
                                 }
+                            } else {
+                                Text(L10n.ResultsView.noResultsForThisSession)
+                                    .font(.bodyBold)
+                                    .foregroundColor(.blueCharcoal)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.top, Constants.largePadding)
                             }
                             
-                            if let wellDoneTiles = currentExerciseResults.wellDoneTiles {
-                                Text(L10n.ResultsView.welldone)
-                                    .font(.title3Bold)
-                                    .foregroundColor(.prussianBlue)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .padding(.top, Constants.largePadding)
-                                    .padding(.bottom, Constants.headerBottomSpacing)
-                                
-                                ForEach(wellDoneTiles, id: \.self) { wellDoneTile in
-                                    FormCommentTileView(viewModel: .init(formCommentTileData: wellDoneTile))
-                                }
-                            }
-                        } else {
-                            Text(L10n.ResultsView.noResultsForThisExercise)
-                                .font(.bodyBold)
-                                .foregroundColor(.blueCharcoal)
-                                .multilineTextAlignment(.center)
-                                .padding(.top, Constants.largePadding)
+                            Spacer()
                         }
-                    } else {
-                        Text(L10n.ResultsView.noResultsForThisSession)
-                            .font(.bodyBold)
-                            .foregroundColor(.blueCharcoal)
-                            .multilineTextAlignment(.center)
-                            .padding(.top, Constants.largePadding)
+                        .padding(.top, Constants.largePadding)
                     }
-
-                    Spacer()
+                    .padding(.horizontal, .mediumSpace)
                 }
-                .padding(.top, Constants.largePadding)
+                .navigationBarItems(trailing: NavigationLink(destination: HomeView()) {
+                    Text(L10n.NavigationBarItem.done)
+                })
+            } else {
+                LoadingView(loadingText: L10n.ResultsView.loading)
+                    .navigationBarItems(trailing: NavigationLink(destination: HomeView()) {
+                        Text(L10n.NavigationBarItem.exit)
+                    })
             }
-            .padding(.horizontal, .mediumSpace)
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(trailing: NavigationLink(destination: HomeView()) {
-            Text(L10n.NavigationBarItem.done)
-        })
         .onAppear(perform: viewModel.fetchData)
     }
 }
 
 struct ResultsView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultsView()
+        ResultsView(viewModel:
+                .init(recordingViewModel:
+                        .init(parentExerciseSet: "",
+                              exerciseName: "",
+                              timestamp: nil)))
     }
 }
 

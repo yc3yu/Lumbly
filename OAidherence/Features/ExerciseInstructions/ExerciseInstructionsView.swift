@@ -95,7 +95,7 @@ struct ExerciseInstructionsView: View {
                     VStack {
                         Spacer()
                         
-                        NavigationLink(destination: RecordingView(parentExerciseSet: viewModel.parentExerciseSet, exerciseName: exerciseName)) {
+                        NavigationLink(destination: RecordingView(viewModel: .init(parentExerciseSet: viewModel.parentExerciseSet, exerciseName: exerciseName, timestamp: nil))) {
                             BlueButtonView(text: L10n.ExerciseInstructionsView.ready, navLinkButton: true)
                                 .frame(width: Constants.readyButtonWidth, height: Constants.readyButtonHeight, alignment: .bottom)
                         }
