@@ -51,6 +51,9 @@
 // MARK: ExerciseTipView
 "ExerciseTipView.tipNumber" =  "TIP #";
 
+// MARK: RecordingInfoModalView
+"RecordingInfoModalView.testRun" = "TEST RUN";
+
 // MARK: PainLevelRatingView
 "PainLevelRatingView.rateYourBackPain" = "Rate your back pain";
 
