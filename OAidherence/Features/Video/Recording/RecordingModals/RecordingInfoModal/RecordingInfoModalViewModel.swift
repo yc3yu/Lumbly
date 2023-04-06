@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension RecordingInfoModalView {
-    class RecordingInfoModalViewModel {
+    class RecordingInfoModalViewModel: ObservableObject {
         var exerciseName: String
         var bodyText: String?
         var isTestRun: Bool

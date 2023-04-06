@@ -95,7 +95,12 @@ struct ExerciseInstructionsView: View {
                     VStack {
                         Spacer()
                         
-                        NavigationLink(destination: RecordingView(viewModel: .init(parentExerciseSet: viewModel.parentExerciseSet, exerciseName: exerciseName, timestamp: nil, recordingInfoModalBodyText: viewModel.exerciseInstructionsData?.recordingInfoModalBodyText))) {
+                        NavigationLink(destination: RecordingView(viewModel:
+                                .init(isTestRun: viewModel.isTestRun,
+                                      parentExerciseSet: viewModel.parentExerciseSet,
+                                      exerciseName: exerciseName,
+                                      recordingInfoModalBodyText: viewModel.exerciseInstructionsData?.recordingInfoModalBodyText,
+                                      parentView: self))) {
                             BlueButtonView(text: L10n.ExerciseInstructionsView.ready, navLinkButton: true)
                                 .frame(width: Constants.readyButtonWidth, height: Constants.readyButtonHeight, alignment: .bottom)
                         }
@@ -115,6 +120,10 @@ struct ExerciseInstructionsView: View {
 
 struct ExerciseInstructionsView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseInstructionsView(viewModel: .init(parentExerciseSet: "", exerciseNumber: 1, exerciseInstructionsURL: nil))
+        ExerciseInstructionsView(viewModel:
+                .init(parentExerciseSet: "",
+                      exerciseNumber: 1,
+                      exerciseInstructionsURL: nil,
+                      isTestRun: true))
     }
 }

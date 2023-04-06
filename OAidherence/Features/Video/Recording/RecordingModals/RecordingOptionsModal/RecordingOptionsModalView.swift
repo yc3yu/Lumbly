@@ -33,13 +33,13 @@ struct RecordingOptionsModalView<OptionView: View>: View {
                     
                     HStack(spacing: .mediumSpace) {
                         NavigationLink(destination: viewModel.leftOptionDestination) {
-                            makeOptionView(text: viewModel.leftOption ?? L10n.RecordingOptionsModalView.yes)
+                            makeOptionView(text: viewModel.leftOptionString ?? L10n.RecordingOptionsModalView.yes)
                         }
 
                         Divider()
                         
                         NavigationLink(destination: viewModel.rightOptionDestination) {
-                            makeOptionView(text: viewModel.rightOption ?? L10n.RecordingOptionsModalView.no)
+                            makeOptionView(text: viewModel.rightOptionString ?? L10n.RecordingOptionsModalView.no)
                         }
                     }
                     .padding(.horizontal, .mediumSpace)

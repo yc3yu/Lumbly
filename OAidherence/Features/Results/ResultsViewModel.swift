@@ -28,19 +28,35 @@ struct IndividualExerciseResults: Decodable {
 }
 
 extension ResultsView {
+    class RecordingViewModel: ObservableObject {
+        @Published private(set) var parentExerciseSet: String
+        @Published private(set) var exerciseName: String
+        @Published private(set) var timestamp: String?
+        @Published private(set) var recordingInfoModalBodyText: String?
+
+        init(parentExerciseSet: String, exerciseName: String, timestamp: String?, recordingInfoModalBodyText: String? = nil) {
+            self.parentExerciseSet = parentExerciseSet
+            self.exerciseName = exerciseName
+            self.timestamp = timestamp
+            self.recordingInfoModalBodyText = recordingInfoModalBodyText
+        }
+    }
+}
+
+extension ResultsView {
     class ResultsViewModel: ObservableObject {
         private struct Constants {
             static let requestDelay: Double = 1.0
         }
         
         private let apiHandler: APIHandler
-        private var recordingViewModel: RecordingView.RecordingViewModel
+        private var recordingViewModel: ResultsView.RecordingViewModel
         
         @Published private(set) var results: Results? = nil
         @Published var isLoading: Bool = false
         @Published var dataAvailability: ResultsAvailability = ResultsAvailability(status: .unavailable)
         
-        init(recordingViewModel: RecordingView.RecordingViewModel) {
+        init(recordingViewModel: ResultsView.RecordingViewModel) {
             self.apiHandler = APIHandler()
             self.recordingViewModel = recordingViewModel
             fetchData()

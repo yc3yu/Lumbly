@@ -9,9 +9,32 @@ import AVKit
 import SwiftUI
 
 struct PlaybackView: View {
-    @State private var player = AVPlayer()
+    private struct Constants {
+        static let maxOptionsModalWidth = 400.0
+    }
     
-    var viewModel: PlaybackViewModel
+    private var leftOptionDestination: RecordingView {
+        let newViewModel = RecordingView.RecordingViewModel(isTestRun: false,
+                                                            parentExerciseSet: viewModel.recordingViewModel.parentExerciseSet,
+                                                            exerciseName: viewModel.recordingViewModel.exerciseName,
+                                                            timestamp: viewModel.recordingViewModel.timestamp,
+                                                            recordingInfoModalBodyText: viewModel.recordingViewModel.recordingInfoModalBodyText,
+                                                            parentView: viewModel.recordingViewModel.parentView)
+        return RecordingView(viewModel: newViewModel)
+    }
+    
+    private var rightOptionDestination: RecordingView {
+        let newViewModel = RecordingView.RecordingViewModel(isTestRun: true,
+                                                            parentExerciseSet: viewModel.recordingViewModel.parentExerciseSet,
+                                                            exerciseName: viewModel.recordingViewModel.exerciseName,
+                                                            timestamp: viewModel.recordingViewModel.timestamp,
+                                                            recordingInfoModalBodyText: viewModel.recordingViewModel.recordingInfoModalBodyText,
+                                                            parentView: viewModel.recordingViewModel.parentView)
+        return RecordingView(viewModel: newViewModel)
+    }
+    
+    @State private var player = AVPlayer()
+    @State var viewModel: PlaybackViewModel
     
     var body: some View {
         if let videoFileURL = viewModel.videoFileURL {
@@ -21,11 +44,34 @@ struct PlaybackView: View {
                     player = AVPlayer(url: videoFileURL)
                     player.play()
                 }
-                .navigationBarItems(trailing: NavigationLink(destination: PainLevelRatingView(viewModel: .init(recordingViewModel: viewModel.recordingViewModel))) {
-                    Text(L10n.NavigationBarItem.submit)
+                .overlay(alignment: .top) {
+                    makeOverlay()
+                        .padding(.top, .miniSpace)
+                        .frame(maxWidth: Constants.maxOptionsModalWidth)
+                }
+                .navigationBarBackButtonHidden(viewModel.recordingViewModel.isTestRun)
+                .navigationBarItems(trailing: NavigationLink(destination: PainLevelRatingView(viewModel:
+                        .init(recordingViewModel:
+                                .init(parentExerciseSet: viewModel.recordingViewModel.parentExerciseSet,
+                                      exerciseName: viewModel.recordingViewModel.exerciseName,
+                                      timestamp: viewModel.recordingViewModel.timestamp)))) {
+                    if !viewModel.recordingViewModel.isTestRun {
+                        Text(L10n.NavigationBarItem.submit)
+                    }
                 }.simultaneousGesture(TapGesture().onEnded {
                     viewModel.uploadVideo()
                 }))
         } // TODO: Handle error case (show error screen or modal and ask them to retry recording)
+    }
+    
+    @ViewBuilder
+    func makeOverlay() -> some View {
+        if viewModel.recordingViewModel.isTestRun {
+            RecordingOptionsModalView(viewModel:
+                    .init(text: L10n.RecordingOptionsModalView.reviewRecording,
+                          showOptions: true,
+                          leftOptionDestination: leftOptionDestination,
+                          rightOptionDestination: rightOptionDestination))
+        }
     }
 }

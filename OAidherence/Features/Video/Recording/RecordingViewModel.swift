@@ -13,12 +13,17 @@ extension RecordingView {
         @Published private(set) var exerciseName: String
         @Published private(set) var timestamp: String?
         @Published private(set) var recordingInfoModalBodyText: String?
+        @Published var isTestRun: Bool
         
-        init(parentExerciseSet: String, exerciseName: String, timestamp: String?, recordingInfoModalBodyText: String? = nil) {
+        var parentView: ExerciseInstructionsView
+        
+        init(isTestRun: Bool, parentExerciseSet: String, exerciseName: String, timestamp: String? = nil, recordingInfoModalBodyText: String? = nil, parentView: ExerciseInstructionsView) {
+            self.isTestRun = isTestRun
             self.parentExerciseSet = parentExerciseSet
             self.exerciseName = exerciseName
             self.timestamp = timestamp
             self.recordingInfoModalBodyText = recordingInfoModalBodyText
+            self.parentView = parentView
         }
     }
 }

@@ -21,7 +21,7 @@ struct RecordingInfoModalView<DestinationView: View>: View {
 
     @State var bodyTextSize: CGSize = .zero
 
-    var viewModel: RecordingInfoModalViewModel
+    @State var viewModel: RecordingInfoModalViewModel
     
     var body: some View {
         VStack(spacing: .nanoSpace) {
@@ -84,7 +84,8 @@ struct RecordingInfoModalView_Previews: PreviewProvider {
                               infoNavLinkDestination: ExerciseInstructionsView(viewModel:
                                     .init(parentExerciseSet: "Lower Back Exercises",
                                           exerciseNumber: 1,
-                                          exerciseInstructionsURL: ""))))
+                                          exerciseInstructionsURL: "",
+                                          isTestRun: true))))
                 
                 RecordingInfoModalView(viewModel:
                         .init(exerciseName: "Bird Dog",
@@ -93,7 +94,8 @@ struct RecordingInfoModalView_Previews: PreviewProvider {
                               infoNavLinkDestination: ExerciseInstructionsView(viewModel:
                                     .init(parentExerciseSet: "Lower Back Exercises",
                                           exerciseNumber: 1,
-                                          exerciseInstructionsURL: ""))))
+                                          exerciseInstructionsURL: "",
+                                          isTestRun: true))))
                 
                 RecordingInfoModalView(viewModel:
                         .init(exerciseName: "Bird Dog",
@@ -102,7 +104,8 @@ struct RecordingInfoModalView_Previews: PreviewProvider {
                               infoNavLinkDestination: ExerciseInstructionsView(viewModel:
                                     .init(parentExerciseSet: "Lower Back Exercises",
                                           exerciseNumber: 1,
-                                          exerciseInstructionsURL: ""))))
+                                          exerciseInstructionsURL: "",
+                                          isTestRun: true))))
                 
                 RecordingInfoModalView(viewModel:
                         .init(exerciseName: "Bird Dog",
@@ -111,7 +114,8 @@ struct RecordingInfoModalView_Previews: PreviewProvider {
                               infoNavLinkDestination: ExerciseInstructionsView(viewModel:
                                     .init(parentExerciseSet: "Lower Back Exercises",
                                           exerciseNumber: 1,
-                                          exerciseInstructionsURL: ""))))
+                                          exerciseInstructionsURL: "",
+                                          isTestRun: true))))
                 
                 RecordingInfoModalView(viewModel:
                         .init(exerciseName: "Bird Dog",
@@ -120,7 +124,8 @@ struct RecordingInfoModalView_Previews: PreviewProvider {
                               infoNavLinkDestination: ExerciseInstructionsView(viewModel:
                                     .init(parentExerciseSet: "Lower Back Exercises",
                                           exerciseNumber: 1,
-                                          exerciseInstructionsURL: ""))))
+                                          exerciseInstructionsURL: "",
+                                          isTestRun: true))))
             }
             .padding(.horizontal, .littleSpace)
         }

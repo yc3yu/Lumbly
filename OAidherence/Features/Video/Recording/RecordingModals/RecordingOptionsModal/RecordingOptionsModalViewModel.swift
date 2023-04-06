@@ -11,8 +11,8 @@ extension RecordingOptionsModalView {
     class RecordingOptionsModalViewModel {
         @Published var text: String
         @Published var showOptions: Bool
-        @Published var leftOption: String?
-        @Published var rightOption: String?
+        @Published var leftOptionString: String?
+        @Published var rightOptionString: String?
         
         var leftOptionDestination: OptionView?
         var rightOptionDestination: OptionView?
@@ -20,8 +20,8 @@ extension RecordingOptionsModalView {
         init(text: String, showOptions: Bool, leftOptionString: String? = nil, rightOptionString: String? = nil, leftOptionDestination: OptionView? = nil, rightOptionDestination: OptionView? = nil) {
             self.text = text
             self.showOptions = showOptions
-            self.leftOption = leftOption
-            self.rightOption = rightOption
+            self.leftOptionString = leftOptionString
+            self.rightOptionString = rightOptionString
             self.leftOptionDestination = leftOptionDestination
             self.rightOptionDestination = rightOptionDestination
         }

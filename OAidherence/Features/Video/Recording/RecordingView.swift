@@ -10,6 +10,7 @@ import SwiftUI
 struct RecordingView: View {
     private struct Constants {
         static let recordingButtonSize: CGFloat = 72.0
+        static let maxOptionsModalWidth: CGFloat = 400.0
     }
     
     private var recordingButtonImage: String {
@@ -29,11 +30,16 @@ struct RecordingView: View {
         }
     }
     
-    @State private var isRecording = false
-    @State private var shouldPresentPlayback = false
-    @State private var orientation = UIDevice.current.orientation
+    private var parentView: ExerciseInstructionsView {
+        viewModel.parentView.viewModel.isTestRun = viewModel.isTestRun
+        return viewModel.parentView
+    }
     
     @ObservedObject var viewControllerLink = RecordingViewControllerLink()
+    
+    @State private var isRecording = false
+    @State private var orientation = UIDevice.current.orientation
+    @State var shouldPresentPlayback = false
     @State var videoFileURL: URL? = nil
     @State var timestamp: String? = nil
     @State var viewModel: RecordingViewModel
@@ -71,7 +77,16 @@ struct RecordingView: View {
                 orientation = newOrientation
             }
         }
-        .navigationBarBackButtonHidden(isRecording)
+        .navigationBarBackButtonHidden(true)
+        .overlay(alignment: .topLeading) {
+            makeInfoModalOverlay()
+                .padding([.top, .leading], .miniSpace)
+        }
+        .overlay(alignment: .top) {
+            makeOptionsModalOverlay()
+                .padding(.top, .miniSpace)
+                .frame(maxWidth: Constants.maxOptionsModalWidth)
+        }
     }
     
     func makeRecordingButton() -> some View {
@@ -92,11 +107,37 @@ struct RecordingView: View {
         .navigationDestination(isPresented: $shouldPresentPlayback) {
             if let videoFileURL = videoFileURL {
                 PlaybackView(viewModel:
-                        .init(recordingViewModel:
-                                .init(parentExerciseSet: viewModel.parentExerciseSet,
-                                      exerciseName: viewModel.exerciseName,
-                                      timestamp: timestamp),
+                        .init(recordingViewModel: viewModel,
                               videoFileURL: videoFileURL))
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func makeInfoModalOverlay() -> some View {
+        RecordingInfoModalView(viewModel: .init(exerciseName: viewModel.exerciseName,
+                                                bodyText: viewModel.recordingInfoModalBodyText,
+                                                isTestRun: viewModel.isTestRun,
+                                                infoNavLinkDestination: parentView))
+    }
+    
+    @ViewBuilder
+    func makeOptionsModalOverlay() -> some View {
+        if viewModel.isTestRun {
+            if isRecording {
+                RecordingOptionsModalView<AnyView>(viewModel:
+                        .init(text: L10n.RecordingOptionsModalView.moveAwayDoOneRep,
+                              showOptions: false))
+            } else {
+                RecordingOptionsModalView<AnyView>(viewModel:
+                        .init(text: L10n.RecordingOptionsModalView.putDeviceOnGround,
+                              showOptions: false))
+            }
+        } else {
+            if !isRecording {
+                RecordingOptionsModalView<AnyView>(viewModel:
+                        .init(text: L10n.RecordingOptionsModalView.rememberToPosition,
+                              showOptions: false))
             }
         }
     }
