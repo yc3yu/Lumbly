@@ -121,6 +121,21 @@ internal enum L10n {
     /// TEST RUN
     internal static let testRun = L10n.tr("Localizable", "RecordingInfoModalView.testRun", fallback: "TEST RUN")
   }
+  internal enum RecordingOptionsModalView {
+    /// Move a few metres away, do one repetition of the exercise, and stop recording.
+    internal static let moveAwayDoOneRep = L10n.tr("Localizable", "RecordingOptionsModalView.moveAwayDoOneRep", fallback: "Move a few metres away, do one repetition of the exercise, and stop recording.")
+    /// No
+    internal static let no = L10n.tr("Localizable", "RecordingOptionsModalView.no", fallback: "No")
+    /// Put your device on the ground, aiming it where you’ll be doing your exercise, and start recording.
+    internal static let putDeviceOnGround = L10n.tr("Localizable", "RecordingOptionsModalView.putDeviceOnGround", fallback: "Put your device on the ground, aiming it where you’ll be doing your exercise, and start recording.")
+    /// Remember to position your device and yourself as you did during the test run
+    internal static let rememberToPosition = L10n.tr("Localizable", "RecordingOptionsModalView.rememberToPosition", fallback: "Remember to position your device and yourself as you did during the test run")
+    /// Review the recording
+    /// Is the entire body captured by the camera?
+    internal static let reviewRecording = L10n.tr("Localizable", "RecordingOptionsModalView.reviewRecording", fallback: "Review the recording\nIs the entire body captured by the camera?")
+    /// Yes
+    internal static let yes = L10n.tr("Localizable", "RecordingOptionsModalView.yes", fallback: "Yes")
+  }
   internal enum ResultsView {
     /// Oops! There was an error retrieving your data.
     internal static let error = L10n.tr("Localizable", "ResultsView.error", fallback: "Oops! There was an error retrieving your data.")
