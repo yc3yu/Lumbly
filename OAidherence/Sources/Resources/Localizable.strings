@@ -51,6 +51,17 @@
 // MARK: ExerciseTipView
 "ExerciseTipView.tipNumber" =  "TIP #";
 
+// MARK: RecordingInfoModalView
+"RecordingInfoModalView.testRun" = "TEST RUN";
+
+// MARK: RecordingOptionsModalView
+"RecordingOptionsModalView.putDeviceOnGround" = "Put your device on the ground, aiming it where you’ll be doing your exercise, and start recording.";
+"RecordingOptionsModalView.moveAwayDoOneRep" = "Move a few metres away, do one repetition of the exercise, and stop recording.";
+"RecordingOptionsModalView.reviewRecording" = "Review the recording\nIs the entire body captured by the camera?";
+"RecordingOptionsModalView.rememberToPosition" = "Remember to position your device and yourself as you did during the test run";
+"RecordingOptionsModalView.yes" = "Yes";
+"RecordingOptionsModalView.no" = "No";
+
 // MARK: PainLevelRatingView
 "PainLevelRatingView.rateYourBackPain" = "Rate your back pain";
 

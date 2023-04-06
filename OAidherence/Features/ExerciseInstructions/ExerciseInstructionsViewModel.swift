@@ -10,6 +10,7 @@ import SwiftUI
 struct ExerciseInstructions: Decodable {
     var exerciseName: String?
     var repetitions: String?
+    var recordingInfoModalBodyText: String?
     var mainImage: String?
     var exerciseSteps: [ExerciseStep]?
     var exerciseTips: [ExerciseTip]?
@@ -26,13 +27,15 @@ extension ExerciseInstructionsView {
         @Published var isLoading: Bool = false
         
         var parentExerciseSet: String
+        var isTestRun: Bool
         
-        init(parentExerciseSet: String, exerciseNumber: Int, exerciseInstructionsURL: String?, showReadyButton: Bool = false) {
+        init(parentExerciseSet: String, exerciseNumber: Int, exerciseInstructionsURL: String?, showReadyButton: Bool = false, isTestRun: Bool) {
             self.apiHandler = APIHandler()
             self.parentExerciseSet = parentExerciseSet
             self.exerciseNumber = exerciseNumber
             self.exerciseInstructionsURL = exerciseInstructionsURL
             self.showReadyButton = showReadyButton
+            self.isTestRun = isTestRun
             
             fetchData()
         }

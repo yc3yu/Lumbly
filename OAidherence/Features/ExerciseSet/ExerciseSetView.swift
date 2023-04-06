@@ -68,7 +68,8 @@ struct ExerciseSetView: View {
                                             ExerciseInstructionsView(viewModel:
                                                     .init(parentExerciseSet: name,
                                                           exerciseNumber: i + 1,
-                                                          exerciseInstructionsURL: exerciseTiles[i].exerciseInstructionsURL))) {
+                                                          exerciseInstructionsURL: exerciseTiles[i].exerciseInstructionsURL,
+                                                          isTestRun: true))) {
                                 ExerciseTileView(viewModel:
                                         .init(exerciseTileData:
                                                 ExerciseTile(inlineIcon: exerciseTiles[i].inlineIcon,
@@ -106,7 +107,8 @@ struct ExerciseSetView: View {
                             .init(parentExerciseSet: name,
                                   exerciseNumber: 1,
                                   exerciseInstructionsURL: exerciseInstructionsURL,
-                                 showReadyButton: true))) {
+                                  showReadyButton: true,
+                                  isTestRun: true))) {
                         BlueButtonView(text: L10n.ExerciseSetView.startExerciseSet, backgroundColor: .veniceBlue, navLinkButton: true)
                             .frame(width: Constants.startButtonWidth, height: Constants.startButtonHeight)
                     }
