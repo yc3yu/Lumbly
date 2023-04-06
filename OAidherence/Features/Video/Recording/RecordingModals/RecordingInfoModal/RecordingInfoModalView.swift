@@ -12,7 +12,7 @@ struct RecordingInfoModalView<DestinationView: View>: View {
         let infoIconWidth: CGFloat = 30.67
         let infoIconHeight: CGFloat = 23.64
         let cornerRadius: CGFloat = 10.0
-        let backgroundOpacity: CGFloat = 0.9
+        let backgroundOpacity: CGFloat = 0.8
         let maxBodyTextWidth: CGFloat = 170.0
         let minRectangleHeight: CGFloat = 60.0
     }
@@ -66,7 +66,7 @@ struct RecordingInfoModalView<DestinationView: View>: View {
         .fixedSize()
         .background(
             RoundedRectangle(cornerRadius: constants.cornerRadius, style: .continuous)
-                .fill(Color(white: constants.backgroundOpacity))
+                .fill(Color.white.opacity(constants.backgroundOpacity))
         )
     }
 }

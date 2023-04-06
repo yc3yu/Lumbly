@@ -9,9 +9,11 @@ import SwiftUI
 
 struct RecordingOptionsModalView: View {
     private struct Constants {
-        static let backgroundOpacity: CGFloat = 0.9
-        static let cornerRadius: CGFloat = 10.0
+        let backgroundOpacity: CGFloat = 0.8
+        let cornerRadius: CGFloat = 10.0
     }
+    
+    private let constants = Constants()
     
     var viewModel: RecordingOptionsModalViewModel
     
@@ -44,8 +46,8 @@ struct RecordingOptionsModalView: View {
         }
         .padding(.top, .smallSpace)
         .background(
-            RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
-                .fill(Color(white: Constants.backgroundOpacity))
+            RoundedRectangle(cornerRadius: constants.cornerRadius, style: .continuous)
+                .fill(Color.white.opacity(constants.backgroundOpacity))
         )
     }
 
