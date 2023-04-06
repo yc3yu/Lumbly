@@ -53,6 +53,10 @@ struct PainLevelRatingView: View {
 
 struct PainLevelRatingView_Previews: PreviewProvider {
     static var previews: some View {
-        PainLevelRatingView(viewModel: .init(recordingViewModel: .init(parentExerciseSet: "", exerciseName: "", timestamp: "")))
+        PainLevelRatingView(viewModel:
+                .init(recordingViewModel:
+                        .init(parentExerciseSet: "",
+                              exerciseName: "",
+                              timestamp: "")))
     }
 }
