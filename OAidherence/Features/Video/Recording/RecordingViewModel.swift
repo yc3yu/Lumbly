@@ -12,7 +12,7 @@ extension RecordingView {
         @Published private(set) var parentExerciseSet: String
         @Published private(set) var exerciseName: String
         @Published private(set) var timestamp: String?
-        var recordingInfoModalBodyText: String?
+        @Published private(set) var recordingInfoModalBodyText: String?
         
         init(parentExerciseSet: String, exerciseName: String, timestamp: String?, recordingInfoModalBodyText: String? = nil) {
             self.parentExerciseSet = parentExerciseSet

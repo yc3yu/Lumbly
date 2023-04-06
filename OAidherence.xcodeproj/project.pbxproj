@@ -50,6 +50,8 @@
 		649581C829DB448000973A0C /* RecordingInfoModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649581C529DB448000973A0C /* RecordingInfoModalViewModel.swift */; };
 		649581C929DB448000973A0C /* RecordingInfoModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649581C629DB448000973A0C /* RecordingInfoModalView.swift */; };
 		649581CC29DE629500973A0C /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649581CB29DE629500973A0C /* SizeCalculator.swift */; };
+		649581CE29DE791C00973A0C /* RecordingOptionsModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649581CD29DE791C00973A0C /* RecordingOptionsModalView.swift */; };
+		649581D029DE794600973A0C /* RecordingOptionsModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649581CF29DE794600973A0C /* RecordingOptionsModalViewModel.swift */; };
 		64979C6829A4A1C600C27768 /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64979C6729A4A1C600C27768 /* BlueButtonView.swift */; };
 		64A434392990B0F3008F8253 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A434382990B0F3008F8253 /* UIColor+Hex.swift */; };
 		64B1BBED2910BA4000AEA7E3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */; };
@@ -138,6 +140,8 @@
 		649581C529DB448000973A0C /* RecordingInfoModalViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingInfoModalViewModel.swift; sourceTree = "<group>"; };
 		649581C629DB448000973A0C /* RecordingInfoModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingInfoModalView.swift; sourceTree = "<group>"; };
 		649581CB29DE629500973A0C /* SizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
+		649581CD29DE791C00973A0C /* RecordingOptionsModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingOptionsModalView.swift; sourceTree = "<group>"; };
+		649581CF29DE794600973A0C /* RecordingOptionsModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingOptionsModalViewModel.swift; sourceTree = "<group>"; };
 		64979C6729A4A1C600C27768 /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
 		64A434382990B0F3008F8253 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
@@ -457,6 +461,8 @@
 		649581C729DB448000973A0C /* RecordingOptionsModal */ = {
 			isa = PBXGroup;
 			children = (
+				649581CD29DE791C00973A0C /* RecordingOptionsModalView.swift */,
+				649581CF29DE794600973A0C /* RecordingOptionsModalViewModel.swift */,
 			);
 			path = RecordingOptionsModal;
 			sourceTree = "<group>";
@@ -795,6 +801,7 @@
 				649581C929DB448000973A0C /* RecordingInfoModalView.swift in Sources */,
 				647280A9293EDBC8004CCE75 /* APIEndpoints.swift in Sources */,
 				64028B8629AEFDA1009C104B /* ExerciseRatingTileViewModel.swift in Sources */,
+				649581D029DE794600973A0C /* RecordingOptionsModalViewModel.swift in Sources */,
 				6460E3A429C4022E00A0884D /* RecordingViewControllerLink.swift in Sources */,
 				649581BB29D6AA9900973A0C /* ErrorView.swift in Sources */,
 				644E35C9290E52AC0024B8A5 /* Font+Presets.swift in Sources */,
@@ -817,6 +824,7 @@
 				6460E3AC29C64D5900A0884D /* RecordingViewController.swift in Sources */,
 				64028B8B29AF0F98009C104B /* PainLevelRatingViewModel.swift in Sources */,
 				6488E9DB29A2C8540090554A /* ExerciseTileViewModel.swift in Sources */,
+				649581CE29DE791C00973A0C /* RecordingOptionsModalView.swift in Sources */,
 				6488E9EA29A4786E0090554A /* LoadingView.swift in Sources */,
 				64028B7F29AE5299009C104B /* PainLevelTileView.swift in Sources */,
 				640781FD29C988EF005050F9 /* ResultsForDayView.swift in Sources */,
