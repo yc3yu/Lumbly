@@ -23,7 +23,7 @@ extension PlaybackView {
             if let videoFileURL = videoFileURL {
                 apiHandler.uploadVideo(parentExerciseSet: recordingViewModel.parentExerciseSet,
                                        exerciseName: recordingViewModel.exerciseName,
-                                       videoFileURL: videoFileURL) { [weak self] in
+                                       videoFileURL: videoFileURL) {
                     let path = videoFileURL.path
                     
                     guard FileManager.default.fileExists(atPath: path) else { return }
