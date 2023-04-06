@@ -168,6 +168,8 @@ extension RecordingViewController: RecordingViewControllerLinkable {
             /// Update the orientation on the movie file output video connection before recording.
             let movieFileOutputConnection = self.movieFileOutput.connection(with: .video)
             movieFileOutputConnection?.videoOrientation = videoPreviewLayerOrientation ?? .landscapeLeft
+            movieFileOutputConnection?.automaticallyAdjustsVideoMirroring = false
+            movieFileOutputConnection?.isVideoMirrored = true
             
             let availableVideoCodecTypes = self.movieFileOutput.availableVideoCodecTypes
             
