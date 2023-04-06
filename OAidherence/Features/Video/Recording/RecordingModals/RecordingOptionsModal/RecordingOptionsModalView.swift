@@ -30,7 +30,6 @@ struct RecordingOptionsModalView: View {
                 VStack(spacing: .zero) {
                     Divider()
                         .foregroundColor(.blueCharcoal)
-                        .frame(width: .infinity)
                     
                     HStack(spacing: .mediumSpace) {
                         makeOptionView(text: viewModel.leftOption ?? L10n.RecordingOptionsModalView.yes)
