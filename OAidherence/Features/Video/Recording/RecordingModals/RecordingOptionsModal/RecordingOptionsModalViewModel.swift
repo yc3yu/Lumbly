@@ -14,11 +14,16 @@ extension RecordingOptionsModalView {
         @Published var leftOption: String?
         @Published var rightOption: String?
         
-        init(text: String, showOptions: Bool, leftOption: String? = nil, rightOption: String? = nil) {
+        var leftOptionDestination: OptionView?
+        var rightOptionDestination: OptionView?
+        
+        init(text: String, showOptions: Bool, leftOptionString: String? = nil, rightOptionString: String? = nil, leftOptionDestination: OptionView? = nil, rightOptionDestination: OptionView? = nil) {
             self.text = text
             self.showOptions = showOptions
             self.leftOption = leftOption
             self.rightOption = rightOption
+            self.leftOptionDestination = leftOptionDestination
+            self.rightOptionDestination = rightOptionDestination
         }
     }
 }

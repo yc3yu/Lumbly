@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RecordingOptionsModalView: View {
+struct RecordingOptionsModalView<OptionView: View>: View {
     private struct Constants {
         let backgroundOpacity: CGFloat = 0.8
         let cornerRadius: CGFloat = 10.0
@@ -32,11 +32,15 @@ struct RecordingOptionsModalView: View {
                         .foregroundColor(.blueCharcoal)
                     
                     HStack(spacing: .mediumSpace) {
-                        makeOptionView(text: viewModel.leftOption ?? L10n.RecordingOptionsModalView.yes)
+                        NavigationLink(destination: viewModel.leftOptionDestination) {
+                            makeOptionView(text: viewModel.leftOption ?? L10n.RecordingOptionsModalView.yes)
+                        }
 
                         Divider()
                         
-                        makeOptionView(text: viewModel.rightOption ?? L10n.RecordingOptionsModalView.no)
+                        NavigationLink(destination: viewModel.rightOptionDestination) {
+                            makeOptionView(text: viewModel.rightOption ?? L10n.RecordingOptionsModalView.no)
+                        }
                     }
                     .padding(.horizontal, .mediumSpace)
                     .fixedSize(horizontal: false, vertical: true)
@@ -70,11 +74,19 @@ struct RecordingOptionsModalView_Previews: PreviewProvider {
                 .ignoresSafeArea(.all)
 
             VStack(spacing: .mediumSpace) {
-                RecordingOptionsModalView(viewModel: .init(text: L10n.RecordingOptionsModalView.putDeviceOnGround, showOptions: false))
+                RecordingOptionsModalView<AnyView>(viewModel:
+                        .init(text: L10n.RecordingOptionsModalView.putDeviceOnGround,
+                              showOptions: false))
                 
-                RecordingOptionsModalView(viewModel: .init(text: L10n.RecordingOptionsModalView.reviewRecording, showOptions: true))
+                RecordingOptionsModalView<AnyView>(viewModel:
+                        .init(text: L10n.RecordingOptionsModalView.reviewRecording,
+                              showOptions: true))
                 
-                RecordingOptionsModalView(viewModel: .init(text: L10n.RecordingOptionsModalView.reviewRecording, showOptions: true, leftOption: "This is an example of a long left option", rightOption: "Short"))
+                RecordingOptionsModalView<AnyView>(viewModel:
+                        .init(text: L10n.RecordingOptionsModalView.reviewRecording,
+                              showOptions: true,
+                              leftOptionString: "This is an example of a long left option",
+                              rightOptionString: "Short"))
             }
             .padding()
         }
