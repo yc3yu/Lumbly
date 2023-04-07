@@ -41,6 +41,8 @@ struct PlaybackView: View {
             VideoPlayer(player: player)
                 .ignoresSafeArea()
                 .onAppear() {
+                    AppDelegate.orientationLock = UIInterfaceOrientationMask.landscapeRight
+                    
                     player = AVPlayer(url: videoFileURL)
                     player.play()
                 }
@@ -59,6 +61,7 @@ struct PlaybackView: View {
                         Text(L10n.NavigationBarItem.submit)
                     }
                 }.simultaneousGesture(TapGesture().onEnded {
+                    AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
                     viewModel.uploadVideo()
                 }))
         } // TODO: Handle error case (show error screen or modal and ask them to retry recording)
