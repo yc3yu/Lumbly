@@ -9,8 +9,7 @@ import SwiftUI
 
 struct RecordingInfoModalView<DestinationView: View>: View {
     private struct Constants {
-        let infoIconWidth: CGFloat = 30.67
-        let infoIconHeight: CGFloat = 23.64
+        let infoIconSize: CGFloat = 24.0
         let cornerRadius: CGFloat = 10.0
         let backgroundOpacity: CGFloat = 0.8
         let maxBodyTextWidth: CGFloat = 170.0
@@ -25,40 +24,39 @@ struct RecordingInfoModalView<DestinationView: View>: View {
     
     var body: some View {
         VStack(spacing: .nanoSpace) {
-            HStack(spacing: .nanoSpace) {
+            HStack(spacing: .zero) {
                 Text(viewModel.exerciseName)
                     .font(.title2Bold)
                     .foregroundColor(.blueCharcoal)
                     .multilineTextAlignment(.leading)
+                    .padding(.trailing, .miniSpace)
                 
                 NavigationLink(destination: viewModel.infoNavLinkDestination) {
                     Image("InfoIcon")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: constants.infoIconWidth, height: constants.infoIconHeight)
+                        .frame(width: constants.infoIconSize, height: constants.infoIconSize)
                 }
                 
                 Spacer()
             }
+            .padding(.trailing, .miniSpace)
             
-            HStack(spacing: .zero) {
-                Group {
-                    if viewModel.isTestRun {
-                        Text(L10n.RecordingInfoModalView.testRun)
-                    } else if let bodyText = viewModel.bodyText,
-                              !bodyText.isEmpty {
-                        Text(bodyText)
-                    }
+            Group {
+                if viewModel.isTestRun {
+                    Text(L10n.RecordingInfoModalView.testRun)
+                } else if let bodyText = viewModel.bodyText,
+                          !bodyText.isEmpty {
+                    Text(bodyText)
                 }
-                .font(.bodyRegular)
-                .foregroundColor(.veniceBlue)
-                .multilineTextAlignment(.leading)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: constants.maxBodyTextWidth, alignment: .leading)
-                .saveSize(in: $bodyTextSize)
-                
-                Spacer()
             }
+            .font(.bodyRegular)
+            .foregroundColor(.veniceBlue)
+            .multilineTextAlignment(.leading)
+            .fixedSize(horizontal: false, vertical: true)
+            .padding(.trailing, .littleSpace)
+            .frame(maxWidth: constants.maxBodyTextWidth, alignment: .leading)
+            .saveSize(in: $bodyTextSize)
         }
         .padding(.vertical)
         .padding(.leading, .littleSpace)
