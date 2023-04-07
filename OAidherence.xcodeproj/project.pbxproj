@@ -73,6 +73,7 @@
 		64D3D50F29A714E70056CB75 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D50E29A714E70056CB75 /* HomeViewModel.swift */; };
 		64D7261329C6DA1800C5200E /* OAidherenceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7261229C6DA1800C5200E /* OAidherenceApp.swift */; };
 		64FF18E129DF2D3B001F4BE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF18E029DF2D3B001F4BE2 /* AppDelegate.swift */; };
+		64FF18E329E085AD001F4BE2 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF18E229E085AD001F4BE2 /* ErrorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +165,7 @@
 		64D3D50E29A714E70056CB75 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		64D7261229C6DA1800C5200E /* OAidherenceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAidherenceApp.swift; sourceTree = "<group>"; };
 		64FF18E029DF2D3B001F4BE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		64FF18E229E085AD001F4BE2 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
 		CA73BCC58085341DDBBEE890 /* Pods-OAidherence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.release.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.release.xcconfig"; sourceTree = "<group>"; };
 		CF95655221B79C369E5AE5CB /* Pods-OAidherence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.debug.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -439,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				649581BA29D6AA9900973A0C /* ErrorView.swift */,
+				64FF18E229E085AD001F4BE2 /* ErrorViewModel.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -804,6 +807,7 @@
 				649581C929DB448000973A0C /* RecordingInfoModalView.swift in Sources */,
 				647280A9293EDBC8004CCE75 /* APIEndpoints.swift in Sources */,
 				64028B8629AEFDA1009C104B /* ExerciseRatingTileViewModel.swift in Sources */,
+				64FF18E329E085AD001F4BE2 /* ErrorViewModel.swift in Sources */,
 				649581D029DE794600973A0C /* RecordingOptionsModalViewModel.swift in Sources */,
 				6460E3A429C4022E00A0884D /* RecordingViewControllerLink.swift in Sources */,
 				649581BB29D6AA9900973A0C /* ErrorView.swift in Sources */,

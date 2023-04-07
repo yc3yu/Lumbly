@@ -21,7 +21,9 @@ struct ResultsView: View {
     var body: some View {
         Group {
             if viewModel.dataAvailability.status == .error {
-                ErrorView(errorText: L10n.ResultsView.error)
+                ErrorView(viewModel:
+                        .init(header: L10n.ResultsView.results,
+                              errorText: L10n.ResultsView.error))
                 .navigationBarItems(trailing: NavigationLink(destination: HomeView()) {
                     Text(L10n.NavigationBarItem.done)
                 })
