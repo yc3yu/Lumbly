@@ -12,5 +12,5 @@ struct APIEndpoints {
     
     static let exerciseSetURL = "https://temporarylumblyfunction.azurewebsites.net/api/exercise_set"
     
-    static let containerURL = "https://temporarylumblyfunction.azurewebsites.net/api/results/TestUser1"
+    static let containerURL = "https://temporarylumblyfunction.azurewebsites.net/api"
 }
