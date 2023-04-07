@@ -71,7 +71,8 @@ extension ResultsView {
                 return
             }
             
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ [weak self] currentTimer in
+            Timer.scheduledTimer(withTimeInterval: Constants.requestDelay,
+                                 repeats: true) { [weak self] currentTimer in
                 if let parentExerciseSet = self?.recordingViewModel.parentExerciseSet,
                    let exerciseName = self?.recordingViewModel.exerciseName {
                     self?.apiHandler.fetchResultsDataAvailability(
