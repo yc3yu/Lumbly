@@ -27,7 +27,7 @@ struct ResultsView: View {
                 .navigationBarItems(trailing: NavigationLink(destination: HomeView()) {
                     Text(L10n.NavigationBarItem.done)
                 })
-            } else if !viewModel.isLoading && viewModel.dataAvailability.status == .available {
+            } else if viewModel.dataAvailability.status == .available {
                 ZStack {
                     Color.oysterBay
                         .ignoresSafeArea(edges: [.leading, .trailing, .bottom])
