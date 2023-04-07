@@ -171,7 +171,7 @@ class APIHandler {
 
     func fetchResultsData(parentExerciseSet: String, exerciseName: String, timestamp: String, completion: @escaping ((Results) -> ())) {
         func makeURL(parentExerciseSet: String, exerciseName: String, timestamp: String) -> String {
-            return "\(APIEndpoints.containerURL)/\(parentExerciseSet)/\(timestamp)"
+            return "\(APIEndpoints.containerURL)/results/TestUser1/\(parentExerciseSet)/\(timestamp)"
         }
         
         let urlString = makeURL(parentExerciseSet: parentExerciseSet, exerciseName: exerciseName, timestamp: timestamp)
