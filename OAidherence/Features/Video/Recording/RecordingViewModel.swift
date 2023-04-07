@@ -17,7 +17,12 @@ extension RecordingView {
         
         var parentView: ExerciseInstructionsView
         
-        init(isTestRun: Bool, parentExerciseSet: String, exerciseName: String, timestamp: String? = nil, recordingInfoModalBodyText: String? = nil, parentView: ExerciseInstructionsView) {
+        init(isTestRun: Bool,
+             parentExerciseSet: String,
+             exerciseName: String,
+             recordingInfoModalBodyText: String? = nil,
+             timestamp: String? = nil,
+             parentView: ExerciseInstructionsView) {
             self.isTestRun = isTestRun
             self.parentExerciseSet = parentExerciseSet
             self.exerciseName = exerciseName

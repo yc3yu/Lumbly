@@ -17,8 +17,8 @@ struct PlaybackView: View {
         let newViewModel = RecordingView.RecordingViewModel(isTestRun: false,
                                                             parentExerciseSet: viewModel.recordingViewModel.parentExerciseSet,
                                                             exerciseName: viewModel.recordingViewModel.exerciseName,
-                                                            timestamp: viewModel.recordingViewModel.timestamp,
                                                             recordingInfoModalBodyText: viewModel.recordingViewModel.recordingInfoModalBodyText,
+                                                            timestamp: viewModel.recordingViewModel.timestamp,
                                                             parentView: viewModel.recordingViewModel.parentView)
         return RecordingView(viewModel: newViewModel)
     }
@@ -27,8 +27,8 @@ struct PlaybackView: View {
         let newViewModel = RecordingView.RecordingViewModel(isTestRun: true,
                                                             parentExerciseSet: viewModel.recordingViewModel.parentExerciseSet,
                                                             exerciseName: viewModel.recordingViewModel.exerciseName,
-                                                            timestamp: viewModel.recordingViewModel.timestamp,
                                                             recordingInfoModalBodyText: viewModel.recordingViewModel.recordingInfoModalBodyText,
+                                                            timestamp: viewModel.recordingViewModel.timestamp,
                                                             parentView: viewModel.recordingViewModel.parentView)
         return RecordingView(viewModel: newViewModel)
     }
