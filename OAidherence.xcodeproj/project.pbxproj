@@ -74,6 +74,7 @@
 		64D7261329C6DA1800C5200E /* OAidherenceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7261229C6DA1800C5200E /* OAidherenceApp.swift */; };
 		64FF18E129DF2D3B001F4BE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF18E029DF2D3B001F4BE2 /* AppDelegate.swift */; };
 		64FF18E329E085AD001F4BE2 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF18E229E085AD001F4BE2 /* ErrorViewModel.swift */; };
+		64FF18E529E0879D001F4BE2 /* ResultsForDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF18E429E0879D001F4BE2 /* ResultsForDayViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,7 @@
 		64D7261229C6DA1800C5200E /* OAidherenceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAidherenceApp.swift; sourceTree = "<group>"; };
 		64FF18E029DF2D3B001F4BE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64FF18E229E085AD001F4BE2 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
+		64FF18E429E0879D001F4BE2 /* ResultsForDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsForDayViewModel.swift; sourceTree = "<group>"; };
 		CA73BCC58085341DDBBEE890 /* Pods-OAidherence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.release.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.release.xcconfig"; sourceTree = "<group>"; };
 		CF95655221B79C369E5AE5CB /* Pods-OAidherence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.debug.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -340,6 +342,7 @@
 				6472809C29370BBE004CCE75 /* ResultsView.swift */,
 				647280A3293ECCA5004CCE75 /* ResultsViewModel.swift */,
 				640781FC29C988EF005050F9 /* ResultsForDayView.swift */,
+				64FF18E429E0879D001F4BE2 /* ResultsForDayViewModel.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -816,6 +819,7 @@
 				64D3D50629A6E15C0056CB75 /* ExerciseSetTileView.swift in Sources */,
 				64D3D4F729A5CB4B0056CB75 /* LoginView.swift in Sources */,
 				64C0442229AAF607000F244B /* ExerciseInstructionsViewModel.swift in Sources */,
+				64FF18E529E0879D001F4BE2 /* ResultsForDayViewModel.swift in Sources */,
 				640B7AB329A491F300A84FD8 /* ExerciseSetView.swift in Sources */,
 				647280A4293ECCA5004CCE75 /* ResultsViewModel.swift in Sources */,
 				6419AF6329ABE6CF00667F4C /* FormCommentTileViewModel.swift in Sources */,

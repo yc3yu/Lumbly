@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct ResultsForDayView: View {
-    let dayOfWeek: String
-    let didExercise: Bool
-    
+    private struct Constants {
+        static let vStackSpacing: CGFloat = 80.0
+        static let topPadding: CGFloat = 40.0
+    }
+
+    var viewModel: ResultsForDayViewModel
+
     var body: some View {
         ZStack {
             Color.oysterBay
                 .ignoresSafeArea(edges: [.horizontal, .bottom])
             
-            VStack(spacing: 80.0) {
+            VStack(spacing: Constants.vStackSpacing) {
                 Text(getDayOfWeek())
                     .font(.largeTitleBold)
                     .foregroundColor(.darkGray06)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, 40.0)
+                    .padding(.top, Constants.topPadding)
                     .padding(.horizontal, .mediumSpace)
                 
                 Text(getContentString())
@@ -35,7 +39,7 @@ struct ResultsForDayView: View {
     }
     
     func getDayOfWeek() -> String {
-        switch dayOfWeek {
+        switch viewModel.dayOfWeek { // TODO: Add strings to L10n
         case L10n.CalendarTileView.mon:
             return "Monday"
         case L10n.CalendarTileView.tue:
@@ -56,7 +60,7 @@ struct ResultsForDayView: View {
     }
     
     func getContentString() -> String {
-        if didExercise {
+        if viewModel.didExercise {
             return "This will show a list of exercise sets that you completed on the selected day.\n\n(This view is to be updated.)"
         } else {
             return "No exercises were completed on this day.\n\n(This view is to be updated.)"
