@@ -9,28 +9,40 @@ import SwiftUI
 
 struct ErrorView: View {
     private struct Constants {
-        static let loadingIconSize: CGFloat = 87.0
+        static let vStackSpacing: CGFloat = 80.0
+        static let topPadding: CGFloat = 40.0
     }
     
-    var errorText: String?
+    var viewModel: ErrorViewModel
     
     var body: some View {
         ZStack {
             Color.oysterBay
                 .ignoresSafeArea(.all)
-
-            Text(errorText ?? "")
-                .font(.title2Bold)
-                .multilineTextAlignment(.center)
-                .foregroundColor(.resolutionBlue)
-                .padding(.mediumSpace)
+            
+            VStack(spacing: Constants.vStackSpacing) {
+                Text(L10n.ResultsView.results)
+                    .font(.largeTitleBold)
+                    .foregroundColor(.darkGray06)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, Constants.topPadding)
+                    
+                
+                Text(viewModel.errorText)
+                    .font(.bodyBold)
+                    .foregroundColor(.blueCharcoal)
+                    .multilineTextAlignment(.center)
+                
+                Spacer()
+            }
+            .padding(.horizontal, .mediumSpace)
         }
     }
 }
 
 struct ErrorView_Previews: PreviewProvider {
     static var previews: some View {
-        ErrorView(errorText: L10n.ResultsView.error)
+        ErrorView(viewModel: .init(header: L10n.ResultsView.results, errorText: L10n.ResultsView.error))
     }
 }
 
