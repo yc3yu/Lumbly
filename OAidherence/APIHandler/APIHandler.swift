@@ -143,12 +143,14 @@ class APIHandler {
     }
     
     func fetchResultsDataAvailability(parentExerciseSet: String, exerciseName: String, timestamp: String, completion: @escaping ((ResultsAvailability) -> ())) {
-        func makeURL(parentExerciseSet: String, exerciseName: String, timestamp: String) -> String {
-            return "\(APIEndpoints.containerURL)/\(parentExerciseSet)/\(timestamp)?flags=dataAvailability"
+        func makeURL(parentExerciseSet: String, exerciseName: String, timestamp: String) -> String? {
+            let urlString = "\(APIEndpoints.containerURL)/results_exist/TestUser1/\(parentExerciseSet)/\(timestamp)"
+            return urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         }
-        
+
         let urlString = makeURL(parentExerciseSet: parentExerciseSet, exerciseName: exerciseName, timestamp: timestamp)
-        if let url = URL(string: urlString) {
+        if let urlString = urlString,
+           let url = URL(string: urlString) {
             URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
                 DispatchQueue.main.async {
                     if error != nil {
