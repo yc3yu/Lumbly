@@ -54,7 +54,7 @@ struct CalendarTileView: View {
             
             if let didExercise = viewModel.calendarTileData?.didExercise,
                viewModel.dateRelativeToToday != .future {
-                NavigationLink(destination: ResultsForDayView(dayOfWeek: viewModel.dayOfWeek ?? "", didExercise: didExercise)) {
+                NavigationLink(destination: ResultsForDayView(viewModel: .init(dayOfWeek: viewModel.dayOfWeek ?? "", didExercise: didExercise))) {
                     Color.clear
                 }
             }

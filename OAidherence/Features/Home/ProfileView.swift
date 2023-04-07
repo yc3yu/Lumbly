@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct ProfileView: View {
+    private struct Constants {
+        static let vStackSpacing: CGFloat = 80.0
+        static let topPadding: CGFloat = 40.0
+    }
+    
     var body: some View {
         ZStack {
             Color.oysterBay
                 .ignoresSafeArea(edges: [.horizontal, .bottom])
             
-            VStack(spacing: 80.0) {
-                Text("Profile")
+            VStack(spacing: Constants.vStackSpacing) {
+                Text("Profile") // TODO: Add to L10n
                     .font(.largeTitleBold)
                     .foregroundColor(.darkGray06)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, 40.0)
+                    .padding(.top, Constants.topPadding)
                     .padding(.horizontal, .mediumSpace)
                 
                 Text("This will show information about the user's profile.\n\n(This view is to be updated.)")
