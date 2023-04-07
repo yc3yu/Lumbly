@@ -10,7 +10,7 @@ import SwiftUI
 struct ResultsAvailability: Decodable {
     var status: AvailabilityStatus
     
-    enum AvailabilityStatus: Decodable {
+    enum AvailabilityStatus: Int, Decodable {
         case available
         case unavailable
         case error
