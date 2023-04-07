@@ -37,26 +37,7 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
 
         UIView.setAnimationsEnabled(false)
         
-        switch UIDevice.current.orientation {
-            // Home button on top
-        case UIDeviceOrientation.portraitUpsideDown:
-            self.previewLayer.connection?.videoOrientation = .portraitUpsideDown
-            
-            // Home button on right
-        case UIDeviceOrientation.landscapeLeft:
-            self.previewLayer.connection?.videoOrientation = .landscapeRight
-            
-            // Home button on left
-        case UIDeviceOrientation.landscapeRight:
-            self.previewLayer.connection?.videoOrientation = .landscapeLeft
-            
-            // Home button at bottom
-        case UIDeviceOrientation.portrait:
-            self.previewLayer.connection?.videoOrientation = .portrait
-            
-        default:
-            break
-        }
+        self.previewLayer.connection?.videoOrientation = .landscapeRight
     }
     
     func checkPermission() {
@@ -167,7 +148,7 @@ extension RecordingViewController: RecordingViewControllerLinkable {
             
             /// Update the orientation on the movie file output video connection before recording.
             let movieFileOutputConnection = self.movieFileOutput.connection(with: .video)
-            movieFileOutputConnection?.videoOrientation = videoPreviewLayerOrientation ?? .landscapeLeft
+            movieFileOutputConnection?.videoOrientation = videoPreviewLayerOrientation ?? .landscapeRight
             movieFileOutputConnection?.automaticallyAdjustsVideoMirroring = false
             movieFileOutputConnection?.isVideoMirrored = true
             

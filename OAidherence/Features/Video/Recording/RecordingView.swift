@@ -30,15 +30,16 @@ struct RecordingView: View {
         }
     }
     
-    private var parentView: ExerciseInstructionsView {
+    private var parentView: some View {
         viewModel.parentView.viewModel.isTestRun = viewModel.isTestRun
-        return viewModel.parentView
+        return viewModel.parentView.onAppear {
+            AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
+        }
     }
     
     @ObservedObject var viewControllerLink = RecordingViewControllerLink()
     
     @State private var isRecording = false
-    @State private var orientation = UIDevice.current.orientation
     @State var shouldPresentPlayback = false
     @State var videoFileURL: URL? = nil
     @State var timestamp: String? = nil
@@ -49,33 +50,14 @@ struct RecordingView: View {
             HostedRecordingViewController(videoFileURL: $videoFileURL, timestamp: $timestamp, viewControllerLink: viewControllerLink)
                 .ignoresSafeArea(.container, edges: .horizontal)
 
-            Group {
-                switch orientation {
-                case .portrait, .faceUp, .faceDown:
-                    VStack {
-                        Spacer()
-                        
-                        makeRecordingButton()
-                            .padding(.bottom, .smallSpace)
-                    }
-                case .landscapeRight:
-                    HStack {
-                        Spacer()
-                        
-                        makeRecordingButton()
-                    }
-                default:
-                    HStack {
-                        Spacer()
-                        
-                        makeRecordingButton()
-                            .padding(.trailing, .smallSpace)
-                    }
-                }
+            HStack {
+                Spacer()
+
+                makeRecordingButton()
             }
-            .onRotate { newOrientation in
-                orientation = newOrientation
-            }
+        }
+        .onAppear {
+            AppDelegate.orientationLock = UIInterfaceOrientationMask.landscapeRight
         }
         .navigationBarBackButtonHidden(true)
         .overlay(alignment: .topLeading) {
@@ -140,23 +122,5 @@ struct RecordingView: View {
                               showOptions: false))
             }
         }
-    }
-}
-
-struct DeviceRotationViewModifier: ViewModifier {
-    let action: (UIDeviceOrientation) -> Void
-    
-    func body(content: Content) -> some View {
-        content
-            .onAppear()
-            .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
-                action(UIDevice.current.orientation)
-            }
-    }
-}
-
-extension View {
-    func onRotate(perform action: @escaping (UIDeviceOrientation) -> Void) -> some View {
-        self.modifier(DeviceRotationViewModifier(action: action))
     }
 }
