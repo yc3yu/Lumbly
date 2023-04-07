@@ -11,8 +11,8 @@ import Combine
 
 struct HostedRecordingViewController: UIViewControllerRepresentable {
     let videoFileURL: Binding<URL?>
-    let timestamp: Binding<String?>
-    
+
+    var viewModel: Binding<RecordingView.RecordingViewModel>
     var viewControllerLink: RecordingViewControllerLink
     
     func makeUIViewController(context: Context) -> UIViewController {
@@ -28,7 +28,7 @@ struct HostedRecordingViewController: UIViewControllerRepresentable {
     
     class Coordinator: RecordingViewControllerDelegate {
         let videoFileURLBinding: Binding<URL?>
-        let timestampBinding: Binding<String?>
+        var viewModelBinding: Binding<RecordingView.RecordingViewModel>
         
         private var cancellable: AnyCancellable?
         
@@ -45,18 +45,18 @@ struct HostedRecordingViewController: UIViewControllerRepresentable {
             }
         }
         
-        init(videoFileURLBinding: Binding<URL?>, timestampBinding: Binding<String?>) {
+        init(videoFileURLBinding: Binding<URL?>, viewModelBinding: Binding<RecordingView.RecordingViewModel>) {
             self.videoFileURLBinding = videoFileURLBinding
-            self.timestampBinding = timestampBinding
+            self.viewModelBinding = viewModelBinding
         }
         
         func videoFileUrlSet(_ viewController: RecordingViewController, videoFileURL: URL, timestamp: String) {
             videoFileURLBinding.wrappedValue = videoFileURL
-            timestampBinding.wrappedValue = timestamp
+            viewModelBinding.timestamp.wrappedValue = timestamp
         }
     }
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator(videoFileURLBinding: videoFileURL, timestampBinding: timestamp)
+        return Coordinator(videoFileURLBinding: videoFileURL, viewModelBinding: viewModel)
     }
 }

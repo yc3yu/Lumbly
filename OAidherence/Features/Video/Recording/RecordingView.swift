@@ -43,12 +43,11 @@ struct RecordingView: View {
     @State private var isRecording = false
     @State var shouldPresentPlayback = false
     @State var videoFileURL: URL? = nil
-    @State var timestamp: String? = nil
     @State var viewModel: RecordingViewModel
     
     var body: some View {
         ZStack {
-            HostedRecordingViewController(videoFileURL: $videoFileURL, timestamp: $timestamp, viewControllerLink: viewControllerLink)
+            HostedRecordingViewController(videoFileURL: $videoFileURL, viewModel: $viewModel, viewControllerLink: viewControllerLink)
                 .ignoresSafeArea(.container, edges: .horizontal)
 
             HStack {

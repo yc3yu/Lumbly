@@ -11,8 +11,9 @@ extension RecordingView {
     class RecordingViewModel: ObservableObject {
         @Published private(set) var parentExerciseSet: String
         @Published private(set) var exerciseName: String
-        @Published private(set) var timestamp: String?
         @Published private(set) var recordingInfoModalBodyText: String?
+        
+        @Published var timestamp: String?
         @Published var isTestRun: Bool
         
         var parentView: ExerciseInstructionsView
