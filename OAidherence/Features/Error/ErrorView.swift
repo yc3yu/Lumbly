@@ -16,27 +16,25 @@ struct ErrorView: View {
     var viewModel: ErrorViewModel
     
     var body: some View {
-        ZStack {
-            Color.oysterBay
-                .ignoresSafeArea(.all)
-            
-            VStack(spacing: Constants.vStackSpacing) {
-                Text(L10n.ResultsView.results)
+        VStack(spacing: Constants.vStackSpacing) {
+            if let header = viewModel.header {
+                Text(header)
                     .font(.largeTitleBold)
                     .foregroundColor(.darkGray06)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, Constants.topPadding)
-                    
-                
-                Text(viewModel.errorText)
-                    .font(.bodyBold)
-                    .foregroundColor(.blueCharcoal)
-                    .multilineTextAlignment(.center)
-                
+            } else {
                 Spacer()
             }
-            .padding(.horizontal, .mediumSpace)
+            
+            Text(viewModel.errorText)
+                .font(.bodyBold)
+                .foregroundColor(.blueCharcoal)
+                .multilineTextAlignment(.center)
+            
+            Spacer()
         }
+        .padding(.horizontal, .mediumSpace)
     }
 }
 
