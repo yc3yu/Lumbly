@@ -25,7 +25,6 @@ extension PlaybackView {
                 apiHandler.uploadVideo(parentExerciseSet: recordingViewModel.parentExerciseSet,
                                        exerciseName: recordingViewModel.exerciseName,
                                        videoFileURL: videoFileURL) { [weak self] in
-                    print("about to remove temp video")
                     self?.removeTemporaryVideo()
                 }
             }
@@ -33,19 +32,17 @@ extension PlaybackView {
         
         func removeTemporaryVideo() {
             if let videoFileURL = videoFileURL {
-                print("video file exists")
                 let path = videoFileURL.path
                 
                 guard FileManager.default.fileExists(atPath: path) else { return }
                 
                 do {
                     try FileManager.default.removeItem(atPath: path)
-                    print("removed file at path \(videoFileURL)")
                 } catch {
                     print("Error removing file at url: \(videoFileURL)")
                 }
             } else {
-                print("video file does not exist")
+                print("Url does not exist")
             }
         }
     }
