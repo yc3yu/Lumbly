@@ -63,6 +63,13 @@ struct FormCommentTileView: View {
                             .frame(width: Constants.imageWidth, height: Constants.secondaryImageHeight)
                     }
                 }
+                
+                if viewModel.isFormMistake {
+                    Text(L10n.FormCommentTileView.ifPainfulOrDifficult)
+                        .font(.bodyRegular)
+                        .foregroundColor(.blueCharcoal)
+                        .padding(.top, .miniSpace)
+                }
             }
         }
         .padding(.mediumSpace)
@@ -87,6 +94,14 @@ struct FormCommentTileView_Previews: PreviewProvider {
                                           mainImage: "https://templumblygroup.blob.core.windows.net/lumblyimage/Bird%20Dog/Bird%20Dog.png?sv=2021-10-04&st=2023-02-26T23%3A08%3A29Z&se=2023-05-01T22%3A08%3A00Z&sr=b&sp=r&sig=JnApvY92bvlrHo49DB45zLaDK4kmWq9vaeS123uJ5hA%3D",
                                           solution: "Remember to keep your leg lifted so it makes a straight line with your back.",
                                           secondaryImage: "https://templumblygroup.blob.core.windows.net/lumblyimage/Bird%20Dog/Bird%20Dog.png?sv=2021-10-04&st=2023-02-26T23%3A08%3A29Z&se=2023-05-01T22%3A08%3A00Z&sr=b&sp=r&sig=JnApvY92bvlrHo49DB45zLaDK4kmWq9vaeS123uJ5hA%3D")))
+                    
+                    FormCommentTileView(viewModel:
+                            .init(formCommentTileData:
+                                    .init(commentTitle: "Leg lifted too high",
+                                          mainImage: "https://templumblygroup.blob.core.windows.net/lumblyimage/Bird%20Dog/Bird%20Dog.png?sv=2021-10-04&st=2023-02-26T23%3A08%3A29Z&se=2023-05-01T22%3A08%3A00Z&sr=b&sp=r&sig=JnApvY92bvlrHo49DB45zLaDK4kmWq9vaeS123uJ5hA%3D",
+                                          solution: "Remember to keep your leg lifted so it makes a straight line with your back.",
+                                          secondaryImage: "https://templumblygroup.blob.core.windows.net/lumblyimage/Bird%20Dog/Bird%20Dog.png?sv=2021-10-04&st=2023-02-26T23%3A08%3A29Z&se=2023-05-01T22%3A08%3A00Z&sr=b&sp=r&sig=JnApvY92bvlrHo49DB45zLaDK4kmWq9vaeS123uJ5hA%3D"),
+                            isFormMistake: true))
                     
                     FormCommentTileView(viewModel:
                             .init(formCommentTileData:

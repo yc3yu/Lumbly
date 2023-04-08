@@ -17,9 +17,11 @@ struct FormCommentTile: Decodable, Hashable {
 extension FormCommentTileView {
     class FormCommentTileViewModel: ObservableObject {
         @Published private(set) var formCommentTileData: FormCommentTile?
-        
-        init(formCommentTileData: FormCommentTile?) {
+        var isFormMistake: Bool
+
+        init(formCommentTileData: FormCommentTile?, isFormMistake: Bool = false) {
             self.formCommentTileData = formCommentTileData
+            self.isFormMistake = isFormMistake
         }
     }
 }

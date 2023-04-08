@@ -86,7 +86,7 @@ struct ResultsView: View {
                                             .padding(.bottom, Constants.headerBottomSpacing)
                                         
                                         ForEach(formMistakesTiles, id: \.self) { formMistakeTile in
-                                            FormCommentTileView(viewModel: .init(formCommentTileData: formMistakeTile))
+                                            FormCommentTileView(viewModel: .init(formCommentTileData: formMistakeTile, isFormMistake: true))
                                         }
                                     }
                                     
