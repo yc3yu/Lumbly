@@ -19,7 +19,12 @@ struct ExerciseInstructionsView: View {
         static let bottomPadding: CGFloat = 50.0
     }
     
-    @State private var stepsOrTips = L10n.ExerciseInstructionsView.steps
+    private enum PickerState {
+        case steps
+        case tips
+    }
+    
+    @State private var stepsOrTips: PickerState = .steps
 
     @StateObject var viewModel: ExerciseInstructionsViewModel
 
@@ -61,25 +66,26 @@ struct ExerciseInstructionsView: View {
                         
                         Picker(L10n.ExerciseInstructionsView.stepsOrTips, selection: $stepsOrTips) {
                             Text(L10n.ExerciseInstructionsView.steps)
-                                .tag(L10n.ExerciseInstructionsView.steps)
+                                .tag(PickerState.steps)
                             Text(L10n.ExerciseInstructionsView.tips)
-                                .tag(L10n.ExerciseInstructionsView.tips)
+                                .tag(PickerState.tips)
                         }
                         .pickerStyle(.segmented)
                         .padding(.horizontal, .hugeSpace)
                         
-                        if stepsOrTips == L10n.ExerciseInstructionsView.steps {
-                            if let exerciseSteps = viewModel.exerciseInstructionsData?.exerciseSteps {
-                                ForEach(exerciseSteps, id: \.self) { exerciseStep in
-                                    ExerciseStepView(viewModel: .init(exerciseStepData: exerciseStep))
-                                }
-                            }
-                        } else {
+                        switch stepsOrTips {
+                        case .tips:
                             if let exerciseTips = viewModel.exerciseInstructionsData?.exerciseTips {
                                 ForEach(exerciseTips.indices, id: \.self) { i in
                                     ExerciseTipView(viewModel:
                                             .init(tipNumber: i + 1,
                                                   exerciseTipData: exerciseTips[i]))
+                                }
+                            }
+                        default:
+                            if let exerciseSteps = viewModel.exerciseInstructionsData?.exerciseSteps {
+                                ForEach(exerciseSteps, id: \.self) { exerciseStep in
+                                    ExerciseStepView(viewModel: .init(exerciseStepData: exerciseStep))
                                 }
                             }
                         }
