@@ -168,6 +168,8 @@ class APIHandler {
                     }
                 }
             }).resume()
+        } else {
+            completion(ResultsAvailability(status: .error))
         }
     }
 
