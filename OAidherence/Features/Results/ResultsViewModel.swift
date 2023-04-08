@@ -80,24 +80,20 @@ extension ResultsView {
                         exerciseName: exerciseName,
                         timestamp: timestamp) { [weak self] dataAvailability in
                             self?.dataAvailability = dataAvailability
+                            
+                            if dataAvailability.status == .available {
+                                self?.apiHandler.fetchResultsData(parentExerciseSet: parentExerciseSet,
+                                                            exerciseName: exerciseName,
+                                                            timestamp: timestamp) { [weak self] results in
+                                    self?.results = results
+                                }
+                            }
                         }
                 }
                 
                 if self?.dataAvailability.status != .unavailable {
                     currentTimer.invalidate()
                 }
-            }
-            
-            guard dataAvailability.status == .available else {
-                isLoading = false // TODO: Check if this is necessary (depends on implementation)
-                return
-            }
-            
-            apiHandler.fetchResultsData(parentExerciseSet: recordingViewModel.parentExerciseSet,
-                                        exerciseName: recordingViewModel.exerciseName,
-                                        timestamp: timestamp) { [weak self] results in
-                self?.results = results
-                self?.isLoading = false
             }
         }
     }
