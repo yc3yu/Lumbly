@@ -63,6 +63,13 @@ struct FormCommentTileView: View {
                             .frame(width: Constants.imageWidth, height: Constants.secondaryImageHeight)
                     }
                 }
+                
+                if viewModel.isFormMistake {
+                    Text(L10n.FormCommentTileView.ifPainfulOrDifficult)
+                        .font(.bodyRegular)
+                        .foregroundColor(.blueCharcoal)
+                        .padding(.top, .miniSpace)
+                }
             }
         }
         .padding(.mediumSpace)
