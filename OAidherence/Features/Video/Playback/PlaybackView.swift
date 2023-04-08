@@ -46,6 +46,11 @@ struct PlaybackView: View {
                     player = AVPlayer(url: videoFileURL)
                     player.play()
                 }
+                .onDisappear {
+                    if viewModel.recordingViewModel.isTestRun {
+                        viewModel.removeTemporaryVideo()
+                    }
+                }
                 .overlay(alignment: .top) {
                     makeOverlay()
                         .padding(.top, .miniSpace)
