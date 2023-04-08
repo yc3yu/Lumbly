@@ -139,6 +139,8 @@ internal enum L10n {
     internal static let yes = L10n.tr("Localizable", "RecordingOptionsModalView.yes", fallback: "Yes")
   }
   internal enum ResultsView {
+    /// Exercise not detected. Please try again.
+    internal static let badVideo = L10n.tr("Localizable", "ResultsView.badVideo", fallback: "Exercise not detected. Please try again.")
     /// Oops! There was an error retrieving your data.
     internal static let error = L10n.tr("Localizable", "ResultsView.error", fallback: "Oops! There was an error retrieving your data.")
     /// Form Mistakes

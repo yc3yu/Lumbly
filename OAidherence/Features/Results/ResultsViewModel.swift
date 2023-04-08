@@ -11,8 +11,10 @@ struct ResultsAvailability: Decodable {
     var status: AvailabilityStatus
     
     enum AvailabilityStatus: Int, Decodable {
+        case loading
         case available
-        case unavailable
+        case noResults
+        case badVideo
         case error
     }
 }
@@ -54,7 +56,7 @@ extension ResultsView {
         
         @Published private(set) var results: Results? = nil
         @Published var isLoading: Bool = false
-        @Published var dataAvailability: ResultsAvailability = ResultsAvailability(status: .unavailable)
+        @Published var dataAvailability: ResultsAvailability = ResultsAvailability(status: .loading)
         
         init(recordingViewModel: ResultsView.RecordingViewModel) {
             self.apiHandler = APIHandler()
@@ -63,11 +65,8 @@ extension ResultsView {
         }
 
         func fetchData() {
-            isLoading = true
-            
             guard let timestamp = recordingViewModel.timestamp else {
                 dataAvailability.status = .error
-                isLoading = false
                 return
             }
             
@@ -82,16 +81,18 @@ extension ResultsView {
                             self?.dataAvailability = dataAvailability
                             
                             if dataAvailability.status == .available {
+                                self?.isLoading = true
                                 self?.apiHandler.fetchResultsData(parentExerciseSet: parentExerciseSet,
                                                             exerciseName: exerciseName,
                                                             timestamp: timestamp) { [weak self] results in
                                     self?.results = results
+                                    self?.isLoading = false
                                 }
                             }
                         }
                 }
                 
-                if self?.dataAvailability.status != .unavailable {
+                if self?.dataAvailability.status != .loading {
                     currentTimer.invalidate()
                 }
             }
