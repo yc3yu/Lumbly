@@ -70,10 +70,13 @@ extension ResultsView {
                 return
             }
             
+            isLoading = true
+            
             Timer.scheduledTimer(withTimeInterval: Constants.requestDelay,
                                  repeats: true) { [weak self] currentTimer in
                 if let parentExerciseSet = self?.recordingViewModel.parentExerciseSet,
-                   let exerciseName = self?.recordingViewModel.exerciseName {
+                   let exerciseName = self?.recordingViewModel.exerciseName,
+                   self?.dataAvailability.status == .loading {
                     self?.apiHandler.fetchResultsDataAvailability(
                         parentExerciseSet: parentExerciseSet,
                         exerciseName: exerciseName,
@@ -81,7 +84,6 @@ extension ResultsView {
                             self?.dataAvailability = dataAvailability
                             
                             if dataAvailability.status == .available {
-                                self?.isLoading = true
                                 self?.apiHandler.fetchResultsData(parentExerciseSet: parentExerciseSet,
                                                             exerciseName: exerciseName,
                                                             timestamp: timestamp) { [weak self] results in
