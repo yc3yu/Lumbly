@@ -144,7 +144,7 @@ class APIHandler {
     
     func fetchResultsDataAvailability(parentExerciseSet: String, exerciseName: String, timestamp: String, completion: @escaping ((ResultsAvailability) -> ())) {
         func makeURL(parentExerciseSet: String, exerciseName: String, timestamp: String) -> String? {
-            let urlString = "\(APIEndpoints.containerURL)/results_exist/TestUser1/\(parentExerciseSet)/\(timestamp)"
+            let urlString = "\(APIEndpoints.containerURL)/results_exist/testuser1/\(parentExerciseSet)/\(timestamp)"
             return urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         }
 
