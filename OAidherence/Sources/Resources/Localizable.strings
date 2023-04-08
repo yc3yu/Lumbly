@@ -85,6 +85,7 @@
 "ResultsView.formMistakes" = "Form Mistakes";
 "ResultsView.welldone" = "Well-Done";
 "ResultsView.solution" = "Solution";
+"ResultsView.badVideo" = "Exercise not detected. Please try again.";
 "ResultsView.noResultsForThisExercise" = "No form mistakes were detected for this exercise. Well done!";
 "ResultsView.noResultsForThisSession" = "No form mistakes were detected in this session. Well done!";
 

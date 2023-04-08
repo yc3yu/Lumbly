@@ -10,9 +10,11 @@ import SwiftUI
 struct ResultsAvailability: Decodable {
     var status: AvailabilityStatus
     
-    enum AvailabilityStatus: Decodable {
+    enum AvailabilityStatus: Int, Decodable {
+        case loading
         case available
-        case unavailable
+        case noResults
+        case badVideo
         case error
     }
 }
@@ -54,7 +56,7 @@ extension ResultsView {
         
         @Published private(set) var results: Results? = nil
         @Published var isLoading: Bool = false
-        @Published var dataAvailability: ResultsAvailability = ResultsAvailability(status: .unavailable)
+        @Published var dataAvailability: ResultsAvailability = ResultsAvailability(status: .loading)
         
         init(recordingViewModel: ResultsView.RecordingViewModel) {
             self.apiHandler = APIHandler()
@@ -63,15 +65,13 @@ extension ResultsView {
         }
 
         func fetchData() {
-            isLoading = true
-            
             guard let timestamp = recordingViewModel.timestamp else {
                 dataAvailability.status = .error
-                isLoading = false
                 return
             }
             
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ [weak self] currentTimer in
+            Timer.scheduledTimer(withTimeInterval: Constants.requestDelay,
+                                 repeats: true) { [weak self] currentTimer in
                 if let parentExerciseSet = self?.recordingViewModel.parentExerciseSet,
                    let exerciseName = self?.recordingViewModel.exerciseName {
                     self?.apiHandler.fetchResultsDataAvailability(
@@ -79,24 +79,22 @@ extension ResultsView {
                         exerciseName: exerciseName,
                         timestamp: timestamp) { [weak self] dataAvailability in
                             self?.dataAvailability = dataAvailability
+                            
+                            if dataAvailability.status == .available {
+                                self?.isLoading = true
+                                self?.apiHandler.fetchResultsData(parentExerciseSet: parentExerciseSet,
+                                                            exerciseName: exerciseName,
+                                                            timestamp: timestamp) { [weak self] results in
+                                    self?.results = results
+                                    self?.isLoading = false
+                                }
+                            }
                         }
                 }
                 
-                if self?.dataAvailability.status != .unavailable {
+                if self?.dataAvailability.status != .loading {
                     currentTimer.invalidate()
                 }
-            }
-            
-            guard dataAvailability.status == .available else {
-                isLoading = false // TODO: Check if this is necessary (depends on implementation)
-                return
-            }
-            
-            apiHandler.fetchResultsData(parentExerciseSet: recordingViewModel.parentExerciseSet,
-                                        exerciseName: recordingViewModel.exerciseName,
-                                        timestamp: timestamp) { [weak self] results in
-                self?.results = results
-                self?.isLoading = false
             }
         }
     }
