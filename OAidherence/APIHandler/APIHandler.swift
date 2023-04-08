@@ -18,7 +18,10 @@ class APIHandler {
     func uploadVideo(parentExerciseSet: String, exerciseName: String, videoFileURL: URL, completion: @escaping () -> ()) {
         fetchConnectionString() { [weak self] connectionString in
             do {
-                guard let containerName = self?.containerName  else { return }
+                guard let containerName = self?.containerName  else {
+                    completion()
+                    return
+                }
                 
                 let account = try AZSCloudStorageAccount(fromConnectionString: connectionString)
                 let blobClient: AZSCloudBlobClient = account.getBlobClient()
@@ -28,8 +31,8 @@ class APIHandler {
                     if error != nil {
                         print("Error creating container")
                         print(error.debugDescription)
-                    }
-                    else {
+                        completion()
+                    } else {
                         let fileName = "\(parentExerciseSet)/\(exerciseName)/\(videoFileURL.lastPathComponent)"
                         let blob: AZSCloudBlockBlob = blobContainer.blockBlobReference(fromName: fileName)
                         
@@ -41,6 +44,7 @@ class APIHandler {
                             })
                         } catch {
                             print("Error extracting data from URL \(videoFileURL)")
+                            completion()
                         }
                     }
                 }
