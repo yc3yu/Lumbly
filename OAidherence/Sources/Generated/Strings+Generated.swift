@@ -63,6 +63,8 @@ internal enum L10n {
     internal static let tipNumber = L10n.tr("Localizable", "ExerciseTipView.tipNumber", fallback: "TIP #")
   }
   internal enum FormCommentTileView {
+    /// If this is painful or difficult, mention it to your physiotherapist. 
+    internal static let ifPainfulOrDifficult = L10n.tr("Localizable", "FormCommentTileView.ifPainfulOrDifficult", fallback: "If this is painful or difficult, mention it to your physiotherapist. ")
     /// Solution
     internal static let solution = L10n.tr("Localizable", "FormCommentTileView.solution", fallback: "Solution")
   }
