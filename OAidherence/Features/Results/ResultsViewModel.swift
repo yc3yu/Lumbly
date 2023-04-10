@@ -96,6 +96,7 @@ extension ResultsView {
                 
                 if self?.dataAvailability.status != .loading {
                     currentTimer.invalidate()
+                    self?.isLoading = false
                 }
             }
         }
