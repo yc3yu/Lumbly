@@ -79,6 +79,8 @@ internal enum L10n {
     internal static let done = L10n.tr("Localizable", "NavigationBarItem.done", fallback: "Done")
     /// Exit
     internal static let exit = L10n.tr("Localizable", "NavigationBarItem.exit", fallback: "Exit")
+    /// Return to Home
+    internal static let returnToHome = L10n.tr("Localizable", "NavigationBarItem.returnToHome", fallback: "Return to Home")
     /// Localizable.strings
     ///   OAidherence
     /// 

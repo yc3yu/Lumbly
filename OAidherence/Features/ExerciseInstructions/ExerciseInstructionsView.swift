@@ -120,7 +120,10 @@ struct ExerciseInstructionsView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             }
         }
-        .onAppear(perform: viewModel.fetchData)
+        .onAppear {
+            viewModel.fetchData()
+            AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
+        }
     }
 }
 

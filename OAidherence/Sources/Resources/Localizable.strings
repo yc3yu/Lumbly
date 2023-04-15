@@ -9,6 +9,7 @@
 // MARK: NavigationBarItem
 "NavigationBarItem.skip" = "Skip";
 "NavigationBarItem.done" = "Done";
+"NavigationBarItem.returnToHome" = "Return to Home";
 "NavigationBarItem.submit" = "Submit";
 "NavigationBarItem.exit" = "Exit";
 
