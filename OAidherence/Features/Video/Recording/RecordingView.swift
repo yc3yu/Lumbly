@@ -59,7 +59,7 @@ struct RecordingView: View {
         .onAppear {
             AppDelegate.orientationLock = UIInterfaceOrientationMask.landscapeRight
         }
-        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(!viewModel.isTestRun)
         .navigationBarItems(trailing: NavigationLink(destination: HomeView()) {
             if !viewModel.isTestRun {
                 Text(L10n.NavigationBarItem.returnToHome)
