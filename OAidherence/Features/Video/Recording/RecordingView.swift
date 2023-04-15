@@ -30,7 +30,7 @@ struct RecordingView: View {
         }
     }
     
-    private var parentView: some View {
+    private var newParentView: some View {
         viewModel.parentView.viewModel.isTestRun = viewModel.isTestRun
         let newParentView = ExerciseInstructionsView(viewModel: viewModel.parentView.viewModel)
         return newParentView.onAppear {
@@ -105,7 +105,7 @@ struct RecordingView: View {
         RecordingInfoModalView(viewModel: .init(exerciseName: viewModel.exerciseName,
                                                 bodyText: viewModel.recordingInfoModalBodyText,
                                                 isTestRun: viewModel.isTestRun,
-                                                infoNavLinkDestination: parentView))
+                                                infoNavLinkDestination: newParentView))
     }
     
     @ViewBuilder
