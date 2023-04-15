@@ -60,6 +60,11 @@ struct RecordingView: View {
             AppDelegate.orientationLock = UIInterfaceOrientationMask.landscapeRight
         }
         .navigationBarBackButtonHidden(true)
+        .navigationBarItems(trailing: NavigationLink(destination: HomeView()) {
+            if !viewModel.isTestRun {
+                Text(L10n.NavigationBarItem.returnToHome)
+            }
+        })
         .overlay(alignment: .topLeading) {
             makeInfoModalOverlay()
                 .padding([.top, .leading], .miniSpace)
