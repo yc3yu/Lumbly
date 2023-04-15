@@ -32,7 +32,13 @@ struct RecordingView: View {
     
     private var newParentView: some View {
         viewModel.parentView.viewModel.isTestRun = viewModel.isTestRun
-        let newParentView = ExerciseInstructionsView(viewModel: viewModel.parentView.viewModel)
+        let parentViewModel = viewModel.parentView.viewModel
+        let newParentView = ExerciseInstructionsView(viewModel:
+                .init(parentExerciseSet: parentViewModel.parentExerciseSet,
+                      exerciseNumber: parentViewModel.exerciseNumber,
+                      exerciseInstructionsURL: parentViewModel.exerciseInstructionsURL,
+                      showReadyButton: false,
+                      isTestRun: parentViewModel.isTestRun))
         return newParentView.onAppear {
             AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
         }
