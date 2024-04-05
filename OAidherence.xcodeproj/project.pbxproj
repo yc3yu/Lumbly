@@ -104,7 +104,7 @@
 		647280A6293ED960004CCE75 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		647280A8293EDBC8004CCE75 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		647635C028FBA34E0043DCFD /* OAidherence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAidherence.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		647C9F8C2909ECAA007EFE62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		647C9F8C2909ECAA007EFE62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "OAidherence/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		6488E9D829A2C5E70090554A /* ExerciseTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTileView.swift; sourceTree = "<group>"; };
 		6488E9DA29A2C8540090554A /* ExerciseTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTileViewModel.swift; sourceTree = "<group>"; };
 		6488E9E929A4786E0090554A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -341,7 +341,6 @@
 				64D1C48A2BBFA04600855706 /* Supporting Files */,
 				64028B9329B99EEC009C104B /* Preview Content */,
 				64D7261229C6DA1800C5200E /* OAidherenceApp.swift */,
-				647C9F8C2909ECAA007EFE62 /* Info.plist */,
 			);
 			path = OAidherence;
 			sourceTree = "<group>";
@@ -458,8 +457,9 @@
 		64D1C48A2BBFA04600855706 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				64922EBD29C792690025B2A9 /* Bridging-Header.h */,
 				64FF18E029DF2D3B001F4BE2 /* AppDelegate.swift */,
+				647C9F8C2909ECAA007EFE62 /* Info.plist */,
+				64922EBD29C792690025B2A9 /* Bridging-Header.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -902,7 +902,7 @@
 				DEVELOPMENT_TEAM = ZMNGHMDVJ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = OAidherence/Info.plist;
+				INFOPLIST_FILE = "OAidherence/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Lumbly;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is required to record videos. You may need to restart the app after granting access.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -937,7 +937,7 @@
 				DEVELOPMENT_TEAM = ZMNGHMDVJ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = OAidherence/Info.plist;
+				INFOPLIST_FILE = "OAidherence/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Lumbly;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is required to record videos. You may need to restart the app after granting access.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
