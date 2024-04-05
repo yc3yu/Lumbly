@@ -309,7 +309,6 @@
 			children = (
 				647280A6293ED960004CCE75 /* APIHandler.swift */,
 				647280A8293EDBC8004CCE75 /* APIEndpoints.swift */,
-				64922EBD29C792690025B2A9 /* Bridging-Header.h */,
 			);
 			path = APIHandler;
 			sourceTree = "<group>";
@@ -452,6 +451,7 @@
 		64D1C48A2BBFA04600855706 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				64922EBD29C792690025B2A9 /* Bridging-Header.h */,
 				64FF18E029DF2D3B001F4BE2 /* AppDelegate.swift */,
 			);
 			path = "Supporting Files";
@@ -903,7 +903,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuechenyu.OAidherence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "OAidherence/APIHandler/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "OAidherence/Supporting Files/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -938,7 +938,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuechenyu.OAidherence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "OAidherence/APIHandler/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "OAidherence/Supporting Files/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
