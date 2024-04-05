@@ -342,7 +342,6 @@
 				647C9F8C2909ECAA007EFE62 /* Info.plist */,
 				647635C728FBA34F0043DCFD /* Assets.xcassets */,
 				64028B9329B99EEC009C104B /* Preview Content */,
-				647280A5293ED94B004CCE75 /* APIHandler */,
 			);
 			path = OAidherence;
 			sourceTree = "<group>";
@@ -470,8 +469,17 @@
 			isa = PBXGroup;
 			children = (
 				64028B9229B99D24009C104B /* Features */,
+				64D1C4962BBFA58900855706 /* Services */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		64D1C4962BBFA58900855706 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				647280A5293ED94B004CCE75 /* APIHandler */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		64D3D4F029A5CB4B0056CB75 /* Onboarding */ = {
