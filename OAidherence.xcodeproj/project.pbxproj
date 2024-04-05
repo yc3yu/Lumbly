@@ -225,21 +225,20 @@
 			path = FormCommentTile;
 			sourceTree = "<group>";
 		};
-		643382D22910BCF90067AA19 /* Sources */ = {
+		643382D22910BCF90067AA19 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				643382D32910BCFE0067AA19 /* Resources */,
-				643382D42910BD050067AA19 /* Generated */,
+				64D1C48C2BBFA0E000855706 /* SwiftGen */,
 			);
-			path = Sources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		643382D32910BCFE0067AA19 /* Resources */ = {
+		643382D32910BCFE0067AA19 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				643382D52910BD140067AA19 /* Localizable.strings */,
 			);
-			path = Resources;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		643382D42910BD050067AA19 /* Generated */ = {
@@ -339,7 +338,7 @@
 			children = (
 				64D7261229C6DA1800C5200E /* OAidherenceApp.swift */,
 				64028B9229B99D24009C104B /* Features */,
-				643382D22910BCF90067AA19 /* Sources */,
+				643382D22910BCF90067AA19 /* Resources */,
 				64D1C48A2BBFA04600855706 /* Supporting Files */,
 				647C9F8C2909ECAA007EFE62 /* Info.plist */,
 				647635C728FBA34F0043DCFD /* Assets.xcassets */,
@@ -456,6 +455,15 @@
 				64FF18E029DF2D3B001F4BE2 /* AppDelegate.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		64D1C48C2BBFA0E000855706 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				643382D32910BCFE0067AA19 /* Sources */,
+				643382D42910BD050067AA19 /* Generated */,
+			);
+			path = SwiftGen;
 			sourceTree = "<group>";
 		};
 		64D3D4F029A5CB4B0056CB75 /* Onboarding */ = {
