@@ -340,11 +340,11 @@
 				64D7261229C6DA1800C5200E /* OAidherenceApp.swift */,
 				64028B9229B99D24009C104B /* Features */,
 				643382D22910BCF90067AA19 /* Sources */,
+				64D1C48A2BBFA04600855706 /* Supporting Files */,
 				647C9F8C2909ECAA007EFE62 /* Info.plist */,
 				647635C728FBA34F0043DCFD /* Assets.xcassets */,
 				64028B9329B99EEC009C104B /* Preview Content */,
 				647280A5293ED94B004CCE75 /* APIHandler */,
-				64FF18E029DF2D3B001F4BE2 /* AppDelegate.swift */,
 			);
 			path = OAidherence;
 			sourceTree = "<group>";
@@ -448,6 +448,14 @@
 				64C0442729ABB2CF000F244B /* ExerciseTipViewModel.swift */,
 			);
 			path = ExerciseTip;
+			sourceTree = "<group>";
+		};
+		64D1C48A2BBFA04600855706 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				64FF18E029DF2D3B001F4BE2 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		64D3D4F029A5CB4B0056CB75 /* Onboarding */ = {
