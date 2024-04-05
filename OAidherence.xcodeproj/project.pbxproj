@@ -336,8 +336,8 @@
 		647635C228FBA34E0043DCFD /* OAidherence */ = {
 			isa = PBXGroup;
 			children = (
+				64D1C48D2BBFA16A00855706 /* Sources */,
 				64D7261229C6DA1800C5200E /* OAidherenceApp.swift */,
-				64028B9229B99D24009C104B /* Features */,
 				643382D22910BCF90067AA19 /* Resources */,
 				64D1C48A2BBFA04600855706 /* Supporting Files */,
 				647C9F8C2909ECAA007EFE62 /* Info.plist */,
@@ -464,6 +464,14 @@
 				643382D42910BD050067AA19 /* Generated */,
 			);
 			path = SwiftGen;
+			sourceTree = "<group>";
+		};
+		64D1C48D2BBFA16A00855706 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				64028B9229B99D24009C104B /* Features */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		64D3D4F029A5CB4B0056CB75 /* Onboarding */ = {
