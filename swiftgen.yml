@@ -1,5 +1,5 @@
-input_dir: OAidherence/Sources/Resources/
-output_dir: OAidherence/Sources/Generated/
+input_dir: OAidherence/Resources/SwiftGen/Sources
+output_dir: OAidherence/Resources/SwiftGen/Generated
 
 strings:
   inputs: Localizable.strings
