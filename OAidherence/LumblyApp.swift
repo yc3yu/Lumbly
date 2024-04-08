@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct OAidherenceApp: App {
+struct LumblyApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {

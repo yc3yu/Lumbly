@@ -67,7 +67,7 @@
 		64D3D50B29A6EACD0056CB75 /* CalendarTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D50A29A6EACD0056CB75 /* CalendarTileView.swift */; };
 		64D3D50D29A6FB5B0056CB75 /* CalendarTileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D50C29A6FB5B0056CB75 /* CalendarTileViewModel.swift */; };
 		64D3D50F29A714E70056CB75 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D50E29A714E70056CB75 /* HomeViewModel.swift */; };
-		64D7261329C6DA1800C5200E /* OAidherenceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7261229C6DA1800C5200E /* OAidherenceApp.swift */; };
+		64D7261329C6DA1800C5200E /* LumblyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7261229C6DA1800C5200E /* LumblyApp.swift */; };
 		64FF18E129DF2D3B001F4BE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF18E029DF2D3B001F4BE2 /* AppDelegate.swift */; };
 		64FF18E329E085AD001F4BE2 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF18E229E085AD001F4BE2 /* ErrorViewModel.swift */; };
 		64FF18E529E0879D001F4BE2 /* ResultsForDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF18E429E0879D001F4BE2 /* ResultsForDayViewModel.swift */; };
@@ -137,7 +137,7 @@
 		64D3D50A29A6EACD0056CB75 /* CalendarTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTileView.swift; sourceTree = "<group>"; };
 		64D3D50C29A6FB5B0056CB75 /* CalendarTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTileViewModel.swift; sourceTree = "<group>"; };
 		64D3D50E29A714E70056CB75 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		64D7261229C6DA1800C5200E /* OAidherenceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAidherenceApp.swift; sourceTree = "<group>"; };
+		64D7261229C6DA1800C5200E /* LumblyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LumblyApp.swift; sourceTree = "<group>"; };
 		64FF18E029DF2D3B001F4BE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64FF18E229E085AD001F4BE2 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
 		64FF18E429E0879D001F4BE2 /* ResultsForDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsForDayViewModel.swift; sourceTree = "<group>"; };
@@ -332,7 +332,7 @@
 				64D1C48D2BBFA16A00855706 /* Sources */,
 				643382D22910BCF90067AA19 /* Resources */,
 				64D1C48A2BBFA04600855706 /* Supporting Files */,
-				64D7261229C6DA1800C5200E /* OAidherenceApp.swift */,
+				64D7261229C6DA1800C5200E /* LumblyApp.swift */,
 			);
 			path = OAidherence;
 			sourceTree = "<group>";
@@ -605,7 +605,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 647635BB28FBA34E0043DCFD /* Build configuration list for PBXProject "f" */;
+			buildConfigurationList = 647635BB28FBA34E0043DCFD /* Build configuration list for PBXProject "Lumbly" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -746,7 +746,7 @@
 				64028B8129AEB318009C104B /* PainLevelTileViewModel.swift in Sources */,
 				64D3D50829A6E6DC0056CB75 /* ExerciseSetTileViewModel.swift in Sources */,
 				647280992936D401004CCE75 /* CGFloat+Presets.swift in Sources */,
-				64D7261329C6DA1800C5200E /* OAidherenceApp.swift in Sources */,
+				64D7261329C6DA1800C5200E /* LumblyApp.swift in Sources */,
 				64922EBF29C799CD0025B2A9 /* PlaybackViewModel.swift in Sources */,
 				643382D82910BE0D0067AA19 /* Strings+Generated.swift in Sources */,
 				640781F629C9719E005050F9 /* GifView.swift in Sources */,
@@ -955,7 +955,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		647635BB28FBA34E0043DCFD /* Build configuration list for PBXProject "f" */ = {
+		647635BB28FBA34E0043DCFD /* Build configuration list for PBXProject "Lumbly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				647635E228FBA34F0043DCFD /* Debug */,
