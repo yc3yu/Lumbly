@@ -209,13 +209,6 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
-		64028B9329B99EEC009C104B /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		6419AF5F29ABDF2B00667F4C /* FormCommentTile */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,7 +332,6 @@
 				64D1C48D2BBFA16A00855706 /* Sources */,
 				643382D22910BCF90067AA19 /* Resources */,
 				64D1C48A2BBFA04600855706 /* Supporting Files */,
-				64028B9329B99EEC009C104B /* Preview Content */,
 				64D7261229C6DA1800C5200E /* OAidherenceApp.swift */,
 			);
 			path = OAidherence;
@@ -898,7 +890,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OAidherence/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = ZMNGHMDVJ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -933,7 +925,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OAidherence/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = ZMNGHMDVJ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
