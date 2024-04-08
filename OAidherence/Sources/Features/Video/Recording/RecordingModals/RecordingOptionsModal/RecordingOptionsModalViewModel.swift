@@ -1,6 +1,6 @@
 //
 //  RecordingOptionsModalViewModel.swift
-//  OAidherence
+//  Lumbly
 //
 //  Created by Yue chen Yu on 2023-04-05.
 //

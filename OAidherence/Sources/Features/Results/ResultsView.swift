@@ -1,6 +1,6 @@
 //
 //  ResultsView.swift
-//  OAidherence
+//  Lumbly
 //
 //  Created by Yue chen Yu on 2022-11-29.
 //

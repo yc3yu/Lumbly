@@ -1,6 +1,6 @@
 //
 //  ExerciseTileViewModel.swift
-//  OAidherence
+//  Lumbly
 //
 //  Created by Yue chen Yu on 2023-02-19.
 //

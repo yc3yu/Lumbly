@@ -1,6 +1,6 @@
 //
 //  Bridging-Header.h
-//  OAidherence
+//  Lumbly
 //
 //  Created by Yue chen Yu on 2023-03-19.
 //

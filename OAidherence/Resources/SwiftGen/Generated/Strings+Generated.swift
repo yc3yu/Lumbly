@@ -82,7 +82,7 @@ internal enum L10n {
     /// Return to Home
     internal static let returnToHome = L10n.tr("Localizable", "NavigationBarItem.returnToHome", fallback: "Return to Home")
     /// Localizable.strings
-    ///   OAidherence
+    ///   Lumbly
     /// 
     ///   Created by Yue chen Yu on 2022-10-31.
     internal static let skip = L10n.tr("Localizable", "NavigationBarItem.skip", fallback: "Skip")
