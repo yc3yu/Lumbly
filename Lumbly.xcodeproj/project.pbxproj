@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		640781F629C9719E005050F9 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640781F529C9719E005050F9 /* GifView.swift */; };
-		644E35C7290E52940024B8A5 /* Color+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E35C6290E52930024B8A5 /* Color+Presets.swift */; };
-		644E35C9290E52AC0024B8A5 /* Font+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E35C8290E52AC0024B8A5 /* Font+Presets.swift */; };
-		647280992936D401004CCE75 /* CGFloat+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647280982936D401004CCE75 /* CGFloat+Presets.swift */; };
 		64924A582BC499DD001E6C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 649249FB2BC499DD001E6C43 /* Assets.xcassets */; };
 		64924A592BC499DD001E6C43 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649249FD2BC499DD001E6C43 /* Strings+Generated.swift */; };
 		64924A5A2BC499DD001E6C43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 649249FF2BC499DD001E6C43 /* Localizable.strings */; };
@@ -66,21 +62,21 @@
 		64924A8C2BC499DD001E6C43 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A4E2BC499DD001E6C43 /* APIHandler.swift */; };
 		64924A8D2BC499DD001E6C43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A522BC499DD001E6C43 /* AppDelegate.swift */; };
 		64924A8F2BC499DD001E6C43 /* LumblyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A562BC499DD001E6C43 /* LumblyApp.swift */; };
-		649581CC29DE629500973A0C /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649581CB29DE629500973A0C /* SizeCalculator.swift */; };
-		64979C6829A4A1C600C27768 /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64979C6729A4A1C600C27768 /* BlueButtonView.swift */; };
-		64A434392990B0F3008F8253 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A434382990B0F3008F8253 /* UIColor+Hex.swift */; };
 		64B1BBED2910BA4000AEA7E3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */; };
-		64D3D50429A66EB90056CB75 /* StyledTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3D50329A66EB90056CB75 /* StyledTextFieldView.swift */; };
+		64BB7C6F2BC4A04E0079226C /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C632BC4A04E0079226C /* BlueButtonView.swift */; };
+		64BB7C702BC4A04E0079226C /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C642BC4A04E0079226C /* GifView.swift */; };
+		64BB7C712BC4A04E0079226C /* StyledTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C652BC4A04E0079226C /* StyledTextFieldView.swift */; };
+		64BB7C722BC4A04E0079226C /* CGFloat+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C672BC4A04E0079226C /* CGFloat+Presets.swift */; };
+		64BB7C732BC4A04E0079226C /* Color+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C682BC4A04E0079226C /* Color+Presets.swift */; };
+		64BB7C742BC4A04E0079226C /* Font+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C692BC4A04E0079226C /* Font+Presets.swift */; };
+		64BB7C752BC4A04E0079226C /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C6A2BC4A04E0079226C /* UIColor+Hex.swift */; };
+		64BB7C762BC4A04E0079226C /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C6C2BC4A04E0079226C /* SizeCalculator.swift */; };
 		F0724A746EF6DFD39823278D /* Pods_Lumbly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890680E8D7E8A4D0735067A6 /* Pods_Lumbly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		06A42527575B5C708FEC26DD /* Pods-Lumbly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lumbly.release.xcconfig"; path = "Target Support Files/Pods-Lumbly/Pods-Lumbly.release.xcconfig"; sourceTree = "<group>"; };
 		3C85596994EBECD9D534B535 /* Pods-Lumbly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lumbly.debug.xcconfig"; path = "Target Support Files/Pods-Lumbly/Pods-Lumbly.debug.xcconfig"; sourceTree = "<group>"; };
-		640781F529C9719E005050F9 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
-		644E35C6290E52930024B8A5 /* Color+Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Presets.swift"; sourceTree = "<group>"; };
-		644E35C8290E52AC0024B8A5 /* Font+Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Presets.swift"; sourceTree = "<group>"; };
-		647280982936D401004CCE75 /* CGFloat+Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Presets.swift"; sourceTree = "<group>"; };
 		647635C028FBA34E0043DCFD /* Lumbly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lumbly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		649249FB2BC499DD001E6C43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		649249FD2BC499DD001E6C43 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
@@ -139,11 +135,15 @@
 		64924A532BC499DD001E6C43 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		64924A542BC499DD001E6C43 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64924A562BC499DD001E6C43 /* LumblyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LumblyApp.swift; sourceTree = "<group>"; };
-		649581CB29DE629500973A0C /* SizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
-		64979C6729A4A1C600C27768 /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
-		64A434382990B0F3008F8253 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
-		64D3D50329A66EB90056CB75 /* StyledTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextFieldView.swift; sourceTree = "<group>"; };
+		64BB7C632BC4A04E0079226C /* BlueButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
+		64BB7C642BC4A04E0079226C /* GifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
+		64BB7C652BC4A04E0079226C /* StyledTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledTextFieldView.swift; sourceTree = "<group>"; };
+		64BB7C672BC4A04E0079226C /* CGFloat+Presets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Presets.swift"; sourceTree = "<group>"; };
+		64BB7C682BC4A04E0079226C /* Color+Presets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Presets.swift"; sourceTree = "<group>"; };
+		64BB7C692BC4A04E0079226C /* Font+Presets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Presets.swift"; sourceTree = "<group>"; };
+		64BB7C6A2BC4A04E0079226C /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		64BB7C6C2BC4A04E0079226C /* SizeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
 		890680E8D7E8A4D0735067A6 /* Pods_Lumbly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lumbly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA73BCC58085341DDBBEE890 /* Pods-OAidherence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.release.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.release.xcconfig"; sourceTree = "<group>"; };
 		CF95655221B79C369E5AE5CB /* Pods-OAidherence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.debug.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,22 +161,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		644E35C5290E52650024B8A5 /* OAidherenceCore */ = {
-			isa = PBXGroup;
-			children = (
-				649581CA29DE628600973A0C /* ViewModifiers */,
-				64979C6629A4A1B400C27768 /* Components */,
-				64979C6529A4A19B00C27768 /* Presets */,
-			);
-			path = OAidherenceCore;
-			sourceTree = "<group>";
-		};
 		647635B728FBA34E0043DCFD = {
 			isa = PBXGroup;
 			children = (
-				64924A572BC499DD001E6C43 /* Lumbly */,
 				64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */,
-				644E35C5290E52650024B8A5 /* OAidherenceCore */,
+				64924A572BC499DD001E6C43 /* Lumbly */,
+				64BB7C6E2BC4A04E0079226C /* LumblyCore */,
 				647635C128FBA34E0043DCFD /* Products */,
 				7B61B1D5BA99C86EE85E54DE /* Pods */,
 				FE4435B4427FECA798DF3A26 /* Frameworks */,
@@ -535,33 +525,43 @@
 			path = Lumbly;
 			sourceTree = "<group>";
 		};
-		649581CA29DE628600973A0C /* ViewModifiers */ = {
+		64BB7C662BC4A04E0079226C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				649581CB29DE629500973A0C /* SizeCalculator.swift */,
+				64BB7C632BC4A04E0079226C /* BlueButtonView.swift */,
+				64BB7C642BC4A04E0079226C /* GifView.swift */,
+				64BB7C652BC4A04E0079226C /* StyledTextFieldView.swift */,
 			);
-			path = ViewModifiers;
+			path = Components;
 			sourceTree = "<group>";
 		};
-		64979C6529A4A19B00C27768 /* Presets */ = {
+		64BB7C6B2BC4A04E0079226C /* Presets */ = {
 			isa = PBXGroup;
 			children = (
-				644E35C6290E52930024B8A5 /* Color+Presets.swift */,
-				64A434382990B0F3008F8253 /* UIColor+Hex.swift */,
-				647280982936D401004CCE75 /* CGFloat+Presets.swift */,
-				644E35C8290E52AC0024B8A5 /* Font+Presets.swift */,
+				64BB7C672BC4A04E0079226C /* CGFloat+Presets.swift */,
+				64BB7C682BC4A04E0079226C /* Color+Presets.swift */,
+				64BB7C692BC4A04E0079226C /* Font+Presets.swift */,
+				64BB7C6A2BC4A04E0079226C /* UIColor+Hex.swift */,
 			);
 			path = Presets;
 			sourceTree = "<group>";
 		};
-		64979C6629A4A1B400C27768 /* Components */ = {
+		64BB7C6D2BC4A04E0079226C /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
-				64979C6729A4A1C600C27768 /* BlueButtonView.swift */,
-				64D3D50329A66EB90056CB75 /* StyledTextFieldView.swift */,
-				640781F529C9719E005050F9 /* GifView.swift */,
+				64BB7C6C2BC4A04E0079226C /* SizeCalculator.swift */,
 			);
-			path = Components;
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		64BB7C6E2BC4A04E0079226C /* LumblyCore */ = {
+			isa = PBXGroup;
+			children = (
+				64BB7C662BC4A04E0079226C /* Components */,
+				64BB7C6B2BC4A04E0079226C /* Presets */,
+				64BB7C6D2BC4A04E0079226C /* ViewModifiers */,
+			);
+			path = LumblyCore;
 			sourceTree = "<group>";
 		};
 		7B61B1D5BA99C86EE85E54DE /* Pods */ = {
@@ -723,15 +723,13 @@
 				64924A612BC499DD001E6C43 /* ExerciseInstructionsView.swift in Sources */,
 				64924A802BC499DD001E6C43 /* RecordingInfoModalView.swift in Sources */,
 				64924A622BC499DD001E6C43 /* ExerciseInstructionsViewModel.swift in Sources */,
-				644E35C9290E52AC0024B8A5 /* Font+Presets.swift in Sources */,
 				64924A752BC499DD001E6C43 /* PainLevelTileViewModel.swift in Sources */,
 				64924A882BC499DD001E6C43 /* RecordingViewControllerLink.swift in Sources */,
+				64BB7C722BC4A04E0079226C /* CGFloat+Presets.swift in Sources */,
+				64BB7C752BC4A04E0079226C /* UIColor+Hex.swift in Sources */,
 				64924A632BC499DD001E6C43 /* ExerciseTileView.swift in Sources */,
-				64A434392990B0F3008F8253 /* UIColor+Hex.swift in Sources */,
 				64924A592BC499DD001E6C43 /* Strings+Generated.swift in Sources */,
-				647280992936D401004CCE75 /* CGFloat+Presets.swift in Sources */,
 				64924A772BC499DD001E6C43 /* PainLevelRatingViewModel.swift in Sources */,
-				640781F629C9719E005050F9 /* GifView.swift in Sources */,
 				64924A7A2BC499DD001E6C43 /* ResultsForDayView.swift in Sources */,
 				64924A722BC499DD001E6C43 /* ExerciseRatingTileView.swift in Sources */,
 				64924A6C2BC499DD001E6C43 /* HomeViewModel.swift in Sources */,
@@ -739,8 +737,10 @@
 				64924A862BC499DD001E6C43 /* RecordingViewController.swift in Sources */,
 				64924A5E2BC499DD001E6C43 /* ExerciseStepViewModel.swift in Sources */,
 				64924A782BC499DD001E6C43 /* FormCommentTileView.swift in Sources */,
+				64BB7C742BC4A04E0079226C /* Font+Presets.swift in Sources */,
 				64924A6D2BC499DD001E6C43 /* ProfileView.swift in Sources */,
 				64924A7F2BC499DD001E6C43 /* PlaybackViewModel.swift in Sources */,
+				64BB7C702BC4A04E0079226C /* GifView.swift in Sources */,
 				64924A872BC499DD001E6C43 /* RecordingViewControllerDelegate.swift in Sources */,
 				64924A792BC499DD001E6C43 /* FormCommentTileViewModel.swift in Sources */,
 				64924A712BC499DD001E6C43 /* OnboardingView.swift in Sources */,
@@ -748,17 +748,19 @@
 				64924A652BC499DD001E6C43 /* ExerciseSetView.swift in Sources */,
 				64924A672BC499DD001E6C43 /* CalendarTileView.swift in Sources */,
 				64924A5F2BC499DD001E6C43 /* ExerciseTipView.swift in Sources */,
+				64BB7C762BC4A04E0079226C /* SizeCalculator.swift in Sources */,
 				64924A7C2BC499DD001E6C43 /* ResultsView.swift in Sources */,
+				64BB7C712BC4A04E0079226C /* StyledTextFieldView.swift in Sources */,
 				64924A6B2BC499DD001E6C43 /* HomeView.swift in Sources */,
 				64924A6F2BC499DD001E6C43 /* LoginView.swift in Sources */,
 				64924A732BC499DD001E6C43 /* ExerciseRatingTileViewModel.swift in Sources */,
 				64924A602BC499DD001E6C43 /* ExerciseTipViewModel.swift in Sources */,
-				644E35C7290E52940024B8A5 /* Color+Presets.swift in Sources */,
 				64924A7D2BC499DD001E6C43 /* ResultsViewModel.swift in Sources */,
 				64924A8F2BC499DD001E6C43 /* LumblyApp.swift in Sources */,
-				64D3D50429A66EB90056CB75 /* StyledTextFieldView.swift in Sources */,
+				64BB7C6F2BC4A04E0079226C /* BlueButtonView.swift in Sources */,
 				64924A642BC499DD001E6C43 /* ExerciseTileViewModel.swift in Sources */,
 				64924A662BC499DD001E6C43 /* ExerciseSetViewModel.swift in Sources */,
+				64BB7C732BC4A04E0079226C /* Color+Presets.swift in Sources */,
 				64924A6A2BC499DD001E6C43 /* ExerciseSetTileViewModel.swift in Sources */,
 				64924A8C2BC499DD001E6C43 /* APIHandler.swift in Sources */,
 				64924A742BC499DD001E6C43 /* PainLevelTileView.swift in Sources */,
@@ -772,8 +774,6 @@
 				64924A8B2BC499DD001E6C43 /* APIEndpoints.swift in Sources */,
 				64924A6E2BC499DD001E6C43 /* LoadingView.swift in Sources */,
 				64924A832BC499DD001E6C43 /* RecordingOptionsModalViewModel.swift in Sources */,
-				649581CC29DE629500973A0C /* SizeCalculator.swift in Sources */,
-				64979C6829A4A1C600C27768 /* BlueButtonView.swift in Sources */,
 				64924A7E2BC499DD001E6C43 /* PlaybackView.swift in Sources */,
 				64924A852BC499DD001E6C43 /* RecordingView.swift in Sources */,
 				64924A892BC499DD001E6C43 /* RecordingViewControllerLinkable.swift in Sources */,
