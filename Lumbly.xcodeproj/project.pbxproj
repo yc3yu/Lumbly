@@ -71,9 +71,12 @@
 		64FF18E129DF2D3B001F4BE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF18E029DF2D3B001F4BE2 /* AppDelegate.swift */; };
 		64FF18E329E085AD001F4BE2 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF18E229E085AD001F4BE2 /* ErrorViewModel.swift */; };
 		64FF18E529E0879D001F4BE2 /* ResultsForDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF18E429E0879D001F4BE2 /* ResultsForDayViewModel.swift */; };
+		F0724A746EF6DFD39823278D /* Pods_Lumbly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890680E8D7E8A4D0735067A6 /* Pods_Lumbly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06A42527575B5C708FEC26DD /* Pods-Lumbly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lumbly.release.xcconfig"; path = "Target Support Files/Pods-Lumbly/Pods-Lumbly.release.xcconfig"; sourceTree = "<group>"; };
+		3C85596994EBECD9D534B535 /* Pods-Lumbly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lumbly.debug.xcconfig"; path = "Target Support Files/Pods-Lumbly/Pods-Lumbly.debug.xcconfig"; sourceTree = "<group>"; };
 		64028B7E29AE5299009C104B /* PainLevelTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevelTileView.swift; sourceTree = "<group>"; };
 		64028B8029AEB318009C104B /* PainLevelTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevelTileViewModel.swift; sourceTree = "<group>"; };
 		64028B8329AEFD30009C104B /* ExerciseRatingTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRatingTileView.swift; sourceTree = "<group>"; };
@@ -141,6 +144,7 @@
 		64FF18E029DF2D3B001F4BE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64FF18E229E085AD001F4BE2 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
 		64FF18E429E0879D001F4BE2 /* ResultsForDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsForDayViewModel.swift; sourceTree = "<group>"; };
+		890680E8D7E8A4D0735067A6 /* Pods_Lumbly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lumbly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA73BCC58085341DDBBEE890 /* Pods-OAidherence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.release.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.release.xcconfig"; sourceTree = "<group>"; };
 		CF95655221B79C369E5AE5CB /* Pods-OAidherence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.debug.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0724A746EF6DFD39823278D /* Pods_Lumbly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +320,7 @@
 				644E35C5290E52650024B8A5 /* OAidherenceCore */,
 				647635C128FBA34E0043DCFD /* Products */,
 				7B61B1D5BA99C86EE85E54DE /* Pods */,
+				FE4435B4427FECA798DF3A26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -563,8 +569,18 @@
 			children = (
 				CF95655221B79C369E5AE5CB /* Pods-OAidherence.debug.xcconfig */,
 				CA73BCC58085341DDBBEE890 /* Pods-OAidherence.release.xcconfig */,
+				3C85596994EBECD9D534B535 /* Pods-Lumbly.debug.xcconfig */,
+				06A42527575B5C708FEC26DD /* Pods-Lumbly.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE4435B4427FECA798DF3A26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				890680E8D7E8A4D0735067A6 /* Pods_Lumbly.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -643,15 +659,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OAidherence/Pods-OAidherence-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Lumbly/Pods-Lumbly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OAidherence/Pods-OAidherence-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Lumbly/Pods-Lumbly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OAidherence/Pods-OAidherence-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lumbly/Pods-Lumbly-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		64B1BBE92910B8CD00AEA7E3 /* SwiftGen */ = {
@@ -687,7 +703,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OAidherence-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Lumbly-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -884,7 +900,7 @@
 		};
 		647635E528FBA34F0043DCFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF95655221B79C369E5AE5CB /* Pods-OAidherence.debug.xcconfig */;
+			baseConfigurationReference = 3C85596994EBECD9D534B535 /* Pods-Lumbly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -919,7 +935,7 @@
 		};
 		647635E628FBA34F0043DCFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA73BCC58085341DDBBEE890 /* Pods-OAidherence.release.xcconfig */;
+			baseConfigurationReference = 06A42527575B5C708FEC26DD /* Pods-Lumbly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_OAidherenceVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_OAidherenceVersionString[];
+FOUNDATION_EXPORT double Pods_LumblyVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_LumblyVersionString[];
 
