@@ -103,7 +103,7 @@
 		647280A3293ECCA5004CCE75 /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
 		647280A6293ED960004CCE75 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		647280A8293EDBC8004CCE75 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
-		647635C028FBA34E0043DCFD /* OAidherence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAidherence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		647635C028FBA34E0043DCFD /* Lumbly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lumbly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		647C9F8C2909ECAA007EFE62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "OAidherence/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		6488E9D829A2C5E70090554A /* ExerciseTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTileView.swift; sourceTree = "<group>"; };
 		6488E9DA29A2C8540090554A /* ExerciseTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTileViewModel.swift; sourceTree = "<group>"; };
@@ -321,7 +321,7 @@
 		647635C128FBA34E0043DCFD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				647635C028FBA34E0043DCFD /* OAidherence.app */,
+				647635C028FBA34E0043DCFD /* Lumbly.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -570,9 +570,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		647635BF28FBA34E0043DCFD /* OAidherence */ = {
+		647635BF28FBA34E0043DCFD /* Lumbly */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 647635E428FBA34F0043DCFD /* Build configuration list for PBXNativeTarget "OAidherence" */;
+			buildConfigurationList = 647635E428FBA34F0043DCFD /* Build configuration list for PBXNativeTarget "Lumbly" */;
 			buildPhases = (
 				D8EE58F4D12E4DD8683404D4 /* [CP] Check Pods Manifest.lock */,
 				64B1BBE92910B8CD00AEA7E3 /* SwiftGen */,
@@ -585,9 +585,9 @@
 			);
 			dependencies = (
 			);
-			name = OAidherence;
+			name = Lumbly;
 			productName = OAidherence;
-			productReference = 647635C028FBA34E0043DCFD /* OAidherence.app */;
+			productReference = 647635C028FBA34E0043DCFD /* Lumbly.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -605,7 +605,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 647635BB28FBA34E0043DCFD /* Build configuration list for PBXProject "OAidherence" */;
+			buildConfigurationList = 647635BB28FBA34E0043DCFD /* Build configuration list for PBXProject "f" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -618,7 +618,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				647635BF28FBA34E0043DCFD /* OAidherence */,
+				647635BF28FBA34E0043DCFD /* Lumbly */,
 			);
 		};
 /* End PBXProject section */
@@ -955,7 +955,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		647635BB28FBA34E0043DCFD /* Build configuration list for PBXProject "OAidherence" */ = {
+		647635BB28FBA34E0043DCFD /* Build configuration list for PBXProject "f" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				647635E228FBA34F0043DCFD /* Debug */,
@@ -964,7 +964,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		647635E428FBA34F0043DCFD /* Build configuration list for PBXNativeTarget "OAidherence" */ = {
+		647635E428FBA34F0043DCFD /* Build configuration list for PBXNativeTarget "Lumbly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				647635E528FBA34F0043DCFD /* Debug */,
