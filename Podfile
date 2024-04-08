@@ -1,6 +1,6 @@
 platform :ios, '16.0'
 
-target 'OAidherence' do
+target 'Lumbly' do
   pod 'SwiftGen', '~> 6.0'
   pod 'AZSClient'
   
