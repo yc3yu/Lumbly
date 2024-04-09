@@ -578,7 +578,6 @@
 				64BB7C9B2BC5250D0079226C /* APIResources */,
 				64BB7C8F2BC524180079226C /* APIEndpoints */,
 				64BB7C902BC524180079226C /* APIHandler.swift */,
-				64BB7C922BC524180079226C /* APIResource.swift */,
 				64BB7C912BC524180079226C /* APIRequest.swift */,
 				64BB7C932BC524180079226C /* NetworkError.swift */,
 			);
@@ -588,6 +587,7 @@
 		64BB7C9B2BC5250D0079226C /* APIResources */ = {
 			isa = PBXGroup;
 			children = (
+				64BB7C922BC524180079226C /* APIResource.swift */,
 			);
 			path = APIResources;
 			sourceTree = "<group>";
