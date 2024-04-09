@@ -17,24 +17,24 @@ struct ExerciseSet: Decodable {
 
 extension ExerciseSetView {
     class ExerciseSetViewModel: ObservableObject {
-        private let apiHandler: APIHandler
-        
-        @Published private(set) var exerciseSetURL: String?
         @Published private(set) var exerciseSetData: ExerciseSet? = nil
         @Published var isLoading: Bool = false
         
+        private var exerciseSetURL: String?
+        
         init(exerciseSetURL: String?) {
-            self.apiHandler = APIHandler()
             self.exerciseSetURL = exerciseSetURL
-            fetchData()
         }
-
-        func fetchData() {
+        
+        @MainActor func fetchExerciseSetData() async throws {
+            guard !isLoading else { return }
+            defer { isLoading = false }
             isLoading = true
-            apiHandler.fetchExerciseSetData(exerciseSetURL: exerciseSetURL) { [weak self] exerciseSetData in
-                self?.exerciseSetData = exerciseSetData
-                self?.isLoading = false
-            }
+            
+            let resource = ExerciseSetResource(urlString: exerciseSetURL ?? "")
+            let request = APIRequest(resource: resource)
+
+            exerciseSetData = try await request.execute()
         }
     }
 }
