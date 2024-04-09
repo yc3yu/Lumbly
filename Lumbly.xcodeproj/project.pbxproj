@@ -71,6 +71,7 @@
 		64BB7C742BC4A04E0079226C /* Font+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C692BC4A04E0079226C /* Font+Presets.swift */; };
 		64BB7C752BC4A04E0079226C /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C6A2BC4A04E0079226C /* UIColor+Hex.swift */; };
 		64BB7C762BC4A04E0079226C /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C6C2BC4A04E0079226C /* SizeCalculator.swift */; };
+		64BB7C862BC4FC5E0079226C /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C852BC4FC5E0079226C /* APIProtocol.swift */; };
 		F0724A746EF6DFD39823278D /* Pods_Lumbly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890680E8D7E8A4D0735067A6 /* Pods_Lumbly.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +145,7 @@
 		64BB7C692BC4A04E0079226C /* Font+Presets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Presets.swift"; sourceTree = "<group>"; };
 		64BB7C6A2BC4A04E0079226C /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		64BB7C6C2BC4A04E0079226C /* SizeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
+		64BB7C852BC4FC5E0079226C /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
 		890680E8D7E8A4D0735067A6 /* Pods_Lumbly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lumbly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA73BCC58085341DDBBEE890 /* Pods-OAidherence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.release.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.release.xcconfig"; sourceTree = "<group>"; };
 		CF95655221B79C369E5AE5CB /* Pods-OAidherence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.debug.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.debug.xcconfig"; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 		64BB7C842BC4FB980079226C /* APIEndpoints */ = {
 			isa = PBXGroup;
 			children = (
+				64BB7C852BC4FC5E0079226C /* APIProtocol.swift */,
 				64924A4D2BC499DD001E6C43 /* APIEndpoints.swift */,
 			);
 			path = APIEndpoints;
@@ -744,6 +747,7 @@
 				64924A6C2BC499DD001E6C43 /* HomeViewModel.swift in Sources */,
 				64924A762BC499DD001E6C43 /* PainLevelRatingView.swift in Sources */,
 				64924A862BC499DD001E6C43 /* RecordingViewController.swift in Sources */,
+				64BB7C862BC4FC5E0079226C /* APIProtocol.swift in Sources */,
 				64924A5E2BC499DD001E6C43 /* ExerciseStepViewModel.swift in Sources */,
 				64924A782BC499DD001E6C43 /* FormCommentTileView.swift in Sources */,
 				64BB7C742BC4A04E0079226C /* Font+Presets.swift in Sources */,
