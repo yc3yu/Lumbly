@@ -5,12 +5,42 @@
 //  Created by Yue chen Yu on 2022-12-05.
 //
 
-struct APIEndpoints {
-    static let connectionStringURL = "https://temporarylumblyfunction.azurewebsites.net/api/connection_string"
+enum APIEndpoints: RawRepresentable, APIProtocol {
+    static let baseURL = URL(string: "https://temporarylumblyfunction.azurewebsites.net/api")
     
-    static let homeURL = "https://temporarylumblyfunction.azurewebsites.net/api/home"
+    case connectionString
+    case home
+    case exerciseSet
+    case resultsAvailablity(userID: String,
+                            parentExerciseSet: String,
+                            exerciseName: String,
+                            timestamp: String)
+    case results(userID: String,
+                 parentExerciseSet: String,
+                 timestamp: String)
     
-    static let exerciseSetURL = "https://temporarylumblyfunction.azurewebsites.net/api/exercise_set"
+    var rawValue: String {
+        switch self {
+        case .connectionString: return "/connection_string"
+        case .home: return "/home"
+        case .exerciseSet: return "/exercise_set"
+        case .resultsAvailablity(let userID,
+                                 let parentExerciseSet,
+                                 let exerciseName,
+                                 let timestamp):
+            return "/results_exist/\(userID)/\(parentExerciseSet)/\(exerciseName)/\(timestamp)"
+        case .results(let userID,
+                      let parentExerciseSet,
+                      let timestamp):
+            return "/results/\(userID)/\(parentExerciseSet)/\(timestamp)"
+        }
+    }
+}
+
+extension RawRepresentable where RawValue == String, Self: APIProtocol {
+    var url: URL? {
+        Self.baseURL?.appendingPathComponent(rawValue)
+    }
     
-    static let containerURL = "https://temporarylumblyfunction.azurewebsites.net/api"
+    init?(rawValue: String) { nil }
 }
