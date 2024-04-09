@@ -10,9 +10,13 @@ import Foundation
 protocol APIResource {
     associatedtype ModelType: Decodable
 
-    var url: URL? { get }
+    var url: URL? { get set }
 }
 
 extension APIResource {
     var keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy { .convertFromSnakeCase }
+
+    mutating func setURL(withString urlString: String?) {
+        self.url = URL(string: urlString ?? "")
+    }
 }
