@@ -10,7 +10,6 @@ enum APIEndpoints: RawRepresentable, APIProtocol {
     
     case connectionString
     case home
-    case exerciseSet
     case resultsAvailablity(userID: String,
                             parentExerciseSet: String,
                             exerciseName: String,
@@ -23,7 +22,6 @@ enum APIEndpoints: RawRepresentable, APIProtocol {
         switch self {
         case .connectionString: return "/connection_string"
         case .home: return "/home"
-        case .exerciseSet: return "/exercise_set"
         case .resultsAvailablity(let userID,
                                  let parentExerciseSet,
                                  let exerciseName,
