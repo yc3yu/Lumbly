@@ -481,7 +481,7 @@
 		64924A4F2BC499DD001E6C43 /* APIHandler */ = {
 			isa = PBXGroup;
 			children = (
-				64924A4D2BC499DD001E6C43 /* APIEndpoints.swift */,
+				64BB7C842BC4FB980079226C /* APIEndpoints */,
 				64924A4E2BC499DD001E6C43 /* APIHandler.swift */,
 			);
 			path = APIHandler;
@@ -562,6 +562,14 @@
 				64BB7C6D2BC4A04E0079226C /* ViewModifiers */,
 			);
 			path = LumblyCore;
+			sourceTree = "<group>";
+		};
+		64BB7C842BC4FB980079226C /* APIEndpoints */ = {
+			isa = PBXGroup;
+			children = (
+				64924A4D2BC499DD001E6C43 /* APIEndpoints.swift */,
+			);
+			path = APIEndpoints;
 			sourceTree = "<group>";
 		};
 		7B61B1D5BA99C86EE85E54DE /* Pods */ = {
