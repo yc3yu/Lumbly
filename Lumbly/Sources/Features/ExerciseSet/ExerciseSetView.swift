@@ -115,7 +115,9 @@ struct ExerciseSetView: View {
                 }
             }
         }
-        .onAppear(perform: viewModel.fetchData)
+        .task {
+            try? await viewModel.fetchExerciseSetData()
+        }
     }
 }
 
