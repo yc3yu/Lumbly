@@ -76,28 +76,6 @@ class APIHandler {
             }).resume()
         }
     }
-    
-    func fetchHomeData(completion: @escaping ((Home) -> ())) {
-        if let url = APIEndpoints.home.url {
-            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-                DispatchQueue.main.async {
-                    if let error = error {
-                        // TODO: Handle error
-                    } else {
-                        let jsonDecoder = JSONDecoder()
-                        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-                        
-                        if let data = data,
-                           let homeData = try? jsonDecoder.decode(Home.self, from: data) {
-                            completion(homeData)
-                        } else {
-                            // TODO: Handle error
-                        }
-                    }
-                }
-            }).resume()
-        }
-    }
 
     func fetchExerciseSetData(exerciseSetURL: String?, completion: @escaping ((ExerciseSet) -> ())) {
         if let exerciseSetURL = exerciseSetURL,
