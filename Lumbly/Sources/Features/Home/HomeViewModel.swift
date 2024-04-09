@@ -15,8 +15,6 @@ struct Home: Decodable {
 
 extension HomeView {
     class HomeViewModel: ObservableObject {
-        private let apiHandler: APIHandler
-        
         @Published private(set) var homeData: Home? = nil
         
         let calendarTilesDayOfWeek: [String] = [L10n.CalendarTileView.mon,
@@ -44,15 +42,11 @@ extension HomeView {
             return result
         }
         
-        init() {
-            self.apiHandler = APIHandler()
-            fetchData()
-        }
+        @MainActor func fetchHomeData() async throws {
+            let resource = HomeResource()
+            let request = APIRequest(resource: resource)
 
-        func fetchData() {
-            apiHandler.fetchHomeData() { [weak self] homeData in
-                self?.homeData = homeData
-            }
+            homeData = try await request.execute()
         }
     }
 }
