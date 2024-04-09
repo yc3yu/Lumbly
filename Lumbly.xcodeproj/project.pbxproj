@@ -58,8 +58,6 @@
 		64924A882BC499DD001E6C43 /* RecordingViewControllerLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A472BC499DD001E6C43 /* RecordingViewControllerLink.swift */; };
 		64924A892BC499DD001E6C43 /* RecordingViewControllerLinkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A482BC499DD001E6C43 /* RecordingViewControllerLinkable.swift */; };
 		64924A8A2BC499DD001E6C43 /* RecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A492BC499DD001E6C43 /* RecordingViewModel.swift */; };
-		64924A8B2BC499DD001E6C43 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A4D2BC499DD001E6C43 /* APIEndpoints.swift */; };
-		64924A8C2BC499DD001E6C43 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A4E2BC499DD001E6C43 /* APIHandler.swift */; };
 		64924A8D2BC499DD001E6C43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A522BC499DD001E6C43 /* AppDelegate.swift */; };
 		64924A8F2BC499DD001E6C43 /* LumblyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A562BC499DD001E6C43 /* LumblyApp.swift */; };
 		64B1BBED2910BA4000AEA7E3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */; };
@@ -71,10 +69,12 @@
 		64BB7C742BC4A04E0079226C /* Font+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C692BC4A04E0079226C /* Font+Presets.swift */; };
 		64BB7C752BC4A04E0079226C /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C6A2BC4A04E0079226C /* UIColor+Hex.swift */; };
 		64BB7C762BC4A04E0079226C /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C6C2BC4A04E0079226C /* SizeCalculator.swift */; };
-		64BB7C862BC4FC5E0079226C /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C852BC4FC5E0079226C /* APIProtocol.swift */; };
-		64BB7C882BC4FCBE0079226C /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C872BC4FCBE0079226C /* APIResource.swift */; };
-		64BB7C8A2BC4FDAC0079226C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C892BC4FDAC0079226C /* NetworkError.swift */; };
-		64BB7C8C2BC4FE250079226C /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C8B2BC4FE250079226C /* APIRequest.swift */; };
+		64BB7C952BC524180079226C /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C8D2BC524180079226C /* APIEndpoints.swift */; };
+		64BB7C962BC524180079226C /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C8E2BC524180079226C /* APIProtocol.swift */; };
+		64BB7C972BC524180079226C /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C902BC524180079226C /* APIHandler.swift */; };
+		64BB7C982BC524180079226C /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C912BC524180079226C /* APIRequest.swift */; };
+		64BB7C992BC524180079226C /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C922BC524180079226C /* APIResource.swift */; };
+		64BB7C9A2BC524180079226C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C932BC524180079226C /* NetworkError.swift */; };
 		F0724A746EF6DFD39823278D /* Pods_Lumbly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890680E8D7E8A4D0735067A6 /* Pods_Lumbly.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,8 +133,6 @@
 		64924A472BC499DD001E6C43 /* RecordingViewControllerLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewControllerLink.swift; sourceTree = "<group>"; };
 		64924A482BC499DD001E6C43 /* RecordingViewControllerLinkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewControllerLinkable.swift; sourceTree = "<group>"; };
 		64924A492BC499DD001E6C43 /* RecordingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewModel.swift; sourceTree = "<group>"; };
-		64924A4D2BC499DD001E6C43 /* APIEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
-		64924A4E2BC499DD001E6C43 /* APIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		64924A522BC499DD001E6C43 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64924A532BC499DD001E6C43 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		64924A542BC499DD001E6C43 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,10 +146,12 @@
 		64BB7C692BC4A04E0079226C /* Font+Presets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Presets.swift"; sourceTree = "<group>"; };
 		64BB7C6A2BC4A04E0079226C /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		64BB7C6C2BC4A04E0079226C /* SizeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
-		64BB7C852BC4FC5E0079226C /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
-		64BB7C872BC4FCBE0079226C /* APIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
-		64BB7C892BC4FDAC0079226C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		64BB7C8B2BC4FE250079226C /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		64BB7C8D2BC524180079226C /* APIEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		64BB7C8E2BC524180079226C /* APIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
+		64BB7C902BC524180079226C /* APIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		64BB7C912BC524180079226C /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		64BB7C922BC524180079226C /* APIResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
+		64BB7C932BC524180079226C /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		890680E8D7E8A4D0735067A6 /* Pods_Lumbly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lumbly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA73BCC58085341DDBBEE890 /* Pods-OAidherence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.release.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.release.xcconfig"; sourceTree = "<group>"; };
 		CF95655221B79C369E5AE5CB /* Pods-OAidherence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.debug.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.debug.xcconfig"; sourceTree = "<group>"; };
@@ -486,22 +486,10 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
-		64924A4F2BC499DD001E6C43 /* APIHandler */ = {
-			isa = PBXGroup;
-			children = (
-				64BB7C842BC4FB980079226C /* APIEndpoints */,
-				64924A4E2BC499DD001E6C43 /* APIHandler.swift */,
-				64BB7C872BC4FCBE0079226C /* APIResource.swift */,
-				64BB7C892BC4FDAC0079226C /* NetworkError.swift */,
-				64BB7C8B2BC4FE250079226C /* APIRequest.swift */,
-			);
-			path = APIHandler;
-			sourceTree = "<group>";
-		};
 		64924A502BC499DD001E6C43 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				64924A4F2BC499DD001E6C43 /* APIHandler */,
+				64BB7C942BC524180079226C /* Networking */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -528,8 +516,8 @@
 		64924A572BC499DD001E6C43 /* Lumbly */ = {
 			isa = PBXGroup;
 			children = (
-				64924A022BC499DD001E6C43 /* Resources */,
 				64924A512BC499DD001E6C43 /* Sources */,
+				64924A022BC499DD001E6C43 /* Resources */,
 				64924A552BC499DD001E6C43 /* Supporting Files */,
 				64924A562BC499DD001E6C43 /* LumblyApp.swift */,
 			);
@@ -575,13 +563,33 @@
 			path = LumblyCore;
 			sourceTree = "<group>";
 		};
-		64BB7C842BC4FB980079226C /* APIEndpoints */ = {
+		64BB7C8F2BC524180079226C /* APIEndpoints */ = {
 			isa = PBXGroup;
 			children = (
-				64BB7C852BC4FC5E0079226C /* APIProtocol.swift */,
-				64924A4D2BC499DD001E6C43 /* APIEndpoints.swift */,
+				64BB7C8D2BC524180079226C /* APIEndpoints.swift */,
+				64BB7C8E2BC524180079226C /* APIProtocol.swift */,
 			);
 			path = APIEndpoints;
+			sourceTree = "<group>";
+		};
+		64BB7C942BC524180079226C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				64BB7C9B2BC5250D0079226C /* APIResources */,
+				64BB7C8F2BC524180079226C /* APIEndpoints */,
+				64BB7C902BC524180079226C /* APIHandler.swift */,
+				64BB7C922BC524180079226C /* APIResource.swift */,
+				64BB7C912BC524180079226C /* APIRequest.swift */,
+				64BB7C932BC524180079226C /* NetworkError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		64BB7C9B2BC5250D0079226C /* APIResources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIResources;
 			sourceTree = "<group>";
 		};
 		7B61B1D5BA99C86EE85E54DE /* Pods */ = {
@@ -742,7 +750,6 @@
 				64924A692BC499DD001E6C43 /* ExerciseSetTileView.swift in Sources */,
 				64924A822BC499DD001E6C43 /* RecordingOptionsModalView.swift in Sources */,
 				64924A612BC499DD001E6C43 /* ExerciseInstructionsView.swift in Sources */,
-				64BB7C882BC4FCBE0079226C /* APIResource.swift in Sources */,
 				64924A802BC499DD001E6C43 /* RecordingInfoModalView.swift in Sources */,
 				64924A622BC499DD001E6C43 /* ExerciseInstructionsViewModel.swift in Sources */,
 				64924A752BC499DD001E6C43 /* PainLevelTileViewModel.swift in Sources */,
@@ -753,11 +760,12 @@
 				64924A592BC499DD001E6C43 /* Strings+Generated.swift in Sources */,
 				64924A772BC499DD001E6C43 /* PainLevelRatingViewModel.swift in Sources */,
 				64924A7A2BC499DD001E6C43 /* ResultsForDayView.swift in Sources */,
+				64BB7C992BC524180079226C /* APIResource.swift in Sources */,
 				64924A722BC499DD001E6C43 /* ExerciseRatingTileView.swift in Sources */,
+				64BB7C952BC524180079226C /* APIEndpoints.swift in Sources */,
 				64924A6C2BC499DD001E6C43 /* HomeViewModel.swift in Sources */,
 				64924A762BC499DD001E6C43 /* PainLevelRatingView.swift in Sources */,
 				64924A862BC499DD001E6C43 /* RecordingViewController.swift in Sources */,
-				64BB7C862BC4FC5E0079226C /* APIProtocol.swift in Sources */,
 				64924A5E2BC499DD001E6C43 /* ExerciseStepViewModel.swift in Sources */,
 				64924A782BC499DD001E6C43 /* FormCommentTileView.swift in Sources */,
 				64BB7C742BC4A04E0079226C /* Font+Presets.swift in Sources */,
@@ -766,13 +774,11 @@
 				64BB7C702BC4A04E0079226C /* GifView.swift in Sources */,
 				64924A872BC499DD001E6C43 /* RecordingViewControllerDelegate.swift in Sources */,
 				64924A792BC499DD001E6C43 /* FormCommentTileViewModel.swift in Sources */,
-				64BB7C8C2BC4FE250079226C /* APIRequest.swift in Sources */,
 				64924A712BC499DD001E6C43 /* OnboardingView.swift in Sources */,
 				64924A5B2BC499DD001E6C43 /* ErrorView.swift in Sources */,
 				64924A652BC499DD001E6C43 /* ExerciseSetView.swift in Sources */,
 				64924A672BC499DD001E6C43 /* CalendarTileView.swift in Sources */,
 				64924A5F2BC499DD001E6C43 /* ExerciseTipView.swift in Sources */,
-				64BB7C8A2BC4FDAC0079226C /* NetworkError.swift in Sources */,
 				64BB7C762BC4A04E0079226C /* SizeCalculator.swift in Sources */,
 				64924A7C2BC499DD001E6C43 /* ResultsView.swift in Sources */,
 				64BB7C712BC4A04E0079226C /* StyledTextFieldView.swift in Sources */,
@@ -783,11 +789,13 @@
 				64924A7D2BC499DD001E6C43 /* ResultsViewModel.swift in Sources */,
 				64924A8F2BC499DD001E6C43 /* LumblyApp.swift in Sources */,
 				64BB7C6F2BC4A04E0079226C /* BlueButtonView.swift in Sources */,
+				64BB7C962BC524180079226C /* APIProtocol.swift in Sources */,
+				64BB7C982BC524180079226C /* APIRequest.swift in Sources */,
 				64924A642BC499DD001E6C43 /* ExerciseTileViewModel.swift in Sources */,
 				64924A662BC499DD001E6C43 /* ExerciseSetViewModel.swift in Sources */,
 				64BB7C732BC4A04E0079226C /* Color+Presets.swift in Sources */,
 				64924A6A2BC499DD001E6C43 /* ExerciseSetTileViewModel.swift in Sources */,
-				64924A8C2BC499DD001E6C43 /* APIHandler.swift in Sources */,
+				64BB7C9A2BC524180079226C /* NetworkError.swift in Sources */,
 				64924A742BC499DD001E6C43 /* PainLevelTileView.swift in Sources */,
 				64924A842BC499DD001E6C43 /* HostedRecordingViewController.swift in Sources */,
 				64924A702BC499DD001E6C43 /* SignupView.swift in Sources */,
@@ -796,13 +804,13 @@
 				64924A8D2BC499DD001E6C43 /* AppDelegate.swift in Sources */,
 				64924A682BC499DD001E6C43 /* CalendarTileViewModel.swift in Sources */,
 				64924A812BC499DD001E6C43 /* RecordingInfoModalViewModel.swift in Sources */,
-				64924A8B2BC499DD001E6C43 /* APIEndpoints.swift in Sources */,
 				64924A6E2BC499DD001E6C43 /* LoadingView.swift in Sources */,
 				64924A832BC499DD001E6C43 /* RecordingOptionsModalViewModel.swift in Sources */,
 				64924A7E2BC499DD001E6C43 /* PlaybackView.swift in Sources */,
 				64924A852BC499DD001E6C43 /* RecordingView.swift in Sources */,
 				64924A892BC499DD001E6C43 /* RecordingViewControllerLinkable.swift in Sources */,
 				64924A5C2BC499DD001E6C43 /* ErrorViewModel.swift in Sources */,
+				64BB7C972BC524180079226C /* APIHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
