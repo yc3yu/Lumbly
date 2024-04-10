@@ -42,11 +42,11 @@ extension HomeView {
             return result
         }
         
-        @MainActor func fetchHomeData() async throws {
+        @MainActor func fetchHomeData() async {
             let resource = HomeResource()
             let request = APIRequest(resource: resource)
 
-            homeData = try await request.execute()
+            homeData = try? await request.execute()
         }
     }
 }

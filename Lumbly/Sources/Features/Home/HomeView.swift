@@ -137,7 +137,7 @@ struct HomeView: View {
             self.navigationBarHidden = true
         }
         .task {
-            try? await viewModel.fetchHomeData()
+            await viewModel.fetchHomeData()
         }
     }
 }
