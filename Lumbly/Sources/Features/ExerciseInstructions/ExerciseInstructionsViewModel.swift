@@ -26,8 +26,8 @@ extension ExerciseInstructionsView {
         @Published var showReadyButton: Bool
         
         private(set) var exerciseInstructionsURL: String?
-        
-        var parentExerciseSet: String
+        private(set) var parentExerciseSet: String
+
         var isTestRun: Bool
         
         init(parentExerciseSet: String, exerciseNumber: Int, exerciseInstructionsURL: String?, showReadyButton: Bool = false, isTestRun: Bool) {
