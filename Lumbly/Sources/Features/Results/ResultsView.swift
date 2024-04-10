@@ -52,7 +52,7 @@ struct ResultsView: View {
                                 
                                 Spacer()
                                 
-                                if let exercises = viewModel.results?.exercises,
+                                if let exercises = viewModel.resultsData?.exercises,
                                    exercises.count > 0 {
                                     Menu {
                                         ForEach(exercises.indices, id: \.self) { i in
@@ -84,9 +84,9 @@ struct ResultsView: View {
                             }
                             .padding(.bottom, .mediumSpace)
                             
-                            if let exercises = viewModel.results?.exercises,
+                            if let exercises = viewModel.resultsData?.exercises,
                                !exercises.isEmpty {
-                                if let individualExerciseResults = viewModel.results?.individualExerciseResults,
+                                if let individualExerciseResults = viewModel.resultsData?.individualExerciseResults,
                                    $selectedExercise.wrappedValue < individualExerciseResults.count,
                                    let currentExerciseResults = individualExerciseResults[$selectedExercise.wrappedValue] {
                                     if let formMistakesTiles = currentExerciseResults.formMistakesTiles,

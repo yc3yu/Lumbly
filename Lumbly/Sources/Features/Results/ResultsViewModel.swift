@@ -53,7 +53,7 @@ extension ResultsView {
         
         private let apiHandler: APIHandler
         
-        @Published private(set) var results: Results? = nil
+        @Published private(set) var resultsData: Results? = nil
         @Published private(set) var isLoading: Bool = false
         @Published private(set) var resultsAvailability: ResultsAvailability = ResultsAvailability(status: .loading)
         
@@ -87,8 +87,8 @@ extension ResultsView {
                             if resultsAvailability.status == .available {
                                 self?.apiHandler.fetchResultsData(parentExerciseSet: parentExerciseSet,
                                                             exerciseName: exerciseName,
-                                                            timestamp: timestamp) { [weak self] results in
-                                    self?.results = results
+                                                            timestamp: timestamp) { [weak self] resultsData in
+                                    self?.resultsData = resultsData
                                     self?.isLoading = false
                                 }
                             }
