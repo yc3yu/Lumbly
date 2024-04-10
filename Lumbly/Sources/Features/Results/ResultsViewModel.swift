@@ -11,6 +11,7 @@ struct ResultsAvailability: Decodable {
     var status: AvailabilityStatus
     
     enum AvailabilityStatus: Int, Decodable {
+        case unknown
         case loading
         case available
         case noResults
@@ -55,7 +56,7 @@ extension ResultsView {
         
         @Published private(set) var resultsData: Results? = nil
         @Published private(set) var isLoading: Bool = false
-        @Published private(set) var resultsAvailability: ResultsAvailability = ResultsAvailability(status: .loading)
+        @Published private(set) var resultsAvailability: ResultsAvailability = ResultsAvailability(status: .unknown)
         
         private var recordingViewModel: ResultsView.RecordingViewModel
         
