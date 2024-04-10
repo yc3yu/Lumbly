@@ -31,7 +31,9 @@ extension ExerciseSetView {
             defer { isLoading = false }
             isLoading = true
             
-            let resource = ExerciseSetResource(urlString: exerciseSetURL ?? "")
+            var resource = ExerciseSetResource()
+            resource.setURL(withString: exerciseSetURL)
+            
             let request = APIRequest(resource: resource)
 
             exerciseSetData = try await request.execute()

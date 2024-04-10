@@ -11,8 +11,4 @@ struct ExerciseSetResource: APIResource {
     typealias ModelType = ExerciseSet
     
     var url: URL?
-    
-    init(urlString: String) {
-        self.url = URL(string: urlString)
-    }
 }
