@@ -116,7 +116,7 @@ struct ExerciseSetView: View {
             }
         }
         .task {
-            try? await viewModel.fetchExerciseSetData()
+            await viewModel.fetchExerciseSetData()
         }
     }
 }
