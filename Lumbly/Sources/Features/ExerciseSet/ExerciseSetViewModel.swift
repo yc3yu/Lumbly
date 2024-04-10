@@ -26,7 +26,7 @@ extension ExerciseSetView {
             self.exerciseSetURL = exerciseSetURL
         }
         
-        @MainActor func fetchExerciseSetData() async throws {
+        @MainActor func fetchExerciseSetData() async {
             guard !isLoading else { return }
             defer { isLoading = false }
             isLoading = true
@@ -36,7 +36,7 @@ extension ExerciseSetView {
             
             let request = APIRequest(resource: resource)
 
-            exerciseSetData = try await request.execute()
+            exerciseSetData = try? await request.execute()
         }
     }
 }
