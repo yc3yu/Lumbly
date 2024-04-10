@@ -52,11 +52,12 @@ extension ResultsView {
         }
         
         private let apiHandler: APIHandler
-        private var recordingViewModel: ResultsView.RecordingViewModel
         
         @Published private(set) var results: Results? = nil
         @Published private(set) var isLoading: Bool = false
         @Published private(set) var dataAvailability: ResultsAvailability = ResultsAvailability(status: .loading)
+        
+        private var recordingViewModel: ResultsView.RecordingViewModel
         
         init(recordingViewModel: ResultsView.RecordingViewModel) {
             self.apiHandler = APIHandler()
