@@ -7,6 +7,7 @@
 
 enum APIEndpoints: RawRepresentable, APIProtocol {
     static let baseURL = URL(string: "https://temporarylumblyfunction.azurewebsites.net/api")
+    static let userID = "testuser1" // For demo purposes, user authentication was not implemented
     
     case connectionString
     case home
