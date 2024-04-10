@@ -20,13 +20,14 @@ extension ExerciseInstructionsView {
     class ExerciseInstructionsViewModel: ObservableObject {
         private let apiHandler: APIHandler
 
-        @Published private(set) var exerciseNumber: Int
-        @Published private(set) var exerciseInstructionsURL: String?
         @Published private(set) var exerciseInstructionsData: ExerciseInstructions? = nil
         @Published private(set) var isLoading: Bool = false
-        @Published var showReadyButton: Bool
         
-        var parentExerciseSet: String
+        private(set) var parentExerciseSet: String
+        private(set) var exerciseNumber: Int
+        private(set) var exerciseInstructionsURL: String?
+        private(set) var showReadyButton: Bool
+
         var isTestRun: Bool
         
         init(parentExerciseSet: String, exerciseNumber: Int, exerciseInstructionsURL: String?, showReadyButton: Bool = false, isTestRun: Bool) {
