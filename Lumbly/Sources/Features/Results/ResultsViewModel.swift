@@ -55,7 +55,7 @@ extension ResultsView {
         
         @Published private(set) var results: Results? = nil
         @Published private(set) var isLoading: Bool = false
-        @Published private(set) var dataAvailability: ResultsAvailability = ResultsAvailability(status: .loading)
+        @Published private(set) var resultsAvailability: ResultsAvailability = ResultsAvailability(status: .loading)
         
         private var recordingViewModel: ResultsView.RecordingViewModel
         
@@ -67,7 +67,7 @@ extension ResultsView {
 
         func fetchData() {
             guard let timestamp = recordingViewModel.timestamp else {
-                dataAvailability.status = .error
+                resultsAvailability.status = .error
                 return
             }
             
@@ -77,14 +77,14 @@ extension ResultsView {
                                  repeats: true) { [weak self] currentTimer in
                 if let parentExerciseSet = self?.recordingViewModel.parentExerciseSet,
                    let exerciseName = self?.recordingViewModel.exerciseName,
-                   self?.dataAvailability.status == .loading {
+                   self?.resultsAvailability.status == .loading {
                     self?.apiHandler.fetchResultsDataAvailability(
                         parentExerciseSet: parentExerciseSet,
                         exerciseName: exerciseName,
-                        timestamp: timestamp) { [weak self] dataAvailability in
-                            self?.dataAvailability = dataAvailability
+                        timestamp: timestamp) { [weak self] resultsAvailability in
+                            self?.resultsAvailability = resultsAvailability
                             
-                            if dataAvailability.status == .available {
+                            if resultsAvailability.status == .available {
                                 self?.apiHandler.fetchResultsData(parentExerciseSet: parentExerciseSet,
                                                             exerciseName: exerciseName,
                                                             timestamp: timestamp) { [weak self] results in
@@ -95,7 +95,7 @@ extension ResultsView {
                         }
                 }
                 
-                if self?.dataAvailability.status != .loading {
+                if self?.resultsAvailability.status != .loading {
                     currentTimer.invalidate()
                 }
             }

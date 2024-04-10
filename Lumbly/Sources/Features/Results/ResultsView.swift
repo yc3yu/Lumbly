@@ -38,7 +38,7 @@ struct ResultsView: View {
             Color.oysterBay
                 .ignoresSafeArea(edges: [.leading, .trailing, .bottom])
             
-            switch viewModel.dataAvailability.status {
+            switch viewModel.resultsAvailability.status {
             case .available:
                 if viewModel.isLoading {
                     loadingView
@@ -172,7 +172,7 @@ struct ResultsView: View {
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(trailing: NavigationLink(destination: HomeView()) {
-            switch viewModel.dataAvailability.status {
+            switch viewModel.resultsAvailability.status {
             case .loading:
                 Text(L10n.NavigationBarItem.exit)
             default:
