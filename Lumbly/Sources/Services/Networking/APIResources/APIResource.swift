@@ -5,8 +5,6 @@
 //  Created by Yue chen Yu on 2024-04-08.
 //
 
-import Foundation
-
 protocol APIResource {
     associatedtype ModelType: Decodable
 
