@@ -121,8 +121,10 @@ struct ExerciseInstructionsView: View {
             }
         }
         .onAppear {
-            viewModel.fetchData()
             AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
+        }
+        .task {
+            await viewModel.fetchExerciseInstructionsData()
         }
     }
 }

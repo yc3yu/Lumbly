@@ -18,8 +18,6 @@ struct ExerciseInstructions: Decodable {
 
 extension ExerciseInstructionsView {
     class ExerciseInstructionsViewModel: ObservableObject {
-        private let apiHandler: APIHandler
-
         @Published private(set) var exerciseInstructionsData: ExerciseInstructions? = nil
         @Published private(set) var isLoading: Bool = false
         
@@ -31,22 +29,24 @@ extension ExerciseInstructionsView {
         var isTestRun: Bool
         
         init(parentExerciseSet: String, exerciseNumber: Int, exerciseInstructionsURL: String?, showReadyButton: Bool = false, isTestRun: Bool) {
-            self.apiHandler = APIHandler()
             self.parentExerciseSet = parentExerciseSet
             self.exerciseNumber = exerciseNumber
             self.exerciseInstructionsURL = exerciseInstructionsURL
             self.showReadyButton = showReadyButton
             self.isTestRun = isTestRun
-            
-            fetchData()
         }
-
-        func fetchData() {
+        
+        @MainActor func fetchExerciseInstructionsData() async {
+            guard !isLoading else { return }
+            defer { isLoading =  false }
             isLoading = true
-            apiHandler.fetchExerciseInstructionsData(exerciseInstructionsURL: exerciseInstructionsURL) { [weak self] exerciseInstructionsData in
-                self?.exerciseInstructionsData = exerciseInstructionsData
-                self?.isLoading = false
-            }
+            
+            var resource = ExerciseInstructionsResource()
+            resource.setURL(withString: exerciseInstructionsURL)
+            
+            let request = APIRequest(resource: resource)
+            
+            exerciseInstructionsData = try? await request.execute()
         }
     }
 }
