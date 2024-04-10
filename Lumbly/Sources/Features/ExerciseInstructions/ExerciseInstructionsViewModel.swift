@@ -23,10 +23,10 @@ extension ExerciseInstructionsView {
         @Published private(set) var exerciseInstructionsData: ExerciseInstructions? = nil
         @Published private(set) var isLoading: Bool = false
         
+        private(set) var parentExerciseSet: String
         private(set) var exerciseNumber: Int
         private(set) var exerciseInstructionsURL: String?
         private(set) var showReadyButton: Bool
-        private(set) var parentExerciseSet: String
 
         var isTestRun: Bool
         
