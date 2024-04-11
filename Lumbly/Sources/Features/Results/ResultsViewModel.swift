@@ -101,5 +101,23 @@ extension ResultsView {
                 }
             }
         }
+        
+        private func fetchResultsAvailability(parentExerciseSet: String,
+                                              exerciseName: String,
+                                              timestamp: String) async {
+            var resource = ResultsAvailabilityResource()
+            resource.setURL(userID: APIEndpoints.userID,
+                            parentExerciseSet: parentExerciseSet,
+                            exerciseName: exerciseName,
+                            timestamp: timestamp)
+            
+            let request = APIRequest(resource: resource)
+            
+            do {
+                resultsAvailability = try await request.execute()
+            } catch {
+                resultsAvailability.status = .error
+            }
+        }
     }
 }
