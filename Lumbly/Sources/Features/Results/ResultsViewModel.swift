@@ -119,5 +119,18 @@ extension ResultsView {
                 resultsAvailability.status = .error
             }
         }
+        
+        private func fetchResultsData(parentExerciseSet: String,
+                                      exerciseName: String,
+                                      timestamp: String) async {
+            var resource = ResultsResource()
+            resource.setURL(userID: APIEndpoints.userID,
+                            parentExerciseSet: parentExerciseSet,
+                            timestamp: timestamp)
+            
+            let request = APIRequest(resource: resource)
+            
+            resultsData = try? await request.execute()
+        }
     }
 }
