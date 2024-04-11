@@ -38,7 +38,7 @@ struct ResultsView: View {
             Color.oysterBay
                 .ignoresSafeArea(edges: [.leading, .trailing, .bottom])
             
-            switch viewModel.dataAvailability.status {
+            switch viewModel.resultsAvailability.status {
             case .available:
                 if viewModel.isLoading {
                     loadingView
@@ -52,7 +52,7 @@ struct ResultsView: View {
                                 
                                 Spacer()
                                 
-                                if let exercises = viewModel.results?.exercises,
+                                if let exercises = viewModel.resultsData?.exercises,
                                    exercises.count > 0 {
                                     Menu {
                                         ForEach(exercises.indices, id: \.self) { i in
@@ -84,9 +84,9 @@ struct ResultsView: View {
                             }
                             .padding(.bottom, .mediumSpace)
                             
-                            if let exercises = viewModel.results?.exercises,
+                            if let exercises = viewModel.resultsData?.exercises,
                                !exercises.isEmpty {
-                                if let individualExerciseResults = viewModel.results?.individualExerciseResults,
+                                if let individualExerciseResults = viewModel.resultsData?.individualExerciseResults,
                                    $selectedExercise.wrappedValue < individualExerciseResults.count,
                                    let currentExerciseResults = individualExerciseResults[$selectedExercise.wrappedValue] {
                                     if let formMistakesTiles = currentExerciseResults.formMistakesTiles,
@@ -172,14 +172,16 @@ struct ResultsView: View {
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(trailing: NavigationLink(destination: HomeView()) {
-            switch viewModel.dataAvailability.status {
+            switch viewModel.resultsAvailability.status {
             case .loading:
                 Text(L10n.NavigationBarItem.exit)
             default:
                 Text(L10n.NavigationBarItem.done)
             }
         })
-        .onAppear(perform: viewModel.fetchData)
+        .task {
+            viewModel.fetchResults()
+        }
     }
 }
 

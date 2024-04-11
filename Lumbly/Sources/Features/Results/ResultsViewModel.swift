@@ -11,6 +11,7 @@ struct ResultsAvailability: Decodable {
     var status: AvailabilityStatus
     
     enum AvailabilityStatus: Int, Decodable {
+        case unknown
         case loading
         case available
         case noResults
@@ -49,56 +50,83 @@ extension ResultsView {
     class ResultsViewModel: ObservableObject {
         private struct Constants {
             static let requestDelay: Double = 1.0
+            static let requestLeeway: DispatchTimeInterval = .milliseconds(50)
         }
         
-        private let apiHandler: APIHandler
-        
-        @Published private(set) var results: Results? = nil
+        @Published private(set) var resultsData: Results? = nil
         @Published private(set) var isLoading: Bool = false
-        @Published private(set) var dataAvailability: ResultsAvailability = ResultsAvailability(status: .loading)
+        @Published private(set) var resultsAvailability: ResultsAvailability = ResultsAvailability(status: .unknown)
         
         private var recordingViewModel: ResultsView.RecordingViewModel
         
         init(recordingViewModel: ResultsView.RecordingViewModel) {
-            self.apiHandler = APIHandler()
             self.recordingViewModel = recordingViewModel
-            fetchData()
         }
 
-        func fetchData() {
+        @MainActor func fetchResults() {
             guard let timestamp = recordingViewModel.timestamp else {
-                dataAvailability.status = .error
+                resultsAvailability.status = .error
                 return
             }
             
+            defer { isLoading = false }
             isLoading = true
+            resultsAvailability.status = .loading
             
-            Timer.scheduledTimer(withTimeInterval: Constants.requestDelay,
-                                 repeats: true) { [weak self] currentTimer in
-                if let parentExerciseSet = self?.recordingViewModel.parentExerciseSet,
-                   let exerciseName = self?.recordingViewModel.exerciseName,
-                   self?.dataAvailability.status == .loading {
-                    self?.apiHandler.fetchResultsDataAvailability(
-                        parentExerciseSet: parentExerciseSet,
-                        exerciseName: exerciseName,
-                        timestamp: timestamp) { [weak self] dataAvailability in
-                            self?.dataAvailability = dataAvailability
-                            
-                            if dataAvailability.status == .available {
-                                self?.apiHandler.fetchResultsData(parentExerciseSet: parentExerciseSet,
-                                                            exerciseName: exerciseName,
-                                                            timestamp: timestamp) { [weak self] results in
-                                    self?.results = results
-                                    self?.isLoading = false
-                                }
-                            }
-                        }
-                }
-                
-                if self?.dataAvailability.status != .loading {
-                    currentTimer.invalidate()
+            let parentExerciseSet = recordingViewModel.parentExerciseSet
+            let exerciseName = recordingViewModel.exerciseName
+            let timer = DispatchSource.makeTimerSource()
+            timer.schedule(deadline: .now(), repeating: Constants.requestDelay, leeway: Constants.requestLeeway)
+            timer.setEventHandler {
+                Task {
+                    await self.fetchResultsAvailability(parentExerciseSet: parentExerciseSet,
+                                                        exerciseName: exerciseName,
+                                                        timestamp: timestamp)
+                    
+                    if self.resultsAvailability.status == .available {
+                        await self.fetchResultsData(parentExerciseSet: parentExerciseSet,
+                                                    exerciseName: exerciseName,
+                                                    timestamp: timestamp)
+                    }
+                    
+                    if self.resultsAvailability.status != .loading {
+                        timer.cancel()
+                    }
                 }
             }
+            
+            timer.activate()
+        }
+        
+        private func fetchResultsAvailability(parentExerciseSet: String,
+                                              exerciseName: String,
+                                              timestamp: String) async {
+            var resource = ResultsAvailabilityResource()
+            resource.setURL(userID: APIEndpoints.userID,
+                            parentExerciseSet: parentExerciseSet,
+                            exerciseName: exerciseName,
+                            timestamp: timestamp)
+            
+            let request = APIRequest(resource: resource)
+            
+            do {
+                resultsAvailability = try await request.execute()
+            } catch {
+                resultsAvailability.status = .error
+            }
+        }
+        
+        private func fetchResultsData(parentExerciseSet: String,
+                                      exerciseName: String,
+                                      timestamp: String) async {
+            var resource = ResultsResource()
+            resource.setURL(userID: APIEndpoints.userID,
+                            parentExerciseSet: parentExerciseSet,
+                            timestamp: timestamp)
+            
+            let request = APIRequest(resource: resource)
+            
+            resultsData = try? await request.execute()
         }
     }
 }
