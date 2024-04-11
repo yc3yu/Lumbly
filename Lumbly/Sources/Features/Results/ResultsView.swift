@@ -179,7 +179,9 @@ struct ResultsView: View {
                 Text(L10n.NavigationBarItem.done)
             }
         })
-        .onAppear(perform: viewModel.fetchData)
+        .task {
+            viewModel.fetchResults()
+        }
     }
 }
 
