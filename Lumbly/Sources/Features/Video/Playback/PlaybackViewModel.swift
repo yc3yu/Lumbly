@@ -10,7 +10,8 @@ import SwiftUI
 extension PlaybackView {
     class PlaybackViewModel: ObservableObject {
         private var apiHandler: APIHandler
-        var videoFileURL: URL?
+        
+        private(set) var videoFileURL: URL?
         
         @Published var recordingViewModel: RecordingView.RecordingViewModel
         
