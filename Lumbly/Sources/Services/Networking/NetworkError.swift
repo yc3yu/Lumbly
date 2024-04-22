@@ -21,4 +21,11 @@ enum NetworkError: Error {
         case unprocessableEntity
         case unknown(data: Data, response: URLResponse)
     }
+    
+    enum UploadError: Error {
+        case badConnectionString
+        case containerCreationFailure
+        case dataExtractionFailure
+        case uploadFailure
+    }
 }
