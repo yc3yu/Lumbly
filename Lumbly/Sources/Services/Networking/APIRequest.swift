@@ -47,21 +47,21 @@ private extension APIRequest {
         case 200..<300:
             return
         case 400:
-            throw NetworkError.badRequest
+            throw NetworkError.HTTPError.badRequest
         case 401:
-            throw NetworkError.unauthorized
+            throw NetworkError.HTTPError.unauthorized
         case 402:
-            throw NetworkError.paymentRequired
+            throw NetworkError.HTTPError.paymentRequired
         case 403:
-            throw NetworkError.forbidden
+            throw NetworkError.HTTPError.forbidden
         case 404:
-            throw NetworkError.notFound
+            throw NetworkError.HTTPError.notFound
         case 413:
-            throw NetworkError.requestEntityTooLarge
+            throw NetworkError.HTTPError.requestEntityTooLarge
         case 422:
-            throw NetworkError.unprocessableEntity
+            throw NetworkError.HTTPError.unprocessableEntity
         default:
-            throw NetworkError.unknown(data: data, response: httpResponse)
+            throw NetworkError.HTTPError.unknown(data: data, response: httpResponse)
         }
     }
 }
