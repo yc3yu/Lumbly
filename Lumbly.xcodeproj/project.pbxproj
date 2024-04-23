@@ -65,6 +65,7 @@
 		64924A8A2BC499DD001E6C43 /* RecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A492BC499DD001E6C43 /* RecordingViewModel.swift */; };
 		64924A8D2BC499DD001E6C43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A522BC499DD001E6C43 /* AppDelegate.swift */; };
 		64924A8F2BC499DD001E6C43 /* LumblyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A562BC499DD001E6C43 /* LumblyApp.swift */; };
+		64A752832BC7CF30004C101C /* AZSUploadResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A752822BC7CF30004C101C /* AZSUploadResource.swift */; };
 		64B1BBED2910BA4000AEA7E3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */; };
 		64BB7C6F2BC4A04E0079226C /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C632BC4A04E0079226C /* BlueButtonView.swift */; };
 		64BB7C702BC4A04E0079226C /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C642BC4A04E0079226C /* GifView.swift */; };
@@ -148,6 +149,7 @@
 		64924A532BC499DD001E6C43 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		64924A542BC499DD001E6C43 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64924A562BC499DD001E6C43 /* LumblyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LumblyApp.swift; sourceTree = "<group>"; };
+		64A752822BC7CF30004C101C /* AZSUploadResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AZSUploadResource.swift; sourceTree = "<group>"; };
 		64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		64BB7C632BC4A04E0079226C /* BlueButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
 		64BB7C642BC4A04E0079226C /* GifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
@@ -536,6 +538,14 @@
 			path = Lumbly;
 			sourceTree = "<group>";
 		};
+		64AA33542BD716EF007FEA7C /* AZSUpload */ = {
+			isa = PBXGroup;
+			children = (
+				64A752822BC7CF30004C101C /* AZSUploadResource.swift */,
+			);
+			path = AZSUpload;
+			sourceTree = "<group>";
+		};
 		64BB7C662BC4A04E0079226C /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,6 +597,7 @@
 		64BB7C942BC524180079226C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				64AA33542BD716EF007FEA7C /* AZSUpload */,
 				64BB7C9B2BC5250D0079226C /* APIResources */,
 				64BB7C8F2BC524180079226C /* APIEndpoints */,
 				64BB7C902BC524180079226C /* APIHandler.swift */,
@@ -819,6 +830,7 @@
 				64924A6A2BC499DD001E6C43 /* ExerciseSetTileViewModel.swift in Sources */,
 				64BB7C9A2BC524180079226C /* NetworkError.swift in Sources */,
 				64924A742BC499DD001E6C43 /* PainLevelTileView.swift in Sources */,
+				64A752832BC7CF30004C101C /* AZSUploadResource.swift in Sources */,
 				64924A842BC499DD001E6C43 /* HostedRecordingViewController.swift in Sources */,
 				64924A702BC499DD001E6C43 /* SignupView.swift in Sources */,
 				64924A7B2BC499DD001E6C43 /* ResultsForDayViewModel.swift in Sources */,
