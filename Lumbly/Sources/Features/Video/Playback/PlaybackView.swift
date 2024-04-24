@@ -65,9 +65,13 @@ struct PlaybackView: View {
                     if !viewModel.recordingViewModel.isTestRun {
                         Text(L10n.NavigationBarItem.submit)
                     }
-                }.simultaneousGesture(TapGesture().onEnded {
+                }
+                .simultaneousGesture(TapGesture().onEnded {
                     AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
-                    viewModel.uploadVideo()
+                    
+                    Task {
+                        await viewModel.uploadVideo()
+                    }
                 }))
         } // TODO: Handle error case (show error screen or modal and ask them to retry recording)
     }
