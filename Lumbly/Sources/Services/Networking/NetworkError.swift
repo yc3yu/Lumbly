@@ -24,6 +24,7 @@ enum NetworkError: Error {
     
     enum UploadError: Error {
         case badConnectionString
+        case accountConnectionFailure
         case containerCreationFailure
         case dataExtractionFailure
         case uploadFailure

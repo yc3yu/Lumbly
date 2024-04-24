@@ -9,25 +9,34 @@ import SwiftUI
 
 extension PlaybackView {
     class PlaybackViewModel: ObservableObject {
-        private var apiHandler: APIHandler
-        var videoFileURL: URL?
+        private(set) var videoFileURL: URL?
         
         @Published var recordingViewModel: RecordingView.RecordingViewModel
         
         init(recordingViewModel: RecordingView.RecordingViewModel, videoFileURL: URL?) {
-            self.apiHandler = APIHandler()
             self.recordingViewModel = recordingViewModel
             self.videoFileURL = videoFileURL
         }
         
-        func uploadVideo() {
-            if let videoFileURL = videoFileURL {
-                apiHandler.uploadVideo(parentExerciseSet: recordingViewModel.parentExerciseSet,
-                                       exerciseName: recordingViewModel.exerciseName,
-                                       videoFileURL: videoFileURL) { [weak self] in
-                    self?.removeTemporaryVideo()
-                }
+        func uploadVideo() async {
+            guard let fileURL = videoFileURL else {
+                // TODO: Handle error
+                return
             }
+            
+            let uploadName = "\(recordingViewModel.parentExerciseSet)/\(recordingViewModel.exerciseName)/\(fileURL.lastPathComponent)"
+            let resource = AZSUploadResource(containerName: APIEndpoints.userID,
+                                             uploadName: uploadName,
+                                             fileURL: fileURL)
+            
+            let upload = AZSUpload(resource: resource)
+            do {
+                try await upload.execute()
+            } catch {
+                // TODO: Handle error
+            }
+
+            removeTemporaryVideo()
         }
         
         func removeTemporaryVideo() {
