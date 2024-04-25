@@ -78,7 +78,6 @@
 		64BB7C762BC4A04E0079226C /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C6C2BC4A04E0079226C /* SizeCalculator.swift */; };
 		64BB7C952BC524180079226C /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C8D2BC524180079226C /* APIEndpoints.swift */; };
 		64BB7C962BC524180079226C /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C8E2BC524180079226C /* APIProtocol.swift */; };
-		64BB7C972BC524180079226C /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C902BC524180079226C /* APIHandler.swift */; };
 		64BB7C982BC524180079226C /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C912BC524180079226C /* APIRequest.swift */; };
 		64BB7C992BC524180079226C /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C922BC524180079226C /* APIResource.swift */; };
 		64BB7C9A2BC524180079226C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C932BC524180079226C /* NetworkError.swift */; };
@@ -163,7 +162,6 @@
 		64BB7C6C2BC4A04E0079226C /* SizeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
 		64BB7C8D2BC524180079226C /* APIEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		64BB7C8E2BC524180079226C /* APIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
-		64BB7C902BC524180079226C /* APIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		64BB7C912BC524180079226C /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		64BB7C922BC524180079226C /* APIResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
 		64BB7C932BC524180079226C /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -603,7 +601,6 @@
 				64AA33542BD716EF007FEA7C /* AZSUpload */,
 				64BB7C9B2BC5250D0079226C /* APIResources */,
 				64BB7C8F2BC524180079226C /* APIEndpoints */,
-				64BB7C902BC524180079226C /* APIHandler.swift */,
 				64BB7C912BC524180079226C /* APIRequest.swift */,
 				64BB7C932BC524180079226C /* NetworkError.swift */,
 			);
@@ -850,7 +847,6 @@
 				64924A852BC499DD001E6C43 /* RecordingView.swift in Sources */,
 				64924A892BC499DD001E6C43 /* RecordingViewControllerLinkable.swift in Sources */,
 				64924A5C2BC499DD001E6C43 /* ErrorViewModel.swift in Sources */,
-				64BB7C972BC524180079226C /* APIHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
