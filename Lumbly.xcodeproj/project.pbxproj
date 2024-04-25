@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		64251EBD2BC73ED100FC50E7 /* ResultsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64251EBC2BC73ED100FC50E7 /* ResultsResource.swift */; };
-		64251EBF2BC7718D00FC50E7 /* ConnectionStringResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64251EBE2BC7718D00FC50E7 /* ConnectionStringResource.swift */; };
-		64342A162BC6919D006680FA /* ResultsAvailabilityResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64342A152BC6919D006680FA /* ResultsAvailabilityResource.swift */; };
-		645AD3F72BC5C74100A6D4BE /* ExerciseSetResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645AD3F62BC5C74100A6D4BE /* ExerciseSetResource.swift */; };
-		645AD3F92BC5D7A800A6D4BE /* ExerciseInstructionsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645AD3F82BC5D7A800A6D4BE /* ExerciseInstructionsResource.swift */; };
+		640C29C92BD9F7870097D444 /* AZSUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29B82BD9F7860097D444 /* AZSUpload.swift */; };
+		640C29CA2BD9F7870097D444 /* AZSUploadResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29B92BD9F7860097D444 /* AZSUploadResource.swift */; };
+		640C29CB2BD9F7870097D444 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29BC2BD9F7870097D444 /* APIEndpoints.swift */; };
+		640C29CC2BD9F7870097D444 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29BD2BD9F7870097D444 /* APIProtocol.swift */; };
+		640C29CD2BD9F7870097D444 /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29BF2BD9F7870097D444 /* APIResource.swift */; };
+		640C29CE2BD9F7870097D444 /* ConnectionStringResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29C02BD9F7870097D444 /* ConnectionStringResource.swift */; };
+		640C29CF2BD9F7870097D444 /* ExerciseInstructionsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29C12BD9F7870097D444 /* ExerciseInstructionsResource.swift */; };
+		640C29D02BD9F7870097D444 /* ExerciseSetResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29C22BD9F7870097D444 /* ExerciseSetResource.swift */; };
+		640C29D12BD9F7870097D444 /* HomeResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29C32BD9F7870097D444 /* HomeResource.swift */; };
+		640C29D22BD9F7870097D444 /* ResultsAvailabilityResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29C42BD9F7870097D444 /* ResultsAvailabilityResource.swift */; };
+		640C29D32BD9F7870097D444 /* ResultsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29C52BD9F7870097D444 /* ResultsResource.swift */; };
+		640C29D42BD9F7870097D444 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29C72BD9F7870097D444 /* APIRequest.swift */; };
 		64924A582BC499DD001E6C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 649249FB2BC499DD001E6C43 /* Assets.xcassets */; };
 		64924A592BC499DD001E6C43 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649249FD2BC499DD001E6C43 /* Strings+Generated.swift */; };
 		64924A5A2BC499DD001E6C43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 649249FF2BC499DD001E6C43 /* Localizable.strings */; };
@@ -65,8 +72,6 @@
 		64924A8A2BC499DD001E6C43 /* RecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A492BC499DD001E6C43 /* RecordingViewModel.swift */; };
 		64924A8D2BC499DD001E6C43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A522BC499DD001E6C43 /* AppDelegate.swift */; };
 		64924A8F2BC499DD001E6C43 /* LumblyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A562BC499DD001E6C43 /* LumblyApp.swift */; };
-		64A752832BC7CF30004C101C /* AZSUploadResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A752822BC7CF30004C101C /* AZSUploadResource.swift */; };
-		64AA335B2BD76FDE007FEA7C /* AZSUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AA335A2BD76FDE007FEA7C /* AZSUpload.swift */; };
 		64B1BBED2910BA4000AEA7E3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */; };
 		64BB7C6F2BC4A04E0079226C /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C632BC4A04E0079226C /* BlueButtonView.swift */; };
 		64BB7C702BC4A04E0079226C /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C642BC4A04E0079226C /* GifView.swift */; };
@@ -76,23 +81,25 @@
 		64BB7C742BC4A04E0079226C /* Font+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C692BC4A04E0079226C /* Font+Presets.swift */; };
 		64BB7C752BC4A04E0079226C /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C6A2BC4A04E0079226C /* UIColor+Hex.swift */; };
 		64BB7C762BC4A04E0079226C /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C6C2BC4A04E0079226C /* SizeCalculator.swift */; };
-		64BB7C952BC524180079226C /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C8D2BC524180079226C /* APIEndpoints.swift */; };
-		64BB7C962BC524180079226C /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C8E2BC524180079226C /* APIProtocol.swift */; };
-		64BB7C982BC524180079226C /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C912BC524180079226C /* APIRequest.swift */; };
-		64BB7C992BC524180079226C /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C922BC524180079226C /* APIResource.swift */; };
 		64BB7C9A2BC524180079226C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C932BC524180079226C /* NetworkError.swift */; };
-		64BB7C9D2BC5306F0079226C /* HomeResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C9C2BC5306F0079226C /* HomeResource.swift */; };
 		F0724A746EF6DFD39823278D /* Pods_Lumbly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890680E8D7E8A4D0735067A6 /* Pods_Lumbly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		06A42527575B5C708FEC26DD /* Pods-Lumbly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lumbly.release.xcconfig"; path = "Target Support Files/Pods-Lumbly/Pods-Lumbly.release.xcconfig"; sourceTree = "<group>"; };
 		3C85596994EBECD9D534B535 /* Pods-Lumbly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lumbly.debug.xcconfig"; path = "Target Support Files/Pods-Lumbly/Pods-Lumbly.debug.xcconfig"; sourceTree = "<group>"; };
-		64251EBC2BC73ED100FC50E7 /* ResultsResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsResource.swift; sourceTree = "<group>"; };
-		64251EBE2BC7718D00FC50E7 /* ConnectionStringResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStringResource.swift; sourceTree = "<group>"; };
-		64342A152BC6919D006680FA /* ResultsAvailabilityResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsAvailabilityResource.swift; sourceTree = "<group>"; };
-		645AD3F62BC5C74100A6D4BE /* ExerciseSetResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSetResource.swift; sourceTree = "<group>"; };
-		645AD3F82BC5D7A800A6D4BE /* ExerciseInstructionsResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInstructionsResource.swift; sourceTree = "<group>"; };
+		640C29B82BD9F7860097D444 /* AZSUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZSUpload.swift; sourceTree = "<group>"; };
+		640C29B92BD9F7860097D444 /* AZSUploadResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZSUploadResource.swift; sourceTree = "<group>"; };
+		640C29BC2BD9F7870097D444 /* APIEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		640C29BD2BD9F7870097D444 /* APIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
+		640C29BF2BD9F7870097D444 /* APIResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
+		640C29C02BD9F7870097D444 /* ConnectionStringResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionStringResource.swift; sourceTree = "<group>"; };
+		640C29C12BD9F7870097D444 /* ExerciseInstructionsResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseInstructionsResource.swift; sourceTree = "<group>"; };
+		640C29C22BD9F7870097D444 /* ExerciseSetResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSetResource.swift; sourceTree = "<group>"; };
+		640C29C32BD9F7870097D444 /* HomeResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeResource.swift; sourceTree = "<group>"; };
+		640C29C42BD9F7870097D444 /* ResultsAvailabilityResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsAvailabilityResource.swift; sourceTree = "<group>"; };
+		640C29C52BD9F7870097D444 /* ResultsResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsResource.swift; sourceTree = "<group>"; };
+		640C29C72BD9F7870097D444 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		647635C028FBA34E0043DCFD /* Lumbly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lumbly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		649249FB2BC499DD001E6C43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		649249FD2BC499DD001E6C43 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
@@ -149,8 +156,6 @@
 		64924A532BC499DD001E6C43 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		64924A542BC499DD001E6C43 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64924A562BC499DD001E6C43 /* LumblyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LumblyApp.swift; sourceTree = "<group>"; };
-		64A752822BC7CF30004C101C /* AZSUploadResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AZSUploadResource.swift; sourceTree = "<group>"; };
-		64AA335A2BD76FDE007FEA7C /* AZSUpload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AZSUpload.swift; sourceTree = "<group>"; };
 		64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		64BB7C632BC4A04E0079226C /* BlueButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
 		64BB7C642BC4A04E0079226C /* GifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
@@ -160,12 +165,7 @@
 		64BB7C692BC4A04E0079226C /* Font+Presets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Presets.swift"; sourceTree = "<group>"; };
 		64BB7C6A2BC4A04E0079226C /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		64BB7C6C2BC4A04E0079226C /* SizeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
-		64BB7C8D2BC524180079226C /* APIEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
-		64BB7C8E2BC524180079226C /* APIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
-		64BB7C912BC524180079226C /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		64BB7C922BC524180079226C /* APIResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
 		64BB7C932BC524180079226C /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		64BB7C9C2BC5306F0079226C /* HomeResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResource.swift; sourceTree = "<group>"; };
 		890680E8D7E8A4D0735067A6 /* Pods_Lumbly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lumbly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA73BCC58085341DDBBEE890 /* Pods-OAidherence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.release.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.release.xcconfig"; sourceTree = "<group>"; };
 		CF95655221B79C369E5AE5CB /* Pods-OAidherence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAidherence.debug.xcconfig"; path = "Target Support Files/Pods-OAidherence/Pods-OAidherence.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +183,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		640C29BA2BD9F7860097D444 /* AZSUpload */ = {
+			isa = PBXGroup;
+			children = (
+				640C29B92BD9F7860097D444 /* AZSUploadResource.swift */,
+				640C29B82BD9F7860097D444 /* AZSUpload.swift */,
+			);
+			path = AZSUpload;
+			sourceTree = "<group>";
+		};
+		640C29BB2BD9F7860097D444 /* Uploading */ = {
+			isa = PBXGroup;
+			children = (
+				640C29BA2BD9F7860097D444 /* AZSUpload */,
+			);
+			path = Uploading;
+			sourceTree = "<group>";
+		};
+		640C29BE2BD9F7870097D444 /* APIEndpoints */ = {
+			isa = PBXGroup;
+			children = (
+				640C29BC2BD9F7870097D444 /* APIEndpoints.swift */,
+				640C29BD2BD9F7870097D444 /* APIProtocol.swift */,
+			);
+			path = APIEndpoints;
+			sourceTree = "<group>";
+		};
+		640C29C62BD9F7870097D444 /* APIResources */ = {
+			isa = PBXGroup;
+			children = (
+				640C29BF2BD9F7870097D444 /* APIResource.swift */,
+				640C29C02BD9F7870097D444 /* ConnectionStringResource.swift */,
+				640C29C12BD9F7870097D444 /* ExerciseInstructionsResource.swift */,
+				640C29C22BD9F7870097D444 /* ExerciseSetResource.swift */,
+				640C29C32BD9F7870097D444 /* HomeResource.swift */,
+				640C29C42BD9F7870097D444 /* ResultsAvailabilityResource.swift */,
+				640C29C52BD9F7870097D444 /* ResultsResource.swift */,
+			);
+			path = APIResources;
+			sourceTree = "<group>";
+		};
+		640C29C82BD9F7870097D444 /* Requesting */ = {
+			isa = PBXGroup;
+			children = (
+				640C29BE2BD9F7870097D444 /* APIEndpoints */,
+				640C29C62BD9F7870097D444 /* APIResources */,
+				640C29C72BD9F7870097D444 /* APIRequest.swift */,
+			);
+			path = Requesting;
+			sourceTree = "<group>";
+		};
 		647635B728FBA34E0043DCFD = {
 			isa = PBXGroup;
 			children = (
@@ -538,15 +588,6 @@
 			path = Lumbly;
 			sourceTree = "<group>";
 		};
-		64AA33542BD716EF007FEA7C /* AZSUpload */ = {
-			isa = PBXGroup;
-			children = (
-				64A752822BC7CF30004C101C /* AZSUploadResource.swift */,
-				64AA335A2BD76FDE007FEA7C /* AZSUpload.swift */,
-			);
-			path = AZSUpload;
-			sourceTree = "<group>";
-		};
 		64BB7C662BC4A04E0079226C /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,39 +627,14 @@
 			path = LumblyCore;
 			sourceTree = "<group>";
 		};
-		64BB7C8F2BC524180079226C /* APIEndpoints */ = {
-			isa = PBXGroup;
-			children = (
-				64BB7C8D2BC524180079226C /* APIEndpoints.swift */,
-				64BB7C8E2BC524180079226C /* APIProtocol.swift */,
-			);
-			path = APIEndpoints;
-			sourceTree = "<group>";
-		};
 		64BB7C942BC524180079226C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				64AA33542BD716EF007FEA7C /* AZSUpload */,
-				64BB7C9B2BC5250D0079226C /* APIResources */,
-				64BB7C8F2BC524180079226C /* APIEndpoints */,
-				64BB7C912BC524180079226C /* APIRequest.swift */,
+				640C29C82BD9F7870097D444 /* Requesting */,
+				640C29BB2BD9F7860097D444 /* Uploading */,
 				64BB7C932BC524180079226C /* NetworkError.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		64BB7C9B2BC5250D0079226C /* APIResources */ = {
-			isa = PBXGroup;
-			children = (
-				64BB7C922BC524180079226C /* APIResource.swift */,
-				64251EBE2BC7718D00FC50E7 /* ConnectionStringResource.swift */,
-				64251EBC2BC73ED100FC50E7 /* ResultsResource.swift */,
-				64342A152BC6919D006680FA /* ResultsAvailabilityResource.swift */,
-				64BB7C9C2BC5306F0079226C /* HomeResource.swift */,
-				645AD3F62BC5C74100A6D4BE /* ExerciseSetResource.swift */,
-				645AD3F82BC5D7A800A6D4BE /* ExerciseInstructionsResource.swift */,
-			);
-			path = APIResources;
 			sourceTree = "<group>";
 		};
 		7B61B1D5BA99C86EE85E54DE /* Pods */ = {
@@ -780,7 +796,6 @@
 				64924A822BC499DD001E6C43 /* RecordingOptionsModalView.swift in Sources */,
 				64924A612BC499DD001E6C43 /* ExerciseInstructionsView.swift in Sources */,
 				64924A802BC499DD001E6C43 /* RecordingInfoModalView.swift in Sources */,
-				64AA335B2BD76FDE007FEA7C /* AZSUpload.swift in Sources */,
 				64924A622BC499DD001E6C43 /* ExerciseInstructionsViewModel.swift in Sources */,
 				64924A752BC499DD001E6C43 /* PainLevelTileViewModel.swift in Sources */,
 				64924A882BC499DD001E6C43 /* RecordingViewControllerLink.swift in Sources */,
@@ -790,62 +805,63 @@
 				64924A592BC499DD001E6C43 /* Strings+Generated.swift in Sources */,
 				64924A772BC499DD001E6C43 /* PainLevelRatingViewModel.swift in Sources */,
 				64924A7A2BC499DD001E6C43 /* ResultsForDayView.swift in Sources */,
-				64251EBD2BC73ED100FC50E7 /* ResultsResource.swift in Sources */,
-				64BB7C992BC524180079226C /* APIResource.swift in Sources */,
 				64924A722BC499DD001E6C43 /* ExerciseRatingTileView.swift in Sources */,
-				64BB7C952BC524180079226C /* APIEndpoints.swift in Sources */,
+				640C29D22BD9F7870097D444 /* ResultsAvailabilityResource.swift in Sources */,
 				64924A6C2BC499DD001E6C43 /* HomeViewModel.swift in Sources */,
 				64924A762BC499DD001E6C43 /* PainLevelRatingView.swift in Sources */,
 				64924A862BC499DD001E6C43 /* RecordingViewController.swift in Sources */,
 				64924A5E2BC499DD001E6C43 /* ExerciseStepViewModel.swift in Sources */,
-				645AD3F72BC5C74100A6D4BE /* ExerciseSetResource.swift in Sources */,
 				64924A782BC499DD001E6C43 /* FormCommentTileView.swift in Sources */,
 				64BB7C742BC4A04E0079226C /* Font+Presets.swift in Sources */,
 				64924A6D2BC499DD001E6C43 /* ProfileView.swift in Sources */,
 				64924A7F2BC499DD001E6C43 /* PlaybackViewModel.swift in Sources */,
 				64BB7C702BC4A04E0079226C /* GifView.swift in Sources */,
+				640C29D02BD9F7870097D444 /* ExerciseSetResource.swift in Sources */,
+				640C29CC2BD9F7870097D444 /* APIProtocol.swift in Sources */,
 				64924A872BC499DD001E6C43 /* RecordingViewControllerDelegate.swift in Sources */,
 				64924A792BC499DD001E6C43 /* FormCommentTileViewModel.swift in Sources */,
 				64924A712BC499DD001E6C43 /* OnboardingView.swift in Sources */,
 				64924A5B2BC499DD001E6C43 /* ErrorView.swift in Sources */,
-				64BB7C9D2BC5306F0079226C /* HomeResource.swift in Sources */,
-				64251EBF2BC7718D00FC50E7 /* ConnectionStringResource.swift in Sources */,
 				64924A652BC499DD001E6C43 /* ExerciseSetView.swift in Sources */,
 				64924A672BC499DD001E6C43 /* CalendarTileView.swift in Sources */,
 				64924A5F2BC499DD001E6C43 /* ExerciseTipView.swift in Sources */,
 				64BB7C762BC4A04E0079226C /* SizeCalculator.swift in Sources */,
 				64924A7C2BC499DD001E6C43 /* ResultsView.swift in Sources */,
 				64BB7C712BC4A04E0079226C /* StyledTextFieldView.swift in Sources */,
+				640C29D12BD9F7870097D444 /* HomeResource.swift in Sources */,
 				64924A6B2BC499DD001E6C43 /* HomeView.swift in Sources */,
 				64924A6F2BC499DD001E6C43 /* LoginView.swift in Sources */,
+				640C29CF2BD9F7870097D444 /* ExerciseInstructionsResource.swift in Sources */,
 				64924A732BC499DD001E6C43 /* ExerciseRatingTileViewModel.swift in Sources */,
 				64924A602BC499DD001E6C43 /* ExerciseTipViewModel.swift in Sources */,
 				64924A7D2BC499DD001E6C43 /* ResultsViewModel.swift in Sources */,
 				64924A8F2BC499DD001E6C43 /* LumblyApp.swift in Sources */,
 				64BB7C6F2BC4A04E0079226C /* BlueButtonView.swift in Sources */,
-				64BB7C962BC524180079226C /* APIProtocol.swift in Sources */,
-				64BB7C982BC524180079226C /* APIRequest.swift in Sources */,
+				640C29CE2BD9F7870097D444 /* ConnectionStringResource.swift in Sources */,
 				64924A642BC499DD001E6C43 /* ExerciseTileViewModel.swift in Sources */,
 				64924A662BC499DD001E6C43 /* ExerciseSetViewModel.swift in Sources */,
 				64BB7C732BC4A04E0079226C /* Color+Presets.swift in Sources */,
 				64924A6A2BC499DD001E6C43 /* ExerciseSetTileViewModel.swift in Sources */,
+				640C29CA2BD9F7870097D444 /* AZSUploadResource.swift in Sources */,
 				64BB7C9A2BC524180079226C /* NetworkError.swift in Sources */,
+				640C29CD2BD9F7870097D444 /* APIResource.swift in Sources */,
 				64924A742BC499DD001E6C43 /* PainLevelTileView.swift in Sources */,
-				64A752832BC7CF30004C101C /* AZSUploadResource.swift in Sources */,
 				64924A842BC499DD001E6C43 /* HostedRecordingViewController.swift in Sources */,
 				64924A702BC499DD001E6C43 /* SignupView.swift in Sources */,
+				640C29C92BD9F7870097D444 /* AZSUpload.swift in Sources */,
 				64924A7B2BC499DD001E6C43 /* ResultsForDayViewModel.swift in Sources */,
 				64924A8A2BC499DD001E6C43 /* RecordingViewModel.swift in Sources */,
 				64924A8D2BC499DD001E6C43 /* AppDelegate.swift in Sources */,
-				64342A162BC6919D006680FA /* ResultsAvailabilityResource.swift in Sources */,
-				645AD3F92BC5D7A800A6D4BE /* ExerciseInstructionsResource.swift in Sources */,
 				64924A682BC499DD001E6C43 /* CalendarTileViewModel.swift in Sources */,
 				64924A812BC499DD001E6C43 /* RecordingInfoModalViewModel.swift in Sources */,
 				64924A6E2BC499DD001E6C43 /* LoadingView.swift in Sources */,
+				640C29CB2BD9F7870097D444 /* APIEndpoints.swift in Sources */,
 				64924A832BC499DD001E6C43 /* RecordingOptionsModalViewModel.swift in Sources */,
 				64924A7E2BC499DD001E6C43 /* PlaybackView.swift in Sources */,
 				64924A852BC499DD001E6C43 /* RecordingView.swift in Sources */,
+				640C29D32BD9F7870097D444 /* ResultsResource.swift in Sources */,
 				64924A892BC499DD001E6C43 /* RecordingViewControllerLinkable.swift in Sources */,
+				640C29D42BD9F7870097D444 /* APIRequest.swift in Sources */,
 				64924A5C2BC499DD001E6C43 /* ErrorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
