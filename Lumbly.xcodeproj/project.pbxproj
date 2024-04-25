@@ -19,6 +19,7 @@
 		640C29D22BD9F7870097D444 /* ResultsAvailabilityResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29C42BD9F7870097D444 /* ResultsAvailabilityResource.swift */; };
 		640C29D32BD9F7870097D444 /* ResultsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29C52BD9F7870097D444 /* ResultsResource.swift */; };
 		640C29D42BD9F7870097D444 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29C72BD9F7870097D444 /* APIRequest.swift */; };
+		640C29DC2BDA012D0097D444 /* FileManager+RemoveFileAtURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29DB2BDA012D0097D444 /* FileManager+RemoveFileAtURL.swift */; };
 		64924A582BC499DD001E6C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 649249FB2BC499DD001E6C43 /* Assets.xcassets */; };
 		64924A592BC499DD001E6C43 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649249FD2BC499DD001E6C43 /* Strings+Generated.swift */; };
 		64924A5A2BC499DD001E6C43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 649249FF2BC499DD001E6C43 /* Localizable.strings */; };
@@ -100,6 +101,7 @@
 		640C29C42BD9F7870097D444 /* ResultsAvailabilityResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsAvailabilityResource.swift; sourceTree = "<group>"; };
 		640C29C52BD9F7870097D444 /* ResultsResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsResource.swift; sourceTree = "<group>"; };
 		640C29C72BD9F7870097D444 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		640C29DB2BDA012D0097D444 /* FileManager+RemoveFileAtURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+RemoveFileAtURL.swift"; sourceTree = "<group>"; };
 		647635C028FBA34E0043DCFD /* Lumbly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lumbly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		649249FB2BC499DD001E6C43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		649249FD2BC499DD001E6C43 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
@@ -231,6 +233,14 @@
 				640C29C72BD9F7870097D444 /* APIRequest.swift */,
 			);
 			path = Requesting;
+			sourceTree = "<group>";
+		};
+		640C29D82BD9FF600097D444 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				640C29DB2BDA012D0097D444 /* FileManager+RemoveFileAtURL.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		647635B728FBA34E0043DCFD = {
@@ -582,6 +592,7 @@
 			children = (
 				64924A512BC499DD001E6C43 /* Sources */,
 				64924A022BC499DD001E6C43 /* Resources */,
+				640C29D82BD9FF600097D444 /* Extensions */,
 				64924A552BC499DD001E6C43 /* Supporting Files */,
 				64924A562BC499DD001E6C43 /* LumblyApp.swift */,
 			);
@@ -826,6 +837,7 @@
 				64924A672BC499DD001E6C43 /* CalendarTileView.swift in Sources */,
 				64924A5F2BC499DD001E6C43 /* ExerciseTipView.swift in Sources */,
 				64BB7C762BC4A04E0079226C /* SizeCalculator.swift in Sources */,
+				640C29DC2BDA012D0097D444 /* FileManager+RemoveFileAtURL.swift in Sources */,
 				64924A7C2BC499DD001E6C43 /* ResultsView.swift in Sources */,
 				64BB7C712BC4A04E0079226C /* StyledTextFieldView.swift in Sources */,
 				640C29D12BD9F7870097D444 /* HomeResource.swift in Sources */,
