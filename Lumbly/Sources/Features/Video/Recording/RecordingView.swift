@@ -48,12 +48,11 @@ struct RecordingView: View {
     
     @State private var isRecording = false
     @State var shouldPresentPlayback = false
-    @State var videoFileURL: URL? = nil
     @State var viewModel: RecordingViewModel
     
     var body: some View {
         ZStack {
-            HostedRecordingViewController(videoFileURL: $videoFileURL, viewModel: $viewModel, viewControllerLink: viewControllerLink)
+            HostedRecordingViewController(viewModel: $viewModel, viewControllerLink: viewControllerLink)
                 .ignoresSafeArea(.container, edges: .horizontal)
 
             HStack {
@@ -101,11 +100,7 @@ struct RecordingView: View {
                 .frame(width: Constants.recordingButtonSize, height: Constants.recordingButtonSize)
         }
         .navigationDestination(isPresented: $shouldPresentPlayback) {
-            if let videoFileURL = videoFileURL {
-                PlaybackView(viewModel:
-                        .init(recordingViewModel: viewModel,
-                              videoFileURL: videoFileURL))
-            }
+            PlaybackView(viewModel: .init(recordingViewModel: viewModel))
         }
     }
     

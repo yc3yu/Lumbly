@@ -37,7 +37,7 @@ struct PlaybackView: View {
     @State var viewModel: PlaybackViewModel
     
     var body: some View {
-        if let videoFileURL = viewModel.videoFileURL {
+        if let videoFileURL = viewModel.recordingViewModel.videoFileURL {
             VideoPlayer(player: player)
                 .ignoresSafeArea()
                 .onAppear() {

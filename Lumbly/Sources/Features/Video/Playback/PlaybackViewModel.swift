@@ -9,17 +9,14 @@ import SwiftUI
 
 extension PlaybackView {
     class PlaybackViewModel: ObservableObject {
-        private(set) var videoFileURL: URL?
-        
         @Published var recordingViewModel: RecordingView.RecordingViewModel
         
-        init(recordingViewModel: RecordingView.RecordingViewModel, videoFileURL: URL?) {
+        init(recordingViewModel: RecordingView.RecordingViewModel) {
             self.recordingViewModel = recordingViewModel
-            self.videoFileURL = videoFileURL
         }
         
         func uploadVideo() async {
-            guard let fileURL = videoFileURL else {
+            guard let fileURL = recordingViewModel.videoFileURL else {
                 // TODO: Handle error
                 return
             }
@@ -36,7 +33,7 @@ extension PlaybackView {
                 // TODO: Handle error
             }
 
-            FileManager.default.removeFile(atURL: videoFileURL)
+            FileManager.default.removeFile(atURL: fileURL)
         }
     }
 }
