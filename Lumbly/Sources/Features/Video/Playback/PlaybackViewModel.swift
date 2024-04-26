@@ -36,23 +36,7 @@ extension PlaybackView {
                 // TODO: Handle error
             }
 
-            removeTemporaryVideo()
-        }
-        
-        func removeTemporaryVideo() {
-            if let videoFileURL = videoFileURL {
-                let path = videoFileURL.path
-                
-                guard FileManager.default.fileExists(atPath: path) else { return }
-                
-                do {
-                    try FileManager.default.removeItem(atPath: path)
-                } catch {
-                    print("Error removing file at url: \(videoFileURL)")
-                }
-            } else {
-                print("Url does not exist")
-            }
+            FileManager.default.removeFile(atURL: videoFileURL)
         }
     }
 }
