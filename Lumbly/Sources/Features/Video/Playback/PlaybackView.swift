@@ -58,10 +58,7 @@ struct PlaybackView: View {
                 }
                 .navigationBarBackButtonHidden(viewModel.recordingViewModel.isTestRun)
                 .navigationBarItems(trailing: NavigationLink(destination: PainLevelRatingView(viewModel:
-                        .init(recordingViewModel:
-                                .init(parentExerciseSet: viewModel.recordingViewModel.parentExerciseSet,
-                                      exerciseName: viewModel.recordingViewModel.exerciseName,
-                                      timestamp: viewModel.recordingViewModel.timestamp)))) {
+                        .init(recordingViewModel: viewModel.recordingViewModel))) {
                     if !viewModel.recordingViewModel.isTestRun {
                         Text(L10n.NavigationBarItem.submit)
                     }

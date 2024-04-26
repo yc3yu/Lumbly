@@ -16,9 +16,9 @@ extension PainLevelRatingView {
                                           L10n.PainLevelTileView.hurtsAWholeLot,
                                           L10n.PainLevelTileView.hurtsTheWorst]
         
-        var recordingViewModel: ResultsView.RecordingViewModel
+        var recordingViewModel: RecordingView.RecordingViewModel
         
-        init(recordingViewModel: ResultsView.RecordingViewModel) {
+        init(recordingViewModel: RecordingView.RecordingViewModel) {
             self.recordingViewModel = recordingViewModel
         }
         

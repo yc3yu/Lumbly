@@ -189,9 +189,14 @@ struct ResultsView_Previews: PreviewProvider {
     static var previews: some View {
         ResultsView(viewModel:
                 .init(recordingViewModel:
-                        .init(parentExerciseSet: "",
-                              exerciseName: "",
-                              timestamp: nil)))
+                        .init(isTestRun: false,
+                              parentExerciseSet: "",
+                              exerciseName: "", 
+                              recordingInfoModalBodyText: "",
+                              timestamp: nil,
+                              parentView: .init(viewModel: .init(parentExerciseSet: "",
+                                                                 exerciseNumber: 2,
+                                                                 exerciseInstructionsURL: nil,
+                                                                 isTestRun: false)))))
     }
 }
-
