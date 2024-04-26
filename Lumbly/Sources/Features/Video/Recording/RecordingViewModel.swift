@@ -13,6 +13,7 @@ extension RecordingView {
         @Published private(set) var exerciseName: String
         @Published private(set) var recordingInfoModalBodyText: String?
         
+        @Published var videoFileURL: URL?
         @Published var timestamp: String?
         @Published var isTestRun: Bool
         
@@ -21,12 +22,14 @@ extension RecordingView {
         init(isTestRun: Bool,
              parentExerciseSet: String,
              exerciseName: String,
+             videoFileURL: URL? = nil,
              recordingInfoModalBodyText: String? = nil,
              timestamp: String? = nil,
              parentView: ExerciseInstructionsView) {
             self.isTestRun = isTestRun
             self.parentExerciseSet = parentExerciseSet
             self.exerciseName = exerciseName
+            self.videoFileURL = videoFileURL
             self.timestamp = timestamp
             self.recordingInfoModalBodyText = recordingInfoModalBodyText
             self.parentView = parentView
