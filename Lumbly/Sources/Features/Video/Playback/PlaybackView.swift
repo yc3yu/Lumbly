@@ -15,21 +15,21 @@ struct PlaybackView: View {
     
     private var leftOptionDestination: RecordingView {
         let newViewModel = RecordingView.RecordingViewModel(isTestRun: false,
+                                                            parentView: viewModel.recordingViewModel.parentView,
                                                             parentExerciseSet: viewModel.recordingViewModel.parentExerciseSet,
                                                             exerciseName: viewModel.recordingViewModel.exerciseName,
                                                             recordingInfoModalBodyText: viewModel.recordingViewModel.recordingInfoModalBodyText,
-                                                            timestamp: viewModel.recordingViewModel.timestamp,
-                                                            parentView: viewModel.recordingViewModel.parentView)
+                                                            timestamp: viewModel.recordingViewModel.timestamp)
         return RecordingView(viewModel: newViewModel)
     }
     
     private var rightOptionDestination: RecordingView {
         let newViewModel = RecordingView.RecordingViewModel(isTestRun: true,
+                                                            parentView: viewModel.recordingViewModel.parentView,
                                                             parentExerciseSet: viewModel.recordingViewModel.parentExerciseSet,
                                                             exerciseName: viewModel.recordingViewModel.exerciseName,
                                                             recordingInfoModalBodyText: viewModel.recordingViewModel.recordingInfoModalBodyText,
-                                                            timestamp: viewModel.recordingViewModel.timestamp,
-                                                            parentView: viewModel.recordingViewModel.parentView)
+                                                            timestamp: viewModel.recordingViewModel.timestamp)
         return RecordingView(viewModel: newViewModel)
     }
     

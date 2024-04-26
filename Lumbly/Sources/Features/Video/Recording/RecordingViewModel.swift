@@ -20,19 +20,19 @@ extension RecordingView {
         var parentView: ExerciseInstructionsView
         
         init(isTestRun: Bool,
+             parentView: ExerciseInstructionsView,
              parentExerciseSet: String,
              exerciseName: String,
-             videoFileURL: URL? = nil,
              recordingInfoModalBodyText: String? = nil,
-             timestamp: String? = nil,
-             parentView: ExerciseInstructionsView) {
+             videoFileURL: URL? = nil,
+             timestamp: String? = nil) {
             self.isTestRun = isTestRun
+            self.parentView = parentView
             self.parentExerciseSet = parentExerciseSet
             self.exerciseName = exerciseName
+            self.recordingInfoModalBodyText = recordingInfoModalBodyText
             self.videoFileURL = videoFileURL
             self.timestamp = timestamp
-            self.recordingInfoModalBodyText = recordingInfoModalBodyText
-            self.parentView = parentView
         }
     }
 }

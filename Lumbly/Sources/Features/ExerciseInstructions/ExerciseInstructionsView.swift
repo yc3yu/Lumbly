@@ -103,10 +103,10 @@ struct ExerciseInstructionsView: View {
                         
                         NavigationLink(destination: RecordingView(viewModel:
                                 .init(isTestRun: viewModel.isTestRun,
+                                      parentView: self,
                                       parentExerciseSet: viewModel.parentExerciseSet,
                                       exerciseName: exerciseName,
-                                      recordingInfoModalBodyText: viewModel.exerciseInstructionsData?.recordingInfoModalBodyText,
-                                      parentView: self))) {
+                                      recordingInfoModalBodyText: viewModel.exerciseInstructionsData?.recordingInfoModalBodyText))) {
                             BlueButtonView(text: L10n.ExerciseInstructionsView.ready, navLinkButton: true)
                                 .frame(width: Constants.readyButtonWidth, height: Constants.readyButtonHeight, alignment: .bottom)
                         }
