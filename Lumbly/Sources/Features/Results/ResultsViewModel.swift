@@ -57,9 +57,9 @@ extension ResultsView {
         @Published private(set) var isLoading: Bool = false
         @Published private(set) var resultsAvailability: ResultsAvailability = ResultsAvailability(status: .unknown)
         
-        private var recordingViewModel: ResultsView.RecordingViewModel
+        private var recordingViewModel: RecordingView.RecordingViewModel
         
-        init(recordingViewModel: ResultsView.RecordingViewModel) {
+        init(recordingViewModel: RecordingView.RecordingViewModel) {
             self.recordingViewModel = recordingViewModel
         }
 
