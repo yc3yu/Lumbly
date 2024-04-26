@@ -48,7 +48,7 @@ struct PlaybackView: View {
                 }
                 .onDisappear {
                     if viewModel.recordingViewModel.isTestRun {
-                        viewModel.removeTemporaryVideo()
+                        FileManager.default.removeFile(atURL: videoFileURL)
                     }
                 }
                 .overlay(alignment: .top) {
