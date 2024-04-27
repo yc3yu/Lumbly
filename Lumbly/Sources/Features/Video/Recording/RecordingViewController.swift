@@ -120,6 +120,11 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
 }
 
 extension RecordingViewController: RecordingViewControllerLinkable {
+    private struct Constants {
+        static let dateFormat: String = "yyyyMMdd-HHmmss"
+        static let videoFileExtension: String = ".mov"
+    }
+
     func action(_ action : RecordingLinkAction) {
         switch action {
         case .startRecording:
@@ -134,7 +139,7 @@ extension RecordingViewController: RecordingViewControllerLinkable {
             let today = Date.now
             let dateFormatter = DateFormatter()
             
-            dateFormatter.dateFormat = "yyyyMMdd-HHmmss"
+            dateFormatter.dateFormat = Constants.dateFormat
             
             return dateFormatter.string(from: today)
         }
@@ -159,9 +164,8 @@ extension RecordingViewController: RecordingViewControllerLinkable {
             }
             
             /// Start recording video to a temporary file.
-            let outputFileName = getCurrentDateString()
-            
-            let temporaryVideoURL = FileManager.default.temporaryDirectory.appendingPathComponent("\(outputFileName).mov")
+            let outputFileName = getCurrentDateString() + Constants.videoFileExtension
+            let temporaryVideoURL = FileManager.default.temporaryDirectory.appendingPathComponent(outputFileName)
             
             self.delegate?.videoFileUrlSet(self, videoFileURL: temporaryVideoURL, timestamp: outputFileName)
             self.movieFileOutput.startRecording(to: temporaryVideoURL, recordingDelegate: self)
