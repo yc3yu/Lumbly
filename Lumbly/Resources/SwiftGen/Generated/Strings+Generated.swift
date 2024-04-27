@@ -73,6 +73,8 @@ internal enum L10n {
   internal enum HomeView {
     /// Calendar
     internal static let calendar = L10n.tr("Localizable", "HomeView.calendar", fallback: "Calendar")
+    /// person.crop.circle
+    internal static let emptyProfileIcon = L10n.tr("Localizable", "HomeView.emptyProfileIcon", fallback: "person.crop.circle")
     /// Exercise Sets
     internal static let exerciseSets = L10n.tr("Localizable", "HomeView.exerciseSets", fallback: "Exercise Sets")
   }

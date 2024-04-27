@@ -22,6 +22,7 @@
 "Onboarding.password" = "Password";
 
 // MARK: HomeView
+"HomeView.emptyProfileIcon" = "person.crop.circle";
 "HomeView.exerciseSets" = "Exercise Sets";
 "HomeView.calendar" = "Calendar";
 
