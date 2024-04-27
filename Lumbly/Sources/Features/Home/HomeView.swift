@@ -52,8 +52,11 @@ struct HomeView: View {
                                         .clipShape(Circle())
                                         .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
                                 } placeholder: {
-                                    Color.clear
+                                    Image(systemName: L10n.HomeView.emptyProfileIcon)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
                                         .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
+                                        .foregroundStyle(Color.prussianBlue)
                                 }
                             }
                         }
