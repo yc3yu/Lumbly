@@ -15,6 +15,8 @@ struct Home: Decodable {
 
 extension HomeView {
     class HomeViewModel: ObservableObject {
+        typealias RelativeDate = CalendarTileView.CalendarTileViewModel.DateRelativeToToday
+        
         @Published private(set) var homeData: Home? = nil
         
         let calendarTilesDayOfWeek: [String] = [L10n.CalendarTileView.mon,
@@ -25,7 +27,7 @@ extension HomeView {
                                                 L10n.CalendarTileView.sat,
                                                 L10n.CalendarTileView.sun]
         
-        var calendarTilesDateRelativeToToday: [CalendarTileView.CalendarTileViewModel.DateRelativeToToday] {
+        var calendarTilesDateRelativeToToday: [RelativeDate] {
             let calendar = Calendar.current
             var today = calendar.component(.weekday, from: Date())
             
@@ -35,9 +37,9 @@ extension HomeView {
                 today -= 1
             }
             
-            let result = [CalendarTileView.CalendarTileViewModel.DateRelativeToToday](repeating: .past, count: today - 1)
-            + [CalendarTileView.CalendarTileViewModel.DateRelativeToToday.today]
-            + [CalendarTileView.CalendarTileViewModel.DateRelativeToToday](repeating: .future, count: 7 - today)
+            let result = [RelativeDate](repeating: .past, count: today - 1)
+            + [RelativeDate.today]
+            + [RelativeDate](repeating: .future, count: 7 - today)
             
             return result
         }
