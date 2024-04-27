@@ -24,7 +24,7 @@ struct HomeView: View {
     
     @StateObject private var viewModel = HomeViewModel()
     
-    @State private var navigationBarHidden: Bool = false
+    @State private var navigationBarHidden: Bool = true
 
     var body: some View {
         VStack(spacing: .zero) {
