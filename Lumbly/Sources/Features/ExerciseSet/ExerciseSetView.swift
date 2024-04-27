@@ -46,7 +46,9 @@ struct ExerciseSetView: View {
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: .mediumSpace, height: .mediumSpace)
                         } placeholder: {
-                            Color.clear
+                            Image(L10n.ExerciseSetView.physiotherapyIcon)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
                                 .frame(width: .mediumSpace, height: .mediumSpace)
                         }
                     }
