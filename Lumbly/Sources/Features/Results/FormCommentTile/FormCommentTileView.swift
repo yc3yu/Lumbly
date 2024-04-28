@@ -9,71 +9,72 @@ import SwiftUI
 
 struct FormCommentTileView: View {
     private struct Constants {
-        static let tileCornerRadius: CGFloat = 10.0
-        static let mainImageBottomPadding: CGFloat = 40.0
-        static let solutionBottomPadding: CGFloat = 12.0
+        static let commentSolutionSpacing: CGFloat = 40.0
         static let imageWidth: CGFloat = 294.0
         static let mainImageHeight: CGFloat = 156.0
         static let secondaryImageHeight: CGFloat = 148.0
+        static let tileCornerRadius: CGFloat = 10.0
     }
     
     @StateObject var viewModel: FormCommentTileViewModel
     
     var body: some View {
-        VStack(alignment: .leading, spacing: .zero) {
-            if let commentTitle = viewModel.formCommentTileData?.commentTitle {
-                Text(commentTitle)
-                    .font(.bodyBold)
-                    .foregroundColor(.blueCharcoal)
-            }
-            
-            if let mainImage = viewModel.formCommentTileData?.mainImage,
-               !mainImage.isEmpty {
-                AsyncImage(url: URL(string: mainImage)) { phase in
-                    if let image = phase.image {
-                        image.resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: Constants.imageWidth, height: Constants.mainImageHeight)
-                    } else if phase.error != nil {
-                        ErrorLoadingContentView(errorText: L10n.ErrorLoadingContentView.contentError)
-                            .frame(width: Constants.imageWidth, height: Constants.mainImageHeight)
-                    } else {
-                        ProgressView()
-                            .frame(width: Constants.imageWidth, height: Constants.mainImageHeight)
+        VStack(alignment: .leading, spacing: Constants.commentSolutionSpacing) {
+            VStack(alignment: .leading, spacing: .smallSpace) {
+                if let commentTitle = viewModel.formCommentTileData?.commentTitle {
+                    Text(commentTitle)
+                        .font(.bodyBold)
+                        .foregroundColor(.blueCharcoal)
+                }
+                
+                if let mainImage = viewModel.formCommentTileData?.mainImage,
+                   !mainImage.isEmpty {
+                    AsyncImage(url: URL(string: mainImage)) { phase in
+                        if let image = phase.image {
+                            image.resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: Constants.imageWidth, height: Constants.mainImageHeight)
+                        } else if phase.error != nil {
+                            ErrorLoadingContentView(errorText: L10n.ErrorLoadingContentView.contentError)
+                                .frame(width: Constants.imageWidth, height: Constants.mainImageHeight)
+                        } else {
+                            ProgressView()
+                                .frame(width: Constants.imageWidth, height: Constants.mainImageHeight)
+                        }
                     }
                 }
-                .padding(.top, .smallSpace)
             }
             
             if let solution = viewModel.formCommentTileData?.solution,
                !solution.isEmpty {
-                Text(L10n.FormCommentTileView.solution)
-                    .font(.caption1Bold)
-                    .foregroundColor(.resolutionBlue)
-                    .padding(.top, Constants.mainImageBottomPadding)
-                
-                Text(solution)
-                    .font(.bodyBold)
-                    .foregroundColor(.blueCharcoal)
-                    .padding(.bottom, Constants.solutionBottomPadding)
-                
-                if let secondaryImage = viewModel.formCommentTileData?.secondaryImage,
-                   !secondaryImage.isEmpty {
-                    AsyncImage(url: URL(string: secondaryImage)) { image in
-                        image.resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: Constants.imageWidth, height: Constants.secondaryImageHeight)
-                    } placeholder: {
-                        ErrorLoadingContentView(errorText: L10n.ErrorLoadingContentView.contentError)
-                            .frame(width: Constants.imageWidth, height: Constants.secondaryImageHeight)
+                VStack(alignment: .leading, spacing: .littleSpace) {
+                    VStack(alignment: .leading, spacing: .zero) {
+                        Text(L10n.FormCommentTileView.solution)
+                            .font(.caption1Bold)
+                            .foregroundColor(.resolutionBlue)
+                        
+                        Text(solution)
+                            .font(.bodyBold)
+                            .foregroundColor(.blueCharcoal)
                     }
-                }
-                
-                if viewModel.isFormMistake {
-                    Text(L10n.FormCommentTileView.ifPainfulOrDifficult)
-                        .font(.bodyRegular)
-                        .foregroundColor(.blueCharcoal)
-                        .padding(.top, .miniSpace)
+                    
+                    if let secondaryImage = viewModel.formCommentTileData?.secondaryImage,
+                       !secondaryImage.isEmpty {
+                        AsyncImage(url: URL(string: secondaryImage)) { image in
+                            image.resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: Constants.imageWidth, height: Constants.secondaryImageHeight)
+                        } placeholder: {
+                            ErrorLoadingContentView(errorText: L10n.ErrorLoadingContentView.contentError)
+                                .frame(width: Constants.imageWidth, height: Constants.secondaryImageHeight)
+                        }
+                    }
+                    
+                    if viewModel.isFormMistake {
+                        Text(L10n.FormCommentTileView.ifPainfulOrDifficult)
+                            .font(.bodyRegular)
+                            .foregroundColor(.blueCharcoal)
+                    }
                 }
             }
         }
