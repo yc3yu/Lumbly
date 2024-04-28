@@ -56,13 +56,18 @@ struct ExerciseTileView: View {
                 Spacer()
                 
                 if let exerciseImage = viewModel.exerciseTileData?.exerciseImage {
-                    AsyncImage(url: URL(string: exerciseImage)) { image in
-                        image.resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: Constants.exerciseImageWidth, height: Constants.exerciseImageHeight)
-                    } placeholder: {
-                        Color.clear
-                            .frame(width: Constants.exerciseImageWidth, height: Constants.exerciseImageHeight)
+                    AsyncImage(url: URL(string: exerciseImage)) { phase in
+                        if let image = phase.image {
+                            image.resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: Constants.exerciseImageWidth, height: Constants.exerciseImageHeight)
+                        } else if phase.error != nil {
+                            ErrorLoadingContentView(errorText: L10n.ErrorLoadingContentView.contentError)
+                                .frame(width: Constants.exerciseImageWidth, height: Constants.exerciseImageHeight)
+                        } else {
+                            ProgressView()
+                                .frame(width: Constants.exerciseImageWidth, height: Constants.exerciseImageHeight)
+                        }
                     }
                 }
             }

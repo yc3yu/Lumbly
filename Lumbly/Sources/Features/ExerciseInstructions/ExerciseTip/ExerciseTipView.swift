@@ -42,14 +42,19 @@ struct ExerciseTipView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             
             if let tipImage = viewModel.exerciseTipData?.tipImage {
-                AsyncImage(url: URL(string: tipImage)) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: Constants.imageWidth, height: Constants.imageHeight)
-                } placeholder: {
-                    Color.clear
-                        .frame(width: Constants.imageWidth, height: Constants.imageHeight)
+                AsyncImage(url: URL(string: tipImage)) { phase in
+                    if let image = phase.image {
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: Constants.imageWidth, height: Constants.imageHeight)
+                    } else if phase.error != nil {
+                        ErrorLoadingContentView(errorText: L10n.ErrorLoadingContentView.contentError)
+                            .frame(width: Constants.imageWidth, height: Constants.imageHeight)
+                    } else {
+                        ProgressView()
+                            .frame(width: Constants.imageWidth, height: Constants.imageHeight)
+                    }
                 }
             }
         }

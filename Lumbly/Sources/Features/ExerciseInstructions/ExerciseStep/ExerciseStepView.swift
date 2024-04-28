@@ -35,14 +35,19 @@ struct ExerciseStepView: View {
             
             if let stepImage = viewModel.exerciseStepData?.stepImage,
                !stepImage.isEmpty {
-                AsyncImage(url: URL(string: stepImage)) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: Constants.imageWidth, height: Constants.imageHeight)
-                } placeholder: {
-                    Color.clear
-                        .frame(width: Constants.imageWidth, height: Constants.imageHeight)
+                AsyncImage(url: URL(string: stepImage)) { phase in
+                    if let image = phase.image {
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: Constants.imageWidth, height: Constants.imageHeight)
+                    } else if phase.error != nil {
+                        ErrorLoadingContentView(errorText: L10n.ErrorLoadingContentView.contentError)
+                            .frame(width: Constants.imageWidth, height: Constants.imageHeight)
+                    } else {
+                        ProgressView()
+                            .frame(width: Constants.imageWidth, height: Constants.imageHeight)
+                    }
                 }
             }
         }
