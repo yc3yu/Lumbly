@@ -150,7 +150,7 @@
 		64924A192BC499DD001E6C43 /* ExerciseSetTileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSetTileViewModel.swift; sourceTree = "<group>"; };
 		64924A1B2BC499DD001E6C43 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		64924A1C2BC499DD001E6C43 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		64924A1D2BC499DD001E6C43 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		64924A1D2BC499DD001E6C43 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = Lumbly/Sources/Features/Home/ProfileView.swift; sourceTree = SOURCE_ROOT; };
 		64924A1F2BC499DD001E6C43 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		64924A212BC499DD001E6C43 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		64924A232BC499DD001E6C43 /* SignupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -276,6 +276,14 @@
 				64924A352BC499DD001E6C43 /* ResultsForDayViewModel.swift */,
 			);
 			path = ResultsForDay;
+			sourceTree = "<group>";
+		};
+		640C29F92BDE59660097D444 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				64924A1D2BC499DD001E6C43 /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		647635B728FBA34E0043DCFD = {
@@ -427,10 +435,10 @@
 			children = (
 				64924A172BC499DD001E6C43 /* CalendarTile */,
 				64924A1A2BC499DD001E6C43 /* ExerciseSetTile */,
+				640C29F92BDE59660097D444 /* Profile */,
 				64924A1B2BC499DD001E6C43 /* HomeView.swift */,
 				64924A1C2BC499DD001E6C43 /* HomeViewModel.swift */,
 				640C29ED2BDE550B0097D444 /* Home.swift */,
-				64924A1D2BC499DD001E6C43 /* ProfileView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
