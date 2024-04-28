@@ -19,7 +19,7 @@ struct ProfileView: View {
                 .ignoresSafeArea(edges: [.horizontal, .bottom])
             
             VStack(spacing: Constants.vStackSpacing) {
-                Text("Profile") // TODO: Add to L10n
+                Text(L10n.ProfileView.profile)
                     .font(.largeTitleBold)
                     .foregroundColor(.darkGray06)
                     .frame(maxWidth: .infinity, alignment: .leading)
