@@ -20,6 +20,7 @@
 		640C29D32BD9F7870097D444 /* ResultsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29C52BD9F7870097D444 /* ResultsResource.swift */; };
 		640C29D42BD9F7870097D444 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29C72BD9F7870097D444 /* APIRequest.swift */; };
 		640C29DC2BDA012D0097D444 /* FileManager+RemoveFileAtURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29DB2BDA012D0097D444 /* FileManager+RemoveFileAtURL.swift */; };
+		640C29DE2BDE28440097D444 /* ErrorLoadingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29DD2BDE28440097D444 /* ErrorLoadingContentView.swift */; };
 		64924A582BC499DD001E6C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 649249FB2BC499DD001E6C43 /* Assets.xcassets */; };
 		64924A592BC499DD001E6C43 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649249FD2BC499DD001E6C43 /* Strings+Generated.swift */; };
 		64924A5A2BC499DD001E6C43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 649249FF2BC499DD001E6C43 /* Localizable.strings */; };
@@ -102,6 +103,7 @@
 		640C29C52BD9F7870097D444 /* ResultsResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsResource.swift; sourceTree = "<group>"; };
 		640C29C72BD9F7870097D444 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		640C29DB2BDA012D0097D444 /* FileManager+RemoveFileAtURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+RemoveFileAtURL.swift"; sourceTree = "<group>"; };
+		640C29DD2BDE28440097D444 /* ErrorLoadingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLoadingContentView.swift; sourceTree = "<group>"; };
 		647635C028FBA34E0043DCFD /* Lumbly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lumbly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		649249FB2BC499DD001E6C43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		649249FD2BC499DD001E6C43 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
@@ -605,6 +607,7 @@
 				64BB7C632BC4A04E0079226C /* BlueButtonView.swift */,
 				64BB7C642BC4A04E0079226C /* GifView.swift */,
 				64BB7C652BC4A04E0079226C /* StyledTextFieldView.swift */,
+				640C29DD2BDE28440097D444 /* ErrorLoadingContentView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -828,6 +831,7 @@
 				64924A7F2BC499DD001E6C43 /* PlaybackViewModel.swift in Sources */,
 				64BB7C702BC4A04E0079226C /* GifView.swift in Sources */,
 				640C29D02BD9F7870097D444 /* ExerciseSetResource.swift in Sources */,
+				640C29DE2BDE28440097D444 /* ErrorLoadingContentView.swift in Sources */,
 				640C29CC2BD9F7870097D444 /* APIProtocol.swift in Sources */,
 				64924A872BC499DD001E6C43 /* RecordingViewControllerDelegate.swift in Sources */,
 				64924A792BC499DD001E6C43 /* FormCommentTileViewModel.swift in Sources */,
