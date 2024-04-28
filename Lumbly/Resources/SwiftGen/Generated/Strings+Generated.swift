@@ -129,6 +129,10 @@ internal enum L10n {
     /// No pain
     internal static let noPain = L10n.tr("Localizable", "PainLevelTileView.noPain", fallback: "No pain")
   }
+  internal enum ProfileView {
+    /// Profile
+    internal static let profile = L10n.tr("Localizable", "ProfileView.profile", fallback: "Profile")
+  }
   internal enum RecordingInfoModalView {
     /// TEST RUN
     internal static let testRun = L10n.tr("Localizable", "RecordingInfoModalView.testRun", fallback: "TEST RUN")

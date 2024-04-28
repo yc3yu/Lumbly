@@ -38,6 +38,9 @@
 // MARK: ExerciseSetTileView
 "ExerciseSetTileView.start" = "Start";
 
+// MARK: ProfileView
+"ProfileView.profile" = "Profile";
+
 // MARK: ExerciseSetView
 "ExerciseSetView.startExerciseSet" = "Start Exercise Set";
 "ExerciseSetView.noExercises" = "There are no exercises to show for this exercise set.";
