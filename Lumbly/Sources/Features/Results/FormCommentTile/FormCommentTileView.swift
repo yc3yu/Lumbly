@@ -29,13 +29,18 @@ struct FormCommentTileView: View {
             
             if let mainImage = viewModel.formCommentTileData?.mainImage,
                !mainImage.isEmpty {
-                AsyncImage(url: URL(string: mainImage)) { image in
-                    image.resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: Constants.imageWidth, height: Constants.mainImageHeight)
-                } placeholder: {
-                    Color.clear
-                        .frame(width: Constants.imageWidth, height: Constants.mainImageHeight)
+                AsyncImage(url: URL(string: mainImage)) { phase in
+                    if let image = phase.image {
+                        image.resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: Constants.imageWidth, height: Constants.mainImageHeight)
+                    } else if phase.error != nil {
+                        ErrorLoadingContentView(errorText: L10n.ErrorLoadingContentView.contentError)
+                            .frame(width: Constants.imageWidth, height: Constants.mainImageHeight)
+                    } else {
+                        ProgressView()
+                            .frame(width: Constants.imageWidth, height: Constants.mainImageHeight)
+                    }
                 }
                 .padding(.top, .smallSpace)
             }
@@ -59,7 +64,7 @@ struct FormCommentTileView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: Constants.imageWidth, height: Constants.secondaryImageHeight)
                     } placeholder: {
-                        Color.clear
+                        ErrorLoadingContentView(errorText: L10n.ErrorLoadingContentView.contentError)
                             .frame(width: Constants.imageWidth, height: Constants.secondaryImageHeight)
                     }
                 }
