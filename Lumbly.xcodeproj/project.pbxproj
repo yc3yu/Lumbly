@@ -21,6 +21,18 @@
 		640C29D42BD9F7870097D444 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29C72BD9F7870097D444 /* APIRequest.swift */; };
 		640C29DC2BDA012D0097D444 /* FileManager+RemoveFileAtURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29DB2BDA012D0097D444 /* FileManager+RemoveFileAtURL.swift */; };
 		640C29DE2BDE28440097D444 /* ErrorLoadingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29DD2BDE28440097D444 /* ErrorLoadingContentView.swift */; };
+		640C29E02BDE53040097D444 /* ExerciseStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29DF2BDE53040097D444 /* ExerciseStep.swift */; };
+		640C29E22BDE53420097D444 /* ExerciseTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29E12BDE53420097D444 /* ExerciseTip.swift */; };
+		640C29E42BDE53800097D444 /* ExerciseInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29E32BDE53800097D444 /* ExerciseInstructions.swift */; };
+		640C29E62BDE53E50097D444 /* ExerciseTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29E52BDE53E50097D444 /* ExerciseTile.swift */; };
+		640C29E82BDE54100097D444 /* ExerciseSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29E72BDE54100097D444 /* ExerciseSet.swift */; };
+		640C29EA2BDE54C50097D444 /* CalendarTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29E92BDE54C50097D444 /* CalendarTile.swift */; };
+		640C29EC2BDE54F00097D444 /* ExerciseSetTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29EB2BDE54F00097D444 /* ExerciseSetTile.swift */; };
+		640C29EE2BDE550B0097D444 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29ED2BDE550B0097D444 /* Home.swift */; };
+		640C29F02BDE55630097D444 /* FormCommentTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29EF2BDE55630097D444 /* FormCommentTile.swift */; };
+		640C29F42BDE55E10097D444 /* IndividualExerciseResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29F32BDE55E10097D444 /* IndividualExerciseResults.swift */; };
+		640C29F62BDE55FF0097D444 /* ResultsAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29F52BDE55FF0097D444 /* ResultsAvailability.swift */; };
+		640C29F82BDE56220097D444 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29F72BDE56220097D444 /* Results.swift */; };
 		64924A582BC499DD001E6C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 649249FB2BC499DD001E6C43 /* Assets.xcassets */; };
 		64924A592BC499DD001E6C43 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649249FD2BC499DD001E6C43 /* Strings+Generated.swift */; };
 		64924A5A2BC499DD001E6C43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 649249FF2BC499DD001E6C43 /* Localizable.strings */; };
@@ -104,6 +116,18 @@
 		640C29C72BD9F7870097D444 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		640C29DB2BDA012D0097D444 /* FileManager+RemoveFileAtURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+RemoveFileAtURL.swift"; sourceTree = "<group>"; };
 		640C29DD2BDE28440097D444 /* ErrorLoadingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLoadingContentView.swift; sourceTree = "<group>"; };
+		640C29DF2BDE53040097D444 /* ExerciseStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStep.swift; sourceTree = "<group>"; };
+		640C29E12BDE53420097D444 /* ExerciseTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTip.swift; sourceTree = "<group>"; };
+		640C29E32BDE53800097D444 /* ExerciseInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInstructions.swift; sourceTree = "<group>"; };
+		640C29E52BDE53E50097D444 /* ExerciseTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTile.swift; sourceTree = "<group>"; };
+		640C29E72BDE54100097D444 /* ExerciseSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSet.swift; sourceTree = "<group>"; };
+		640C29E92BDE54C50097D444 /* CalendarTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTile.swift; sourceTree = "<group>"; };
+		640C29EB2BDE54F00097D444 /* ExerciseSetTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSetTile.swift; sourceTree = "<group>"; };
+		640C29ED2BDE550B0097D444 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		640C29EF2BDE55630097D444 /* FormCommentTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCommentTile.swift; sourceTree = "<group>"; };
+		640C29F32BDE55E10097D444 /* IndividualExerciseResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualExerciseResults.swift; sourceTree = "<group>"; };
+		640C29F52BDE55FF0097D444 /* ResultsAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsAvailability.swift; sourceTree = "<group>"; };
+		640C29F72BDE56220097D444 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		647635C028FBA34E0043DCFD /* Lumbly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lumbly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		649249FB2BC499DD001E6C43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		649249FD2BC499DD001E6C43 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
@@ -139,8 +163,8 @@
 		64924A2E2BC499DD001E6C43 /* PainLevelRatingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainLevelRatingViewModel.swift; sourceTree = "<group>"; };
 		64924A312BC499DD001E6C43 /* FormCommentTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCommentTileView.swift; sourceTree = "<group>"; };
 		64924A322BC499DD001E6C43 /* FormCommentTileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCommentTileViewModel.swift; sourceTree = "<group>"; };
-		64924A342BC499DD001E6C43 /* ResultsForDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsForDayView.swift; sourceTree = "<group>"; };
-		64924A352BC499DD001E6C43 /* ResultsForDayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsForDayViewModel.swift; sourceTree = "<group>"; };
+		64924A342BC499DD001E6C43 /* ResultsForDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsForDayView.swift; path = Lumbly/Sources/Features/Results/ResultsForDayView.swift; sourceTree = SOURCE_ROOT; };
+		64924A352BC499DD001E6C43 /* ResultsForDayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsForDayViewModel.swift; path = Lumbly/Sources/Features/Results/ResultsForDayViewModel.swift; sourceTree = SOURCE_ROOT; };
 		64924A362BC499DD001E6C43 /* ResultsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		64924A372BC499DD001E6C43 /* ResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
 		64924A392BC499DD001E6C43 /* PlaybackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackView.swift; sourceTree = "<group>"; };
@@ -245,6 +269,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		640C29F22BDE55B60097D444 /* ResultsForDay */ = {
+			isa = PBXGroup;
+			children = (
+				64924A342BC499DD001E6C43 /* ResultsForDayView.swift */,
+				64924A352BC499DD001E6C43 /* ResultsForDayViewModel.swift */,
+			);
+			path = ResultsForDay;
+			sourceTree = "<group>";
+		};
 		647635B728FBA34E0043DCFD = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +354,7 @@
 			children = (
 				64924A062BC499DD001E6C43 /* ExerciseStepView.swift */,
 				64924A072BC499DD001E6C43 /* ExerciseStepViewModel.swift */,
+				640C29DF2BDE53040097D444 /* ExerciseStep.swift */,
 			);
 			path = ExerciseStep;
 			sourceTree = "<group>";
@@ -330,6 +364,7 @@
 			children = (
 				64924A092BC499DD001E6C43 /* ExerciseTipView.swift */,
 				64924A0A2BC499DD001E6C43 /* ExerciseTipViewModel.swift */,
+				640C29E12BDE53420097D444 /* ExerciseTip.swift */,
 			);
 			path = ExerciseTip;
 			sourceTree = "<group>";
@@ -341,6 +376,7 @@
 				64924A0B2BC499DD001E6C43 /* ExerciseTip */,
 				64924A0C2BC499DD001E6C43 /* ExerciseInstructionsView.swift */,
 				64924A0D2BC499DD001E6C43 /* ExerciseInstructionsViewModel.swift */,
+				640C29E32BDE53800097D444 /* ExerciseInstructions.swift */,
 			);
 			path = ExerciseInstructions;
 			sourceTree = "<group>";
@@ -350,6 +386,7 @@
 			children = (
 				64924A0F2BC499DD001E6C43 /* ExerciseTileView.swift */,
 				64924A102BC499DD001E6C43 /* ExerciseTileViewModel.swift */,
+				640C29E52BDE53E50097D444 /* ExerciseTile.swift */,
 			);
 			path = ExerciseTile;
 			sourceTree = "<group>";
@@ -360,6 +397,7 @@
 				64924A112BC499DD001E6C43 /* ExerciseTile */,
 				64924A122BC499DD001E6C43 /* ExerciseSetView.swift */,
 				64924A132BC499DD001E6C43 /* ExerciseSetViewModel.swift */,
+				640C29E72BDE54100097D444 /* ExerciseSet.swift */,
 			);
 			path = ExerciseSet;
 			sourceTree = "<group>";
@@ -369,6 +407,7 @@
 			children = (
 				64924A152BC499DD001E6C43 /* CalendarTileView.swift */,
 				64924A162BC499DD001E6C43 /* CalendarTileViewModel.swift */,
+				640C29E92BDE54C50097D444 /* CalendarTile.swift */,
 			);
 			path = CalendarTile;
 			sourceTree = "<group>";
@@ -378,6 +417,7 @@
 			children = (
 				64924A182BC499DD001E6C43 /* ExerciseSetTileView.swift */,
 				64924A192BC499DD001E6C43 /* ExerciseSetTileViewModel.swift */,
+				640C29EB2BDE54F00097D444 /* ExerciseSetTile.swift */,
 			);
 			path = ExerciseSetTile;
 			sourceTree = "<group>";
@@ -389,6 +429,7 @@
 				64924A1A2BC499DD001E6C43 /* ExerciseSetTile */,
 				64924A1B2BC499DD001E6C43 /* HomeView.swift */,
 				64924A1C2BC499DD001E6C43 /* HomeViewModel.swift */,
+				640C29ED2BDE550B0097D444 /* Home.swift */,
 				64924A1D2BC499DD001E6C43 /* ProfileView.swift */,
 			);
 			path = Home;
@@ -470,6 +511,7 @@
 			children = (
 				64924A312BC499DD001E6C43 /* FormCommentTileView.swift */,
 				64924A322BC499DD001E6C43 /* FormCommentTileViewModel.swift */,
+				640C29EF2BDE55630097D444 /* FormCommentTile.swift */,
 			);
 			path = FormCommentTile;
 			sourceTree = "<group>";
@@ -478,10 +520,12 @@
 			isa = PBXGroup;
 			children = (
 				64924A332BC499DD001E6C43 /* FormCommentTile */,
-				64924A342BC499DD001E6C43 /* ResultsForDayView.swift */,
-				64924A352BC499DD001E6C43 /* ResultsForDayViewModel.swift */,
+				640C29F22BDE55B60097D444 /* ResultsForDay */,
+				640C29F52BDE55FF0097D444 /* ResultsAvailability.swift */,
+				640C29F32BDE55E10097D444 /* IndividualExerciseResults.swift */,
 				64924A362BC499DD001E6C43 /* ResultsView.swift */,
 				64924A372BC499DD001E6C43 /* ResultsViewModel.swift */,
+				640C29F72BDE56220097D444 /* Results.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -527,11 +571,11 @@
 			children = (
 				64924A422BC499DD001E6C43 /* RecordingModals */,
 				64924A432BC499DD001E6C43 /* HostedRecordingViewController.swift */,
-				64924A442BC499DD001E6C43 /* RecordingView.swift */,
 				64924A452BC499DD001E6C43 /* RecordingViewController.swift */,
 				64924A462BC499DD001E6C43 /* RecordingViewControllerDelegate.swift */,
 				64924A472BC499DD001E6C43 /* RecordingViewControllerLink.swift */,
 				64924A482BC499DD001E6C43 /* RecordingViewControllerLinkable.swift */,
+				64924A442BC499DD001E6C43 /* RecordingView.swift */,
 				64924A492BC499DD001E6C43 /* RecordingViewModel.swift */,
 			);
 			path = Recording;
@@ -807,20 +851,26 @@
 			files = (
 				64924A5D2BC499DD001E6C43 /* ExerciseStepView.swift in Sources */,
 				64924A692BC499DD001E6C43 /* ExerciseSetTileView.swift in Sources */,
+				640C29EE2BDE550B0097D444 /* Home.swift in Sources */,
 				64924A822BC499DD001E6C43 /* RecordingOptionsModalView.swift in Sources */,
 				64924A612BC499DD001E6C43 /* ExerciseInstructionsView.swift in Sources */,
 				64924A802BC499DD001E6C43 /* RecordingInfoModalView.swift in Sources */,
+				640C29F02BDE55630097D444 /* FormCommentTile.swift in Sources */,
 				64924A622BC499DD001E6C43 /* ExerciseInstructionsViewModel.swift in Sources */,
 				64924A752BC499DD001E6C43 /* PainLevelTileViewModel.swift in Sources */,
 				64924A882BC499DD001E6C43 /* RecordingViewControllerLink.swift in Sources */,
 				64BB7C722BC4A04E0079226C /* CGFloat+Presets.swift in Sources */,
 				64BB7C752BC4A04E0079226C /* UIColor+Hex.swift in Sources */,
 				64924A632BC499DD001E6C43 /* ExerciseTileView.swift in Sources */,
+				640C29EC2BDE54F00097D444 /* ExerciseSetTile.swift in Sources */,
 				64924A592BC499DD001E6C43 /* Strings+Generated.swift in Sources */,
 				64924A772BC499DD001E6C43 /* PainLevelRatingViewModel.swift in Sources */,
+				640C29F82BDE56220097D444 /* Results.swift in Sources */,
 				64924A7A2BC499DD001E6C43 /* ResultsForDayView.swift in Sources */,
+				640C29E42BDE53800097D444 /* ExerciseInstructions.swift in Sources */,
 				64924A722BC499DD001E6C43 /* ExerciseRatingTileView.swift in Sources */,
 				640C29D22BD9F7870097D444 /* ResultsAvailabilityResource.swift in Sources */,
+				640C29E62BDE53E50097D444 /* ExerciseTile.swift in Sources */,
 				64924A6C2BC499DD001E6C43 /* HomeViewModel.swift in Sources */,
 				64924A762BC499DD001E6C43 /* PainLevelRatingView.swift in Sources */,
 				64924A862BC499DD001E6C43 /* RecordingViewController.swift in Sources */,
@@ -833,6 +883,7 @@
 				640C29D02BD9F7870097D444 /* ExerciseSetResource.swift in Sources */,
 				640C29DE2BDE28440097D444 /* ErrorLoadingContentView.swift in Sources */,
 				640C29CC2BD9F7870097D444 /* APIProtocol.swift in Sources */,
+				640C29F42BDE55E10097D444 /* IndividualExerciseResults.swift in Sources */,
 				64924A872BC499DD001E6C43 /* RecordingViewControllerDelegate.swift in Sources */,
 				64924A792BC499DD001E6C43 /* FormCommentTileViewModel.swift in Sources */,
 				64924A712BC499DD001E6C43 /* OnboardingView.swift in Sources */,
@@ -840,6 +891,7 @@
 				64924A652BC499DD001E6C43 /* ExerciseSetView.swift in Sources */,
 				64924A672BC499DD001E6C43 /* CalendarTileView.swift in Sources */,
 				64924A5F2BC499DD001E6C43 /* ExerciseTipView.swift in Sources */,
+				640C29EA2BDE54C50097D444 /* CalendarTile.swift in Sources */,
 				64BB7C762BC4A04E0079226C /* SizeCalculator.swift in Sources */,
 				640C29DC2BDA012D0097D444 /* FileManager+RemoveFileAtURL.swift in Sources */,
 				64924A7C2BC499DD001E6C43 /* ResultsView.swift in Sources */,
@@ -852,6 +904,7 @@
 				64924A602BC499DD001E6C43 /* ExerciseTipViewModel.swift in Sources */,
 				64924A7D2BC499DD001E6C43 /* ResultsViewModel.swift in Sources */,
 				64924A8F2BC499DD001E6C43 /* LumblyApp.swift in Sources */,
+				640C29E02BDE53040097D444 /* ExerciseStep.swift in Sources */,
 				64BB7C6F2BC4A04E0079226C /* BlueButtonView.swift in Sources */,
 				640C29CE2BD9F7870097D444 /* ConnectionStringResource.swift in Sources */,
 				64924A642BC499DD001E6C43 /* ExerciseTileViewModel.swift in Sources */,
@@ -864,11 +917,13 @@
 				64924A742BC499DD001E6C43 /* PainLevelTileView.swift in Sources */,
 				64924A842BC499DD001E6C43 /* HostedRecordingViewController.swift in Sources */,
 				64924A702BC499DD001E6C43 /* SignupView.swift in Sources */,
+				640C29F62BDE55FF0097D444 /* ResultsAvailability.swift in Sources */,
 				640C29C92BD9F7870097D444 /* AZSUpload.swift in Sources */,
 				64924A7B2BC499DD001E6C43 /* ResultsForDayViewModel.swift in Sources */,
 				64924A8A2BC499DD001E6C43 /* RecordingViewModel.swift in Sources */,
 				64924A8D2BC499DD001E6C43 /* AppDelegate.swift in Sources */,
 				64924A682BC499DD001E6C43 /* CalendarTileViewModel.swift in Sources */,
+				640C29E22BDE53420097D444 /* ExerciseTip.swift in Sources */,
 				64924A812BC499DD001E6C43 /* RecordingInfoModalViewModel.swift in Sources */,
 				64924A6E2BC499DD001E6C43 /* LoadingView.swift in Sources */,
 				640C29CB2BD9F7870097D444 /* APIEndpoints.swift in Sources */,
@@ -878,6 +933,7 @@
 				640C29D32BD9F7870097D444 /* ResultsResource.swift in Sources */,
 				64924A892BC499DD001E6C43 /* RecordingViewControllerLinkable.swift in Sources */,
 				640C29D42BD9F7870097D444 /* APIRequest.swift in Sources */,
+				640C29E82BDE54100097D444 /* ExerciseSet.swift in Sources */,
 				64924A5C2BC499DD001E6C43 /* ErrorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

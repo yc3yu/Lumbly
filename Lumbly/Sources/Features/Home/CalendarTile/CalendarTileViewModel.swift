@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-struct CalendarTile: Decodable, Hashable {
-    var didExercise: Bool?
-}
-
 extension CalendarTileView {
     class CalendarTileViewModel: ObservableObject {
         enum DateRelativeToToday {

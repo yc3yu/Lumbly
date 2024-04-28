@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-struct ExerciseTip: Decodable, Hashable {
-    var tipName: String?
-    var tipDescription: String?
-    var tipImage: String?
-}
-
 extension ExerciseTipView {
     class ExerciseTipViewModel: ObservableObject {
         @Published private(set) var tipNumber: Int?

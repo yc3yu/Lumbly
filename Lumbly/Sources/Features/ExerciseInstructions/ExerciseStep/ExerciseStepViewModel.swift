@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-struct ExerciseStep: Decodable, Hashable {
-    var stepNumber: Int?
-    var stepString: String?
-    var stepImage: String?
-}
-
 extension ExerciseStepView {
     class ExerciseStepViewModel: ObservableObject {
         @Published private(set) var exerciseStepData: ExerciseStep?
