@@ -7,29 +7,6 @@
 
 import SwiftUI
 
-struct ResultsAvailability: Decodable {
-    var status: AvailabilityStatus
-    
-    enum AvailabilityStatus: Int, Decodable {
-        case unknown
-        case loading
-        case available
-        case noResults
-        case badVideo
-        case error
-    }
-}
-
-struct Results: Decodable {
-    var exercises: [String]?
-    var individualExerciseResults: [IndividualExerciseResults?]?
-}
-
-struct IndividualExerciseResults: Decodable {
-    var formMistakesTiles: [FormCommentTile]?
-    var wellDoneTiles: [FormCommentTile]?
-}
-
 extension ResultsView {
     class ResultsViewModel: ObservableObject {
         private struct Constants {

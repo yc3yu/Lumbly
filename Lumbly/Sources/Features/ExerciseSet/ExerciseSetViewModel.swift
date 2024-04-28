@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-struct ExerciseSet: Decodable {
-    var name: String?
-    var duration: String?
-    var physiotherapyIcon: String?
-    var physiotherapyString: String?
-    var exerciseTiles: [ExerciseTile]?
-}
-
 extension ExerciseSetView {
     class ExerciseSetViewModel: ObservableObject {
         @Published private(set) var exerciseSetData: ExerciseSet? = nil

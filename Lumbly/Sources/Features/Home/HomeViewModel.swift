@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-struct Home: Decodable {
-    var profilePicture: String?
-    var exerciseSetTiles: [ExerciseSetTile]?
-    var calendarTiles: [CalendarTile]?
-}
-
 extension HomeView {
     class HomeViewModel: ObservableObject {
         typealias RelativeDate = CalendarTileView.CalendarTileViewModel.DateRelativeToToday

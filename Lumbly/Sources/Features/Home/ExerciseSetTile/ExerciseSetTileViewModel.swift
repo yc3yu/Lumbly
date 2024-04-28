@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-struct ExerciseSetTile: Decodable, Hashable {
-    var exerciseSetName: String?
-    var duration: String?
-    var exerciseSetURL: String?
-}
-
 extension ExerciseSetTileView {
     class ExerciseSetTileViewModel: ObservableObject {
         @Published private(set) var exerciseSetTileData: ExerciseSetTile?
