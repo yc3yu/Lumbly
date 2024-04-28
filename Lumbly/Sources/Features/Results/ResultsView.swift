@@ -20,16 +20,6 @@ struct ResultsView: View {
         LoadingView(loadingText: L10n.ResultsView.loading)
     }
     
-    private var resultsHeader: some View {
-        HStack(alignment: .center, spacing: .mediumSpace) {
-            Text(L10n.ResultsView.results)
-                .font(.largeTitleBold)
-                .foregroundColor(.darkGray06)
-            
-            Spacer()
-        }
-    }
-    
     @State private var selectedExercise: Int = 0
     @StateObject var viewModel: ResultsViewModel
     
