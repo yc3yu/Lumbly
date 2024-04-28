@@ -96,4 +96,5 @@
 "FormCommentTileView.solution" = "Solution";
 "FormCommentTileView.ifPainfulOrDifficult" = "If this is painful or difficult, mention it to your physiotherapist. ";
 
-
+// MARK: ErrorLoadingContentView
+"ErrorLoadingContentView.contentError" = "Oops! This content could not be loaded.";
