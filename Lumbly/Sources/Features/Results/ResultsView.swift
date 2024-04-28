@@ -20,16 +20,6 @@ struct ResultsView: View {
         LoadingView(loadingText: L10n.ResultsView.loading)
     }
     
-    private var resultsHeader: some View {
-        HStack(alignment: .center, spacing: .mediumSpace) {
-            Text(L10n.ResultsView.results)
-                .font(.largeTitleBold)
-                .foregroundColor(.darkGray06)
-            
-            Spacer()
-        }
-    }
-    
     @State private var selectedExercise: Int = 0
     @StateObject var viewModel: ResultsViewModel
     
@@ -139,33 +129,13 @@ struct ResultsView: View {
                         .init(header: L10n.ResultsView.results,
                               errorText: L10n.ResultsView.error))
             case .badVideo:
-                VStack(spacing: Constants.vStackSpacing) {
-                    resultsHeader
-                    
-                    Text(L10n.ResultsView.badVideo)
-                        .font(.bodyBold)
-                        .foregroundColor(.blueCharcoal)
-                        .multilineTextAlignment(.center)
-                        .padding(.top, Constants.largePadding)
-                    
-                    Spacer()
-                }
-                .padding(.top, Constants.largePadding)
-                .padding(.horizontal, .mediumSpace)
+                ErrorView(viewModel:
+                        .init(header: L10n.ResultsView.results,
+                              errorText: L10n.ResultsView.badVideo))
             case .noResults:
-                VStack(spacing: Constants.vStackSpacing) {
-                    resultsHeader
-                    
-                    Text(L10n.ResultsView.noResultsForThisSession)
-                        .font(.bodyBold)
-                        .foregroundColor(.blueCharcoal)
-                        .multilineTextAlignment(.center)
-                        .padding(.top, Constants.largePadding)
-                    
-                    Spacer()
-                }
-                .padding(.top, Constants.largePadding)
-                .padding(.horizontal, .mediumSpace)
+                ErrorView(viewModel:
+                        .init(header: L10n.ResultsView.results,
+                              errorText: L10n.ResultsView.noResultsForThisSession))
             default:
                 loadingView
             }
