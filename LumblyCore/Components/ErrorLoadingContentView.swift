@@ -11,11 +11,17 @@ struct ErrorLoadingContentView: View {
     private(set) var errorText: String
     
     var body: some View {
-        Text(errorText)
-            .multilineTextAlignment(.center)
-            .font(.bodyRegular)
-            .foregroundStyle(Color.darkGray03)
-            .padding(.littleSpace)
+        ZStack {
+            Rectangle()
+                .foregroundStyle(.clear)
+                .border(.gray)
+            
+            Text(errorText)
+                .multilineTextAlignment(.center)
+                .font(.bodyRegular)
+                .foregroundStyle(Color.darkGray03)
+                .padding(.littleSpace)
+        }
     }
 }
 
