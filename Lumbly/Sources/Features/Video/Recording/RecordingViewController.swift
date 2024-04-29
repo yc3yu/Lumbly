@@ -147,7 +147,9 @@ extension RecordingViewController: RecordingViewControllerLinkable {
         
         let videoPreviewLayerOrientation = previewLayer.connection?.videoOrientation
         
-        sessionQueue.async {
+        sessionQueue.async { [weak self] in
+            guard let self = self else { return }
+            
             if UIDevice.current.isMultitaskingSupported {
                 self.backgroundRecordingID = UIApplication.shared.beginBackgroundTask(expirationHandler: nil)
             }
