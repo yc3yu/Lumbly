@@ -32,8 +32,10 @@ extension PlaybackView {
             } catch {
                 // TODO: Handle error
             }
-
-            FileManager.default.removeFile(atURL: fileURL)
+            
+            if let fileManager = recordingViewModel.fileManager {
+                fileManager.removeFile(atURL: fileURL)
+            }
         }
     }
 }
