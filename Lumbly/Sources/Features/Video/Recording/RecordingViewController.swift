@@ -12,6 +12,7 @@ import UIKit
 class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
     private let captureSession = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
+    private let fileManager = FileManager.default
     
     private var movieFileOutput = AVCaptureMovieFileOutput()
     private var permissionGranted = false
@@ -165,7 +166,7 @@ extension RecordingViewController: RecordingViewControllerLinkable {
             
             /// Start recording video to a temporary file.
             let outputFileName = getCurrentDateString() + Constants.videoFileExtension
-            let temporaryVideoURL = FileManager.default.temporaryDirectory.appendingPathComponent(outputFileName)
+            let temporaryVideoURL = self.fileManager.temporaryDirectory.appendingPathComponent(outputFileName)
             
             self.delegate?.videoFileUrlSet(self, videoFileURL: temporaryVideoURL, timestamp: outputFileName)
             self.movieFileOutput.startRecording(to: temporaryVideoURL, recordingDelegate: self)
