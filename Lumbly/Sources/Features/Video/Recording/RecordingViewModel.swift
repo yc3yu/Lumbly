@@ -18,6 +18,7 @@ extension RecordingView {
         @Published var timestamp: String?
         
         var parentView: ExerciseInstructionsView
+        var fileManager: FileManager? = nil
         
         init(isTestRun: Bool,
              parentView: ExerciseInstructionsView,
