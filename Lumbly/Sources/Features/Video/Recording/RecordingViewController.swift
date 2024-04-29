@@ -168,7 +168,7 @@ extension RecordingViewController: RecordingViewControllerLinkable {
             let outputFileName = getCurrentDateString() + Constants.videoFileExtension
             let temporaryVideoURL = self.fileManager.temporaryDirectory.appendingPathComponent(outputFileName)
             
-            self.delegate?.videoFileUrlSet(self, videoFileURL: temporaryVideoURL, timestamp: outputFileName)
+            self.delegate?.videoFileUrlSet(self, fileManager: self.fileManager, videoFileURL: temporaryVideoURL, timestamp: outputFileName)
             self.movieFileOutput.startRecording(to: temporaryVideoURL, recordingDelegate: self)
         }
     }

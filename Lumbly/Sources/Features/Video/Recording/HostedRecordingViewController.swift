@@ -44,7 +44,8 @@ struct HostedRecordingViewController: UIViewControllerRepresentable {
             self.viewModelBinding = viewModelBinding
         }
         
-        func videoFileUrlSet(_ viewController: RecordingViewController, videoFileURL: URL, timestamp: String) {
+        func videoFileUrlSet(_ viewController: RecordingViewController, fileManager: FileManager, videoFileURL: URL, timestamp: String) {
+            viewModelBinding.fileManager.wrappedValue = fileManager
             viewModelBinding.videoFileURL.wrappedValue = videoFileURL
             viewModelBinding.timestamp.wrappedValue = timestamp
         }
