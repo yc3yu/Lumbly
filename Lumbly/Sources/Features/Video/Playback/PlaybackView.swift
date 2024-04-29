@@ -47,8 +47,9 @@ struct PlaybackView: View {
                     player.play()
                 }
                 .onDisappear {
-                    if viewModel.recordingViewModel.isTestRun {
-                        FileManager.default.removeFile(atURL: videoFileURL)
+                    if viewModel.recordingViewModel.isTestRun,
+                       let fileManager = viewModel.recordingViewModel.fileManager {
+                        fileManager.removeFile(atURL: videoFileURL)
                     }
                 }
                 .overlay(alignment: .top) {
