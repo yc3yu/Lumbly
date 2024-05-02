@@ -1,10 +1,10 @@
 platform :ios, '16.0'
 
 target 'Lumbly' do
+  use_frameworks!
   pod 'SwiftGen', '~> 6.0'
   pod 'AZSClient'
-  
-  use_frameworks!
+  pod 'FLAnimatedImage'
   pod 'JellyGif'
 end
 
