@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-Lumbly/Pods-Lumbly-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AZSClient/AZSClient.framework
+${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework
 ${BUILT_PRODUCTS_DIR}/JellyGif/JellyGif.framework

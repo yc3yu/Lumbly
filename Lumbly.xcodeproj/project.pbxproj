@@ -86,9 +86,11 @@
 		64924A8A2BC499DD001E6C43 /* RecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A492BC499DD001E6C43 /* RecordingViewModel.swift */; };
 		64924A8D2BC499DD001E6C43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A522BC499DD001E6C43 /* AppDelegate.swift */; };
 		64924A8F2BC499DD001E6C43 /* LumblyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A562BC499DD001E6C43 /* LumblyApp.swift */; };
+		649D022C2BE36DFF0068CA07 /* GifUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649D022B2BE36DFF0068CA07 /* GifUIView.swift */; };
+		649D02302BE3716E0068CA07 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649D022F2BE3716E0068CA07 /* GifView.swift */; };
+		649D02322BE3718D0068CA07 /* GifViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649D02312BE3718D0068CA07 /* GifViewModel.swift */; };
 		64B1BBED2910BA4000AEA7E3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */; };
 		64BB7C6F2BC4A04E0079226C /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C632BC4A04E0079226C /* BlueButtonView.swift */; };
-		64BB7C702BC4A04E0079226C /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C642BC4A04E0079226C /* GifView.swift */; };
 		64BB7C712BC4A04E0079226C /* StyledTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C652BC4A04E0079226C /* StyledTextFieldView.swift */; };
 		64BB7C722BC4A04E0079226C /* CGFloat+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C672BC4A04E0079226C /* CGFloat+Presets.swift */; };
 		64BB7C732BC4A04E0079226C /* Color+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB7C682BC4A04E0079226C /* Color+Presets.swift */; };
@@ -184,9 +186,11 @@
 		64924A532BC499DD001E6C43 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		64924A542BC499DD001E6C43 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64924A562BC499DD001E6C43 /* LumblyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LumblyApp.swift; sourceTree = "<group>"; };
+		649D022B2BE36DFF0068CA07 /* GifUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifUIView.swift; sourceTree = "<group>"; };
+		649D022F2BE3716E0068CA07 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
+		649D02312BE3718D0068CA07 /* GifViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewModel.swift; sourceTree = "<group>"; };
 		64B1BBEC2910BA4000AEA7E3 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		64BB7C632BC4A04E0079226C /* BlueButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
-		64BB7C642BC4A04E0079226C /* GifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
 		64BB7C652BC4A04E0079226C /* StyledTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledTextFieldView.swift; sourceTree = "<group>"; };
 		64BB7C672BC4A04E0079226C /* CGFloat+Presets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Presets.swift"; sourceTree = "<group>"; };
 		64BB7C682BC4A04E0079226C /* Color+Presets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Presets.swift"; sourceTree = "<group>"; };
@@ -653,11 +657,21 @@
 			path = Lumbly;
 			sourceTree = "<group>";
 		};
+		649D022A2BE36DF60068CA07 /* GifView */ = {
+			isa = PBXGroup;
+			children = (
+				649D022B2BE36DFF0068CA07 /* GifUIView.swift */,
+				649D022F2BE3716E0068CA07 /* GifView.swift */,
+				649D02312BE3718D0068CA07 /* GifViewModel.swift */,
+			);
+			path = GifView;
+			sourceTree = "<group>";
+		};
 		64BB7C662BC4A04E0079226C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				649D022A2BE36DF60068CA07 /* GifView */,
 				64BB7C632BC4A04E0079226C /* BlueButtonView.swift */,
-				64BB7C642BC4A04E0079226C /* GifView.swift */,
 				64BB7C652BC4A04E0079226C /* StyledTextFieldView.swift */,
 				640C29DD2BDE28440097D444 /* ErrorLoadingContentView.swift */,
 			);
@@ -866,9 +880,11 @@
 				640C29F02BDE55630097D444 /* FormCommentTile.swift in Sources */,
 				64924A622BC499DD001E6C43 /* ExerciseInstructionsViewModel.swift in Sources */,
 				64924A752BC499DD001E6C43 /* PainLevelTileViewModel.swift in Sources */,
+				649D02302BE3716E0068CA07 /* GifView.swift in Sources */,
 				64924A882BC499DD001E6C43 /* RecordingViewControllerLink.swift in Sources */,
 				64BB7C722BC4A04E0079226C /* CGFloat+Presets.swift in Sources */,
 				64BB7C752BC4A04E0079226C /* UIColor+Hex.swift in Sources */,
+				649D022C2BE36DFF0068CA07 /* GifUIView.swift in Sources */,
 				64924A632BC499DD001E6C43 /* ExerciseTileView.swift in Sources */,
 				640C29EC2BDE54F00097D444 /* ExerciseSetTile.swift in Sources */,
 				64924A592BC499DD001E6C43 /* Strings+Generated.swift in Sources */,
@@ -887,7 +903,6 @@
 				64BB7C742BC4A04E0079226C /* Font+Presets.swift in Sources */,
 				64924A6D2BC499DD001E6C43 /* ProfileView.swift in Sources */,
 				64924A7F2BC499DD001E6C43 /* PlaybackViewModel.swift in Sources */,
-				64BB7C702BC4A04E0079226C /* GifView.swift in Sources */,
 				640C29D02BD9F7870097D444 /* ExerciseSetResource.swift in Sources */,
 				640C29DE2BDE28440097D444 /* ErrorLoadingContentView.swift in Sources */,
 				640C29CC2BD9F7870097D444 /* APIProtocol.swift in Sources */,
@@ -904,6 +919,7 @@
 				640C29DC2BDA012D0097D444 /* FileManager+RemoveFileAtURL.swift in Sources */,
 				64924A7C2BC499DD001E6C43 /* ResultsView.swift in Sources */,
 				64BB7C712BC4A04E0079226C /* StyledTextFieldView.swift in Sources */,
+				649D02322BE3718D0068CA07 /* GifViewModel.swift in Sources */,
 				640C29D12BD9F7870097D444 /* HomeResource.swift in Sources */,
 				64924A6B2BC499DD001E6C43 /* HomeView.swift in Sources */,
 				64924A6F2BC499DD001E6C43 /* LoginView.swift in Sources */,
