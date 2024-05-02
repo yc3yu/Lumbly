@@ -24,19 +24,18 @@ extension GifView {
             self.loadStatus = .unknown
         }
         
-        func fetchGifData() async {
+        @MainActor func fetchGifData() {
             guard let url = url else {
                 loadStatus = .failure
                 return
             }
             
-            guard let (gifData, _) = try? await URLSession.shared.data(from: url) else {
+            do {
+                self.gifData = try Data(contentsOf: url)
+                loadStatus = .success
+            } catch {
                 loadStatus = .failure
-                return
             }
-            
-            self.gifData = gifData
-            loadStatus = .success
         }
     }
 }
