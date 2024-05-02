@@ -5,7 +5,6 @@ target 'Lumbly' do
   pod 'SwiftGen', '~> 6.0'
   pod 'AZSClient'
   pod 'FLAnimatedImage'
-  pod 'JellyGif'
 end
 
 post_install do |installer|

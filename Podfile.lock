@@ -1,28 +1,24 @@
 PODS:
   - AZSClient (0.2.6)
   - FLAnimatedImage (1.0.17)
-  - JellyGif (1.0.2)
   - SwiftGen (6.6.2)
 
 DEPENDENCIES:
   - AZSClient
   - FLAnimatedImage
-  - JellyGif
   - SwiftGen (~> 6.0)
 
 SPEC REPOS:
   trunk:
     - AZSClient
     - FLAnimatedImage
-    - JellyGif
     - SwiftGen
 
 SPEC CHECKSUMS:
   AZSClient: efd576cabf56f97e38cb1b614739f4b0c1906392
   FLAnimatedImage: bbf914596368867157cc71b38a8ec834b3eeb32b
-  JellyGif: 52b7569b7015f3b1ab2a6be30e4a81d47f974c97
   SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
 
-PODFILE CHECKSUM: cb1eda8f928c9e8c36be7bd8884a5d09b7eadc28
+PODFILE CHECKSUM: 7eb16273cf8d08f38c842f8e0bd0b38cfe8eb193
 
 COCOAPODS: 1.12.0
