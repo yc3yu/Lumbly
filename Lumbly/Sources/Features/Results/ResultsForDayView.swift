@@ -61,9 +61,9 @@ struct ResultsForDayView: View {
     
     func getContentString() -> String {
         if viewModel.didExercise {
-            return "This will show a list of exercise sets that you completed on the selected day.\n\n(This view is to be updated.)"
+            return "This will show a list of exercise sets that you completed on the selected day.\n\n(This view is to be updated.)" // Placeholder for demo purposes
         } else {
-            return "No exercises were completed on this day.\n\n(This view is to be updated.)"
+            return "No exercises were completed on this day.\n\n(This view is to be updated.)" // Placeholder for demo purposes
         }
     }
 }
