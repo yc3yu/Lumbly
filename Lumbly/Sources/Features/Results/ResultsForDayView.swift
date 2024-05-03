@@ -41,19 +41,19 @@ struct ResultsForDayView: View {
     func getDayOfWeek() -> String {
         switch viewModel.dayOfWeek { // TODO: Add strings to L10n
         case L10n.CalendarTileView.mon:
-            return "Monday"
+            return L10n.CalendarTileView.monday
         case L10n.CalendarTileView.tue:
-            return "Tuesday"
+            return L10n.CalendarTileView.tuesday
         case L10n.CalendarTileView.wed:
-            return "Wednesday"
+            return L10n.CalendarTileView.wednesday
         case L10n.CalendarTileView.thu:
-            return "Thursday"
+            return L10n.CalendarTileView.thursday
         case L10n.CalendarTileView.fri:
-            return "Friday"
+            return L10n.CalendarTileView.friday
         case L10n.CalendarTileView.sat:
-            return "Saturday"
+            return L10n.CalendarTileView.saturday
         case L10n.CalendarTileView.sun:
-            return "Sunday"
+            return L10n.CalendarTileView.sunday
         default:
             return ""
         }
