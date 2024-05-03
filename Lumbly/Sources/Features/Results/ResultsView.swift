@@ -59,7 +59,7 @@ struct ResultsView: View {
                                                 .lineLimit(1)
                                                 .truncationMode(.tail)
                                             
-                                            Image("Expand Arrow")
+                                            Image(asset: Asset.expandArrow)
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fit)
                                                 .frame(width: Constants.dropDownArrowSize, height: Constants.dropDownArrowSize)

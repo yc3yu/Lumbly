@@ -44,7 +44,6 @@
 // MARK: ExerciseSetView
 "ExerciseSetView.startExerciseSet" = "Start Exercise Set";
 "ExerciseSetView.noExercises" = "There are no exercises to show for this exercise set.";
-"ExerciseSetView.physiotherapyIcon" = "Physiotherapy";
 
 // MARK: ExerciseInstructionsView
 "ExerciseInstructionsView.exercise" = "Exercise";

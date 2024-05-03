@@ -13,12 +13,9 @@ struct RecordingView: View {
         static let maxOptionsModalWidth: CGFloat = 400.0
     }
     
-    private var recordingButtonImage: String {
-        if self.isRecording {
-            return "RecordingButtonStop"
-        } else {
-            return "RecordingButtonStart"
-        }
+    private var recordingButtonImage: Image {
+        let imageAsset = self.isRecording ? Asset.recordingButtonStop : Asset.recordingButtonStart
+        return imageAsset.swiftUIImage
     }
     
     private var buttonAction: RecordingLinkAction {
@@ -94,7 +91,7 @@ struct RecordingView: View {
                 shouldPresentPlayback = true
             }
         }) {
-            Image(recordingButtonImage)
+            recordingButtonImage
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: Constants.recordingButtonSize, height: Constants.recordingButtonSize)

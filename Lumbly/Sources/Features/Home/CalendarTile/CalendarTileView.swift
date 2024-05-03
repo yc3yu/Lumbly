@@ -37,7 +37,7 @@ struct CalendarTileView: View {
                 if let didExercise = viewModel.calendarTileData?.didExercise,
                    viewModel.dateRelativeToToday != .future,
                    didExercise {
-                    Image("DidExercise")
+                    Image(asset: Asset.didExercise)
                         .renderingMode(.template)
                         .foregroundColor(tileColors.accentColor ?? .veniceBlue)
                         .padding(.top, .smallSpace)

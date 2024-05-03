@@ -1,8 +1,14 @@
-input_dir: Lumbly/Resources/SwiftGen/Sources
-output_dir: Lumbly/Resources/SwiftGen/Generated
+input_dir: Lumbly/Resources
+output_dir: Lumbly/Resources/Generated
 
 strings:
   inputs: Localizable.strings
   outputs:
     templateName: structured-swift5
-    output: Strings+Generated.swift
+    output: Strings.swift
+
+xcassets:
+  inputs: Assets.xcassets
+  outputs:
+    templateName: swift5
+    output: Assets.swift

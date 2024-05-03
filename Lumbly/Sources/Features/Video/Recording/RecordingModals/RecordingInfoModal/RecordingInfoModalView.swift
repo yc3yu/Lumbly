@@ -32,7 +32,7 @@ struct RecordingInfoModalView<DestinationView: View>: View {
                     .padding(.trailing, .miniSpace)
                 
                 NavigationLink(destination: viewModel.infoNavLinkDestination) {
-                    Image("InfoIcon")
+                    Image(asset: Asset.infoIcon)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: constants.infoIconSize, height: constants.infoIconSize)
