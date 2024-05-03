@@ -35,6 +35,9 @@
 		640C29F82BDE56220097D444 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C29F72BDE56220097D444 /* Results.swift */; };
 		644E39172BE3B4B80014CEF8 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E39152BE3B4B80014CEF8 /* Strings.swift */; };
 		644E39182BE3B4B80014CEF8 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E39162BE3B4B80014CEF8 /* Assets.swift */; };
+		644E39E82BE4D6480014CEF8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E39E62BE4D6480014CEF8 /* ProfileView.swift */; };
+		644E39EC2BE4D6740014CEF8 /* ResultsForDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E39E92BE4D6740014CEF8 /* ResultsForDayView.swift */; };
+		644E39ED2BE4D6740014CEF8 /* ResultsForDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E39EA2BE4D6740014CEF8 /* ResultsForDayViewModel.swift */; };
 		64924A5B2BC499DD001E6C43 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A032BC499DD001E6C43 /* ErrorView.swift */; };
 		64924A5C2BC499DD001E6C43 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A042BC499DD001E6C43 /* ErrorViewModel.swift */; };
 		64924A5D2BC499DD001E6C43 /* ExerciseStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A062BC499DD001E6C43 /* ExerciseStepView.swift */; };
@@ -53,7 +56,6 @@
 		64924A6A2BC499DD001E6C43 /* ExerciseSetTileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A192BC499DD001E6C43 /* ExerciseSetTileViewModel.swift */; };
 		64924A6B2BC499DD001E6C43 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A1B2BC499DD001E6C43 /* HomeView.swift */; };
 		64924A6C2BC499DD001E6C43 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A1C2BC499DD001E6C43 /* HomeViewModel.swift */; };
-		64924A6D2BC499DD001E6C43 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A1D2BC499DD001E6C43 /* ProfileView.swift */; };
 		64924A6E2BC499DD001E6C43 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A1F2BC499DD001E6C43 /* LoadingView.swift */; };
 		64924A6F2BC499DD001E6C43 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A212BC499DD001E6C43 /* LoginView.swift */; };
 		64924A702BC499DD001E6C43 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A232BC499DD001E6C43 /* SignupView.swift */; };
@@ -66,8 +68,6 @@
 		64924A772BC499DD001E6C43 /* PainLevelRatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A2E2BC499DD001E6C43 /* PainLevelRatingViewModel.swift */; };
 		64924A782BC499DD001E6C43 /* FormCommentTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A312BC499DD001E6C43 /* FormCommentTileView.swift */; };
 		64924A792BC499DD001E6C43 /* FormCommentTileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A322BC499DD001E6C43 /* FormCommentTileViewModel.swift */; };
-		64924A7A2BC499DD001E6C43 /* ResultsForDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A342BC499DD001E6C43 /* ResultsForDayView.swift */; };
-		64924A7B2BC499DD001E6C43 /* ResultsForDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A352BC499DD001E6C43 /* ResultsForDayViewModel.swift */; };
 		64924A7C2BC499DD001E6C43 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A362BC499DD001E6C43 /* ResultsView.swift */; };
 		64924A7D2BC499DD001E6C43 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A372BC499DD001E6C43 /* ResultsViewModel.swift */; };
 		64924A7E2BC499DD001E6C43 /* PlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A392BC499DD001E6C43 /* PlaybackView.swift */; };
@@ -133,6 +133,9 @@
 		640C29F72BDE56220097D444 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		644E39152BE3B4B80014CEF8 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		644E39162BE3B4B80014CEF8 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		644E39E62BE4D6480014CEF8 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		644E39E92BE4D6740014CEF8 /* ResultsForDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsForDayView.swift; sourceTree = "<group>"; };
+		644E39EA2BE4D6740014CEF8 /* ResultsForDayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsForDayViewModel.swift; sourceTree = "<group>"; };
 		647635C028FBA34E0043DCFD /* Lumbly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lumbly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64924A032BC499DD001E6C43 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		64924A042BC499DD001E6C43 /* ErrorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
@@ -152,7 +155,6 @@
 		64924A192BC499DD001E6C43 /* ExerciseSetTileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSetTileViewModel.swift; sourceTree = "<group>"; };
 		64924A1B2BC499DD001E6C43 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		64924A1C2BC499DD001E6C43 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		64924A1D2BC499DD001E6C43 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = Lumbly/Sources/Features/Home/ProfileView.swift; sourceTree = SOURCE_ROOT; };
 		64924A1F2BC499DD001E6C43 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		64924A212BC499DD001E6C43 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		64924A232BC499DD001E6C43 /* SignupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -165,8 +167,6 @@
 		64924A2E2BC499DD001E6C43 /* PainLevelRatingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainLevelRatingViewModel.swift; sourceTree = "<group>"; };
 		64924A312BC499DD001E6C43 /* FormCommentTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCommentTileView.swift; sourceTree = "<group>"; };
 		64924A322BC499DD001E6C43 /* FormCommentTileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCommentTileViewModel.swift; sourceTree = "<group>"; };
-		64924A342BC499DD001E6C43 /* ResultsForDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsForDayView.swift; path = Lumbly/Sources/Features/Results/ResultsForDayView.swift; sourceTree = SOURCE_ROOT; };
-		64924A352BC499DD001E6C43 /* ResultsForDayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsForDayViewModel.swift; path = Lumbly/Sources/Features/Results/ResultsForDayViewModel.swift; sourceTree = SOURCE_ROOT; };
 		64924A362BC499DD001E6C43 /* ResultsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		64924A372BC499DD001E6C43 /* ResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
 		64924A392BC499DD001E6C43 /* PlaybackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackView.swift; sourceTree = "<group>"; };
@@ -275,21 +275,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		640C29F22BDE55B60097D444 /* ResultsForDay */ = {
+		644E39E72BE4D6480014CEF8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				64924A342BC499DD001E6C43 /* ResultsForDayView.swift */,
-				64924A352BC499DD001E6C43 /* ResultsForDayViewModel.swift */,
-			);
-			path = ResultsForDay;
-			sourceTree = "<group>";
-		};
-		640C29F92BDE59660097D444 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				64924A1D2BC499DD001E6C43 /* ProfileView.swift */,
+				644E39E62BE4D6480014CEF8 /* ProfileView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		644E39EB2BE4D6740014CEF8 /* ResultsForDay */ = {
+			isa = PBXGroup;
+			children = (
+				644E39E92BE4D6740014CEF8 /* ResultsForDayView.swift */,
+				644E39EA2BE4D6740014CEF8 /* ResultsForDayViewModel.swift */,
+			);
+			path = ResultsForDay;
 			sourceTree = "<group>";
 		};
 		647635B728FBA34E0043DCFD = {
@@ -409,7 +409,7 @@
 			children = (
 				64924A172BC499DD001E6C43 /* CalendarTile */,
 				64924A1A2BC499DD001E6C43 /* ExerciseSetTile */,
-				640C29F92BDE59660097D444 /* Profile */,
+				644E39E72BE4D6480014CEF8 /* Profile */,
 				64924A1B2BC499DD001E6C43 /* HomeView.swift */,
 				64924A1C2BC499DD001E6C43 /* HomeViewModel.swift */,
 				640C29ED2BDE550B0097D444 /* Home.swift */,
@@ -502,7 +502,7 @@
 			isa = PBXGroup;
 			children = (
 				64924A332BC499DD001E6C43 /* FormCommentTile */,
-				640C29F22BDE55B60097D444 /* ResultsForDay */,
+				644E39EB2BE4D6740014CEF8 /* ResultsForDay */,
 				640C29F52BDE55FF0097D444 /* ResultsAvailability.swift */,
 				640C29F32BDE55E10097D444 /* IndividualExerciseResults.swift */,
 				64924A362BC499DD001E6C43 /* ResultsView.swift */,
@@ -862,16 +862,17 @@
 				649D02302BE3716E0068CA07 /* GifView.swift in Sources */,
 				64924A882BC499DD001E6C43 /* RecordingViewControllerLink.swift in Sources */,
 				64BB7C722BC4A04E0079226C /* CGFloat+Presets.swift in Sources */,
+				644E39EC2BE4D6740014CEF8 /* ResultsForDayView.swift in Sources */,
 				64BB7C752BC4A04E0079226C /* UIColor+Hex.swift in Sources */,
 				649D022C2BE36DFF0068CA07 /* GifUIView.swift in Sources */,
 				64924A632BC499DD001E6C43 /* ExerciseTileView.swift in Sources */,
 				640C29EC2BDE54F00097D444 /* ExerciseSetTile.swift in Sources */,
 				64924A772BC499DD001E6C43 /* PainLevelRatingViewModel.swift in Sources */,
 				640C29F82BDE56220097D444 /* Results.swift in Sources */,
-				64924A7A2BC499DD001E6C43 /* ResultsForDayView.swift in Sources */,
 				640C29E42BDE53800097D444 /* ExerciseInstructions.swift in Sources */,
 				64924A722BC499DD001E6C43 /* ExerciseRatingTileView.swift in Sources */,
 				640C29D22BD9F7870097D444 /* ResultsAvailabilityResource.swift in Sources */,
+				644E39E82BE4D6480014CEF8 /* ProfileView.swift in Sources */,
 				644E39182BE3B4B80014CEF8 /* Assets.swift in Sources */,
 				640C29E62BDE53E50097D444 /* ExerciseTile.swift in Sources */,
 				64924A6C2BC499DD001E6C43 /* HomeViewModel.swift in Sources */,
@@ -880,7 +881,6 @@
 				64924A5E2BC499DD001E6C43 /* ExerciseStepViewModel.swift in Sources */,
 				64924A782BC499DD001E6C43 /* FormCommentTileView.swift in Sources */,
 				64BB7C742BC4A04E0079226C /* Font+Presets.swift in Sources */,
-				64924A6D2BC499DD001E6C43 /* ProfileView.swift in Sources */,
 				64924A7F2BC499DD001E6C43 /* PlaybackViewModel.swift in Sources */,
 				640C29D02BD9F7870097D444 /* ExerciseSetResource.swift in Sources */,
 				640C29DE2BDE28440097D444 /* ErrorLoadingContentView.swift in Sources */,
@@ -904,6 +904,7 @@
 				64924A6B2BC499DD001E6C43 /* HomeView.swift in Sources */,
 				64924A6F2BC499DD001E6C43 /* LoginView.swift in Sources */,
 				640C29CF2BD9F7870097D444 /* ExerciseInstructionsResource.swift in Sources */,
+				644E39ED2BE4D6740014CEF8 /* ResultsForDayViewModel.swift in Sources */,
 				64924A732BC499DD001E6C43 /* ExerciseRatingTileViewModel.swift in Sources */,
 				64924A602BC499DD001E6C43 /* ExerciseTipViewModel.swift in Sources */,
 				64924A7D2BC499DD001E6C43 /* ResultsViewModel.swift in Sources */,
@@ -923,7 +924,6 @@
 				64924A702BC499DD001E6C43 /* SignupView.swift in Sources */,
 				640C29F62BDE55FF0097D444 /* ResultsAvailability.swift in Sources */,
 				640C29C92BD9F7870097D444 /* AZSUpload.swift in Sources */,
-				64924A7B2BC499DD001E6C43 /* ResultsForDayViewModel.swift in Sources */,
 				64924A8A2BC499DD001E6C43 /* RecordingViewModel.swift in Sources */,
 				64924A8D2BC499DD001E6C43 /* AppDelegate.swift in Sources */,
 				64924A682BC499DD001E6C43 /* CalendarTileViewModel.swift in Sources */,
