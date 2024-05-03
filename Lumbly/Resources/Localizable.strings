@@ -34,6 +34,13 @@
 "CalendarTileView.fri" = "FRI";
 "CalendarTileView.sat" = "SAT";
 "CalendarTileView.sun" = "SUN";
+"CalendarTileView.monday" = "Monday";
+"CalendarTileView.tuesday" = "Tuesday";
+"CalendarTileView.wednesday" = "Wednesday";
+"CalendarTileView.thursday" = "Thursday";
+"CalendarTileView.friday" = "Friday";
+"CalendarTileView.saturday" = "Saturday";
+"CalendarTileView.sunday" = "Sunday";
 
 // MARK: ExerciseSetTileView
 "ExerciseSetTileView.start" = "Start";

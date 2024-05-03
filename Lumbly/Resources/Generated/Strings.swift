@@ -13,18 +13,32 @@ internal enum L10n {
   internal enum CalendarTileView {
     /// FRI
     internal static let fri = L10n.tr("Localizable", "CalendarTileView.fri", fallback: "FRI")
+    /// Friday
+    internal static let friday = L10n.tr("Localizable", "CalendarTileView.friday", fallback: "Friday")
     /// MON
     internal static let mon = L10n.tr("Localizable", "CalendarTileView.mon", fallback: "MON")
+    /// Monday
+    internal static let monday = L10n.tr("Localizable", "CalendarTileView.monday", fallback: "Monday")
     /// SAT
     internal static let sat = L10n.tr("Localizable", "CalendarTileView.sat", fallback: "SAT")
+    /// Saturday
+    internal static let saturday = L10n.tr("Localizable", "CalendarTileView.saturday", fallback: "Saturday")
     /// SUN
     internal static let sun = L10n.tr("Localizable", "CalendarTileView.sun", fallback: "SUN")
+    /// Sunday
+    internal static let sunday = L10n.tr("Localizable", "CalendarTileView.sunday", fallback: "Sunday")
     /// THU
     internal static let thu = L10n.tr("Localizable", "CalendarTileView.thu", fallback: "THU")
+    /// Thursday
+    internal static let thursday = L10n.tr("Localizable", "CalendarTileView.thursday", fallback: "Thursday")
     /// TUE
     internal static let tue = L10n.tr("Localizable", "CalendarTileView.tue", fallback: "TUE")
+    /// Tuesday
+    internal static let tuesday = L10n.tr("Localizable", "CalendarTileView.tuesday", fallback: "Tuesday")
     /// WED
     internal static let wed = L10n.tr("Localizable", "CalendarTileView.wed", fallback: "WED")
+    /// Wednesday
+    internal static let wednesday = L10n.tr("Localizable", "CalendarTileView.wednesday", fallback: "Wednesday")
   }
   internal enum ErrorLoadingContentView {
     /// Oops! This content could not be loaded.
