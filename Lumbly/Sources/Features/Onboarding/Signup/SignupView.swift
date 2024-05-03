@@ -31,7 +31,7 @@ struct SignupView: View {
             
             ScrollView {
                 VStack(spacing: Constants.vStackSpacing) {
-                    Image("LumblyMedium")
+                    Image(asset: Asset.lumblyMedium)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: Constants.logoWidth, height: Constants.logoHeight)

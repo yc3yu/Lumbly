@@ -23,7 +23,7 @@ struct OnboardingView: View {
                     .ignoresSafeArea(.all)
                 
                 VStack(spacing: .zero) {
-                    Image("LumblyLarge")
+                    Image(asset: Asset.lumblyLarge)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: Constants.lumblyLogoWidth, height: Constants.lumblyLogoHeight)

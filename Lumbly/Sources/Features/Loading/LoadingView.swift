@@ -25,7 +25,7 @@ struct LoadingView: View {
                     .multilineTextAlignment(.center)
                     .foregroundColor(.resolutionBlue)
                 
-                Image("Loading")
+                Image(asset: Asset.loading)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: Constants.loadingIconSize, height: Constants.loadingIconSize)
