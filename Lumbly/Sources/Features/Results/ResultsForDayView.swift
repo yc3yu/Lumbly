@@ -39,21 +39,21 @@ struct ResultsForDayView: View {
     }
     
     func getDayOfWeek() -> String {
-        switch viewModel.dayOfWeek { // TODO: Add strings to L10n
+        switch viewModel.dayOfWeek {
         case L10n.CalendarTileView.mon:
-            return "Monday"
+            return L10n.CalendarTileView.monday
         case L10n.CalendarTileView.tue:
-            return "Tuesday"
+            return L10n.CalendarTileView.tuesday
         case L10n.CalendarTileView.wed:
-            return "Wednesday"
+            return L10n.CalendarTileView.wednesday
         case L10n.CalendarTileView.thu:
-            return "Thursday"
+            return L10n.CalendarTileView.thursday
         case L10n.CalendarTileView.fri:
-            return "Friday"
+            return L10n.CalendarTileView.friday
         case L10n.CalendarTileView.sat:
-            return "Saturday"
+            return L10n.CalendarTileView.saturday
         case L10n.CalendarTileView.sun:
-            return "Sunday"
+            return L10n.CalendarTileView.sunday
         default:
             return ""
         }
@@ -61,9 +61,9 @@ struct ResultsForDayView: View {
     
     func getContentString() -> String {
         if viewModel.didExercise {
-            return "This will show a list of exercise sets that you completed on the selected day.\n\n(This view is to be updated.)"
+            return "This will show a list of exercise sets that you completed on the selected day.\n\n(This view is to be updated.)" // Placeholder for demo purposes
         } else {
-            return "No exercises were completed on this day.\n\n(This view is to be updated.)"
+            return "No exercises were completed on this day.\n\n(This view is to be updated.)" // Placeholder for demo purposes
         }
     }
 }
