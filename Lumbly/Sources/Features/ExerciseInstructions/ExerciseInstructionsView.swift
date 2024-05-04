@@ -10,8 +10,8 @@ import SwiftUI
 struct ExerciseInstructionsView: View {
     private struct Constants {
         static let topPadding: CGFloat = 40.0
-        static let mainImageWidth: CGFloat = 310.0
-        static let mainImageHeight: CGFloat = 173.0
+        static let mainGifWidth: CGFloat = 310.0
+        static let mainGifHeight: CGFloat = 173.0
         static let readyButtonWidth: CGFloat = 366.0
         static let readyButtonHeight: CGFloat = 50.0
         static let readyButtonCornerRadius: CGFloat = 15.0
@@ -58,10 +58,10 @@ struct ExerciseInstructionsView: View {
                             Spacer()
                         }
                         
-                        if let mainImage = viewModel.exerciseInstructionsData?.mainImage,
-                           let imageURL = URL(string: mainImage) {
-                            GifView(viewModel: .init(url: imageURL))
-                                .frame(width: Constants.mainImageWidth, height: Constants.mainImageHeight)
+                        if let mainGif = viewModel.exerciseInstructionsData?.mainImage, // TODO: Change mainImage to mainGif once server is updated
+                           let gifURL = URL(string: mainGif) {
+                            GifView(viewModel: .init(url: gifURL))
+                                .frame(width: Constants.mainGifWidth, height: Constants.mainGifHeight)
                         }
                         
                         Picker(L10n.ExerciseInstructionsView.stepsOrTips, selection: $stepsOrTips) {
