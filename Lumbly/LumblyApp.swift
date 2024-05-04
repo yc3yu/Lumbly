@@ -13,7 +13,9 @@ struct LumblyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            NavigationStack {
+                OnboardingView()
+            }
         }
     }
 }

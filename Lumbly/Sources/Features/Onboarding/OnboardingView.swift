@@ -17,37 +17,35 @@ struct OnboardingView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Color.oysterBay
-                    .ignoresSafeArea(.all)
+        ZStack {
+            Color.oysterBay
+                .ignoresSafeArea(.all)
+            
+            VStack(spacing: .zero) {
+                Image(asset: Asset.lumblyLarge)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: Constants.lumblyLogoWidth, height: Constants.lumblyLogoHeight)
+                    .padding(.bottom, Constants.logoToSignUpSpacing)
                 
-                VStack(spacing: .zero) {
-                    Image(asset: Asset.lumblyLarge)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: Constants.lumblyLogoWidth, height: Constants.lumblyLogoHeight)
-                        .padding(.bottom, Constants.logoToSignUpSpacing)
-                    
-                    NavigationLink(destination: SignupView()) {
-                        BlueButtonView(text: L10n.Onboarding.signUp,
-                                       navLinkButton: true)
-                        .frame(width: Constants.buttonWidth, height: Constants.buttonHeight)
-                        .padding(.bottom, .mediumSpace)
-                    }
-                    
-                    NavigationLink(destination: LoginView()) {
-                        BlueButtonView(text: L10n.Onboarding.logIn,
-                                       textColor: .prussianBlue,
-                                       backgroundColor: .oysterBay,
-                                       borderColor: .resolutionBlue,
-                                       navLinkButton: true)
-                        .frame(width: Constants.buttonWidth, height: Constants.buttonHeight)
-                    }
+                NavigationLink(destination: SignupView()) {
+                    BlueButtonView(text: L10n.Onboarding.signUp,
+                                   navLinkButton: true)
+                    .frame(width: Constants.buttonWidth, height: Constants.buttonHeight)
+                    .padding(.bottom, .mediumSpace)
+                }
+                
+                NavigationLink(destination: LoginView()) {
+                    BlueButtonView(text: L10n.Onboarding.logIn,
+                                   textColor: .prussianBlue,
+                                   backgroundColor: .oysterBay,
+                                   borderColor: .resolutionBlue,
+                                   navLinkButton: true)
+                    .frame(width: Constants.buttonWidth, height: Constants.buttonHeight)
                 }
             }
-            .frame(maxHeight: .infinity)
         }
+        .frame(maxHeight: .infinity)
     }
 }
 
