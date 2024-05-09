@@ -12,6 +12,7 @@ extension HomeView {
         typealias RelativeDate = CalendarTileView.CalendarTileViewModel.DateRelativeToToday
         
         @Published private(set) var homeData: Home? = nil
+        @Published private(set) var isLoading: Bool = false
         
         let calendarTilesDayOfWeek: [String] = [L10n.CalendarTileView.mon,
                                                 L10n.CalendarTileView.tue,
@@ -39,6 +40,10 @@ extension HomeView {
         }
         
         @MainActor func fetchHomeData() async {
+            guard !isLoading else { return }
+            defer { isLoading =  false }
+            isLoading = true
+            
             let resource = HomeResource()
             let request = APIRequest(resource: resource)
 
