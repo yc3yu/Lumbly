@@ -28,10 +28,9 @@ struct LoadingView: View {
                         .foregroundColor(.resolutionBlue)
                 }
                 
-                Image(asset: Asset.loading)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: Constants.loadingIconSize, height: Constants.loadingIconSize)
+                ProgressView()
+                    .tint(.resolutionBlue)
+                    .controlSize(.large)
             }
             .padding(.mediumSpace)
         }
