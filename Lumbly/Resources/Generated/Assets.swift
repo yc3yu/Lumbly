@@ -32,7 +32,6 @@ internal enum Asset {
   internal static let hurtsTheWorst = ImageAsset(name: "Hurts the worst")
   internal static let infoIcon = ImageAsset(name: "InfoIcon")
   internal static let likedIt = ImageAsset(name: "Liked it")
-  internal static let loading = ImageAsset(name: "Loading")
   internal static let lumblyLarge = ImageAsset(name: "LumblyLarge")
   internal static let lumblyMedium = ImageAsset(name: "LumblyMedium")
   internal static let lumblyWordOnly = ImageAsset(name: "LumblyWordOnly")

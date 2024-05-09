@@ -20,15 +20,17 @@ struct LoadingView: View {
                 .ignoresSafeArea(.all)
             
             VStack(spacing: .largeSpace) {
-                Text(loadingText ?? "")
-                    .font(.title2Bold)
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.resolutionBlue)
+                if let loadingText = loadingText,
+                   !loadingText.isEmpty {
+                    Text(loadingText)
+                        .font(.title3Bold)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.resolutionBlue)
+                }
                 
-                Image(asset: Asset.loading)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: Constants.loadingIconSize, height: Constants.loadingIconSize)
+                ProgressView()
+                    .tint(.resolutionBlue)
+                    .controlSize(.large)
             }
             .padding(.mediumSpace)
         }
