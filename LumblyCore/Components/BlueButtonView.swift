@@ -23,34 +23,27 @@ struct BlueButtonView: View {
     var body: some View {
         if let navLinkButton = navLinkButton,
            navLinkButton {
-            Text(text)
-                .font(.title3Bold)
-                .foregroundColor(textColor ?? .mercuryGrey)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                .background(
-                    RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
-                        .fill(backgroundColor ?? .resolutionBlue)
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
-                        .strokeBorder(borderColor ?? .clear, lineWidth: Constants.borderWidth)
-                )
+            buttonBody
         } else {
             Button(action: action ?? { }) {
-                Text(text)
-                    .font(.title3Bold)
-                    .foregroundColor(textColor ?? .mercuryGrey)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                    .background(
-                        RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
-                            .fill(backgroundColor ?? .resolutionBlue)
-                    )
-                    .overlay(
-                        RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
-                            .strokeBorder(borderColor ?? .clear, lineWidth: Constants.borderWidth)
-                    )
+                buttonBody
             }
         }
+    }
+    
+    private var buttonBody: some View {
+        Text(text)
+            .font(.title3Bold)
+            .foregroundColor(textColor ?? .mercuryGrey)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .background(
+                RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
+                    .fill(backgroundColor ?? .resolutionBlue)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous)
+                    .strokeBorder(borderColor ?? .clear, lineWidth: Constants.borderWidth)
+            )
     }
 }
 
