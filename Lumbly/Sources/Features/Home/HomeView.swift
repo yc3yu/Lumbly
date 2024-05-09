@@ -27,112 +27,118 @@ struct HomeView: View {
     @State private var navigationBarHidden: Bool = true
 
     var body: some View {
-        VStack(spacing: .zero) {
-            ZStack {
-                Color.mercuryGrey
-                    .ignoresSafeArea(.container)
-                
-                VStack {
-                    Spacer()
-                    
-                    HStack(spacing: .zero) {
-                        Image(asset: Asset.lumblyWordOnly)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: Constants.lumblyLogoWidth, height: Constants.lumblyLogoHeight)
+        Group {
+            if viewModel.isLoading {
+                LoadingView()
+            } else {
+                VStack(spacing: .zero) {
+                    ZStack {
+                        Color.mercuryGrey
+                            .ignoresSafeArea(.container)
                         
-                        Spacer()
-                        
-                        if let profilePicture = viewModel.homeData?.profilePicture {
-                            NavigationLink(destination: ProfileView()) {
-                                AsyncImage(url: URL(string: profilePicture)) { image in
-                                    image
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .clipShape(Circle())
-                                        .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
-                                } placeholder: {
-                                    Image(systemName: L10n.HomeView.emptyProfileIcon)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
-                                        .foregroundStyle(Color.prussianBlue)
-                                }
-                            }
-                        }
-                    }
-                    .padding(.leading, .smallSpace)
-                    .padding(.trailing, .mediumSpace)
-                    .padding(.bottom, Constants.topSectionBottomPadding)
-                }
-            }
-            .frame(height: Constants.topSectionHeight)
-            
-            ZStack {
-                Color.oysterBay
-                    .ignoresSafeArea(.container)
-                
-                VStack(alignment: .leading, spacing: .zero) {
-                        Text(L10n.HomeView.exerciseSets)
-                            .font(.title2Bold)
-                            .foregroundColor(.blueCharcoal)
-                            .padding(.horizontal, .mediumSpace)
-                            .padding(.bottom, .smallSpace)
-                        
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                Spacer(minLength: .mediumSpace)
+                        VStack {
+                            Spacer()
+                            
+                            HStack(spacing: .zero) {
+                                Image(asset: Asset.lumblyWordOnly)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: Constants.lumblyLogoWidth, height: Constants.lumblyLogoHeight)
                                 
-                                if let exerciseSetTiles = viewModel.homeData?.exerciseSetTiles {
-                                    ForEach(exerciseSetTiles, id: \.self) { exerciseSetTile in
-                                        NavigationLink(destination: ExerciseSetView(viewModel: .init(exerciseSetURL: exerciseSetTile.exerciseSetURL))) {
-                                            ExerciseSetTileView(viewModel: .init(exerciseSetTileData: exerciseSetTile))
-                                                .frame(width: Constants.exerciseSetTilesWidth)
+                                Spacer()
+                                
+                                if let profilePicture = viewModel.homeData?.profilePicture {
+                                    NavigationLink(destination: ProfileView()) {
+                                        AsyncImage(url: URL(string: profilePicture)) { image in
+                                            image
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .clipShape(Circle())
+                                                .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
+                                        } placeholder: {
+                                            Image(systemName: L10n.HomeView.emptyProfileIcon)
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: Constants.profilePictureWidth, height: Constants.profilePictureHeight)
+                                                .foregroundStyle(Color.prussianBlue)
                                         }
-                                        .simultaneousGesture(TapGesture().onEnded {
-                                            self.navigationBarHidden = false
-                                        })
                                     }
                                 }
-                                
-                                Spacer(minLength: .mediumSpace)
                             }
-                        }
-                        .frame(height: Constants.exerciseSetTilesHeight)
-                        .padding(.bottom, Constants.sectionSpacing)
-                    
-                    VStack(alignment: .leading) {
-                        Text(L10n.HomeView.calendar)
-                            .font(.title2Bold)
-                            .foregroundColor(.blueCharcoal)
-                            .padding(.horizontal, .mediumSpace)
-                            .padding(.bottom, .smallSpace)
-                        
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                Spacer(minLength: .mediumSpace)
-                                
-                                if let calendarTiles = viewModel.homeData?.calendarTiles {
-                                    let calendarTilesDateRelativeToToday = viewModel.calendarTilesDateRelativeToToday
-                                    
-                                    ForEach(calendarTiles.indices, id: \.self) { i in
-                                        CalendarTileView(viewModel:
-                                                .init(calendarTileData:
-                                                        CalendarTile(didExercise: calendarTiles[i].didExercise),
-                                                      dayOfWeek: viewModel.calendarTilesDayOfWeek[i],
-                                                      dateRelativeToToday: calendarTilesDateRelativeToToday[i]))
-                                        .frame(width: Constants.calendarTilesWidth, height: Constants.calendarTilesHeight)
-                                    }
-                                }
-                                
-                                Spacer(minLength: .mediumSpace)
-                            }
+                            .padding(.leading, .smallSpace)
+                            .padding(.trailing, .mediumSpace)
+                            .padding(.bottom, Constants.topSectionBottomPadding)
                         }
                     }
+                    .frame(height: Constants.topSectionHeight)
+                    
+                    ZStack {
+                        Color.oysterBay
+                            .ignoresSafeArea(.container)
                         
-                    Spacer()
+                        VStack(alignment: .leading, spacing: .zero) {
+                            Text(L10n.HomeView.exerciseSets)
+                                .font(.title2Bold)
+                                .foregroundColor(.blueCharcoal)
+                                .padding(.horizontal, .mediumSpace)
+                                .padding(.bottom, .smallSpace)
+                            
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack {
+                                    Spacer(minLength: .mediumSpace)
+                                    
+                                    if let exerciseSetTiles = viewModel.homeData?.exerciseSetTiles {
+                                        ForEach(exerciseSetTiles, id: \.self) { exerciseSetTile in
+                                            NavigationLink(destination: ExerciseSetView(viewModel: .init(exerciseSetURL: exerciseSetTile.exerciseSetURL))) {
+                                                ExerciseSetTileView(viewModel: .init(exerciseSetTileData: exerciseSetTile))
+                                                    .frame(width: Constants.exerciseSetTilesWidth)
+                                            }
+                                            .simultaneousGesture(TapGesture().onEnded {
+                                                self.navigationBarHidden = false
+                                            })
+                                        }
+                                    }
+                                    
+                                    Spacer(minLength: .mediumSpace)
+                                }
+                            }
+                            .frame(height: Constants.exerciseSetTilesHeight)
+                            .padding(.bottom, Constants.sectionSpacing)
+                            
+                            VStack(alignment: .leading) {
+                                Text(L10n.HomeView.calendar)
+                                    .font(.title2Bold)
+                                    .foregroundColor(.blueCharcoal)
+                                    .padding(.horizontal, .mediumSpace)
+                                    .padding(.bottom, .smallSpace)
+                                
+                                ScrollView(.horizontal, showsIndicators: false) {
+                                    HStack {
+                                        Spacer(minLength: .mediumSpace)
+                                        
+                                        if let calendarTiles = viewModel.homeData?.calendarTiles {
+                                            let calendarTilesDateRelativeToToday = viewModel.calendarTilesDateRelativeToToday
+                                            
+                                            ForEach(calendarTiles.indices, id: \.self) { i in
+                                                CalendarTileView(viewModel:
+                                                        .init(calendarTileData:
+                                                                CalendarTile(didExercise: calendarTiles[i].didExercise),
+                                                              dayOfWeek: viewModel.calendarTilesDayOfWeek[i],
+                                                              dateRelativeToToday: calendarTilesDateRelativeToToday[i]))
+                                                .frame(width: Constants.calendarTilesWidth, height: Constants.calendarTilesHeight)
+                                            }
+                                        }
+                                        
+                                        Spacer(minLength: .mediumSpace)
+                                    }
+                                }
+                            }
+                            
+                            Spacer()
+                        }
+                        .padding(.top, Constants.sectionSpacing)
+                    }
                 }
-                .padding(.top, Constants.sectionSpacing)
             }
         }
         .navigationBarHidden(navigationBarHidden)
