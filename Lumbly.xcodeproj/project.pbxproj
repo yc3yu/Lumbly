@@ -41,6 +41,7 @@
 		6456C8E42BEDF87A00A9E127 /* GifUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6456C8E02BEDF87A00A9E127 /* GifUIView.swift */; };
 		6456C8E52BEDF87A00A9E127 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6456C8E12BEDF87A00A9E127 /* GifView.swift */; };
 		6456C8E62BEDF87A00A9E127 /* GifViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6456C8E22BEDF87A00A9E127 /* GifViewModel.swift */; };
+		6456C8E82BEDF97B00A9E127 /* StyledTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6456C8E72BEDF97B00A9E127 /* StyledTextFieldViewModel.swift */; };
 		64924A5B2BC499DD001E6C43 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A032BC499DD001E6C43 /* ErrorView.swift */; };
 		64924A5C2BC499DD001E6C43 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A042BC499DD001E6C43 /* ErrorViewModel.swift */; };
 		64924A5D2BC499DD001E6C43 /* ExerciseStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64924A062BC499DD001E6C43 /* ExerciseStepView.swift */; };
@@ -139,6 +140,7 @@
 		6456C8E02BEDF87A00A9E127 /* GifUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifUIView.swift; sourceTree = "<group>"; };
 		6456C8E12BEDF87A00A9E127 /* GifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
 		6456C8E22BEDF87A00A9E127 /* GifViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifViewModel.swift; sourceTree = "<group>"; };
+		6456C8E72BEDF97B00A9E127 /* StyledTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextFieldViewModel.swift; sourceTree = "<group>"; };
 		647635C028FBA34E0043DCFD /* Lumbly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lumbly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64924A032BC499DD001E6C43 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		64924A042BC499DD001E6C43 /* ErrorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
@@ -651,6 +653,7 @@
 			children = (
 				6456C8E32BEDF87A00A9E127 /* Gif */,
 				64BB7C632BC4A04E0079226C /* BlueButtonView.swift */,
+				6456C8E72BEDF97B00A9E127 /* StyledTextFieldViewModel.swift */,
 				64BB7C652BC4A04E0079226C /* StyledTextFieldView.swift */,
 				640C29DD2BDE28440097D444 /* ErrorLoadingContentView.swift */,
 			);
@@ -927,6 +930,7 @@
 				64924A8A2BC499DD001E6C43 /* RecordingViewModel.swift in Sources */,
 				64924A8D2BC499DD001E6C43 /* AppDelegate.swift in Sources */,
 				64924A682BC499DD001E6C43 /* CalendarTileViewModel.swift in Sources */,
+				6456C8E82BEDF97B00A9E127 /* StyledTextFieldViewModel.swift in Sources */,
 				640C29E22BDE53420097D444 /* ExerciseTip.swift in Sources */,
 				64924A812BC499DD001E6C43 /* RecordingInfoModalViewModel.swift in Sources */,
 				64924A6E2BC499DD001E6C43 /* LoadingView.swift in Sources */,
