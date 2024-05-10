@@ -37,22 +37,26 @@ struct SignupView: View {
                         .frame(width: Constants.logoWidth, height: Constants.logoHeight)
                         .padding(.top, Constants.topPadding)
                     
-                    StyledTextFieldView(L10n.Onboarding.physiotherapistCode,
-                                        text: $physiotherapistCode,
-                                        autocorrectionDisabled: true)
+                    StyledTextFieldView(viewModel:
+                            .init(L10n.Onboarding.physiotherapistCode,
+                                  text: $physiotherapistCode,
+                                  autocorrectionDisabled: true))
                     
-                    StyledTextFieldView(L10n.Onboarding.name,
-                                        text: $name,
-                                        autocorrectionDisabled: true)
+                    StyledTextFieldView(viewModel:
+                            .init(L10n.Onboarding.name,
+                                  text: $name,
+                                  autocorrectionDisabled: true))
                     
-                    StyledTextFieldView(L10n.Onboarding.email,
-                                        text: $email,
-                                        autocorrectionDisabled: true)
+                    StyledTextFieldView(viewModel:
+                            .init(L10n.Onboarding.email,
+                                  text: $email,
+                                  autocorrectionDisabled: true))
                     
-                    StyledTextFieldView(L10n.Onboarding.password,
-                                        text: $password,
-                                        autocorrectionDisabled: true,
-                                        isSecureField: true)
+                    StyledTextFieldView(viewModel:
+                            .init(L10n.Onboarding.password,
+                                  text: $password,
+                                  autocorrectionDisabled: true,
+                                  isSecureField: true))
                     
                     NavigationLink(destination: HomeView()) {
                         BlueButtonView(text: L10n.Onboarding.signUp,

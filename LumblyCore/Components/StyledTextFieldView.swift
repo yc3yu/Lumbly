@@ -8,39 +8,19 @@
 import SwiftUI
 
 struct StyledTextFieldView: View {
-    @Binding var text: String
-    
-    var title: String
-    var autocapitalization: TextInputAutocapitalization
-    var autocorrectionDisabled: Bool
-    var backgroundColor: Color
-    var isSecureField: Bool
-    
-    init(_ title: String = "",
-         text: Binding<String>,
-         autocapitalization: TextInputAutocapitalization = .never,
-         autocorrectionDisabled: Bool = false,
-         backgroundColor: Color = .white,
-         isSecureField: Bool = false) {
-        self.title = title
-        self._text = text
-        self.autocapitalization = autocapitalization
-        self.autocorrectionDisabled = autocorrectionDisabled
-        self.backgroundColor = backgroundColor
-        self.isSecureField = isSecureField
-    }
+    @StateObject var viewModel: StyledTextFieldViewModel
     
     var body: some View {
         Group {
-            if isSecureField {
-                SecureField(title, text: $text)
+            if viewModel.isSecureField {
+                SecureField(viewModel.title, text: viewModel.$text)
             } else {
-                TextField(title, text: $text, axis: .vertical)
+                TextField(viewModel.title, text: viewModel.$text, axis: .vertical)
             }
         }
-        .textInputAutocapitalization(autocapitalization)
-        .autocorrectionDisabled(autocorrectionDisabled)
+        .textInputAutocapitalization(viewModel.autocapitalization)
+        .autocorrectionDisabled(viewModel.autocorrectionDisabled)
         .padding(.all, .smallSpace)
-        .background(backgroundColor)
+        .background(viewModel.backgroundColor)
     }
 }
