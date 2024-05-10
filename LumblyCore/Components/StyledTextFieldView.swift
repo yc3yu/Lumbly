@@ -8,42 +8,39 @@
 import SwiftUI
 
 struct StyledTextFieldView: View {
-    private struct Constants {
-        static let fieldHeight: CGFloat = 56.0
-    }
+    @Binding var text: String
     
-    var textFieldContent: AnyView
+    var title: String
+    var autocapitalization: TextInputAutocapitalization
+    var autocorrectionDisabled: Bool
+    var backgroundColor: Color
+    var isSecureField: Bool
+    
+    init(_ title: String = "",
+         text: Binding<String>,
+         autocapitalization: TextInputAutocapitalization = .never,
+         autocorrectionDisabled: Bool = false,
+         backgroundColor: Color = .white,
+         isSecureField: Bool = false) {
+        self.title = title
+        self._text = text
+        self.autocapitalization = autocapitalization
+        self.autocorrectionDisabled = autocorrectionDisabled
+        self.backgroundColor = backgroundColor
+        self.isSecureField = isSecureField
+    }
     
     var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(.white)
-            
-            VStack {
-                textFieldContent
-                
-                Divider()
-            }.padding(.horizontal, .smallSpace)
-        }.frame(height: Constants.fieldHeight)
-    }
-}
-
-
-struct TextFieldStylingView_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            Color.oysterBay
-                .ignoresSafeArea(.all)
-            
-            VStack {
-                StyledTextFieldView(textFieldContent: AnyView(TextField("Email", text: .constant(""))))
-                
-                StyledTextFieldView(textFieldContent:
-                                        AnyView(TextField(L10n.Onboarding.physiotherapistCode,
-                                                          text: .constant(""))
-                                            .textInputAutocapitalization(.never)
-                                            .autocorrectionDisabled(true)))
+        Group {
+            if isSecureField {
+                SecureField(title, text: $text)
+            } else {
+                TextField(title, text: $text, axis: .vertical)
             }
         }
+        .textInputAutocapitalization(autocapitalization)
+        .autocorrectionDisabled(autocorrectionDisabled)
+        .padding(.all, .smallSpace)
+        .background(backgroundColor)
     }
 }

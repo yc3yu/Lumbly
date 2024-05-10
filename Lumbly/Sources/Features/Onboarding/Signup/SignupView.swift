@@ -37,29 +37,22 @@ struct SignupView: View {
                         .frame(width: Constants.logoWidth, height: Constants.logoHeight)
                         .padding(.top, Constants.topPadding)
                     
-                    StyledTextFieldView(textFieldContent:
-                                            AnyView(TextField(L10n.Onboarding.physiotherapistCode,
-                                                              text: $physiotherapistCode)
-                                                .textInputAutocapitalization(.never)
-                                                .autocorrectionDisabled(true)))
+                    StyledTextFieldView(L10n.Onboarding.physiotherapistCode,
+                                        text: $physiotherapistCode,
+                                        autocorrectionDisabled: true)
                     
-                    StyledTextFieldView(textFieldContent:
-                                            AnyView(TextField(L10n.Onboarding.name,
-                                                              text: $name)
-                                                .textInputAutocapitalization(.never)
-                                                .autocorrectionDisabled(true)))
+                    StyledTextFieldView(L10n.Onboarding.name,
+                                        text: $name,
+                                        autocorrectionDisabled: true)
                     
-                    StyledTextFieldView(textFieldContent:
-                                            AnyView(TextField(L10n.Onboarding.email,
-                                                              text: $email)
-                                                .textInputAutocapitalization(.never)
-                                                .autocorrectionDisabled(true)))
+                    StyledTextFieldView(L10n.Onboarding.email,
+                                        text: $email,
+                                        autocorrectionDisabled: true)
                     
-                    StyledTextFieldView(textFieldContent:
-                                            AnyView(SecureField(L10n.Onboarding.password,
-                                                                text: $password)
-                                                .textInputAutocapitalization(.never)
-                                                .autocorrectionDisabled(true)))
+                    StyledTextFieldView(L10n.Onboarding.password,
+                                        text: $password,
+                                        autocorrectionDisabled: true,
+                                        isSecureField: true)
                     
                     NavigationLink(destination: HomeView()) {
                         BlueButtonView(text: L10n.Onboarding.signUp,

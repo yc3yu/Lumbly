@@ -32,17 +32,14 @@ struct LoginView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: Constants.logoWidth, height: Constants.logoHeight)
                 
-                StyledTextFieldView(textFieldContent:
-                                        AnyView(TextField(L10n.Onboarding.email,
-                                                          text: $email)
-                                            .textInputAutocapitalization(.never)
-                                            .autocorrectionDisabled(true)))
+                StyledTextFieldView(L10n.Onboarding.email,
+                                    text: $email,
+                                    autocorrectionDisabled: true)
                 
-                StyledTextFieldView(textFieldContent:
-                                        AnyView(SecureField(L10n.Onboarding.password,
-                                                            text: $password)
-                                            .textInputAutocapitalization(.never)
-                                            .autocorrectionDisabled(true)))
+                StyledTextFieldView(L10n.Onboarding.password,
+                                    text: $password,
+                                    autocorrectionDisabled: true,
+                                    isSecureField: true)
                 
                 NavigationLink(destination: HomeView()) {
                     BlueButtonView(text: L10n.Onboarding.logIn,
