@@ -9,14 +9,13 @@ import SwiftUI
 
 struct SignupView: View {
     private struct Constants {
-        static let topPadding: CGFloat = 40.0
         static let logoWidth: CGFloat = 282.0
         static let logoHeight: CGFloat = 103.0
-        static let fieldHeight: CGFloat = 56.0
         static let buttonWidth: CGFloat = 177.0
         static let buttonHeight: CGFloat = 56.0
         static let vStackSpacing: CGFloat = 40.0
-        static let vStackHorizontalPadding: CGFloat = 20.0
+        static let horizontalPadding: CGFloat = 20.0
+        static let verticalPadding: CGFloat = 40.0
     }
     
     @State private var physiotherapistCode: String = ""
@@ -35,7 +34,6 @@ struct SignupView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: Constants.logoWidth, height: Constants.logoHeight)
-                        .padding(.top, Constants.topPadding)
                     
                     StyledTextFieldView(viewModel:
                             .init(L10n.Onboarding.physiotherapistCode,
@@ -67,7 +65,9 @@ struct SignupView: View {
                                name.isEmpty ||
                                email.isEmpty ||
                                password.isEmpty)
-                }.padding(.horizontal, Constants.vStackHorizontalPadding)
+                }
+                .padding(.horizontal, Constants.horizontalPadding)
+                .padding(.vertical, Constants.verticalPadding)
             }
         }
     }
