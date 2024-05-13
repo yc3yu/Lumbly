@@ -97,6 +97,8 @@ internal enum L10n {
   internal enum ModalResponseOptions {
     /// No
     internal static let no = L10n.tr("Localizable", "ModalResponseOptions.no", fallback: "No")
+    /// OK
+    internal static let ok = L10n.tr("Localizable", "ModalResponseOptions.ok", fallback: "OK")
     /// Yes
     internal static let yes = L10n.tr("Localizable", "ModalResponseOptions.yes", fallback: "Yes")
   }
