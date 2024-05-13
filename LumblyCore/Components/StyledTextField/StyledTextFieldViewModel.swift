@@ -12,6 +12,7 @@ extension StyledTextFieldView {
         @Binding var text: String
         
         private(set) var title: String
+        private(set) var isRequiredField: Bool
         private(set) var autocapitalization: TextInputAutocapitalization
         private(set) var autocorrectionDisabled: Bool
         private(set) var backgroundColor: Color
@@ -19,12 +20,14 @@ extension StyledTextFieldView {
         
         init(_ title: String = "",
              text: Binding<String>,
+             isRequiredField: Bool = true,
              autocapitalization: TextInputAutocapitalization = .never,
              autocorrectionDisabled: Bool = false,
              backgroundColor: Color = .white,
              isSecureField: Bool = false) {
             self.title = title
             self._text = text
+            self.isRequiredField = isRequiredField
             self.autocapitalization = autocapitalization
             self.autocorrectionDisabled = autocorrectionDisabled
             self.backgroundColor = backgroundColor
