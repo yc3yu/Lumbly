@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct StyledTextFieldView: View {
+    private var styledTitle: String {
+        let suffix = viewModel.isRequiredField ? "*" : ""
+        return viewModel.title + suffix
+    }
+    
     @StateObject var viewModel: StyledTextFieldViewModel
     
     var body: some View {
         Group {
             if viewModel.isSecureField {
-                SecureField(viewModel.title, text: viewModel.$text)
+                SecureField(styledTitle, text: viewModel.$text)
             } else {
-                TextField(viewModel.title, text: viewModel.$text, axis: .vertical)
+                TextField(styledTitle, text: viewModel.$text, axis: viewModel.axis)
             }
         }
         .textInputAutocapitalization(viewModel.autocapitalization)
