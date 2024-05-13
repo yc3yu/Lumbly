@@ -34,11 +34,17 @@ struct SignupView: View {
                       autocorrectionDisabled: true,
                       isSecureField: true)]
     }
+
+    private var buttonIsDisabled: Bool {
+        let requiredTextFields = styledTextFieldViewModels.filter(\.isRequiredField).map(\.text)
+        return requiredTextFields.contains(where: \.isEmpty)
+    }
     
     @State private var physiotherapistCode: String = ""
     @State private var name: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var showCompleteFieldsAlert: Bool = false
     
     var body: some View {
         ZStack {
@@ -56,15 +62,26 @@ struct SignupView: View {
                         StyledTextFieldView(viewModel: styledTextFieldViewModel)
                     }
                     
-                    NavigationLink(destination: HomeView()) {
-                        BlueButtonView(text: L10n.Onboarding.signUp,
-                                       navLinkButton: true)
-                        .frame(width: Constants.buttonWidth, height: Constants.buttonHeight)
-                        .padding(.bottom, Constants.vStackSpacing)
-                    }.disabled(physiotherapistCode.isEmpty ||
-                               name.isEmpty ||
-                               email.isEmpty ||
-                               password.isEmpty)
+                    Group {
+                        if buttonIsDisabled {
+                            BlueButtonView(text: L10n.Onboarding.signUp,
+                                           backgroundColor: .lightSecondary) {
+                                showCompleteFieldsAlert = true
+                            }.alert(L10n.Onboarding.fillInAllRequiredFields, isPresented: $showCompleteFieldsAlert) {
+                                Button(L10n.ModalResponseOptions.ok, role: .cancel) {
+                                    showCompleteFieldsAlert = false
+                                }
+                            }
+                        } else {
+                            NavigationLink(destination: HomeView()) {
+                                BlueButtonView(text: L10n.Onboarding.signUp,
+                                               navLinkButton: true)
+                            }
+                        }
+                    }
+                    .frame(width: Constants.buttonWidth, height: Constants.buttonHeight)
+                    .padding(.bottom, Constants.vStackSpacing)
+
                 }
                 .padding(.horizontal, Constants.horizontalPadding)
                 .padding(.vertical, Constants.verticalPadding)

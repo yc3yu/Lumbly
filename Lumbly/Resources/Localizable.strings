@@ -16,6 +16,7 @@
 // MARK: ModalResponseOptions
 "ModalResponseOptions.yes" = "Yes";
 "ModalResponseOptions.no" = "No";
+"ModalResponseOptions.ok" = "OK";
 
 // MARK: Onboarding
 "Onboarding.signUp" = "Sign up";
@@ -24,6 +25,7 @@
 "Onboarding.name" = "Name";
 "Onboarding.email" = "Email";
 "Onboarding.password" = "Password";
+"Onboarding.fillInAllRequiredFields" = "Please fill in all required fields to continue.";
 
 // MARK: HomeView
 "HomeView.emptyProfileIcon" = "person.crop.circle";

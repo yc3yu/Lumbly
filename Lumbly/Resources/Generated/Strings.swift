@@ -97,6 +97,8 @@ internal enum L10n {
   internal enum ModalResponseOptions {
     /// No
     internal static let no = L10n.tr("Localizable", "ModalResponseOptions.no", fallback: "No")
+    /// OK
+    internal static let ok = L10n.tr("Localizable", "ModalResponseOptions.ok", fallback: "OK")
     /// Yes
     internal static let yes = L10n.tr("Localizable", "ModalResponseOptions.yes", fallback: "Yes")
   }
@@ -118,6 +120,8 @@ internal enum L10n {
   internal enum Onboarding {
     /// Email
     internal static let email = L10n.tr("Localizable", "Onboarding.email", fallback: "Email")
+    /// Please fill in all required fields to continue.
+    internal static let fillInAllRequiredFields = L10n.tr("Localizable", "Onboarding.fillInAllRequiredFields", fallback: "Please fill in all required fields to continue.")
     /// Log in
     internal static let logIn = L10n.tr("Localizable", "Onboarding.logIn", fallback: "Log in")
     /// Name
