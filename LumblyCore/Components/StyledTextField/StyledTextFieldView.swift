@@ -20,7 +20,7 @@ struct StyledTextFieldView: View {
             if viewModel.isSecureField {
                 SecureField(styledTitle, text: viewModel.$text)
             } else {
-                TextField(styledTitle, text: viewModel.$text, axis: .vertical)
+                TextField(styledTitle, text: viewModel.$text, axis: viewModel.axis)
             }
         }
         .textInputAutocapitalization(viewModel.autocapitalization)
