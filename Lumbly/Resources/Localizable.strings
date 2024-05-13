@@ -13,6 +13,10 @@
 "NavigationBarItem.submit" = "Submit";
 "NavigationBarItem.exit" = "Exit";
 
+// MARK: ModalResponseOptions
+"ModalResponseOptions.yes" = "Yes";
+"ModalResponseOptions.no" = "No";
+
 // MARK: Onboarding
 "Onboarding.signUp" = "Sign up";
 "Onboarding.logIn" = "Log in";
@@ -71,8 +75,6 @@
 "RecordingOptionsModalView.moveAwayDoOneRep" = "Move a few metres away, do one repetition of the exercise, and stop recording.";
 "RecordingOptionsModalView.reviewRecording" = "Review the recording\nIs the entire body captured by the camera?";
 "RecordingOptionsModalView.rememberToPosition" = "Remember to position your device and yourself as you did during the test run";
-"RecordingOptionsModalView.yes" = "Yes";
-"RecordingOptionsModalView.no" = "No";
 
 // MARK: PainLevelRatingView
 "PainLevelRatingView.rateYourBackPain" = "Rate your back pain";
