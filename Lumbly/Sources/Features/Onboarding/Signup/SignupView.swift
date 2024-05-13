@@ -18,6 +18,23 @@ struct SignupView: View {
         static let verticalPadding: CGFloat = 40.0
     }
     
+    private var styledTextFieldViewModels: [StyledTextFieldView.StyledTextFieldViewModel] {
+        return [.init(L10n.Onboarding.physiotherapistCode,
+                      text: $physiotherapistCode,
+                      autocorrectionDisabled: true),
+                .init(L10n.Onboarding.name,
+                      text: $name,
+                      isRequiredField: false,
+                      autocorrectionDisabled: true),
+                .init(L10n.Onboarding.email,
+                      text: $email,
+                      autocorrectionDisabled: true),
+                .init(L10n.Onboarding.password,
+                      text: $password,
+                      autocorrectionDisabled: true,
+                      isSecureField: true)]
+    }
+    
     @State private var physiotherapistCode: String = ""
     @State private var name: String = ""
     @State private var email: String = ""
@@ -35,26 +52,9 @@ struct SignupView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: Constants.logoWidth, height: Constants.logoHeight)
                     
-                    StyledTextFieldView(viewModel:
-                            .init(L10n.Onboarding.physiotherapistCode,
-                                  text: $physiotherapistCode,
-                                  autocorrectionDisabled: true))
-                    
-                    StyledTextFieldView(viewModel:
-                            .init(L10n.Onboarding.name,
-                                  text: $name,
-                                  autocorrectionDisabled: true))
-                    
-                    StyledTextFieldView(viewModel:
-                            .init(L10n.Onboarding.email,
-                                  text: $email,
-                                  autocorrectionDisabled: true))
-                    
-                    StyledTextFieldView(viewModel:
-                            .init(L10n.Onboarding.password,
-                                  text: $password,
-                                  autocorrectionDisabled: true,
-                                  isSecureField: true))
+                    ForEach(styledTextFieldViewModels, id: \.title) { styledTextFieldViewModel in
+                        StyledTextFieldView(viewModel: styledTextFieldViewModel)
+                    }
                     
                     NavigationLink(destination: HomeView()) {
                         BlueButtonView(text: L10n.Onboarding.signUp,
