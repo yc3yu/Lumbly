@@ -25,6 +25,7 @@
 "Onboarding.name" = "Name";
 "Onboarding.email" = "Email";
 "Onboarding.password" = "Password";
+"Onboarding.fillInAllRequiredFields" = "Please fill in all required fields to continue.";
 
 // MARK: HomeView
 "HomeView.emptyProfileIcon" = "person.crop.circle";
