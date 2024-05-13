@@ -16,6 +16,7 @@ extension StyledTextFieldView {
         private(set) var autocapitalization: TextInputAutocapitalization
         private(set) var autocorrectionDisabled: Bool
         private(set) var backgroundColor: Color
+        private(set) var axis: Axis
         private(set) var isSecureField: Bool
         
         init(_ title: String = "",
@@ -24,6 +25,7 @@ extension StyledTextFieldView {
              autocapitalization: TextInputAutocapitalization = .never,
              autocorrectionDisabled: Bool = false,
              backgroundColor: Color = .white,
+             axis: Axis = .horizontal,
              isSecureField: Bool = false) {
             self.title = title
             self._text = text
@@ -31,6 +33,7 @@ extension StyledTextFieldView {
             self.autocapitalization = autocapitalization
             self.autocorrectionDisabled = autocorrectionDisabled
             self.backgroundColor = backgroundColor
+            self.axis = axis
             self.isSecureField = isSecureField
         }
     }
