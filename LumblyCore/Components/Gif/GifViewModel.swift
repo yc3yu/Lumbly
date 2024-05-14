@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension GifView {
-    class GifViewModel: ObservableObject {
+    class ViewModel: ObservableObject {
         enum LoadStatus {
             case success
             case failure

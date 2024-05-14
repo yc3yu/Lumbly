@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension RecordingOptionsModalView {
-    class RecordingOptionsModalViewModel {
+    class ViewModel {
         @Published var text: String
         @Published var showOptions: Bool
         @Published var leftOptionString: String?

@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension RecordingView {
-    class RecordingViewModel: ObservableObject {
+    class ViewModel: ObservableObject {
         @Published private(set) var isTestRun: Bool
         @Published private(set) var parentExerciseSet: String
         @Published private(set) var exerciseName: String

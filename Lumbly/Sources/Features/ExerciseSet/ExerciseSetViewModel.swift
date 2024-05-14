@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension ExerciseSetView {
-    class ExerciseSetViewModel: ObservableObject {
+    class ViewModel: ObservableObject {
         @Published private(set) var exerciseSetData: ExerciseSet? = nil
         @Published var isLoading: Bool = false
         

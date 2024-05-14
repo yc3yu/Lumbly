@@ -13,7 +13,7 @@ struct ErrorView: View {
         static let topPadding: CGFloat = 40.0
     }
     
-    var viewModel: ErrorViewModel
+    var viewModel: ViewModel
     
     var body: some View {
         VStack(spacing: Constants.vStackSpacing) {

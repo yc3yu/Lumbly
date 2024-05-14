@@ -8,10 +8,10 @@
 import SwiftUI
 
 extension PlaybackView {
-    class PlaybackViewModel: ObservableObject {
-        @Published var recordingViewModel: RecordingView.RecordingViewModel
+    class ViewModel: ObservableObject {
+        @Published var recordingViewModel: RecordingView.ViewModel
         
-        init(recordingViewModel: RecordingView.RecordingViewModel) {
+        init(recordingViewModel: RecordingView.ViewModel) {
             self.recordingViewModel = recordingViewModel
         }
         

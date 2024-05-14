@@ -22,7 +22,7 @@ struct HomeView: View {
         static let calendarTilesHeight: CGFloat = 100.0
     }
     
-    @StateObject private var viewModel = HomeViewModel()
+    @StateObject private var viewModel = ViewModel()
     
     @State private var navigationBarHidden: Bool = true
 

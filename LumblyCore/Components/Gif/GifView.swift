@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GifView: View {
-    @StateObject var viewModel: GifViewModel
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         Group {

@@ -14,7 +14,7 @@ struct ExerciseStepView: View {
         static let imageHeight: CGFloat = 148.0
     }
     
-    @StateObject var viewModel: ExerciseStepViewModel
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         VStack(spacing: .smallSpace) {

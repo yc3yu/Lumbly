@@ -16,7 +16,7 @@ struct FormCommentTileView: View {
         static let tileCornerRadius: CGFloat = 10.0
     }
     
-    @StateObject var viewModel: FormCommentTileViewModel
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: Constants.commentSolutionSpacing) {

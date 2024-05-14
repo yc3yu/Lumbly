@@ -21,7 +21,7 @@ struct ResultsView: View {
     }
     
     @State private var selectedExercise: Int = 0
-    @StateObject var viewModel: ResultsViewModel
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         ZStack {

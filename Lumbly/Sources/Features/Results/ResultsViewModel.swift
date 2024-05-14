@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension ResultsView {
-    class ResultsViewModel: ObservableObject {
+    class ViewModel: ObservableObject {
         private struct Constants {
             static let requestDelay: Double = 1.0
             static let requestLeeway: DispatchTimeInterval = .milliseconds(50)
@@ -18,9 +18,9 @@ extension ResultsView {
         @Published private(set) var isLoading: Bool = false
         @Published private(set) var resultsAvailability: ResultsAvailability = ResultsAvailability(status: .unknown)
         
-        private var recordingViewModel: RecordingView.RecordingViewModel
+        private var recordingViewModel: RecordingView.ViewModel
         
-        init(recordingViewModel: RecordingView.RecordingViewModel) {
+        init(recordingViewModel: RecordingView.ViewModel) {
             self.recordingViewModel = recordingViewModel
         }
 

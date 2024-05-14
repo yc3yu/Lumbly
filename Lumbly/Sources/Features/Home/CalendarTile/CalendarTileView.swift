@@ -15,7 +15,7 @@ struct CalendarTileView: View {
         static let circleSize: CGFloat = 6.0
     }
     
-    @StateObject var viewModel: CalendarTileViewModel
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         ZStack {
@@ -61,7 +61,7 @@ struct CalendarTileView: View {
         }
     }
     
-    func getColors(dateRelativeToToday: CalendarTileViewModel.DateRelativeToToday?) -> (tileColor: Color?, borderColor: Color?, accentColor: Color?) {
+    func getColors(dateRelativeToToday: ViewModel.DateRelativeToToday?) -> (tileColor: Color?, borderColor: Color?, accentColor: Color?) {
         if let dateRelativeToToday = dateRelativeToToday {
             switch(dateRelativeToToday) {
             case .past:

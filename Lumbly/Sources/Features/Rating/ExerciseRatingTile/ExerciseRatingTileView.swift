@@ -18,7 +18,7 @@ struct ExerciseRatingTileView: View {
         static let imageSize: CGFloat = 33.38
     }
     
-    @StateObject var viewModel: ExerciseRatingTileViewModel
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         ZStack {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension PainLevelRatingView {
-    class PainLevelRatingViewModel: ObservableObject {
+    class ViewModel: ObservableObject {
         let painLevelOptions: [String] = [L10n.PainLevelTileView.noPain,
                                           L10n.PainLevelTileView.hurtsALittle,
                                           L10n.PainLevelTileView.hurtsALittleMore,
@@ -16,9 +16,9 @@ extension PainLevelRatingView {
                                           L10n.PainLevelTileView.hurtsAWholeLot,
                                           L10n.PainLevelTileView.hurtsTheWorst]
         
-        var recordingViewModel: RecordingView.RecordingViewModel
+        var recordingViewModel: RecordingView.ViewModel
         
-        init(recordingViewModel: RecordingView.RecordingViewModel) {
+        init(recordingViewModel: RecordingView.ViewModel) {
             self.recordingViewModel = recordingViewModel
         }
         

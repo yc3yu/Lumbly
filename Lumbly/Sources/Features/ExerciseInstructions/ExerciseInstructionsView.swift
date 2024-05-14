@@ -25,7 +25,7 @@ struct ExerciseInstructionsView: View {
     
     @State private var stepsOrTips: PickerState = .steps
 
-    @StateObject var viewModel: ExerciseInstructionsViewModel
+    @StateObject var viewModel: ViewModel
 
     var body: some View {
         ZStack {

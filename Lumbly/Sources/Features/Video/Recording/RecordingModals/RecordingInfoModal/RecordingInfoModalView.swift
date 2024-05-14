@@ -20,7 +20,7 @@ struct RecordingInfoModalView<DestinationView: View>: View {
 
     @State var bodyTextSize: CGSize = .zero
 
-    @State var viewModel: RecordingInfoModalViewModel
+    @State var viewModel: ViewModel
     
     var body: some View {
         VStack(spacing: .nanoSpace) {

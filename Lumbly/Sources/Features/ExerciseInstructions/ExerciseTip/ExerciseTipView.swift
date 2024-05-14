@@ -16,7 +16,7 @@ struct ExerciseTipView: View {
         static let tileCornerRadius: CGFloat = 15.0
     }
     
-    @StateObject var viewModel: ExerciseTipViewModel
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         VStack(spacing: Constants.textAndImageSpacing) {

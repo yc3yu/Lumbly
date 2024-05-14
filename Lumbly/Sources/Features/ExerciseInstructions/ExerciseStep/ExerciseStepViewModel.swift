@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension ExerciseStepView {
-    class ExerciseStepViewModel: ObservableObject {
+    class ViewModel: ObservableObject {
         @Published private(set) var exerciseStepData: ExerciseStep?
         
         init(exerciseStepData: ExerciseStep?) {

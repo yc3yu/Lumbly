@@ -18,7 +18,7 @@ struct SignupView: View {
         static let verticalPadding: CGFloat = 40.0
     }
     
-    private var styledTextFieldViewModels: [StyledTextFieldView.StyledTextFieldViewModel] {
+    private var styledTextFieldViewModels: [StyledTextFieldView.ViewModel] {
         return [.init(L10n.Onboarding.physiotherapistCode,
                       text: $physiotherapistCode,
                       autocorrectionDisabled: true),

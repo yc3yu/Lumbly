@@ -18,7 +18,7 @@ struct PainLevelTileView: View {
         static let faceSize: CGFloat = 28.0
     }
     
-    @StateObject var viewModel: PainLevelTileViewModel
+    @StateObject var viewModel: ViewModel
 
     var body: some View {
         ZStack {

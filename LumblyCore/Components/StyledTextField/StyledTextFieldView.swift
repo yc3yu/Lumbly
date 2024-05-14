@@ -13,7 +13,7 @@ struct StyledTextFieldView: View {
         return viewModel.title + suffix
     }
     
-    @StateObject var viewModel: StyledTextFieldViewModel
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         Group {

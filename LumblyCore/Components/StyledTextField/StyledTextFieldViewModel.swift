@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension StyledTextFieldView {
-    class StyledTextFieldViewModel: ObservableObject {
+    class ViewModel: ObservableObject {
         @Binding var text: String
         
         private(set) var title: String

@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 struct HostedRecordingViewController: UIViewControllerRepresentable {
-    var viewModel: Binding<RecordingView.RecordingViewModel>
+    var viewModel: Binding<RecordingView.ViewModel>
     var viewControllerLink: RecordingViewControllerLink
     
     func makeUIViewController(context: Context) -> UIViewController {
@@ -26,7 +26,7 @@ struct HostedRecordingViewController: UIViewControllerRepresentable {
     
     class Coordinator: RecordingViewControllerDelegate {
         private var cancellable: AnyCancellable?
-        var viewModelBinding: Binding<RecordingView.RecordingViewModel>
+        var viewModelBinding: Binding<RecordingView.ViewModel>
         var viewController: RecordingViewControllerLinkable?
         
         var viewControllerLink: RecordingViewControllerLink? {
@@ -40,7 +40,7 @@ struct HostedRecordingViewController: UIViewControllerRepresentable {
             }
         }
         
-        init(viewModelBinding: Binding<RecordingView.RecordingViewModel>) {
+        init(viewModelBinding: Binding<RecordingView.ViewModel>) {
             self.viewModelBinding = viewModelBinding
         }
         

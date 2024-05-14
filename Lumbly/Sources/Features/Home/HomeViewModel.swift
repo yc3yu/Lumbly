@@ -8,8 +8,8 @@
 import SwiftUI
 
 extension HomeView {
-    class HomeViewModel: ObservableObject {
-        typealias RelativeDate = CalendarTileView.CalendarTileViewModel.DateRelativeToToday
+    class ViewModel: ObservableObject {
+        typealias RelativeDate = CalendarTileView.ViewModel.DateRelativeToToday
         
         @Published private(set) var homeData: Home? = nil
         @Published private(set) var isLoading: Bool = false
