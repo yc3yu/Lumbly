@@ -14,27 +14,27 @@ struct PlaybackView: View {
     }
     
     private var leftOptionDestination: RecordingView {
-        let newViewModel = RecordingView.RecordingViewModel(isTestRun: false,
-                                                            parentView: viewModel.recordingViewModel.parentView,
-                                                            parentExerciseSet: viewModel.recordingViewModel.parentExerciseSet,
-                                                            exerciseName: viewModel.recordingViewModel.exerciseName,
-                                                            recordingInfoModalBodyText: viewModel.recordingViewModel.recordingInfoModalBodyText,
-                                                            timestamp: viewModel.recordingViewModel.timestamp)
+        let newViewModel = RecordingView.ViewModel(isTestRun: false,
+                                                   parentView: viewModel.recordingViewModel.parentView,
+                                                   parentExerciseSet: viewModel.recordingViewModel.parentExerciseSet,
+                                                   exerciseName: viewModel.recordingViewModel.exerciseName,
+                                                   recordingInfoModalBodyText: viewModel.recordingViewModel.recordingInfoModalBodyText,
+                                                   timestamp: viewModel.recordingViewModel.timestamp)
         return RecordingView(viewModel: newViewModel)
     }
     
     private var rightOptionDestination: RecordingView {
-        let newViewModel = RecordingView.RecordingViewModel(isTestRun: true,
-                                                            parentView: viewModel.recordingViewModel.parentView,
-                                                            parentExerciseSet: viewModel.recordingViewModel.parentExerciseSet,
-                                                            exerciseName: viewModel.recordingViewModel.exerciseName,
-                                                            recordingInfoModalBodyText: viewModel.recordingViewModel.recordingInfoModalBodyText,
-                                                            timestamp: viewModel.recordingViewModel.timestamp)
+        let newViewModel = RecordingView.ViewModel(isTestRun: true,
+                                                   parentView: viewModel.recordingViewModel.parentView,
+                                                   parentExerciseSet: viewModel.recordingViewModel.parentExerciseSet,
+                                                   exerciseName: viewModel.recordingViewModel.exerciseName,
+                                                   recordingInfoModalBodyText: viewModel.recordingViewModel.recordingInfoModalBodyText,
+                                                   timestamp: viewModel.recordingViewModel.timestamp)
         return RecordingView(viewModel: newViewModel)
     }
     
     @State private var player = AVPlayer()
-    @State var viewModel: PlaybackViewModel
+    @State var viewModel: ViewModel
     
     var body: some View {
         if let videoFileURL = viewModel.recordingViewModel.videoFileURL {

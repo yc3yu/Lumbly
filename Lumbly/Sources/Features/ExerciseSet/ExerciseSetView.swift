@@ -16,7 +16,7 @@ struct ExerciseSetView: View {
         static let bottomPadding: CGFloat = 80.0
     }
     
-    @StateObject var viewModel: ExerciseSetViewModel
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         ZStack {

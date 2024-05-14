@@ -15,7 +15,7 @@ struct RecordingOptionsModalView<OptionView: View>: View {
     
     private let constants = Constants()
     
-    var viewModel: RecordingOptionsModalViewModel
+    var viewModel: ViewModel
     
     var body: some View {
         VStack(spacing: .zero) {

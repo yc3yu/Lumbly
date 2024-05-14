@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension CalendarTileView {
-    class CalendarTileViewModel: ObservableObject {
+    class ViewModel: ObservableObject {
         enum DateRelativeToToday {
             case past
             case today

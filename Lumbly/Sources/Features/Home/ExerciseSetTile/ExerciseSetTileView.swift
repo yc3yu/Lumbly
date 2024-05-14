@@ -13,7 +13,7 @@ struct ExerciseSetTileView: View {
         static let topPadding: CGFloat = 28.0
     }
     
-    @StateObject var viewModel: ExerciseSetTileViewModel
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         ZStack {

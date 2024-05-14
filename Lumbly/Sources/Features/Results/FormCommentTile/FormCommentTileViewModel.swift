@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension FormCommentTileView {
-    class FormCommentTileViewModel: ObservableObject {
+    class ViewModel: ObservableObject {
         @Published private(set) var formCommentTileData: FormCommentTile?
         var isFormMistake: Bool
 

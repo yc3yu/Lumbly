@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension PainLevelTileView {
-    class PainLevelTileViewModel: ObservableObject {
+    class ViewModel: ObservableObject {
         @Published private(set) var painLevel: String?
         
         init(painLevel: String?) {

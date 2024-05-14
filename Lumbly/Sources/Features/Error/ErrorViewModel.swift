@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension ErrorView {
-    class ErrorViewModel {
+    class ViewModel {
         var header: String?
         var errorText: String
         

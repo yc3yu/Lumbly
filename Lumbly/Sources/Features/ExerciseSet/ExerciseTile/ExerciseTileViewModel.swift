@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension ExerciseTileView {
-    class ExerciseTileViewModel: ObservableObject {
+    class ViewModel: ObservableObject {
         @Published private(set) var exerciseTileData: ExerciseTile?
         
         init(exerciseTileData: ExerciseTile?) {

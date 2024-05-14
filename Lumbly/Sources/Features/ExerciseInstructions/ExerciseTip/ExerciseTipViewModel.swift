@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension ExerciseTipView {
-    class ExerciseTipViewModel: ObservableObject {
+    class ViewModel: ObservableObject {
         @Published private(set) var tipNumber: Int?
         @Published private(set) var exerciseTipData: ExerciseTip?
         

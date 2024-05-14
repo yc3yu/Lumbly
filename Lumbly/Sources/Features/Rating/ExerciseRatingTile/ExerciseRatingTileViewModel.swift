@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension ExerciseRatingTileView {
-    class ExerciseRatingTileViewModel: ObservableObject {
+    class ViewModel: ObservableObject {
         @Published private(set) var exerciseRating: String?
         
         init(exerciseRating: String?) {

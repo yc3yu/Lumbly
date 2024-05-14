@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension ResultsForDayView {
-    class ResultsForDayViewModel {
+    class ViewModel {
         var dayOfWeek: String
         var didExercise: Bool
         

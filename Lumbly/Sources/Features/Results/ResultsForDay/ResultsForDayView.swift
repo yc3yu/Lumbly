@@ -13,7 +13,7 @@ struct ResultsForDayView: View {
         static let topPadding: CGFloat = 40.0
     }
 
-    var viewModel: ResultsForDayViewModel
+    var viewModel: ViewModel
 
     var body: some View {
         ZStack {

@@ -45,7 +45,7 @@ struct RecordingView: View {
     
     @State private var isRecording = false
     @State var shouldPresentPlayback = false
-    @State var viewModel: RecordingViewModel
+    @State var viewModel: ViewModel
     
     var body: some View {
         ZStack {

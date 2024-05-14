@@ -17,7 +17,7 @@ struct PainLevelRatingView: View {
                           GridItem(.fixed(Constants.tileWidth), spacing: .mediumSpace),
                           GridItem(.fixed(Constants.tileWidth), spacing: .mediumSpace)]
     
-    @StateObject var viewModel: PainLevelRatingViewModel
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         // TODO: Change to navigate to exercise rating view
