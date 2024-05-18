@@ -25,43 +25,52 @@ struct LumblyInputView<DestinationView: View>: View {
     @State private var showCompleteFieldsAlert: Bool = false
     
     var body: some View {
-        ZStack {
-            Color.oysterBay
-                .ignoresSafeArea(.all)
-            
-            ScrollView {
-                VStack(spacing: constants.vStackSpacing) {
-                    Image(asset: Asset.lumblyMedium)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: constants.logoWidth, height: constants.logoHeight)
-                    
-                    ForEach(viewModel.styledTextFieldViewModels, id: \.title) { styledTextFieldViewModel in
-                        StyledTextFieldView(viewModel: styledTextFieldViewModel)
-                    }
-                    
-                    Group {
-                        if viewModel.buttonIsDisabled {
-                            BlueButtonView(text: viewModel.buttonText,
-                                           backgroundColor: .lightSecondary) {
-                                showCompleteFieldsAlert = true
-                            }.alert(L10n.Onboarding.fillInAllRequiredFields, isPresented: $showCompleteFieldsAlert) {
-                                Button(L10n.ModalResponseOptions.ok, role: .cancel) {
-                                    showCompleteFieldsAlert = false
+        GeometryReader { geometry in
+            ZStack {
+                Color.oysterBay
+                    .ignoresSafeArea(.all)
+                
+                ScrollView {
+                    ScrollViewReader { proxy in
+                        VStack(spacing: constants.vStackSpacing) {
+                            Image(asset: Asset.lumblyMedium)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: constants.logoWidth, height: constants.logoHeight)
+                            
+                            ForEach(viewModel.styledTextFieldViewModels, id: \.title) { styledTextFieldViewModel in
+                                StyledTextFieldView(viewModel: styledTextFieldViewModel)
+                                    .onTapGesture {
+                                        withAnimation {
+                                            proxy.scrollTo(styledTextFieldViewModel.title, anchor: .center)
+                                        }
+                                    }
+                            }
+                            
+                            Group {
+                                if viewModel.buttonIsDisabled {
+                                    BlueButtonView(text: viewModel.buttonText,
+                                                   backgroundColor: .lightSecondary) {
+                                        showCompleteFieldsAlert = true
+                                    }.alert(L10n.Onboarding.fillInAllRequiredFields, isPresented: $showCompleteFieldsAlert) {
+                                        Button(L10n.ModalResponseOptions.ok, role: .cancel) {
+                                            showCompleteFieldsAlert = false
+                                        }
+                                    }
+                                } else {
+                                    NavigationLink(destination: viewModel.buttonDestination) {
+                                        BlueButtonView(text: viewModel.buttonText,
+                                                       navLinkButton: true)
+                                    }
                                 }
                             }
-                        } else {
-                            NavigationLink(destination: viewModel.buttonDestination) {
-                                BlueButtonView(text: viewModel.buttonText,
-                                               navLinkButton: true)
-                            }
+                            .frame(width: constants.buttonWidth, height: constants.buttonHeight)
+                            .padding(.bottom, constants.vStackSpacing)
                         }
+                        .frame(minHeight: geometry.size.height, alignment: .center)
+                        .padding(.horizontal, constants.horizontalPadding)
                     }
-                    .frame(width: constants.buttonWidth, height: constants.buttonHeight)
-                    .padding(.bottom, constants.vStackSpacing)
                 }
-                .padding(.horizontal, constants.horizontalPadding)
-                .padding(.vertical, constants.verticalPadding)
             }
         }
     }
