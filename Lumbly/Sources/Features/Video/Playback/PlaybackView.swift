@@ -40,7 +40,7 @@ struct PlaybackView: View {
         if let videoFileURL = viewModel.recordingViewModel.videoFileURL {
             VideoPlayer(player: player)
                 .ignoresSafeArea()
-                .onAppear() {
+                .onAppear {
                     AppDelegate.orientationLock = UIInterfaceOrientationMask.landscapeRight
                     
                     player = AVPlayer(url: videoFileURL)

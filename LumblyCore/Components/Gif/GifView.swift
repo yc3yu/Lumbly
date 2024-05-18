@@ -21,7 +21,7 @@ struct GifView: View {
                 ErrorLoadingContentView(errorText: L10n.ErrorLoadingContentView.contentError)
             }
         }
-        .onAppear() {
+        .onAppear {
             viewModel.fetchGifData()
         }
     }
